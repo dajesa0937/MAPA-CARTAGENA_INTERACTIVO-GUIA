@@ -1,5 +1,5 @@
 // Orquestación: estado de la vista, enrutado por hash (enlaces compartibles) y eventos.
-import { loadData, db, pexels, photosFor, place, event as getEvent, period, route as getRoute, periodForYear } from './data.js';
+import { loadData, db, pexels, photosFor, place, event as getEvent, period, route as getRoute, periodForYear, eraFocus, eraYear } from './data.js';
 import { loadLanguages, setLang, getLang, t, L, applyDom, onLangChange } from './i18n.js';
 import { store } from './store.js';
 import * as M from './map.js';
@@ -18,7 +18,8 @@ const S = {
   history: false,
   route: null,       // objeto ruta activa
   stop: 0,
-  speaking: false
+  speaking: false,
+  eventId: null
 };
 
 /* ---------------- Render ---------------- */
@@ -26,20 +27,26 @@ function render() {
   document.querySelectorAll('[role="tab"]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === S.tab)));
   const p = S.placeId && place(S.placeId);
   if (p) body.innerHTML = V.placeView(p, { route: S.route, stopIndex: S.stop, speaking: S.speaking });
-  else if (S.tab === 'history') body.innerHTML = V.historyView({ year: S.year, periodId: S.periodId });
+  else if (S.tab === 'history') body.innerHTML = V.historyView({ periodId: S.periodId, eventId: S.eventId, speaking: S.speaking });
   else if (S.tab === 'routes') body.innerHTML = V.routesView();
   else if (S.tab === 'about') body.innerHTML = V.aboutView();
   else body.innerHTML = V.exploreView({ visibleCats: S.visibleCats });
   $('#timebar').hidden = !S.history;
   wireGallery();
-  body.querySelector('.period-nav [aria-pressed="true"]')?.scrollIntoView({ inline: 'center', block: 'nearest' });
   renderMap();
   updateBadgeCount();
 }
 
 function renderMap() {
-  M.showWalls(!S.history);
+  let focus = null, pulse = null;
+  if (S.history) {
+    const ev = S.eventId && getEvent(S.eventId);
+    pulse = ev ? new Set(ev.places || []) : null;
+    focus = new Set(ev && ev.places?.length ? ev.places : eraFocus(S.periodId));
+  }
+  M.showWalls(!S.history ? true : S.year >= 1640 ? true : S.year >= 1614 ? 'building' : false);
   M.renderMarkers({
+    focus, pulse,
     visibleCats: S.history ? new Set(V.CATS) : S.visibleCats,
     year: S.history ? S.year : null,
     route: S.route,
@@ -91,63 +98,107 @@ function openTab(tab) {
   setSheet(tab === 'explore' ? 'peek' : 'half');
 }
 
-/* ---- Historia ---- */
+/* ---- Historia: relato por capítulos ---- */
 function enterHistory(periodId) {
   S.history = true;
   $('#timebar').hidden = false;
-  if (periodId) setPeriod(periodId, false);
-  else setYear(S.year, false);
-  M.fitPlaces(db.places.filter(p => p.category !== 'castillo' || p.id === 'castillo-san-felipe').map(p => p.id));
+  $('#eraStamp').hidden = false;
+  setPeriod(periodId || S.periodId, false);
 }
 function leaveHistory(rerender = true) {
-  S.history = false; stopPlay();
+  S.history = false; S.eventId = null; stopPlay();
+  if (S.speaking) { tts.stop(); S.speaking = false; }
+  $('#eraStamp').hidden = true; $('#mapNote').hidden = true;
   if (rerender) { S.tab = 'explore'; render(); setHash('explorar'); }
 }
 function setYear(y, rerender = true) {
   S.year = y;
-  const pe = periodForYear(y);
-  const changed = pe.id !== S.periodId;
-  S.periodId = pe.id;
-  $('#yearSlider').value = y;
-  $('#yearLabel').textContent = y;
-  $('#periodLabel').textContent = L(pe.name);
-  updateBands();
-  if (store.addTo('periods', pe.id)) checkBadges();
-  if (rerender) {
-    if (changed && S.tab === 'history' && !S.placeId) { render(); setHash(`historia/${pe.id}`); }
-    else renderMap();
-  }
+  $('#yearLabel').textContent = y >= 2026 ? t('story.today') : y <= 1532 ? '< 1533' : y;
+  $('#periodLabel').textContent = L(period(S.periodId)?.name);
+  if (rerender) renderMap();
 }
-function setPeriod(id, rerender = true) {
+function setPeriod(id, rerender = true, fit = true) {
   const pe = period(id);
   if (!pe) return;
-  const y = Math.max(1500, Math.min(2026, pe.id === 'prehispanica' ? 1500 : pe.from));
-  S.periodId = id;
-  setYear(y, false);
-  S.periodId = id;
-  updateBands();
-  if (rerender) { render(); scrollTop(); setHash(`historia/${id}`); }
+  if (S.speaking) { tts.stop(); S.speaking = false; }
+  S.periodId = id; S.eventId = null;
+  setYear(eraYear(pe), false);
+  updateSteps();
+  if (store.addTo('periods', id)) checkBadges();
+  const focus = eraFocus(id);
+  $('#mapNote').textContent = t('story.noCity');
+  $('#mapNote').hidden = focus.length > 0;
+  if (rerender) { render(); scrollTop(); setHash(`historia/${id}`); } else renderMap();
+  if (fit) { if (focus.length) M.fitPlaces(focus); else M.home(); }
+}
+function selectEvent(id) {
+  const ev = getEvent(id);
+  if (!ev) return;
+  stopPlay();
+  if (ev.period !== S.periodId) { setPeriod(ev.period, true, false); }
+  S.eventId = S.eventId === id ? null : id;           // segundo toque: vuelve a la vista de la época
+  const e2 = S.eventId && getEvent(S.eventId);
+  setYear(e2 ? Math.max(1500, e2.year) : eraYear(period(S.periodId)), false);
+  body.querySelectorAll('.moment').forEach(b => b.classList.toggle('on', b.dataset.event === S.eventId));
+  renderMap();
+  const ids = e2?.places?.length ? e2.places : eraFocus(S.periodId);
+  if (ids.length) M.fitPlaces(ids, { maxZoom: e2 ? 16 : 17 });
+  if (e2 && window.matchMedia('(max-width: 820px)').matches) { setSheet('peek'); toast(`${L(e2.date)} · ${L(e2.title)}`); }
+}
+function stepPeriod(d) {
+  const i = db.periods.findIndex(p => p.id === S.periodId);
+  const next = db.periods[i + d];
+  if (next) setPeriod(next.id);
+}
+function buildSteps() {
+  $('#tlSteps').innerHTML = db.periods.map(p => `<li><button type="button" class="step" data-band="${p.id}" title="${V.esc(L(p.name))} · ${V.esc(L(p.label))}">
+      <span class="s-dot"></span><span class="s-year">${p.id === 'prehispanica' ? V.esc(t('story.before')) : p.from}</span><span class="s-name">${V.esc(L(p.short))}</span>
+    </button></li>`).join('');
+  updateSteps();
+}
+function updateSteps() {
+  const idx = db.periods.findIndex(p => p.id === S.periodId);
+  document.querySelectorAll('#tlSteps .step').forEach((b, i) => {
+    b.classList.toggle('on', i === idx); b.classList.toggle('past', i < idx);
+    if (i === idx) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+  });
+  const on = document.querySelector('#tlSteps .step.on');
+  const ol = $('#tlSteps');
+  if (on && ol) ol.scrollTo({ left: on.parentElement.offsetLeft - ol.clientWidth / 2 + on.parentElement.clientWidth / 2, behavior: 'smooth' });
 }
 
 let playTimer = null;
 function togglePlay() {
   if (playTimer) return stopPlay();
   const btn = $('#playBtn');
+  btn.classList.add('playing');
   btn.innerHTML = '<svg aria-hidden="true"><use href="#i-pause"/></svg>';
-  btn.setAttribute('aria-label', t('history.pause'));
-  if (S.year >= 2026) setYear(1500);
+  btn.setAttribute('aria-label', t('story.pause'));
+  const last = db.periods[db.periods.length - 1].id;
+  if (S.periodId === last) setPeriod(db.periods[0].id);
   playTimer = setInterval(() => {
-    const next = Math.min(2026, S.year + (S.year < 1850 ? 4 : 8));
-    setYear(next);
-    if (next >= 2026) stopPlay();
-  }, 120);
+    const i = db.periods.findIndex(p => p.id === S.periodId);
+    if (i >= db.periods.length - 1) return stopPlay();
+    setPeriod(db.periods[i + 1].id);
+  }, 9000);
 }
 function stopPlay() {
   if (!playTimer) return;
   clearInterval(playTimer); playTimer = null;
   const btn = $('#playBtn');
+  btn.classList.remove('playing');
   btn.innerHTML = '<svg aria-hidden="true"><use href="#i-play"/></svg>';
-  btn.setAttribute('aria-label', t('history.play'));
+  btn.setAttribute('aria-label', t('story.play'));
+}
+function listenEra() {
+  const pe = period(S.periodId);
+  if (S.speaking) { tts.stop(); S.speaking = false; render(); return; }
+  stopPlay();
+  const ok = tts.speak(`${L(pe.name)}. ${L(pe.label)}. ${L(pe.summary)}`, getLang(), { onend: () => { S.speaking = false; if (S.tab === 'history' && !S.placeId) render(); } });
+  if (!ok) return toast(t('tts.unsupported'));
+  S.speaking = true;
+  const b = body.querySelector('[data-listen-era]');
+  if (b) { b.setAttribute('aria-pressed', 'true'); b.innerHTML = `<svg aria-hidden="true"><use href="#i-pause"/></svg><span>${t('place.stop')}</span>`; }
 }
 
 /* ---- Rutas ---- */
@@ -272,9 +323,8 @@ function wireSearch() {
     if (b.dataset.place) { S.tab = S.tab === 'history' ? 'history' : 'explore'; openPlace(b.dataset.place); }
     else if (b.dataset.event) {
       const ev = getEvent(b.dataset.event);
-      S.tab = 'history'; S.placeId = null; enterHistory(ev.period);
-      setYear(Math.max(1500, ev.year), false); render(); scrollTop(); setHash(`historia/${ev.period}`);
-      if (ev.places?.length) M.fitPlaces(ev.places);
+      S.tab = 'history'; S.placeId = null; enterHistory(ev.period); render(); scrollTop(); setHash(`historia/${ev.period}`);
+      selectEvent(ev.id);
     } else if (b.dataset.period) { S.tab = 'history'; S.placeId = null; enterHistory(b.dataset.period); render(); scrollTop(); setHash(`historia/${b.dataset.period}`); }
   });
   document.addEventListener('click', e => { if (!e.target.closest('.search')) close(); });
@@ -284,9 +334,9 @@ function wireSearch() {
 function routeFromHash() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   const [a, b, c] = parts;
-  if (a === 'lugar' && place(b)) { S.tab = 'explore'; openPlace(b); return true; }
+  if (a === 'lugar' && place(b)) { if (S.history) leaveHistory(false); S.tab = 'explore'; openPlace(b); return true; }
   if (a === 'historia') { S.tab = 'history'; S.placeId = null; enterHistory(period(b) ? b : S.periodId); render(); return true; }
-  if (a === 'ruta' && getRoute(b)) { startRoute(b, Number(c) || 1); return true; }
+  if (a === 'ruta' && getRoute(b)) { if (S.history) leaveHistory(false); startRoute(b, Number(c) || 1); return true; }
   if (a === 'rutas') { openTab('routes'); return true; }
   if (a === 'fuentes') { openTab('about'); return true; }
   if (a === 'fortificaciones') { goForts(); return true; }
@@ -306,7 +356,7 @@ function wire() {
   document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
     setLang(b.dataset.lang); store.set('lang', b.dataset.lang);
   }));
-  onLangChange(() => { tts.stop(); S.speaking = false; M.refreshTooltips(); buildTicks(); if (S.history) setYear(S.year, false); render(); });
+  onLangChange(() => { tts.stop(); S.speaking = false; M.refreshTooltips(); buildSteps(); if (S.history) setYear(S.year, false); render(); });
 
   document.querySelectorAll('[role="tab"]').forEach(b => b.addEventListener('click', () => openTab(b.dataset.tab)));
 
@@ -325,7 +375,7 @@ function wire() {
       const ids = db.places.filter(p => S.visibleCats.has(p.category)).map(p => p.id);
       if (S.visibleCats.size < V.CATS.length && ids.length) M.fitPlaces(ids);
     }
-    else if (d.period) { S.tab = 'history'; S.placeId = null; S.history = true; setPeriod(d.period); }
+    else if (d.period) { tts.stop(); S.speaking = false; S.tab = 'history'; S.placeId = null; enterHistory(d.period); render(); scrollTop(); setHash(`historia/${d.period}`); }
     else if (d.route) startRoute(d.route);
     else if ('back' in d) closePlace();
     else if ('listen' in d) listen();
@@ -333,25 +383,17 @@ function wire() {
     else if ('share' in d) share();
     else if (d.step) step(Number(d.step));
     else if ('finish' in d) finishRoute();
+    else if (d.event) selectEvent(d.event);
+    else if (d.eraStep) { stopPlay(); stepPeriod(Number(d.eraStep)); }
+    else if ('listenEra' in d) listenEra();
     else if (d.gal) galStep(Number(d.gal));
     else if (d.viewer != null) openViewer(Number(d.viewer));
   });
 
-  $('#yearSlider').addEventListener('input', e => { stopPlay(); setYear(Number(e.target.value)); });
   $('#playBtn').addEventListener('click', togglePlay);
-  $('#prevPeriodBtn').addEventListener('click', () => stepPeriod(-1));
-  $('#nextPeriodBtn').addEventListener('click', () => stepPeriod(1));
-  $('#timebar').addEventListener('click', e => {
-    const band = e.target.closest('[data-band]');
-    if (band) { stopPlay(); setPeriod(band.dataset.band); return; }
-    const dot = e.target.closest('[data-ev]');
-    if (dot) {
-      const ev = getEvent(dot.dataset.ev); stopPlay();
-      if (ev.period !== S.periodId) setPeriod(ev.period);
-      setYear(ev.year);
-      if (ev.places?.length) M.fitPlaces(ev.places);
-      toast(`${L(ev.date)} · ${L(ev.title)}`);
-    }
+  $('#tlSteps').addEventListener('click', e => {
+    const b = e.target.closest('[data-band]');
+    if (b) { stopPlay(); setPeriod(b.dataset.band); }
   });
   $('#exitHistoryBtn').addEventListener('click', () => leaveHistory(true));
 
@@ -401,30 +443,6 @@ function wire() {
   window.addEventListener('hashchange', routeFromHash);
   window.addEventListener('offline', () => toast(t('ui.offline')));
   window.addEventListener('resize', () => M.invalidate());
-}
-
-const TL_MIN = 1500, TL_MAX = 2026;
-const pct = y => ((Math.max(TL_MIN, Math.min(TL_MAX, y)) - TL_MIN) / (TL_MAX - TL_MIN)) * 100;
-/** Línea de tiempo: bandas por época (clicables) y puntos de acontecimientos. */
-function buildTicks() {
-  $('#tlBands').innerHTML = db.periods.map(p => {
-    const a = pct(p.id === 'prehispanica' ? TL_MIN : p.from), b = pct(p.to + 1);
-    return `<button type="button" class="tl-band" data-band="${p.id}" style="left:${a}%;width:${b - a}%" title="${V.esc(L(p.name))} · ${V.esc(L(p.label))}"><span>${V.esc(L(p.short))}</span></button>`;
-  }).join('');
-  $('#tlEvents').innerHTML = db.events.map(ev =>
-    `<button type="button" class="tl-dot" data-ev="${ev.id}" style="left:${pct(ev.year)}%" title="${V.esc(L(ev.date))} · ${V.esc(L(ev.title))}" aria-label="${V.esc(L(ev.date))}: ${V.esc(L(ev.title))}"></button>`).join('');
-  updateBands();
-}
-function updateBands() {
-  document.querySelectorAll('.tl-band').forEach(b => b.classList.toggle('on', b.dataset.band === S.periodId));
-  const pe = period(S.periodId);
-  if (pe) $('#periodRange').textContent = L(pe.label);
-  $('#yearSlider').style.setProperty('--p', pct(S.year) + '%');
-}
-function stepPeriod(d) {
-  const i = db.periods.findIndex(p => p.id === S.periodId);
-  const next = db.periods[Math.max(0, Math.min(db.periods.length - 1, i + d))];
-  if (next) { stopPlay(); setPeriod(next.id); }
 }
 
 /* ---------------- Galería de vistas ---------------- */
@@ -553,7 +571,7 @@ async function boot() {
   if (initial !== 'es') setLang(initial); else applyDom();
 
   M.initMap($('#map'), { onPlaceSelect: id => openPlace(id, { fromRoute: !!(S.route && S.route.stops.includes(id)) }) });
-  buildTicks();
+  buildSteps();
   setupHero();
   onLangChange(setupHero);
   wire();

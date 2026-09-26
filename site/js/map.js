@@ -40,6 +40,7 @@ export function initMap(el, { onPlaceSelect }) {
 
   for (const p of db.places) addMarker(p);
   map.on('click', () => el.dispatchEvent(new CustomEvent('mapblankclick')));
+  map.on('zoomend moveend', scheduleDeclutter);
   return map;
 }
 
@@ -52,10 +53,12 @@ function drawWalls() {
       .bindTooltip(() => `<strong>${t('walls.label')}</strong><br>${Lx(w.note)}`, { className: 'mk-tip', sticky: true })
   ]).addTo(map);
 }
-export function showWalls(on) {
+/** Murallas: true = completas, 'building' = en construcción (línea discontinua), false = ocultas. */
+export function showWalls(mode) {
   if (!walls) return;
-  if (on && !map.hasLayer(walls)) walls.addTo(map);
-  if (!on && map.hasLayer(walls)) map.removeLayer(walls);
+  if (mode && !map.hasLayer(walls)) walls.addTo(map);
+  if (!mode && map.hasLayer(walls)) map.removeLayer(walls);
+  if (mode) walls.getLayers()[1].setStyle({ dashArray: mode === 'building' ? '6 9' : null, opacity: mode === 'building' ? 0.8 : 0.95 });
 }
 
 export function setBaseLayer(name) {
@@ -85,11 +88,11 @@ function addMarker(p) {
 }
 
 /** Redibuja todos los marcadores según el estado de la vista. */
-export function renderMarkers({ visibleCats, year = null, route = null, activeId = null } = {}) {
+export function renderMarkers({ visibleCats, year = null, route = null, activeId = null, focus = null, pulse = null } = {}) {
   const routeIdx = route ? new Map(route.stops.map((id, i) => [id, i + 1])) : null;
   for (const [id, rec] of markers) {
     const { m, p } = rec;
-    let show = true, cls = '', num = null;
+    let show = true, cls = '', num = null, label = false;
     if (routeIdx) {
       show = routeIdx.has(id);
       num = routeIdx.get(id);
@@ -98,26 +101,63 @@ export function renderMarkers({ visibleCats, year = null, route = null, activeId
       if (year != null) {
         const ex = existsIn(p, year);
         if (ex === 'no') show = false;
-        if (ex === 'ruin') cls = 'ruin dim';
+        if (ex === 'ruin') cls = 'ruin';
       }
+      if (focus && show) {
+        const maxLabels = window.matchMedia('(max-width: 820px)').matches ? 3 : 6;
+        if (focus.has(id)) { cls += ' focus'; label = focus.size <= maxLabels; }
+        else cls += ' dim small';
+      }
+      if (pulse && pulse.has(id) && show) cls += ' pulse';
     }
     if (id === activeId) cls += ' active';
-    const key = `${show}|${cls}|${num}|${store.has('visited', id)}`;
+    const key = `${show}|${cls}|${num}|${label}|${store.has('visited', id)}`;
     if (rec.key !== key) {
       rec.key = key;
       if (show) {
         m.setIcon(makeIcon(p, { num, cls }));
         if (!map.hasLayer(m)) m.addTo(map);
-        m.setZIndexOffset(id === activeId ? 1000 : 0);
+        m.setZIndexOffset(id === activeId || label ? 1000 : cls.includes('dim') ? -500 : 0);
+        setLabel(rec, label);
       } else if (map.hasLayer(m)) {
         map.removeLayer(m);
       }
     }
   }
+  scheduleDeclutter();
+}
+
+/** Oculta etiquetas que se montan unas sobre otras (el marcador sigue visible). */
+function declutter() {
+  const els = [...document.querySelectorAll('.leaflet-tooltip.mk-label')];
+  const placed = [];
+  for (const el of els) {
+    el.style.visibility = '';
+    const r = el.getBoundingClientRect();
+    const hit = placed.some(q => !(r.right < q.left || r.left > q.right || r.bottom < q.top || r.top > q.bottom));
+    if (hit) el.style.visibility = 'hidden'; else placed.push(r);
+  }
+}
+let declutterTimer;
+const scheduleDeclutter = () => { clearTimeout(declutterTimer); declutterTimer = setTimeout(declutter, 60); };
+
+/** Etiqueta con el nombre siempre visible (para los protagonistas de una época). */
+function setLabel(rec, on) {
+  const { m, p } = rec;
+  if (rec.labeled === on) return;
+  rec.labeled = on;
+  const name = Lx(p.name).split(' · ')[0];
+  m.unbindTooltip();
+  if (on) {
+    m.bindTooltip(name, { permanent: true, direction: 'right', offset: [16, -18], className: 'mk-label' });
+    if (map.hasLayer(m)) m.openTooltip();
+  } else {
+    m.bindTooltip(name, { className: 'mk-tip', direction: 'top' });
+  }
 }
 
 export function refreshTooltips() {
-  for (const { m, p } of markers.values()) { m.setTooltipContent(Lx(p.name)); m.options.title = Lx(p.name); }
+  for (const { m, p } of markers.values()) { m.setTooltipContent(Lx(p.name).split(' · ')[0]); m.options.title = Lx(p.name); }
 }
 
 export function flyToPlace(id, { zoom } = {}) {
@@ -136,16 +176,16 @@ function offsetForPanel(latlng, zoom) {
   return map.unproject(pt, zoom);
 }
 
-export function fitPlaces(ids) {
+export function fitPlaces(ids, { maxZoom = 17 } = {}) {
   const pts = ids.map(id => place(id).coords);
   if (!pts.length) return;
   const mobile = window.matchMedia('(max-width: 820px)').matches;
   const tb = document.getElementById('timebar');
-  const top = tb && !tb.hidden ? tb.getBoundingClientRect().bottom - 50 : 40;  // no tapar con la línea de tiempo
+  const top = tb && !tb.hidden ? tb.getBoundingClientRect().bottom - 40 : 40;  // no tapar con la línea de tiempo
   map.flyToBounds(window.L.latLngBounds(pts), {
-    paddingTopLeft: mobile ? [30, Math.max(30, top)] : [470, Math.max(40, top)],
+    paddingTopLeft: mobile ? [40, Math.max(30, top + 20)] : [480, Math.max(40, top + 30)],
     paddingBottomRight: mobile ? [30, window.innerHeight * 0.48] : [70, 140],
-    duration: 0.7, maxZoom: 17
+    duration: 0.8, maxZoom
   });
 }
 

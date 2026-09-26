@@ -1,5 +1,5 @@
 // Vistas del panel: devuelven HTML a partir de los datos. Sin lógica de estado.
-import { db, place, event, period, source, routeStats, existsIn, pexels, photoFor, photosFor } from './data.js';
+import { db, place, event, period, source, routeStats, existsIn, pexels, photoFor, photosFor, eraFocus } from './data.js';
 import { t, L, getLang, formatDate } from './i18n.js';
 import { store } from './store.js';
 import { catColor } from './map.js';
@@ -87,8 +87,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
   const sources = (p.sources || []).map(source).filter(Boolean).map(s => `
     <li><span class="src-type">${esc(t(`about.type.${s.type}`))}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}</li>`).join('');
   const visit = p.visit ? `
-    <h3 class="st">${esc(t('place.visit'))}</h3>
-    <div class="visit"><p style="margin:0">${esc(L(p.visit))}</p>
+    <div class="visit"><h4>${ico('route')}${esc(t('place.visit'))}</h4><p style="margin:0">${esc(L(p.visit))}</p>
       <small>${esc(t('place.visitWarn', { date: formatDate(p.visit.checked) }))} · <a href="${esc(source(p.visit.source)?.url)}" target="_blank" rel="noopener">${esc(source(p.visit.source)?.org || '')}</a></small></div>` : '';
   const note = p.note ? `<div class="note"><strong>${esc(t('place.note'))}</strong>${esc(L(p.note))}</div>` : '';
   const commons = `https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(L(p.name).split('·')[0].trim() + ' Cartagena')}&title=Special:MediaSearch&type=image`;
@@ -118,37 +117,48 @@ export function placeView(p, { route, stopIndex, speaking }) {
       ${ph ? `<button class="gal-open" type="button" data-viewer="0">${ico('layers')}${esc(phs.length > 1 ? t('gallery.views', { n: phs.length }) : t('gallery.open'))}</button>` : ''}
       ${ph ? `<figcaption class="cover-credit" data-gal-cap>${credit(phs[0])}</figcaption>` : ''}
     </figure>
-    <h2 class="pt">${esc(L(p.name))}</h2>
-    <p class="dates">${esc(L(p.dates))}</p>
-    <div class="meta-row">${certPill(p.certainty)}<span class="pill">${esc(t(`place.acc.${acc}`))}</span></div>
+    <header class="place-head">
+      <h2 class="pt">${esc(L(p.name))}</h2>
+      <p class="dates">${esc(L(p.dates))}</p>
+    </header>
 
     <div class="guide">
       <div class="guide-avatar" aria-hidden="true">C</div>
       <div class="guide-bubble">
         <div class="guide-name">${esc(t('place.guide'))} <span>· ${esc(t('place.guideRole'))}</span></div>
         <p>${esc(L(p.guide))}</p>
-        <button class="btn small" type="button" data-listen aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('place.listen'))}</span></button>
+        <button class="btn small listen-btn" type="button" data-listen aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('place.listen'))}</span></button>
       </div>
     </div>
-    ${note}
 
-    <h3 class="st">${esc(t('place.more'))}</h3>
-    <div class="story">${hist}</div>
-
-    <div class="kv">
-      <div><h4>${esc(t('place.significance'))}</h4><p>${esc(L(p.significance))}</p></div>
-      <div><h4>${esc(t('place.status'))}</h4><p>${esc(L(p.status))}</p></div>
-      ${people}
+    <div class="quick">
+      <div><span class="q-label">${esc(t('place.significance'))}</span><p>${esc(L(p.significance))}</p></div>
+      <div><span class="q-label">${esc(t('place.status'))}</span><p>${esc(L(p.status))}</p></div>
     </div>
-    ${periods ? `<h3 class="st">${esc(t('place.periods'))}</h3><div class="chips">${periods}</div>` : ''}
     ${visit}
-    ${events ? `<h3 class="st">${esc(t('place.events'))}</h3><ul class="ev-list">${events}</ul>` : ''}
 
-    <h3 class="st">${esc(t('place.location'))}</h3>
-    <p class="loc-line">${esc(t(`place.acc.${acc}`))} — ${esc(p.loc?.method || '')}</p>
-
-    <h3 class="st">${esc(t('place.sources'))}</h3>
-    <ol class="src-list">${sources}</ol>
+    <div class="accs">
+      <details class="acc">
+        <summary>${esc(t('place.more'))}</summary>
+        <div class="acc-body story-text">${hist}${note}</div>
+      </details>
+      ${events ? `<details class="acc">
+        <summary>${esc(t('place.events'))}</summary>
+        <div class="acc-body"><ul class="ev-list">${events}</ul></div>
+      </details>` : ''}
+      ${(people || periods) ? `<details class="acc">
+        <summary>${esc(t('place.facts'))}</summary>
+        <div class="acc-body kv">${people}${periods ? `<div><h4>${esc(t('place.periods'))}</h4><div class="chips">${periods}</div></div>` : ''}</div>
+      </details>` : ''}
+      <details class="acc">
+        <summary>${esc(t('place.rigor'))}</summary>
+        <div class="acc-body">
+          <div class="meta-row">${certPill(p.certainty)}<span class="pill">${esc(t(`place.acc.${acc}`))}</span></div>
+          <p class="loc-line">${esc(p.loc?.method || '')}</p>
+          <ol class="src-list">${sources}</ol>
+        </div>
+      </details>
+    </div>
 
     <div class="actions">
       <button class="btn small" type="button" data-zoom>${ico('map')}${esc(t('place.zoom'))}</button>
@@ -160,32 +170,58 @@ export function placeView(p, { route, stopIndex, speaking }) {
 }
 
 /* ---------- Historia ---------- */
-export function historyView({ year, periodId }) {
+export function historyView({ periodId, eventId, speaking }) {
   const pe = period(periodId);
-  const nav = db.periods.map(x => `<button type="button" class="chip" data-period="${esc(x.id)}" aria-pressed="${x.id === periodId}">${esc(L(x.label))}</button>`).join('');
-  const evs = db.events.filter(e => e.period === periodId).sort((a, b) => a.year - b.year).map(e => {
-    const places = (e.places || []).map(place).filter(Boolean)
-      .map(p => `<button type="button" class="chip" data-place="${esc(p.id)}">${esc(L(p.name))}</button>`).join(' ');
-    return `<li><span class="ev-date">${esc(L(e.date))}</span><div class="ev-title">${esc(L(e.title))}</div><p>${esc(L(e.text))}</p>${places ? `<div class="chips" style="margin-top:6px">${places}</div>` : ''}</li>`;
-  }).join('');
-  const inPeriod = db.places.filter(p => (p.periods || []).includes(periodId) && existsIn(p, Math.min(year, pe.to)) !== 'no');
+  const i = db.periods.indexOf(pe), n = db.periods.length;
+  const ph = pe.photo ? { ...pe.photo, specific: true } : null;
+  const evs = db.events.filter(e => e.period === periodId).sort((a, b) => a.year - b.year);
+  const focus = eraFocus(periodId).map(place);
+  const evList = evs.map(e => `
+    <li><button type="button" class="moment ${e.id === eventId ? 'on' : ''}" data-event="${esc(e.id)}">
+      <span class="m-year">${esc(String(e.year))}</span>
+      <span class="m-body"><strong>${esc(L(e.title))}</strong><small>${esc(L(e.text))}</small></span>
+    </button></li>`).join('');
   const srcs = (pe.sources || []).map(source).filter(Boolean)
-    .map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ');
-  return `<div class="anim">
-    <h2 class="pt">${esc(t('history.title'))}</h2>
-    <p class="lead">${esc(t('history.intro'))}</p>
-    <div class="period-nav" role="group">${nav}</div>
-    <div class="period-card">
-      <div class="range">${esc(L(pe.label))}</div>
-      <h3>${esc(L(pe.name))}</h3>
-      <div class="meta-row">${certPill(pe.certainty)}</div>
-      <p>${esc(L(pe.context))}</p>
-      <p class="fine" style="margin-top:10px">${esc(t('place.sources'))}: ${srcs}</p>
-    </div>
-    ${evs ? `<h3 class="st">${esc(t('history.events'))}</h3><ul class="ev-list">${evs}</ul>` : ''}
-    <h3 class="st">${esc(t('history.inPeriod'))}</h3>
-    ${inPeriod.length ? `<ul class="plist">${inPeriod.map(p => placeItem(p, existsIn(p, year) === 'ruin' ? esc(t('history.ruins')) : esc(L(p.dates)))).join('')}</ul>` : `<p class="muted">${esc(t('history.none'))}</p>`}
-  </div>`;
+    .map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}</li>`).join('');
+  return `<article class="story anim">
+    <figure class="era-cover ${ph ? '' : 'no-photo'}">
+      ${ph ? img(ph, 900, 'era-img', '(max-width: 820px) 100vw, 420px') : `<svg class="era-ico" aria-hidden="true"><use href="#i-compass"/></svg>`}
+      <span class="era-shade"></span>
+      <span class="era-kicker">${esc(t('story.chapter', { i: i + 1, n }))}</span>
+      <div class="era-head">
+        <span class="era-years">${esc(L(pe.label))}</span>
+        <h2>${esc(L(pe.name))}</h2>
+      </div>
+      ${ph ? `<figcaption>${esc(L(ph.alt))} · ${esc(t('photo.by'))}: ${esc(ph.author)} / Pexels</figcaption>` : ''}
+    </figure>
+
+    <p class="era-summary">${esc(L(pe.summary))}</p>
+    <button class="btn listen-btn" type="button" data-listen-era aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('story.listen'))}</span></button>
+
+    ${evList ? `<section class="block">
+      <h3 class="st">${esc(t('story.whatHappened'))}</h3>
+      <p class="hint">${esc(t('story.tapEvent'))}</p>
+      <ol class="moments">${evList}</ol>
+    </section>` : ''}
+
+    ${focus.length ? `<section class="block">
+      <h3 class="st">${esc(t('story.places'))}</h3>
+      <div class="carousel">${focus.map(p => `<div>${card(p)}</div>`).join('')}</div>
+    </section>` : `<div class="note soft">${esc(t('story.noCity'))}</div>`}
+
+    <details class="acc">
+      <summary>${esc(t('story.readMore'))}</summary>
+      <div class="acc-body"><p>${esc(L(pe.context))}</p>
+        <p class="fine">${certPill(pe.certainty)}</p>
+        <ol class="src-list">${srcs}</ol></div>
+    </details>
+
+    <nav class="story-nav">
+      <button class="btn" type="button" data-era-step="-1" ${i === 0 ? 'disabled' : ''}>${ico('back')}<span>${esc(t('story.prev'))}</span></button>
+      <span class="story-count">${i + 1} / ${n}</span>
+      <button class="btn primary" type="button" data-era-step="1" ${i === n - 1 ? 'disabled' : ''}><span>${esc(t('story.next'))}</span>${ico('back', 'flip')}</button>
+    </nav>
+  </article>`;
 }
 
 /* ---------- Rutas ---------- */

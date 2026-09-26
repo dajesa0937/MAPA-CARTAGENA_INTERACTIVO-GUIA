@@ -115,25 +115,12 @@
     </aside>
 
     <section class="timebar" id="timebar" hidden aria-label="Línea de tiempo">
-      <div class="timebar-row">
-        <button class="icon-btn small tb-play" id="playBtn" type="button" data-i18n-aria="history.play" aria-label="Reproducir"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
-        <div class="timebar-year">
-          <span class="yr" id="yearLabel">1741</span>
-          <span class="tb-meta"><span class="per" id="periodLabel"></span><span class="rng" id="periodRange"></span></span>
-        </div>
-        <div class="tb-nav">
-          <button class="icon-btn small" id="prevPeriodBtn" type="button" data-i18n-aria="history.prev" aria-label="Época anterior"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
-          <button class="icon-btn small flip" id="nextPeriodBtn" type="button" data-i18n-aria="history.next" aria-label="Época siguiente"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
-          <button class="icon-btn small" id="exitHistoryBtn" type="button" data-i18n-aria="history.exit" aria-label="Salir"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
-        </div>
-      </div>
-      <div class="tl">
-        <div class="tl-events" id="tlEvents"></div>
-        <div class="tl-bands" id="tlBands"></div>
-        <input type="range" class="tl-range" id="yearSlider" min="1500" max="2026" step="1" value="1741" aria-describedby="yearLabel" data-i18n-aria="history.year">
-        <div class="tl-ends"><span>1500</span><span data-i18n="history.today">Hoy</span></div>
-      </div>
+      <button class="tb-play" id="playBtn" type="button" data-i18n-aria="story.play" aria-label="Recorrer la historia"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+      <ol class="steps" id="tlSteps"></ol>
+      <button class="tb-exit" id="exitHistoryBtn" type="button" data-i18n-aria="story.exit" aria-label="Salir"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
     </section>
+    <div class="era-stamp" id="eraStamp" hidden aria-hidden="true"><span id="yearLabel"></span><small id="periodLabel"></small></div>
+    <div class="map-note" id="mapNote" hidden></div>
 
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
   </main>

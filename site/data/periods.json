@@ -24,6 +24,10 @@
   "short": {
    "es": "Prehispánica",
    "en": "Pre-Hispanic"
+  },
+  "summary": {
+   "es": "Antes de la llegada de los españoles, esta costa ya estaba habitada. Cerca de aquí se han encontrado algunas de las cerámicas más antiguas de América.",
+   "en": "Long before the Spaniards arrived, this coast was already inhabited. Some of the oldest pottery in the Americas has been found near here."
   }
  },
  {
@@ -52,6 +56,22 @@
   "short": {
    "es": "Fundación",
    "en": "Founding"
+  },
+  "summary": {
+   "es": "En 1533 Pedro de Heredia fundó la ciudad. Pronto se convirtió en un puerto rico… y en un blanco para los piratas: Francis Drake la tomó en 1586.",
+   "en": "In 1533 Pedro de Heredia founded the city. It soon became a rich port… and a target for pirates: Francis Drake captured it in 1586."
+  },
+  "photo": {
+   "pexels": 20375713,
+   "author": "Natalia Falon",
+   "alt": {
+    "es": "Hoy: la torre de la catedral en el centro histórico",
+    "en": "Today: the cathedral tower in the historic centre"
+   },
+   "angle": {
+    "es": "Hoy: la torre de la catedral en el centro histórico",
+    "en": "Today: the cathedral tower in the historic centre"
+   }
   }
  },
  {
@@ -84,6 +104,22 @@
   "short": {
    "es": "Murallas",
    "en": "Walls"
+  },
+  "summary": {
+   "es": "Tras el ataque de Drake, la ciudad se rodeó de murallas y baluartes. En 1657 nació el primer fuerte de lo que hoy es el Castillo de San Felipe.",
+   "en": "After Drake's attack, the city was ringed with walls and bastions. In 1657 the first fort of today's Castillo de San Felipe was built."
+  },
+  "photo": {
+   "pexels": 36874558,
+   "author": "Woody Willis",
+   "alt": {
+    "es": "Hoy: las murallas de Cartagena",
+    "en": "Today: the walls of Cartagena"
+   },
+   "angle": {
+    "es": "Hoy: las murallas de Cartagena",
+    "en": "Today: the walls of Cartagena"
+   }
   }
  },
  {
@@ -112,6 +148,22 @@
   "short": {
    "es": "Asedios",
    "en": "Sieges"
+  },
+  "summary": {
+   "es": "Franceses (1697) e ingleses (1741) atacaron Cartagena. En 1741 la ciudad resistió el gran sitio de la flota del almirante Vernon.",
+   "en": "The French (1697) and the British (1741) attacked Cartagena. In 1741 the city held out against the great siege by Admiral Vernon's fleet."
+  },
+  "photo": {
+   "pexels": 34044015,
+   "author": "Roodzn",
+   "alt": {
+    "es": "Hoy: el Castillo de San Felipe, que resistió en 1741",
+    "en": "Today: Castillo de San Felipe, which held out in 1741"
+   },
+   "angle": {
+    "es": "Hoy: el Castillo de San Felipe, que resistió en 1741",
+    "en": "Today: Castillo de San Felipe, which held out in 1741"
+   }
   }
  },
  {
@@ -142,6 +194,22 @@
   "short": {
    "es": "Gran defensa",
    "en": "Defences"
+  },
+  "summary": {
+   "es": "Después de 1741 se construyó gran parte de lo que ves hoy: nuevos fuertes en la bahía, la ampliación de San Felipe y Las Bóvedas.",
+   "en": "After 1741 much of what you see today was built: new forts in the bay, the enlargement of San Felipe and Las Bóvedas."
+  },
+  "photo": {
+   "pexels": 24514434,
+   "author": "Enrique",
+   "alt": {
+    "es": "Hoy: Las Bóvedas, terminadas en 1798",
+    "en": "Today: Las Bóvedas, completed in 1798"
+   },
+   "angle": {
+    "es": "Hoy: Las Bóvedas, terminadas en 1798",
+    "en": "Today: Las Bóvedas, completed in 1798"
+   }
   }
  },
  {
@@ -170,6 +238,22 @@
   "short": {
    "es": "Independencia",
    "en": "Independence"
+  },
+  "summary": {
+   "es": "El 11 de noviembre de 1811 Cartagena declaró su independencia absoluta de España. Lo pagó caro: el sitio de 1815 y los fusilamientos de 1816.",
+   "en": "On 11 November 1811 Cartagena declared absolute independence from Spain. It paid dearly: the 1815 siege and the executions of 1816."
+  },
+  "photo": {
+   "pexels": 20483126,
+   "author": "Ariel Foletto",
+   "alt": {
+    "es": "Hoy: Getsemaní, el barrio que impulsó la independencia",
+    "en": "Today: Getsemaní, the quarter that pushed for independence"
+   },
+   "angle": {
+    "es": "Hoy: Getsemaní, el barrio que impulsó la independencia",
+    "en": "Today: Getsemaní, the quarter that pushed for independence"
+   }
   }
  },
  {
@@ -197,6 +281,22 @@
   "short": {
    "es": "Siglo XIX",
    "en": "19th c."
+  },
+  "summary": {
+   "es": "Tras las guerras, la ciudad quedó empobrecida. A finales del siglo empezó a recuperarse; de esos años es la torre de la Puerta del Reloj (1888).",
+   "en": "The wars left the city impoverished. It began to recover at the end of the century; the Clock Tower (1888) dates from those years."
+  },
+  "photo": {
+   "pexels": 36856198,
+   "author": "Woody Willis",
+   "alt": {
+    "es": "Hoy: la Torre del Reloj",
+    "en": "Today: the Clock Tower"
+   },
+   "angle": {
+    "es": "Hoy: la Torre del Reloj",
+    "en": "Today: the Clock Tower"
+   }
   }
  },
  {
@@ -227,6 +327,22 @@
   "short": {
    "es": "Siglo XX",
    "en": "20th c."
+  },
+  "summary": {
+   "es": "La ciudad creció fuera de las murallas. Se abrieron nuevos pasos en ellas y nacieron lugares como el Teatro Municipal (1911).",
+   "en": "The city grew beyond its walls. New openings were cut through them, and places like the Municipal Theatre (1911) were born."
+  },
+  "photo": {
+   "pexels": 11815910,
+   "author": "Kelly",
+   "alt": {
+    "es": "Hoy: el centro histórico y la ciudad moderna",
+    "en": "Today: the historic centre and the modern city"
+   },
+   "angle": {
+    "es": "Hoy: el centro histórico y la ciudad moderna",
+    "en": "Today: the historic centre and the modern city"
+   }
   }
  },
  {
@@ -253,6 +369,22 @@
   "short": {
    "es": "Patrimonio",
    "en": "Heritage"
+  },
+  "summary": {
+   "es": "En 1984 la UNESCO declaró Patrimonio Mundial el puerto, las fortalezas y el centro histórico. Hoy puedes recorrerlos, como en esta guía.",
+   "en": "In 1984 UNESCO declared the port, fortresses and historic centre a World Heritage Site. Today you can explore them, just like in this guide."
+  },
+  "photo": {
+   "pexels": 11815901,
+   "author": "Kelly",
+   "alt": {
+    "es": "Hoy: el centro histórico al atardecer",
+    "en": "Today: the historic centre at sunset"
+   },
+   "angle": {
+    "es": "Hoy: el centro histórico al atardecer",
+    "en": "Today: the historic centre at sunset"
+   }
   }
  }
 ]

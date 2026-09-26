@@ -68,3 +68,15 @@ export function photoFor(p) {
   const c = db.media.cat?.[p.category];
   return c ? { ...c, specific: false } : null;
 }
+
+/** Lugares protagonistas de una época: los ligados a sus acontecimientos y los construidos en ella. */
+export function eraFocus(periodId) {
+  const pe = period(periodId);
+  if (!pe) return [];
+  const ids = new Set();
+  db.events.filter(e => e.period === periodId).forEach(e => (e.places || []).forEach(id => ids.add(id)));
+  db.places.forEach(p => { const f = p.built?.from; if (f != null && f >= pe.from && f <= pe.to) ids.add(p.id); });
+  return [...ids].filter(id => place(id));
+}
+/** Año que representa el final de una época (para ver cómo quedó la ciudad). */
+export const eraYear = pe => pe.id === 'contemporanea' ? 2026 : Math.max(1500, pe.to);
