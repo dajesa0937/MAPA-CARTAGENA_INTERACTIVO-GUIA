@@ -1,0 +1,70 @@
+// Capa de servicios de datos. Hoy lee archivos JSON estáticos; mañana puede leer una API
+// sin que la interfaz cambie (misma forma de objetos).
+const FILES = ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media'];
+
+export const db = {
+  places: [], events: [], periods: [], routes: [], sources: [], badges: [], media: {},
+  byId: { places: new Map(), events: new Map(), periods: new Map(), routes: new Map(), sources: new Map() }
+};
+
+export async function loadData() {
+  // Versión de un solo archivo: los datos vienen incrustados en la página.
+  const B = window.__CTG_BUNDLE__;
+  const results = B ? FILES.map(f => B.data[f]) : await Promise.all(FILES.map(f => fetch(`data/${f}.json`).then(r => {
+    if (!r.ok) throw new Error(`data/${f}.json → ${r.status}`);
+    return r.json();
+  })));
+  FILES.forEach((f, i) => { db[f] = results[i]; });
+  for (const k of Object.keys(db.byId)) db.byId[k] = new Map(db[k].map(x => [x.id, x]));
+  return db;
+}
+
+export const place = id => db.byId.places.get(id);
+export const event = id => db.byId.events.get(id);
+export const period = id => db.byId.periods.get(id);
+export const route = id => db.byId.routes.get(id);
+export const source = id => db.byId.sources.get(id);
+
+export function periodForYear(y) {
+  return db.periods.find(p => y >= p.from && y <= p.to) || db.periods[db.periods.length - 1];
+}
+
+/** ¿Existía el lugar en ese año? 'yes' | 'ruin' | 'no' */
+export function existsIn(p, year) {
+  const from = p.built?.from ?? -Infinity;
+  const to = p.built?.to ?? Infinity;
+  if (year < from) return 'no';
+  if (year > to) return 'ruin';
+  return 'yes';
+}
+
+/** Distancia haversine en km. */
+export function distKm(a, b) {
+  const R = 6371, rad = d => d * Math.PI / 180;
+  const dLat = rad(b[0] - a[0]), dLon = rad(b[1] - a[1]);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+/** Estimación transparente: línea recta × 1,25 y 4 km/h + minutos por parada. */
+export function routeStats(r) {
+  const pts = r.stops.map(id => place(id).coords);
+  let km = 0;
+  for (let i = 1; i < pts.length; i++) km += distKm(pts[i - 1], pts[i]);
+  km *= 1.25;
+  const walkMin = km / 4 * 60;
+  return { km, minutes: Math.round((walkMin + r.stops.length * (r.stopMinutes || 5)) / 5) * 5 };
+}
+
+/** Fotografía (Pexels) de un lugar; si no hay foto propia, imagen ilustrativa de su categoría. */
+export const pexels = (id, w = 800) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+export function photosFor(p) {
+  if (p.photos?.length) return p.photos.map(x => ({ ...x, specific: true }));
+  const c = photoFor(p);
+  return c ? [c] : [];
+}
+export function photoFor(p) {
+  if (p.photos?.length) return { ...p.photos[0], specific: true };
+  const c = db.media.cat?.[p.category];
+  return c ? { ...c, specific: false } : null;
+}

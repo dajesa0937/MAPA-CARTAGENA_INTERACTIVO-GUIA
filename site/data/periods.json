@@ -1,0 +1,258 @@
+[
+ {
+  "id": "prehispanica",
+  "from": -4000,
+  "to": 1532,
+  "label": {
+   "es": "Antes de 1533",
+   "en": "Before 1533"
+  },
+  "name": {
+   "es": "Cartagena prehispánica",
+   "en": "Pre-Hispanic Cartagena"
+  },
+  "context": {
+   "es": "Mucho antes de la ciudad española, las tierras bajas del Caribe colombiano estuvieron habitadas. La arqueología ha documentado en esta región algunas de las cerámicas más antiguas conocidas en América, en sitios como Puerto Hormiga y Monsú, y un sitio precerámico en Canapote, hoy un barrio de Cartagena. Las fechas exactas de estas ocupaciones se discuten entre especialistas, por eso aquí no damos una cifra única. Cuando llegaron los españoles, la bahía estaba habitada por comunidades indígenas; las fuentes de la conquista llaman Calamarí al lugar donde se fundó la ciudad. Al sur, en la región del Sinú, los pueblos zenúes enterraban a sus muertos con ricos ajuares de oro.",
+   "en": "Long before the Spanish city, Colombia's Caribbean lowlands were home to people. Archaeologists have found here some of the oldest pottery known in the Americas, at sites such as Puerto Hormiga and Monsú, and a pre-ceramic site at Canapote, today a Cartagena neighbourhood. Specialists still debate the exact dates of these occupations, so we do not give a single figure. When the Spaniards arrived, the bay was home to Indigenous communities; conquest-era sources call the place where the city was founded Calamarí. To the south, in the Sinú region, the Zenú buried their dead with rich gold offerings."
+  },
+  "certainty": "consenso",
+  "sources": [
+   "archila-1994",
+   "banrep-heredia",
+   "wiki-cartagena"
+  ],
+  "short": {
+   "es": "Prehispánica",
+   "en": "Pre-Hispanic"
+  }
+ },
+ {
+  "id": "fundacion",
+  "from": 1533,
+  "to": 1585,
+  "label": {
+   "es": "1533 – 1585",
+   "en": "1533 – 1585"
+  },
+  "name": {
+   "es": "Fundación y primeros años",
+   "en": "Founding and early years"
+  },
+  "context": {
+   "es": "Pedro de Heredia desembarcó en la bahía el 14 de enero de 1533 y fundó la ciudad el 1 de junio de ese año. Cartagena creció pronto como puerto clave del imperio español y, por eso mismo, se volvió presa codiciada: sufrió asaltos desde la década de 1540. Las primeras defensas fueron modestas, como el fuerte de El Boquerón (1566) y el de San Matías (1567). La ciudad seguía siendo vulnerable, y en febrero de 1586 Francis Drake la tomó y la ocupó durante dos meses.",
+   "en": "Pedro de Heredia landed in the bay on 14 January 1533 and founded the city on 1 June that year. Cartagena quickly grew into a key port of the Spanish empire, and for that very reason it became a prized target, suffering raids from the 1540s onward. Its first defences were modest, such as the forts of El Boquerón (1566) and San Matías (1567). The city remained vulnerable, and in February 1586 Francis Drake captured it and held it for two months."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "banrep-heredia",
+   "banrep-fortificaciones",
+   "etcar-desaparecidas",
+   "wiki-1586"
+  ],
+  "short": {
+   "es": "Fundación",
+   "en": "Founding"
+  }
+ },
+ {
+  "id": "amurallada",
+  "from": 1586,
+  "to": 1696,
+  "label": {
+   "es": "1586 – 1696",
+   "en": "1586 – 1696"
+  },
+  "name": {
+   "es": "La ciudad se amuralla",
+   "en": "The city builds its walls"
+  },
+  "context": {
+   "es": "Tras el ataque de Drake, la Corona decidió cerrar la ciudad. El ingeniero Bautista Antonelli trazó en 1595 el proyecto de murallas que desarrollarían Cristóbal de Roda y, más tarde, el gobernador e ingeniero Francisco de Murga. La primera piedra del baluarte de Santo Domingo se colocó el 8 de septiembre de 1614. En estos mismos años se instalaron el Tribunal de la Inquisición (1610) y el convento de La Popa (1607), y Pedro Claver desarrolló su labor con las personas africanas esclavizadas que llegaban al puerto. Cuando en 1640 la entrada de Bocagrande quedó cegada por arena, la defensa se desplazó hacia Bocachica, donde se levantó el castillo de San Luis (1646). En 1657 se construyó en el cerro de San Lázaro el primer fuerte de lo que sería el castillo de San Felipe.",
+   "en": "After Drake's attack, the Crown decided to enclose the city. In 1595 the engineer Bautista Antonelli drew up the wall project that Cristóbal de Roda and, later, the governor and engineer Francisco de Murga would carry out. The foundation stone of the Santo Domingo bastion was laid on 8 September 1614. In the same period the Tribunal of the Inquisition (1610) and the La Popa convent (1607) were established, and Pedro Claver ministered to the enslaved Africans who arrived at the port. When the Bocagrande entrance silted up in 1640, the defence shifted to Bocachica, where the castle of San Luis was built (1646). In 1657 the first fort of what would become San Felipe castle was built on San Lázaro hill."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "etcar-santodomingo",
+   "etcar-santiago",
+   "etcar-escollera",
+   "etcar-desaparecidas",
+   "etcar-sanfelipe-areas",
+   "muhca",
+   "epa-popa",
+   "banrep-claver"
+  ],
+  "short": {
+   "es": "Murallas",
+   "en": "Walls"
+  }
+ },
+ {
+  "id": "asedios",
+  "from": 1697,
+  "to": 1741,
+  "label": {
+   "es": "1697 – 1741",
+   "en": "1697 – 1741"
+  },
+  "name": {
+   "es": "Ataques y asedios",
+   "en": "Raids and sieges"
+  },
+  "context": {
+   "es": "En la primavera de 1697 una expedición francesa dirigida por el barón de Pointis rompió las defensas y saqueó la ciudad. La reconstrucción, a cargo del ingeniero Juan de Herrera y Sotomayor en las primeras décadas del siglo XVIII, reforzó baluartes, puertas y fuertes. Esa preparación se puso a prueba en 1741: entre marzo y mayo, una gran flota británica al mando del almirante Edward Vernon sitió Cartagena. Tomó las defensas de Bocachica, pero fracasó en el asalto nocturno al fuerte de San Lázaro (San Felipe) el 20 de abril y se retiró. La defensa estuvo dirigida por el virrey Sebastián de Eslava y por Blas de Lezo. Las cifras de tropas y bajas de ese sitio varían mucho según la fuente.",
+   "en": "In spring 1697 a French expedition led by the Baron de Pointis broke through the defences and sacked the city. Reconstruction, led by the engineer Juan de Herrera y Sotomayor in the early decades of the 18th century, strengthened bastions, gates and forts. That preparation was put to the test in 1741: between March and May a huge British fleet under Admiral Edward Vernon besieged Cartagena. It took the Bocachica defences but failed in its night assault on Fort San Lázaro (San Felipe) on 20 April, and withdrew. The defence was directed by Viceroy Sebastián de Eslava and by Blas de Lezo. Troop and casualty figures for this siege vary widely between sources."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "wiki-1697",
+   "wiki-1741",
+   "etcar-santodomingo",
+   "etcar-sanfelipe-areas"
+  ],
+  "short": {
+   "es": "Asedios",
+   "en": "Sieges"
+  }
+ },
+ {
+  "id": "sistema",
+  "from": 1742,
+  "to": 1809,
+  "label": {
+   "es": "1742 – 1809",
+   "en": "1742 – 1809"
+  },
+  "name": {
+   "es": "El gran sistema defensivo",
+   "en": "The great defensive system"
+  },
+  "context": {
+   "es": "Tras 1741, la Corona rehízo la defensa de la bahía. Se levantaron San Sebastián del Pastelillo (1741–1744) y, en Bocachica, el fuerte de San Fernando (1753–1759) y la batería de San José, reconstruida entre 1759 y 1779. El ingeniero Antonio de Arévalo amplió el castillo de San Felipe (1762–1769), cerró la entrada de Bocagrande con una escollera submarina (1771–1778) y completó las murallas con el cuartel de Las Bóvedas (1792–1798), la última obra del recinto. Es la Cartagena fortificada que, en gran parte, se conserva hoy.",
+   "en": "After 1741 the Crown rebuilt the defence of the bay. San Sebastián del Pastelillo was raised (1741–1744) and, at Bocachica, Fort San Fernando (1753–1759) and the San José battery, rebuilt between 1759 and 1779. The engineer Antonio de Arévalo enlarged San Felipe castle (1762–1769), sealed the Bocagrande entrance with an underwater barrier (1771–1778) and completed the walls with the Las Bóvedas barracks (1792–1798), the last work of the enclosure. This is the fortified Cartagena that, to a large extent, survives today."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "etcar-pastelillo",
+   "etcar-sanfernando",
+   "etcar-sanjose",
+   "etcar-sanfelipe-areas",
+   "etcar-escollera",
+   "etcar-bovedas"
+  ],
+  "short": {
+   "es": "Gran defensa",
+   "en": "Defences"
+  }
+ },
+ {
+  "id": "independencia",
+  "from": 1810,
+  "to": 1821,
+  "label": {
+   "es": "1810 – 1821",
+   "en": "1810 – 1821"
+  },
+  "name": {
+   "es": "Independencia",
+   "en": "Independence"
+  },
+  "context": {
+   "es": "En 1810 se formó en Cartagena una junta de gobierno. El 11 de noviembre de 1811, con la presión de sectores populares reunidos en Getsemaní y liderados por los hermanos Gutiérrez de Piñeres, la ciudad proclamó su independencia absoluta de España. La respuesta llegó en 1815: el ejército de Pablo Morillo sitió la ciudad desde agosto hasta el 6 de diciembre, y el hambre y las epidemias causaron miles de muertes. En febrero de 1816 fueron fusilados los llamados Mártires de Cartagena. Las fuerzas patriotas recuperaron la ciudad en octubre de 1821.",
+   "en": "In 1810 a governing junta was formed in Cartagena. On 11 November 1811, under pressure from working-class groups gathered in Getsemaní and led by the Gutiérrez de Piñeres brothers, the city proclaimed absolute independence from Spain. The response came in 1815: Pablo Morillo's army besieged the city from August until 6 December, and hunger and disease caused thousands of deaths. In February 1816 the so-called Martyrs of Cartagena were executed by firing squad. Patriot forces recaptured the city in October 1821."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "canal-1811",
+   "banrep-martires",
+   "wiki-1815",
+   "wiki-cartagena"
+  ],
+  "short": {
+   "es": "Independencia",
+   "en": "Independence"
+  }
+ },
+ {
+  "id": "sigloXIX",
+  "from": 1822,
+  "to": 1899,
+  "label": {
+   "es": "1822 – 1899",
+   "en": "1822 – 1899"
+  },
+  "name": {
+   "es": "La república en el siglo XIX",
+   "en": "The republic in the 19th century"
+  },
+  "context": {
+   "es": "Las guerras dejaron a Cartagena empobrecida y con menos población; en 1849 una epidemia de cólera golpeó la ciudad y el Canal del Dique, su vía hacia el río Magdalena, se sedimentó. La recuperación llegó a finales del siglo, en la época del presidente cartagenero Rafael Núñez. De esos años es la torre actual de la Puerta del Reloj (1888). Las murallas, que ya no tenían función militar, empezaron a verse como un obstáculo para el crecimiento.",
+   "en": "The wars left Cartagena impoverished and depopulated; in 1849 a cholera epidemic struck, and the Canal del Dique, its link to the Magdalena River, silted up. Recovery came at the end of the century, in the time of President Rafael Núñez, a native of the city. The present tower of the Puerta del Reloj dates from these years (1888). The walls, no longer of military use, began to be seen as an obstacle to growth."
+  },
+  "certainty": "consenso",
+  "sources": [
+   "wiki-cartagena",
+   "universal-reloj",
+   "wiki-timeline"
+  ],
+  "short": {
+   "es": "Siglo XIX",
+   "en": "19th c."
+  }
+ },
+ {
+  "id": "sigloXX",
+  "from": 1900,
+  "to": 1983,
+  "label": {
+   "es": "1900 – 1983",
+   "en": "1900 – 1983"
+  },
+  "name": {
+   "es": "Siglo XX: la ciudad crece",
+   "en": "20th century: the city grows"
+  },
+  "context": {
+   "es": "Cartagena creció fuera del recinto. Se abrieron nuevos pasos en las murallas, como la Puerta Balmaceda junto a la Torre del Reloj (1905), y tramos del cordón defensivo de Getsemaní se perdieron; el puente Román, por ejemplo, dejó separado el baluarte de El Reducto. En 1911 se inauguraron el Teatro Municipal, hoy Teatro Adolfo Mejía, y el Parque del Centenario. A mediados de siglo empezó la valoración patrimonial: en 1972 se restauró el Pastelillo y en 1974 se levantó el monumento a la India Catalina.",
+   "en": "Cartagena grew beyond the walls. New openings were cut through them, such as the Puerta Balmaceda next to the Clock Tower (1905), and stretches of the Getsemaní defences were lost; the Román bridge, for example, cut the El Reducto bastion off from the rest. In 1911 the Municipal Theatre, today the Teatro Adolfo Mejía, and the Parque del Centenario opened. Heritage appreciation began mid-century: the Pastelillo fort was restored in 1972 and the India Catalina monument was raised in 1974."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "universal-reloj",
+   "etcar-reducto",
+   "senal-teatro",
+   "etcar-pastelillo",
+   "universal-catalina",
+   "wiki-timeline"
+  ],
+  "short": {
+   "es": "Siglo XX",
+   "en": "20th c."
+  }
+ },
+ {
+  "id": "contemporanea",
+  "from": 1984,
+  "to": 2026,
+  "label": {
+   "es": "1984 – hoy",
+   "en": "1984 – today"
+  },
+  "name": {
+   "es": "Cartagena patrimonio mundial",
+   "en": "Cartagena, World Heritage"
+  },
+  "context": {
+   "es": "En 1984 la UNESCO inscribió el «Puerto, fortalezas y conjunto monumental de Cartagena» en la Lista del Patrimonio Mundial, reconociendo el sistema de fortificaciones más extenso de Sudamérica. Hoy las fortificaciones son administradas por la Escuela Taller Cartagena de Indias, que reinvierte los ingresos en su conservación. El reto contemporáneo es equilibrar turismo, vida de barrio y protección del patrimonio.",
+   "en": "In 1984 UNESCO inscribed the “Port, Fortresses and Group of Monuments, Cartagena” on the World Heritage List, recognising the most extensive fortifications in South America. Today the fortifications are managed by the Escuela Taller Cartagena de Indias, which reinvests its income in their conservation. The contemporary challenge is balancing tourism, neighbourhood life and heritage protection."
+  },
+  "certainty": "documentado",
+  "sources": [
+   "unesco",
+   "etcar-sanfelipe-areas"
+  ],
+  "short": {
+   "es": "Patrimonio",
+   "en": "Heritage"
+  }
+ }
+]

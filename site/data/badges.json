@@ -1,0 +1,7 @@
+[
+ {"id":"fortificaciones","icon":"castle","name":{"es":"Explorador de Fortificaciones","en":"Fortifications Explorer"},"desc":{"es":"Visita 5 castillos o fuertes.","en":"Visit 5 castles or forts."},"rule":{"type":"category","category":"castillo","count":5}},
+ {"id":"murallas","icon":"wall","name":{"es":"Conocedor de las Murallas","en":"Walls Connoisseur"},"desc":{"es":"Visita 6 tramos, puertas o baluartes.","en":"Visit 6 wall sections, gates or bastions."},"rule":{"type":"category","category":"muralla","count":6}},
+ {"id":"historiador","icon":"scroll","name":{"es":"Historiador de Cartagena","en":"Cartagena Historian"},"desc":{"es":"Recorre las 9 épocas de la línea de tiempo.","en":"Travel through all 9 eras of the timeline."},"rule":{"type":"periods","count":9}},
+ {"id":"centro","icon":"map","name":{"es":"Explorador del Centro Histórico","en":"Historic Centre Explorer"},"desc":{"es":"Visita 5 lugares del centro amurallado.","en":"Visit 5 places in the walled centre."},"rule":{"type":"set","ids":["plaza-bolivar","catedral","palacio-inquisicion","iglesia-santo-domingo","san-pedro-claver","teatro-adolfo-mejia","puerta-del-reloj","san-diego"],"count":5}},
+ {"id":"caminante","icon":"route","name":{"es":"Caminante","en":"Wayfarer"},"desc":{"es":"Completa una ruta.","en":"Complete a tour."},"rule":{"type":"routes","count":1}}
+]

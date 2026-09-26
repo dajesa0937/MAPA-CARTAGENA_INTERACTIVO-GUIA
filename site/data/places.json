@@ -1,0 +1,2472 @@
+[
+ {
+  "id": "castillo-san-felipe",
+  "category": "castillo",
+  "name": {
+   "es": "Castillo de San Felipe de Barajas",
+   "en": "Castillo de San Felipe de Barajas"
+  },
+  "aka": [
+   "San Lázaro",
+   "Castillo San Felipe",
+   "San Felipe"
+  ],
+  "coords": [
+   10.4225,
+   -75.5392
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1657,
+   "to": null
+  },
+  "dates": {
+   "es": "1657 (primer fuerte) · 1762–1769 (gran ampliación)",
+   "en": "1657 (first fort) · 1762–1769 (major enlargement)"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Ricardo Carr",
+   "Juan de Herrera y Sotomayor",
+   "Antonio de Arévalo",
+   "Edward Vernon",
+   "Blas de Lezo"
+  ],
+  "guide": {
+   "es": "Estás ante la fortaleza más grande del sistema defensivo de Cartagena. Desde este cerro, a unos 40 metros sobre el mar, se dominaba el acceso por tierra a la ciudad. Empezó en 1657 como un pequeño fuerte con 15 cañones; un siglo después, el ingeniero Antonio de Arévalo lo convirtió en esta montaña de baterías escalonadas.",
+   "en": "You are standing before the largest fortress in Cartagena's defensive system. From this hill, some 40 metres above the sea, defenders controlled the land approach to the city. It began in 1657 as a small fort with 15 cannons; a century later the engineer Antonio de Arévalo turned it into this mountain of tiered batteries."
+  },
+  "history": {
+   "es": [
+    "El primer fuerte, levantado en 1657 en el cerro de San Lázaro según diseño del ingeniero neerlandés Ricardo Carr, era una obra triangular con garitas, aljibe, almacén y alojamiento para 20 soldados y 4 artilleros.",
+    "En 1697 el fuerte cayó ante la expedición francesa del barón de Pointis. Juan de Herrera y Sotomayor lo reforzó después. En 1741 resistió el asalto nocturno de las tropas británicas de Vernon, el 20 de abril, un momento decisivo del sitio.",
+    "Entre 1762 y 1769 Antonio de Arévalo lo amplió con baterías escalonadas: San Lázaro, Santa Bárbara, La Redención, el Hornabeque, San Carlos y Los Apóstoles, y La Cruz. Así adquirió la silueta que hoy lo hace reconocible."
+   ],
+   "en": [
+    "The first fort, built in 1657 on San Lázaro hill to a design by the Dutch engineer Ricardo Carr, was a triangular work with sentry boxes, a cistern, a storehouse and quarters for 20 soldiers and 4 gunners.",
+    "In 1697 the fort fell to the Baron de Pointis's French expedition. Juan de Herrera y Sotomayor later strengthened it. In 1741 it withstood the night assault by Vernon's British troops on 20 April, a turning point of the siege.",
+    "Between 1762 and 1769 Antonio de Arévalo enlarged it with tiered batteries: San Lázaro, Santa Bárbara, La Redención, the Hornwork, San Carlos and Los Apóstoles, and La Cruz. That gave it the silhouette that makes it so recognisable today."
+   ]
+  },
+  "note": {
+   "es": "El sitio oficial describe el castillo como «inexpugnable», mientras otra página del mismo sitio indica que el fuerte original cayó en 1697. Presentamos ambos datos: la toma de 1697 afectó al fuerte primitivo, anterior a la gran ampliación.",
+   "en": "The official site calls the castle “impregnable”, while another page of the same site says the original fort fell in 1697. We present both: the 1697 capture concerned the early fort, before the great enlargement."
+  },
+  "significance": {
+   "es": "Pieza central de la defensa terrestre y símbolo del sitio de 1741.",
+   "en": "Centrepiece of the land defence and a symbol of the 1741 siege."
+  },
+  "status": {
+   "es": "Conservado y visitable. Lo administra la Escuela Taller Cartagena de Indias, que reinvierte la taquilla en su conservación.",
+   "en": "Preserved and open to visitors. Managed by the Escuela Taller Cartagena de Indias, which reinvests ticket income in its upkeep."
+  },
+  "visit": {
+   "es": "Horario publicado: lunes a domingo, 7:00 a. m. – 6:00 p. m. Tarifas publicadas (vigentes desde enero de 2026): general $38.000 COP; nacionales $33.000 COP; niños de 6 a 13 años $16.000 COP.",
+   "en": "Published hours: Monday to Sunday, 7 am – 6 pm. Published fares (from January 2026): general COP 38,000; Colombian nationals COP 33,000; children aged 6–13 COP 16,000.",
+   "checked": "2026-09-26",
+   "source": "etcar-sanfelipe-visita"
+  },
+  "events": [
+   "e1657-sanfelipe",
+   "e1697-pointis",
+   "e1741-vernon",
+   "e1762-sanfelipe",
+   "e1984-unesco"
+  ],
+  "sources": [
+   "etcar-sanfelipe-areas",
+   "etcar-sanfelipe-visita",
+   "wiki-sanfelipe",
+   "wiki-1741",
+   "unesco"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 36874560,
+    "author": "Woody Willis",
+    "alt": {
+     "es": "El Castillo de San Felipe de Barajas con flores en primer plano",
+     "en": "Castillo de San Felipe de Barajas with flowers in the foreground"
+    },
+    "angle": {
+     "es": "Desde la base del cerro",
+     "en": "From the foot of the hill"
+    }
+   },
+   {
+    "pexels": 34044015,
+    "author": "Roodzn",
+    "alt": {
+     "es": "La fortaleza vista desde abajo, con la bandera de Colombia",
+     "en": "The fortress seen from below, with the Colombian flag"
+    },
+    "angle": {
+     "es": "Las murallas desde abajo",
+     "en": "The ramparts from below"
+    }
+   },
+   {
+    "pexels": 34044000,
+    "author": "Roodzn",
+    "alt": {
+     "es": "Una visitante recorre las terrazas del castillo",
+     "en": "A visitor walks along the castle terraces"
+    },
+    "angle": {
+     "es": "Recorriendo sus terrazas",
+     "en": "Walking its terraces"
+    }
+   },
+   {
+    "pexels": 16960987,
+    "author": "Maps Acosta",
+    "alt": {
+     "es": "La bandera de Colombia en lo alto de la fortaleza",
+     "en": "The Colombian flag atop the fortress"
+    },
+    "angle": {
+     "es": "En lo alto de la fortaleza",
+     "en": "Atop the fortress"
+    }
+   }
+  ]
+ },
+ {
+  "id": "fuerte-pastelillo",
+  "category": "castillo",
+  "name": {
+   "es": "Fuerte de San Sebastián del Pastelillo",
+   "en": "Fort of San Sebastián del Pastelillo"
+  },
+  "aka": [
+   "Pastelillo",
+   "El Boquerón",
+   "Club de Pesca"
+  ],
+  "coords": [
+   10.41421,
+   -75.54433
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1741,
+   "to": null
+  },
+  "dates": {
+   "es": "1741–1744",
+   "en": "1741–1744"
+  },
+  "periods": [
+   "fundacion",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Sebastián de Eslava",
+   "Juan Bautista Mac Evan",
+   "Carlos Desnaux",
+   "Juan Manuel Zapatero"
+  ],
+  "guide": {
+   "es": "Este pequeño fuerte de la isla de Manga custodiaba la entrada de la bahía de las Ánimas, frente a Getsemaní. Se construyó justo después del sitio de 1741 y su nombre curioso, Pastelillo, alude a su forma, parecida a un pastel.",
+   "en": "This small fort on Manga island guarded the entrance to the Bay of Las Ánimas, across from Getsemaní. It was built right after the 1741 siege, and its curious name, Pastelillo (“little pie”), refers to its pie-like shape."
+  },
+  "history": {
+   "es": [
+    "Ocupa el lugar de El Boquerón, el primer fuerte de Cartagena, de 1566. El virrey Sebastián de Eslava ordenó sustituirlo por una obra mejor: el plano fue de Juan Bautista Mac Evan y la dirección de Carlos Desnaux, entre 1741 y 1744.",
+    "Tenía planta irregular adaptada al terreno, muralla con troneras, cuerpo de guardia, aljibe, almacén y muelle. Fue restaurado en 1972 por el arquitecto Juan Manuel Zapatero."
+   ],
+   "en": [
+    "It stands on the site of El Boquerón, Cartagena's first fort, from 1566. Viceroy Sebastián de Eslava ordered a better work to replace it: the plan was by Juan Bautista Mac Evan and construction was directed by Carlos Desnaux, between 1741 and 1744.",
+    "It had an irregular plan fitted to the ground, a wall with embrasures, a guardhouse, a cistern, a storehouse and a pier. It was restored in 1972 by the architect Juan Manuel Zapatero."
+   ]
+  },
+  "significance": {
+   "es": "Muestra la reorganización de la defensa de la bahía interior tras 1741.",
+   "en": "Shows how the inner-bay defence was reorganised after 1741."
+  },
+  "status": {
+   "es": "Conservado; hoy alberga un restaurante del Club de Pesca.",
+   "en": "Preserved; it now houses a Club de Pesca restaurant."
+  },
+  "events": [
+   "e1566-boqueron"
+  ],
+  "sources": [
+   "etcar-pastelillo",
+   "etcar-desaparecidas"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "san-juan-manzanillo",
+  "category": "castillo",
+  "name": {
+   "es": "Fuerte de San Juan de Manzanillo",
+   "en": "Fort of San Juan de Manzanillo"
+  },
+  "aka": [
+   "Manzanillo",
+   "Casa de Huéspedes Ilustres"
+  ],
+  "coords": [
+   10.39336,
+   -75.5362
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Extremo de la isla de Manzanillo frente a Castillogrande (OpenStreetMap); acceso restringido"
+  },
+  "built": {
+   "from": 1631,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1631 · reparado en 1724",
+   "en": "c. 1631 · repaired 1724"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Juan de Herrera y Sotomayor",
+   "Germán Téllez"
+  ],
+  "guide": {
+   "es": "Frente a Castillogrande, en la isla de Manzanillo, este fuerte cruzaba sus fuegos con el de Santa Cruz para cerrar el paso hacia el puerto interior. Era una tenaza de artillería sobre el canal.",
+   "en": "Opposite Castillogrande, on Manzanillo island, this fort crossed its fire with Santa Cruz to close the passage to the inner harbour. Together they formed a pincer of artillery over the channel."
+  },
+  "history": {
+   "es": [
+    "Hacia 1631 se levantó aquí una plataforma artillada. Quedó parcialmente destruida en el ataque de Pointis de 1697 y se reparó en 1724 según propuesta de Juan de Herrera y Sotomayor.",
+    "Tras el sitio de 1741, en el que los británicos lo sortearon, perdió peso militar y se usó como depósito de pertrechos. El arquitecto Germán Téllez restauró hacia 1980 el antiguo polvorín."
+   ],
+   "en": [
+    "Around 1631 a gun platform was built here. It was partly destroyed in Pointis's 1697 attack and repaired in 1724 following a proposal by Juan de Herrera y Sotomayor.",
+    "After the 1741 siege, when the British bypassed it, it lost military importance and was used to store munitions. Around 1980 the architect Germán Téllez restored the old powder store."
+   ]
+  },
+  "significance": {
+   "es": "Parte del cierre del puerto interior junto con Santa Cruz.",
+   "en": "Part of the inner-harbour closure together with Santa Cruz."
+  },
+  "status": {
+   "es": "Integrado en la Casa de Huéspedes Ilustres de Colombia; acceso restringido.",
+   "en": "Part of Colombia's House for Illustrious Guests; restricted access."
+  },
+  "events": [
+   "e1697-pointis"
+  ],
+  "sources": [
+   "etcar-manzanillo",
+   "etcar-bahia-interior"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "fuerte-santa-cruz",
+  "category": "castillo",
+  "name": {
+   "es": "Fuerte de Santa Cruz (Castillogrande)",
+   "en": "Fort of Santa Cruz (Castillogrande)"
+  },
+  "aka": [
+   "Castillogrande",
+   "Castillo Grande",
+   "Santa Cruz"
+  ],
+  "coords": [
+   10.3918,
+   -75.54532
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1626,
+   "to": null
+  },
+  "dates": {
+   "es": "1626–1636",
+   "en": "1626–1636"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Cristóbal de Roda",
+   "Francisco de Murga",
+   "Tiburcio Spanoqui",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Aquí se alzaba una fortaleza cuadrada con un baluarte en cada esquina, que dio nombre al barrio de Castillogrande. Hoy apenas quedan restos de su muralla, porque la historia de este fuerte es una historia de pérdidas.",
+   "en": "A square fortress with a bastion at each corner stood here, giving the Castillogrande neighbourhood its name. Only fragments of its rampart remain, because this fort's story is one of losses."
+  },
+  "history": {
+   "es": [
+    "Ordenado por real cédula en 1608, se construyó entre 1626 y 1636 por Cristóbal de Roda y Francisco de Murga, siguiendo un plano de Tiburcio Spanoqui.",
+    "Sufrió graves daños en 1697 y fue reconstruido en 1728 bajo Juan de Herrera y Sotomayor. En 1741 fue destruido parcialmente y no se reconstruyó. En 1938 una explosión de municiones arruinó sus bóvedas."
+   ],
+   "en": [
+    "Ordered by royal decree in 1608, it was built between 1626 and 1636 by Cristóbal de Roda and Francisco de Murga, following a plan by Tiburcio Spanoqui.",
+    "It was badly damaged in 1697 and rebuilt in 1728 under Juan de Herrera y Sotomayor. In 1741 it was partly destroyed and never rebuilt. In 1938 a munitions explosion wrecked its vaults."
+   ]
+  },
+  "significance": {
+   "es": "Muestra cómo cambió la estrategia al cerrarse Bocagrande en 1640.",
+   "en": "Shows how strategy changed when Bocagrande closed in 1640."
+  },
+  "status": {
+   "es": "Vestigios integrados en el Club de Oficiales de la Armada; acceso restringido.",
+   "en": "Remains are part of the Navy Officers' Club; restricted access."
+  },
+  "events": [
+   "e1640-bocagrande",
+   "e1697-pointis",
+   "e1741-vernon"
+  ],
+  "sources": [
+   "etcar-castillogrande"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "escollera-bocagrande",
+  "category": "castillo",
+  "name": {
+   "es": "Escollera submarina de Bocagrande",
+   "en": "Bocagrande underwater barrier"
+  },
+  "aka": [
+   "Escollera",
+   "Bocagrande"
+  ],
+  "coords": [
+   10.383,
+   -75.561
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Zona aproximada entre Bocagrande y Tierrabomba; la obra es submarina"
+  },
+  "built": {
+   "from": 1771,
+   "to": null
+  },
+  "dates": {
+   "es": "1771–1778",
+   "en": "1771–1778"
+  },
+  "periods": [
+   "amurallada",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Ignacio Sala",
+   "Lorenzo de Solís",
+   "Antonio de Arévalo"
+  ],
+  "guide": {
+   "es": "Mira hacia el mar entre Bocagrande y Tierrabomba: bajo el agua hay una muralla. Es una escollera construida en el siglo XVIII para impedir que los barcos entraran a la bahía por esta boca.",
+   "en": "Look out to sea between Bocagrande and Tierrabomba: there is a wall under the water. It is an underwater barrier built in the 18th century to stop ships entering the bay through this mouth."
+  },
+  "history": {
+   "es": [
+    "En 1640 unos barcos encallados y la arena bloquearon la entrada de Bocagrande, pero con el tiempo el canal volvió a abrirse. Ignacio Sala (1750) y Lorenzo de Solís (1754) intentaron cerrarlo sin éxito.",
+    "Antonio de Arévalo inició la obra el 11 de noviembre de 1771 y la terminó en 1778: tres hileras de grandes cestones rellenos formaban una cama de arena sobre la que se colocó piedra."
+   ],
+   "en": [
+    "In 1640 grounded ships and sand blocked the Bocagrande entrance, but over time the channel reopened. Ignacio Sala (1750) and Lorenzo de Solís (1754) tried to close it without success.",
+    "Antonio de Arévalo began the work on 11 November 1771 and finished it in 1778: three rows of large filled baskets formed a bed of sand on which stone was laid."
+   ]
+  },
+  "significance": {
+   "es": "Obra de ingeniería hidráulica que todavía condiciona la navegación de la bahía.",
+   "en": "A feat of hydraulic engineering that still shapes navigation in the bay."
+  },
+  "status": {
+   "es": "Sigue bloqueando el paso de grandes barcos por Bocagrande.",
+   "en": "It still blocks large ships from passing through Bocagrande."
+  },
+  "events": [
+   "e1640-bocagrande",
+   "e1771-escollera"
+  ],
+  "sources": [
+   "etcar-escollera"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "fuerte-san-fernando",
+  "category": "castillo",
+  "name": {
+   "es": "Fuerte de San Fernando de Bocachica",
+   "en": "Fort of San Fernando de Bocachica"
+  },
+  "aka": [
+   "San Fernando",
+   "Bocachica"
+  ],
+  "coords": [
+   10.31935,
+   -75.58117
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1753,
+   "to": null
+  },
+  "dates": {
+   "es": "1753–1759",
+   "en": "1753–1759"
+  },
+  "periods": [
+   "sistema",
+   "independencia",
+   "contemporanea"
+  ],
+  "people": [
+   "Juan Bautista Mac Evan",
+   "Antonio de Arévalo",
+   "Ignacio Sala",
+   "Lorenzo de Solís"
+  ],
+  "guide": {
+   "es": "En la boca de Bocachica, la única entrada navegable a la bahía tras el cierre de Bocagrande, este fuerte en forma de herradura esperaba a los barcos enemigos a ras de agua. Se levantó después del desastre de 1741 para que la historia no se repitiera.",
+   "en": "At Bocachica, the only navigable entrance to the bay once Bocagrande closed, this horseshoe-shaped fort awaited enemy ships at water level. It was built after the 1741 disaster so that history would not repeat itself."
+  },
+  "history": {
+   "es": [
+    "Tras el ataque de 1741 llegaron a Cartagena los ingenieros Juan Bautista Mac Evan y Antonio de Arévalo. Hubo un debate sobre la estrategia con el gobernador Ignacio Sala, y en 1752 la Corona aprobó el proyecto de defensa marítima de Mac Evan.",
+    "Arévalo inició la obra el 12 de marzo de 1753 y la primera etapa terminó en 1759. Su nombre honra al rey Fernando VI. A comienzos del siglo XIX sirvió como prisión de líderes de la independencia."
+   ],
+   "en": [
+    "After the 1741 attack, the engineers Juan Bautista Mac Evan and Antonio de Arévalo arrived in Cartagena. There was a debate over strategy with Governor Ignacio Sala, and in 1752 the Crown approved Mac Evan's sea-defence plan.",
+    "Arévalo began construction on 12 March 1753 and the first stage was completed in 1759. It is named after King Ferdinand VI. In the early 19th century it served as a prison for independence leaders."
+   ]
+  },
+  "significance": {
+   "es": "Llave de la entrada a la bahía en el siglo XVIII.",
+   "en": "Key to the bay entrance in the 18th century."
+  },
+  "status": {
+   "es": "Conservado y visitable; se llega en lancha.",
+   "en": "Preserved and open to visitors; reached by boat."
+  },
+  "visit": {
+   "es": "Publicado por el sitio oficial: lunes a domingo, 8:00 a. m. – 5:00 p. m.; acceso gratuito desde 2017. Lanchas desde el muelle turístico La Bodeguita (avenida Blas de Lezo).",
+   "en": "Published on the official site: Monday to Sunday, 8 am – 5 pm; free entry since 2017. Boats from La Bodeguita tourist pier (Avenida Blas de Lezo).",
+   "checked": "2026-09-26",
+   "source": "etcar-bocachica"
+  },
+  "events": [
+   "e1753-sanfernando"
+  ],
+  "sources": [
+   "etcar-sanfernando",
+   "etcar-bocachica",
+   "etcar-bahia-exterior"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "bateria-san-jose",
+  "category": "castillo",
+  "name": {
+   "es": "Batería-fuerte de San José",
+   "en": "San José battery-fort"
+  },
+  "aka": [
+   "San José",
+   "Bocachica"
+  ],
+  "coords": [
+   10.31433,
+   -75.57838
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1714,
+   "to": null
+  },
+  "dates": {
+   "es": "1714–1725 · reconstruida 1759–1779",
+   "en": "1714–1725 · rebuilt 1759–1779"
+  },
+  "periods": [
+   "asedios",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Juan de Herrera y Sotomayor",
+   "Antonio de Arévalo"
+  ],
+  "guide": {
+   "es": "Al otro lado del canal de Bocachica, esta batería trabajaba en pareja con San Fernando. Sus cañones, casi a nivel del mar, apuntaban a la línea de flotación de los barcos que intentaban entrar.",
+   "en": "Across the Bocachica channel, this battery worked in tandem with San Fernando. Its cannons, almost at sea level, aimed at the waterline of any ship trying to get in."
+  },
+  "history": {
+   "es": [
+    "La primera obra la construyó Juan de Herrera y Sotomayor entre 1714 y 1725. Vernon la destruyó en 1741.",
+    "Fue reconstruida y ampliada entre 1759 y 1779 y culminada por Antonio de Arévalo, que añadió un rompeolas. Tiene siete bóvedas a prueba de explosiones y dos líneas de baterías: Punta Abanico y Varadero."
+   ],
+   "en": [
+    "The first work was built by Juan de Herrera y Sotomayor between 1714 and 1725. Vernon destroyed it in 1741.",
+    "It was rebuilt and enlarged between 1759 and 1779 and completed by Antonio de Arévalo, who added a breakwater. It has seven blast-proof vaults and two lines of batteries: Punta Abanico and Varadero."
+   ]
+  },
+  "significance": {
+   "es": "Completaba el fuego cruzado sobre Bocachica.",
+   "en": "Completed the crossfire over Bocachica."
+  },
+  "status": {
+   "es": "Conservada.",
+   "en": "Preserved."
+  },
+  "events": [
+   "e1741-vernon"
+  ],
+  "sources": [
+   "etcar-sanjose",
+   "etcar-bocachica"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "castillo-san-luis",
+  "category": "castillo",
+  "name": {
+   "es": "Castillo de San Luis de Bocachica (ruinas)",
+   "en": "San Luis de Bocachica Castle (ruins)"
+  },
+  "aka": [
+   "San Luis",
+   "Bocachica"
+  ],
+  "coords": [
+   10.3248,
+   -75.58
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Zona aproximada (Bocachica, Tierrabomba); pendiente de verificación"
+  },
+  "built": {
+   "from": 1646,
+   "to": 1741
+  },
+  "dates": {
+   "es": "1646 · destruido en 1741",
+   "en": "1646 · destroyed 1741"
+  },
+  "periods": [
+   "amurallada",
+   "asedios"
+  ],
+  "people": [
+   "Juan de Somovilla",
+   "Luis Fernández de Córdoba",
+   "Edward Vernon"
+  ],
+  "guide": {
+   "es": "Aquí estuvo el castillo que defendía Bocachica cuando llegaron los grandes ataques. Cayó dos veces, en 1697 y en 1741, y después de la segunda no se reconstruyó: su papel pasó al fuerte de San Fernando.",
+   "en": "This is where the castle guarding Bocachica stood when the great attacks came. It fell twice, in 1697 and 1741, and after the second it was never rebuilt: its role passed to Fort San Fernando."
+  },
+  "history": {
+   "es": [
+    "Su construcción comenzó en 1646 con el ingeniero Juan de Somovilla; el nombre honra al gobernador Luis Fernández de Córdoba.",
+    "Fue dañado en 1697 por el barón de Pointis y restaurado entre 1719 y 1728. En 1741 las fuerzas de Vernon lo tomaron y lo destruyeron."
+   ],
+   "en": [
+    "Construction began in 1646 under the engineer Juan de Somovilla; the name honours Governor Luis Fernández de Córdoba.",
+    "It was damaged in 1697 by the Baron de Pointis and restored between 1719 and 1728. In 1741 Vernon's forces captured and destroyed it."
+   ]
+  },
+  "significance": {
+   "es": "Su caída en 1741 abrió la bahía a la flota británica.",
+   "en": "Its fall in 1741 opened the bay to the British fleet."
+  },
+  "status": {
+   "es": "Desaparecido; quedan vestigios.",
+   "en": "Lost; only traces remain."
+  },
+  "events": [
+   "e1640-bocagrande",
+   "e1697-pointis",
+   "e1741-vernon"
+  ],
+  "sources": [
+   "etcar-desaparecidas",
+   "wiki-sanluis"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "puerta-del-reloj",
+  "category": "muralla",
+  "name": {
+   "es": "Puerta del Reloj (Boca del Puente)",
+   "en": "Puerta del Reloj (Clock Tower Gate)"
+  },
+  "aka": [
+   "Torre del Reloj",
+   "Boca del Puente",
+   "Clock Tower"
+  ],
+  "coords": [
+   10.42296,
+   -75.5492
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1631,
+   "to": null
+  },
+  "dates": {
+   "es": "siglo XVII · reformas del XVIII · torre de 1888",
+   "en": "17th century · 18th-century rebuilding · 1888 tower"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Juan de Herrera y Sotomayor",
+   "Luis Felipe Jaspe"
+  ],
+  "guide": {
+   "es": "Esta fue la entrada principal de la ciudad amurallada. Aquí un puente cruzaba el caño de San Anastasio hacia el arrabal de Getsemaní y podía levantarse en caso de ataque. La torre del reloj que ves encima es mucho más reciente: de 1888.",
+   "en": "This was the main entrance to the walled city. Here a bridge crossed the San Anastasio channel to the Getsemaní quarter, and it could be raised in case of attack. The clock tower you see on top is far more recent: it dates from 1888."
+  },
+  "history": {
+   "es": [
+    "Conocida como Boca del Puente, unía el centro con Getsemaní mediante un puente sobre el caño de San Anastasio. Las fuentes consultadas dan fechas distintas para la primera puerta (entre 1601 y 1631).",
+    "Tras los daños del ataque de Pointis (1697), fue reconstruida por Juan de Herrera y Sotomayor. En 1888 el arquitecto Luis Felipe Jaspe renovó la torre, que pasó a planta octogonal con detalles neogóticos. En 1905 se abrió una segunda bóveda lateral, la Puerta Balmaceda."
+   ],
+   "en": [
+    "Known as Boca del Puente, it linked the centre with Getsemaní by a bridge over the San Anastasio channel. The sources consulted give different dates for the first gate (between 1601 and 1631).",
+    "After damage in Pointis's attack (1697), it was rebuilt by Juan de Herrera y Sotomayor. In 1888 the architect Luis Felipe Jaspe renewed the tower, giving it an octagonal plan with Gothic Revival details. In 1905 a second side arch, the Puerta Balmaceda, was opened."
+   ]
+  },
+  "note": {
+   "es": "Fechas de la primera puerta sin consenso en las fuentes consultadas.",
+   "en": "The sources consulted do not agree on the date of the first gate."
+  },
+  "significance": {
+   "es": "Umbral simbólico de la ciudad amurallada.",
+   "en": "The symbolic threshold of the walled city."
+  },
+  "status": {
+   "es": "Conservada; es el acceso más transitado al centro histórico.",
+   "en": "Preserved; it is the busiest entrance to the historic centre."
+  },
+  "events": [
+   "e1697-pointis",
+   "e1888-torre",
+   "e1984-unesco"
+  ],
+  "sources": [
+   "universal-reloj",
+   "wiki-reloj",
+   "etcar-murallas"
+  ],
+  "certainty": "debatido",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 36856198,
+    "author": "Woody Willis",
+    "alt": {
+     "es": "La torre del reloj bajo el cielo azul",
+     "en": "The clock tower under a blue sky"
+    },
+    "angle": {
+     "es": "La torre a pleno sol",
+     "en": "The tower in full sun"
+    }
+   },
+   {
+    "pexels": 18047903,
+    "author": "Molly Champion",
+    "alt": {
+     "es": "La puerta completa con sus arcos de entrada",
+     "en": "The whole gate with its entrance arches"
+    },
+    "angle": {
+     "es": "La puerta y sus arcos",
+     "en": "The gate and its arches"
+    }
+   },
+   {
+    "pexels": 38132246,
+    "author": "Juliana Zuluaga",
+    "alt": {
+     "es": "Detalle de la torre amarilla y el reloj",
+     "en": "Detail of the yellow tower and clock"
+    },
+    "angle": {
+     "es": "Detalle del reloj",
+     "en": "Close-up of the clock"
+    }
+   },
+   {
+    "pexels": 13836085,
+    "author": "JVAS71",
+    "alt": {
+     "es": "La torre bajo un cielo de tormenta",
+     "en": "The tower under a stormy sky"
+    },
+    "angle": {
+     "es": "Bajo un cielo de tormenta",
+     "en": "Under a stormy sky"
+    }
+   },
+   {
+    "pexels": 16960974,
+    "author": "Maps Acosta",
+    "alt": {
+     "es": "La torre del reloj al anochecer",
+     "en": "The clock tower at dusk"
+    },
+    "angle": {
+     "es": "Al anochecer",
+     "en": "At dusk"
+    }
+   }
+  ]
+ },
+ {
+  "id": "baluarte-santo-domingo",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de Santo Domingo",
+   "en": "Santo Domingo Bastion"
+  },
+  "aka": [
+   "Santo Domingo",
+   "Baluarte"
+  ],
+  "coords": [
+   10.42444,
+   -75.55407
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1614,
+   "to": null
+  },
+  "dates": {
+   "es": "1614–1626 · restaurado 1714–1718",
+   "en": "1614–1626 · restored 1714–1718"
+  },
+  "periods": [
+   "fundacion",
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Bautista Antonelli",
+   "Cristóbal de Roda",
+   "Diego de Acuña",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Aquí empezó la muralla de Cartagena. Por este sector había entrado Francis Drake en 1586, y fue precisamente aquí donde, en 1614, se colocó la primera piedra del recinto. La garita que mira al mar es un añadido del siglo XVIII.",
+   "en": "Cartagena's wall began here. Francis Drake had broken in through this sector in 1586, and it was precisely here that, in 1614, the first stone of the enclosure was laid. The sentry box facing the sea was added in the 18th century."
+  },
+  "history": {
+   "es": [
+    "La primera piedra se colocó el 8 de septiembre de 1614, por iniciativa del gobernador Diego de Acuña y según planos de Bautista Antonelli y Cristóbal de Roda. Se terminó hacia 1625–1626.",
+    "Tras los daños del ataque francés de 1697, Juan de Herrera y Sotomayor lo restauró entre 1714 y 1718: suprimió las plazas bajas y añadió la gran garita barroca."
+   ],
+   "en": [
+    "The foundation stone was laid on 8 September 1614, on the initiative of Governor Diego de Acuña and to plans by Bautista Antonelli and Cristóbal de Roda. It was completed around 1625–1626.",
+    "After damage in the 1697 French attack, Juan de Herrera y Sotomayor restored it between 1714 and 1718: he removed the lower gun platforms and added the large Baroque sentry box."
+   ]
+  },
+  "significance": {
+   "es": "Origen del recinto amurallado.",
+   "en": "The starting point of the walled enclosure."
+  },
+  "status": {
+   "es": "Conservado; su plataforma tiene hoy uso comercial y turístico.",
+   "en": "Preserved; its platform is now used for commercial and tourist purposes."
+  },
+  "events": [
+   "e1586-drake",
+   "e1614-santodomingo"
+  ],
+  "sources": [
+   "etcar-santodomingo",
+   "wiki-santodomingo-baluarte"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "baluarte-santa-cruz",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de Santa Cruz",
+   "en": "Santa Cruz Bastion"
+  },
+  "aka": [
+   "Santa Cruz",
+   "La Cruz"
+  ],
+  "coords": [
+   10.42545,
+   -75.55338
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1614,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1614 · reconstruido tras 1713–1714",
+   "en": "c. 1614 · rebuilt after 1713–1714"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Diego de Acuña",
+   "Cristóbal de Roda",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Junto a Santo Domingo, este baluarte forma parte de los primeros tramos de la muralla, levantados para cerrar el lado más expuesto de la ciudad: la franja de arena que la unía con Bocagrande.",
+   "en": "Beside Santo Domingo, this bastion belongs to the earliest stretches of the wall, built to close off the city's most exposed side: the strip of sand joining it to Bocagrande."
+  },
+  "history": {
+   "es": [
+    "Iniciado hacia 1614 bajo el gobernador Diego de Acuña, con diseño de Cristóbal de Roda a partir del proyecto de Antonelli de 1595.",
+    "Sufrió graves daños en 1697, y en 1713–1714 los temporales derrumbaron varios tramos. Herrera y Sotomayor dirigió su reconstrucción, con tres bóvedas a prueba de bombas."
+   ],
+   "en": [
+    "Begun around 1614 under Governor Diego de Acuña, designed by Cristóbal de Roda from Antonelli's 1595 project.",
+    "It was badly damaged in 1697, and in 1713–1714 storms brought down several sections. Herrera y Sotomayor directed its rebuilding, with three bomb-proof vaults."
+   ]
+  },
+  "significance": {
+   "es": "Parte del primer frente defensivo frente al mar.",
+   "en": "Part of the first defensive front facing the sea."
+  },
+  "status": {
+   "es": "Conservado como parte del cordón amurallado.",
+   "en": "Preserved as part of the wall circuit."
+  },
+  "events": [
+   "e1586-drake"
+  ],
+  "sources": [
+   "etcar-santacruz"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 19799167,
+    "author": "Miguel Rodriguez Leon",
+    "alt": {
+     "es": "Garita del baluarte de Santa Cruz frente al mar",
+     "en": "Sentry box of the Santa Cruz bastion facing the sea"
+    },
+    "angle": {
+     "es": "La garita frente al mar",
+     "en": "The sentry box by the sea"
+    }
+   }
+  ]
+ },
+ {
+  "id": "baluarte-santiago",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de Santiago Apóstol",
+   "en": "Santiago Apóstol Bastion"
+  },
+  "aka": [
+   "Santiago"
+  ],
+  "coords": [
+   10.42343,
+   -75.55362
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1614,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1614 · reformas 1714–1719",
+   "en": "c. 1614 · alterations 1714–1719"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Diego de Acuña",
+   "Cristóbal de Roda",
+   "Bautista Antonelli",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Otro de los primeros baluartes de la ciudad. Protegía el tramo más vulnerable, la lengua de arena hacia Bocagrande. Parte de su flanco se perdió en el siglo XX al abrir la calle Baloco hacia la avenida Santander.",
+   "en": "Another of the city's first bastions. It guarded the most vulnerable stretch, the tongue of sand towards Bocagrande. Part of its flank was lost in the 20th century when Calle Baloco was opened onto Avenida Santander."
+  },
+  "history": {
+   "es": [
+    "Comenzado hacia 1614 bajo Diego de Acuña, según diseño de Cristóbal de Roda sobre el proyecto de Bautista Antonelli de 1595.",
+    "Entre 1714 y 1719 Herrera y Sotomayor reparó la muralla, añadió troneras y una garita en el ángulo."
+   ],
+   "en": [
+    "Begun around 1614 under Diego de Acuña, designed by Cristóbal de Roda on Bautista Antonelli's 1595 project.",
+    "Between 1714 and 1719 Herrera y Sotomayor repaired the wall and added embrasures and a corner sentry box."
+   ]
+  },
+  "significance": {
+   "es": "Muestra la primera fase del amurallamiento.",
+   "en": "Shows the first phase of wall-building."
+  },
+  "status": {
+   "es": "Conservado, con pérdidas en su flanco derecho.",
+   "en": "Preserved, with losses on its right flank."
+  },
+  "events": [
+   "e1595-antonelli"
+  ],
+  "sources": [
+   "etcar-santiago"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "baluarte-san-francisco-javier",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de San Francisco Javier",
+   "en": "San Francisco Javier Bastion"
+  },
+  "aka": [
+   "San Francisco Javier",
+   "Baluarte de los Canastos"
+  ],
+  "coords": [
+   10.42156,
+   -75.55264
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1630,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1630 · rediseño 1720–1730",
+   "en": "c. 1630 · redesigned 1720–1730"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Francisco de Murga",
+   "Cristóbal de Roda",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Al principio lo llamaron «de los Canastos», por la técnica con que se construyó. Su aspecto actual, con rasgos barrocos, procede de la gran reforma del siglo XVIII.",
+   "en": "It was first called the “Bastion of the Baskets” because of the technique used to build it. Its present look, with Baroque touches, comes from the major 18th-century rebuilding."
+  },
+  "history": {
+   "es": [
+    "Hacia 1630, bajo el gobernador Francisco de Murga, se completó la obra iniciada por Cristóbal de Roda unas tres décadas antes.",
+    "Entre 1720 y 1730 Juan de Herrera y Sotomayor lo rediseñó tras los daños del sitio de Pointis."
+   ],
+   "en": [
+    "Around 1630, under Governor Francisco de Murga, the work begun by Cristóbal de Roda some three decades earlier was completed.",
+    "Between 1720 and 1730 Juan de Herrera y Sotomayor redesigned it after the damage from Pointis's siege."
+   ]
+  },
+  "significance": {
+   "es": "Ejemplo de la evolución de los baluartes del siglo XVII al XVIII.",
+   "en": "An example of how bastions evolved from the 17th to the 18th century."
+  },
+  "status": {
+   "es": "Conservado.",
+   "en": "Preserved."
+  },
+  "events": [],
+  "sources": [
+   "etcar-sfjavier"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "baluarte-san-ignacio",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de San Ignacio",
+   "en": "San Ignacio Bastion"
+  },
+  "aka": [
+   "San Ignacio",
+   "Baluarte de los Moros"
+  ],
+  "coords": [
+   10.42125,
+   -75.55071
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1630,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1630 · rediseño hacia 1730",
+   "en": "c. 1630 · redesigned c. 1730"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Francisco de Murga",
+   "Cristóbal de Roda",
+   "Juan de Herrera y Sotomayor",
+   "Antonio de Arévalo"
+  ],
+  "guide": {
+   "es": "Sus cañones apuntaban hacia la bahía de las Ánimas para proteger el muelle. Primero se llamó «de los Moros»; tomó el nombre de San Ignacio por su cercanía al colegio de los jesuitas, hoy Museo Naval.",
+   "en": "Its cannons pointed towards the Bay of Las Ánimas to protect the pier. It was first called the “Bastion of the Moors” and took the name of San Ignacio because it stood next to the Jesuit college, now the Naval Museum."
+  },
+  "history": {
+   "es": [
+    "Terminado hacia 1630 bajo el gobernador Francisco de Murga, sobre trabajos iniciados por Cristóbal de Roda.",
+    "Hacia 1730 Herrera y Sotomayor le dio su forma actual y le añadió una garita barroca. En el siglo XX se construyó sobre él un monumento a la Bandera, y en 1969 fue restaurado."
+   ],
+   "en": [
+    "Completed around 1630 under Governor Francisco de Murga, on work begun by Cristóbal de Roda.",
+    "Around 1730 Herrera y Sotomayor gave it its present form and added a Baroque sentry box. In the 20th century a Monument to the Flag was built on it, and it was restored in 1969."
+   ]
+  },
+  "significance": {
+   "es": "Defendía el frente de la bahía y el muelle.",
+   "en": "It defended the bay front and the pier."
+  },
+  "status": {
+   "es": "Conservado y restaurado.",
+   "en": "Preserved and restored."
+  },
+  "events": [],
+  "sources": [
+   "etcar-sanignacio",
+   "wiki-sanignacio"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "baluarte-santa-catalina",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de Santa Catalina",
+   "en": "Santa Catalina Bastion"
+  },
+  "aka": [
+   "Santa Catalina"
+  ],
+  "coords": [
+   10.43079,
+   -75.54565
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1625,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1625 · 1631–1638 · reparaciones del siglo XVIII",
+   "en": "c. 1625 · 1631–1638 · 18th-century repairs"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Cristóbal de Roda",
+   "Francisco de Murga",
+   "Juan de Herrera y Sotomayor",
+   "Antonio de Arévalo"
+  ],
+  "guide": {
+   "es": "En el extremo norte del recinto, Santa Catalina miraba hacia La Boquilla. Con San Lucas defendía la ciudad por ese lado, y su trazado se adelantó para dejar dentro de las murallas tierras fértiles y reservas de agua.",
+   "en": "At the northern end of the enclosure, Santa Catalina faced La Boquilla. Together with San Lucas it defended that side of the city, and it was pushed forward so that fertile land and water reserves ended up inside the walls."
+  },
+  "history": {
+   "es": [
+    "Cristóbal de Roda lo construyó hacia 1625 a partir del proyecto de Antonelli. Entre 1631 y 1638 el gobernador e ingeniero Francisco de Murga lo reformó con trincheras y revellines de escuela flamenca.",
+    "Las voladuras del ataque de 1697 lo dañaron gravemente. En 1719 Herrera y Sotomayor reparó sus aljibes y comenzó un rompeolas, y a finales del siglo XVIII Arévalo añadió el revellín de El Cabrero, demolido a finales del XIX."
+   ],
+   "en": [
+    "Cristóbal de Roda built it around 1625 from Antonelli's project. Between 1631 and 1638 the governor and engineer Francisco de Murga remodelled it with Flemish-style trenches and ravelins.",
+    "Explosions during the 1697 attack badly damaged it. In 1719 Herrera y Sotomayor repaired its cisterns and began a breakwater, and in the late 18th century Arévalo added the El Cabrero ravelin, demolished in the late 19th century."
+   ]
+  },
+  "significance": {
+   "es": "Cierre norte del recinto amurallado.",
+   "en": "The northern closure of the walled enclosure."
+  },
+  "status": {
+   "es": "Conservado.",
+   "en": "Preserved."
+  },
+  "events": [],
+  "sources": [
+   "etcar-santacatalina"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "baluarte-san-lucas",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de San Lucas",
+   "en": "San Lucas Bastion"
+  },
+  "aka": [
+   "San Lucas"
+  ],
+  "coords": [
+   10.42978,
+   -75.54477
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1617,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1617 · 1631–1638 · reconstruido 1719",
+   "en": "c. 1617 · 1631–1638 · rebuilt 1719"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "contemporanea"
+  ],
+  "people": [
+   "Bautista Antonelli",
+   "Cristóbal de Roda",
+   "Francisco de Murga",
+   "Juan de Herrera y Sotomayor"
+  ],
+  "guide": {
+   "es": "Se levantó sobre el canal de Juan de Angola y, junto con Santa Catalina, cuidaba este flanco de la ciudad. Tiene rampa de acceso, dos caminos cubiertos y dos garitas.",
+   "en": "It was built over the Juan de Angola channel and, with Santa Catalina, guarded this flank of the city. It has an access ramp, two covered ways and two sentry boxes."
+  },
+  "history": {
+   "es": [
+    "Proyectado por Antonelli en 1595 y construido hacia 1617 por Cristóbal de Roda. Francisco de Murga lo amplió entre 1631 y 1638.",
+    "Parcialmente destruido por las voladuras del ataque de 1697, fue reconstruido en 1719 por Juan de Herrera y Sotomayor."
+   ],
+   "en": [
+    "Designed by Antonelli in 1595 and built around 1617 by Cristóbal de Roda. Francisco de Murga enlarged it between 1631 and 1638.",
+    "Partly destroyed by explosions in the 1697 attack, it was rebuilt in 1719 by Juan de Herrera y Sotomayor."
+   ]
+  },
+  "significance": {
+   "es": "Parte del frente norte-oriental del recinto.",
+   "en": "Part of the enclosure's north-eastern front."
+  },
+  "status": {
+   "es": "Conservado.",
+   "en": "Preserved."
+  },
+  "events": [
+   "e1595-antonelli"
+  ],
+  "sources": [
+   "etcar-sanlucas"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "las-bovedas",
+  "category": "muralla",
+  "name": {
+   "es": "Las Bóvedas",
+   "en": "Las Bóvedas"
+  },
+  "aka": [
+   "Bóvedas",
+   "Cuartel de las Bóvedas"
+  ],
+  "coords": [
+   10.42982,
+   -75.54657
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1792,
+   "to": null
+  },
+  "dates": {
+   "es": "1792–1798",
+   "en": "1792–1798"
+  },
+  "periods": [
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Lorenzo de Solís",
+   "Antonio de Arévalo"
+  ],
+  "guide": {
+   "es": "Estas 23 bóvedas fueron la última obra de las murallas de Cartagena. Se construyeron a prueba de bombas para guardar tropa, víveres y municiones, entre los baluartes de Santa Clara y Santa Catalina. Hoy su galería de arcos alberga tiendas de artesanías.",
+   "en": "These 23 vaults were the last work on Cartagena's walls. They were built bomb-proof to hold troops, food and munitions, between the Santa Clara and Santa Catalina bastions. Today their arcaded gallery houses craft shops."
+  },
+  "history": {
+   "es": [
+    "Lorenzo de Solís proyectó la obra en 1755 y Antonio de Arévalo presentó su propuesta en 1773. La construcción se hizo entre 1792 y 1798, año que figura en el escudo del arco central.",
+    "Además de cuartel y almacén, tenía troneras en su fachada marítima. En las guerras civiles del siglo XIX se usaron como prisión."
+   ],
+   "en": [
+    "Lorenzo de Solís drew up the project in 1755 and Antonio de Arévalo submitted his proposal in 1773. Construction took place between 1792 and 1798, the year shown on the coat of arms of the central arch.",
+    "Besides serving as barracks and storehouse, it had embrasures on its sea-facing side. During the 19th-century civil wars the vaults were used as a prison."
+   ]
+  },
+  "note": {
+   "es": "Otra fuente secundaria da 1789–1795 para las bóvedas y 1798 para los pórticos. Seguimos la fecha del sitio oficial (1792–1798).",
+   "en": "Another secondary source gives 1789–1795 for the vaults and 1798 for the porticoes. We follow the official site's dates (1792–1798)."
+  },
+  "significance": {
+   "es": "Cierra la historia constructiva del recinto amurallado.",
+   "en": "Closes the building history of the walled enclosure."
+  },
+  "status": {
+   "es": "Conservado; uso comercial y turístico.",
+   "en": "Preserved; used for shops and tourism."
+  },
+  "events": [
+   "e1792-bovedas",
+   "e1984-unesco"
+  ],
+  "sources": [
+   "etcar-bovedas",
+   "wiki-bovedas"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 24514434,
+    "author": "Enrique",
+    "alt": {
+     "es": "Galería de arcos de Las Bóvedas",
+     "en": "The arcaded gallery of Las Bóvedas"
+    },
+    "angle": {
+     "es": "La galería de arcos",
+     "en": "The arcaded gallery"
+    }
+   }
+  ]
+ },
+ {
+  "id": "baluarte-reducto",
+  "category": "muralla",
+  "name": {
+   "es": "Baluarte de El Reducto",
+   "en": "El Reducto Bastion"
+  },
+  "aka": [
+   "El Reducto",
+   "San Lázaro",
+   "San Lorenzo",
+   "Getsemaní"
+  ],
+  "coords": [
+   10.41765,
+   -75.54532
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1631,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1631",
+   "en": "c. 1631"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Francisco de Murga",
+   "Cristóbal de Roda"
+  ],
+  "guide": {
+   "es": "En la punta de Getsemaní, este baluarte vigilaba la entrada al puerto junto con el fuerte del Pastelillo, al otro lado del agua. También servía para frenar el contrabando que entraba por este punto.",
+   "en": "At the tip of Getsemaní, this bastion watched the harbour entrance together with the Pastelillo fort across the water. It also served to stop smuggled goods coming in at this point."
+  },
+  "history": {
+   "es": [
+    "Se construyó hacia 1631, impulsado por el gobernador Francisco de Murga, sobre un proyecto de Cristóbal de Roda de planta muy sencilla, similar a una torre fuerte medieval.",
+    "La construcción del puente Román, a comienzos del siglo XX, lo dejó separado del resto de las murallas de Getsemaní."
+   ],
+   "en": [
+    "It was built around 1631, promoted by Governor Francisco de Murga, on a very simple plan by Cristóbal de Roda resembling a medieval keep.",
+    "The building of the Román bridge in the early 20th century cut it off from the rest of the Getsemaní walls."
+   ]
+  },
+  "significance": {
+   "es": "Testimonio de las murallas de Getsemaní, en gran parte perdidas.",
+   "en": "A witness to the Getsemaní walls, largely lost."
+  },
+  "status": {
+   "es": "Conservado, aislado del resto del cordón.",
+   "en": "Preserved, isolated from the rest of the circuit."
+  },
+  "events": [],
+  "sources": [
+   "etcar-reducto"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "palacio-inquisicion",
+  "category": "museo",
+  "name": {
+   "es": "Palacio de la Inquisición · Museo Histórico de Cartagena",
+   "en": "Palace of the Inquisition · Cartagena History Museum"
+  },
+  "aka": [
+   "Inquisición",
+   "MUHCA",
+   "Museo Histórico"
+  ],
+  "coords": [
+   10.4233,
+   -75.55158
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1610,
+   "to": null
+  },
+  "dates": {
+   "es": "Tribunal: 1610–1821 · edificio: siglo XVII, fachada de hacia 1770",
+   "en": "Tribunal: 1610–1821 · building: 17th century, façade c. 1770"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Felipe III"
+  ],
+  "guide": {
+   "es": "Detrás de esta portada barroca de piedra funcionó durante dos siglos el Tribunal del Santo Oficio. Hoy es el Museo Histórico de Cartagena. Un consejo de historiador: parte de los instrumentos de tortura que suelen exhibirse en este tipo de museos son réplicas modernas, no piezas originales.",
+   "en": "Behind this carved-stone Baroque doorway, the Holy Office tribunal operated for two centuries. Today it is the Cartagena History Museum. A historian's tip: some of the torture devices often shown in museums like this are modern replicas, not original pieces."
+  },
+  "history": {
+   "es": [
+    "En 1610 el Tribunal de la Inquisición empezó a funcionar en casas alquiladas junto a la plaza mayor, hoy plaza de Bolívar. Hacia 1630 levantó una nueva sede, que luego se amplió hasta ocupar cuatro inmuebles, con cárceles secretas.",
+    "Su portada barroca en piedra caliza es considerada un gran ejemplo de arquitectura civil del siglo XVIII en Cartagena. El tribunal cesó en 1821. El museo se fundó en 1924."
+   ],
+   "en": [
+    "In 1610 the Tribunal of the Inquisition began operating in rented houses beside the main square, now Plaza de Bolívar. Around 1630 it built a new headquarters, later enlarged to four buildings with secret cells.",
+    "Its Baroque limestone doorway is regarded as a fine example of 18th-century civil architecture in Cartagena. The tribunal ended in 1821. The museum was founded in 1924."
+   ]
+  },
+  "note": {
+   "es": "La fecha de hacia 1770 para la conclusión del edificio es aproximada en las fuentes.",
+   "en": "The c. 1770 completion date for the building is approximate in the sources."
+  },
+  "significance": {
+   "es": "Sede de uno de los tribunales de la Inquisición en la América española.",
+   "en": "Seat of one of the Inquisition tribunals in Spanish America."
+  },
+  "status": {
+   "es": "Museo, administrado por la Corporación Museo Histórico de Cartagena de Indias.",
+   "en": "Museum, run by the Corporación Museo Histórico de Cartagena de Indias."
+  },
+  "events": [
+   "e1610-inquisicion",
+   "e1811-independencia",
+   "e1821-recuperacion"
+  ],
+  "sources": [
+   "muhca",
+   "wiki-inquisicion"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "plaza-bolivar",
+  "category": "plaza",
+  "name": {
+   "es": "Plaza de Bolívar",
+   "en": "Plaza de Bolívar"
+  },
+  "aka": [
+   "Plaza Mayor",
+   "Parque Bolívar",
+   "Plaza"
+  ],
+  "coords": [
+   10.42327,
+   -75.55125
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1533,
+   "to": null
+  },
+  "dates": {
+   "es": "Plaza mayor colonial · estatua de Bolívar de 1896",
+   "en": "Colonial main square · Bolívar statue of 1896"
+  },
+  "periods": [
+   "fundacion",
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Simón Bolívar"
+  ],
+  "guide": {
+   "es": "Esta fue la plaza mayor de la ciudad colonial, rodeada por el poder religioso y judicial: la catedral y el Palacio de la Inquisición. Hoy es un parque sombreado, con la estatua de Simón Bolívar en el centro.",
+   "en": "This was the main square of the colonial city, surrounded by religious and judicial power: the cathedral and the Palace of the Inquisition. Today it is a shady park with a statue of Simón Bolívar at its centre."
+  },
+  "history": {
+   "es": [
+    "Fue la plaza mayor de la ciudad; la Inquisición se instaló a su lado en 1610.",
+    "Según fuentes secundarias, la estatua de Bolívar se levantó en 1896."
+   ],
+   "en": [
+    "It was the city's main square; the Inquisition settled beside it in 1610.",
+    "According to secondary sources, the Bolívar statue was raised in 1896."
+   ]
+  },
+  "significance": {
+   "es": "Centro cívico de la ciudad colonial.",
+   "en": "Civic centre of the colonial city."
+  },
+  "status": {
+   "es": "Parque público.",
+   "en": "Public park."
+  },
+  "events": [
+   "e1533-fundacion"
+  ],
+  "sources": [
+   "muhca",
+   "wiki-timeline"
+  ],
+  "certainty": "consenso",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 5397910,
+    "author": "Gustavo Bettin",
+    "alt": {
+     "es": "Estatua ecuestre de Simón Bolívar entre los árboles de la plaza",
+     "en": "Equestrian statue of Simón Bolívar among the square's trees"
+    },
+    "angle": {
+     "es": "La estatua de Bolívar",
+     "en": "The Bolívar statue"
+    }
+   }
+  ]
+ },
+ {
+  "id": "catedral",
+  "category": "iglesia",
+  "name": {
+   "es": "Catedral de Santa Catalina de Alejandría",
+   "en": "Cathedral of St Catherine of Alexandria"
+  },
+  "aka": [
+   "Catedral",
+   "Cathedral",
+   "Iglesia"
+  ],
+  "coords": [
+   10.42366,
+   -75.55081
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1577,
+   "to": null
+  },
+  "dates": {
+   "es": "finales del siglo XVI – comienzos del XVII",
+   "en": "late 16th – early 17th century"
+  },
+  "periods": [
+   "fundacion",
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "La catedral preside el centro de la ciudad desde la época colonial. Su historia está ligada a los ataques corsarios: según fuentes secundarias, sufrió daños durante la toma de Drake en 1586.",
+   "en": "The cathedral has presided over the city centre since colonial times. Its history is tied to the corsair raids: according to secondary sources, it was damaged during Drake's capture of the city in 1586."
+  },
+  "history": {
+   "es": [
+    "La diócesis de Cartagena se creó en 1534. Las fuentes secundarias consultadas sitúan la construcción de la catedral a finales del siglo XVI y su conclusión hacia 1612.",
+    "No hemos podido contrastar estas fechas con una fuente primaria o académica; por eso la ficha se marca como pendiente de verificación."
+   ],
+   "en": [
+    "The diocese of Cartagena was created in 1534. The secondary sources consulted place the cathedral's construction in the late 16th century and its completion around 1612.",
+    "We have not been able to check these dates against a primary or academic source, so this entry is marked as pending verification."
+   ]
+  },
+  "significance": {
+   "es": "Sede de la arquidiócesis y referencia del centro histórico.",
+   "en": "Seat of the archdiocese and a landmark of the historic centre."
+  },
+  "status": {
+   "es": "En culto.",
+   "en": "In use for worship."
+  },
+  "events": [
+   "e1586-drake"
+  ],
+  "sources": [
+   "wiki-cartagena",
+   "wiki-timeline"
+  ],
+  "certainty": "pendiente",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 20375713,
+    "author": "Natalia Falon",
+    "alt": {
+     "es": "La torre de la catedral entre casas coloniales",
+     "en": "The cathedral tower among colonial houses"
+    },
+    "angle": {
+     "es": "Desde una calle colonial",
+     "en": "From a colonial street"
+    }
+   },
+   {
+    "pexels": 16960980,
+    "author": "Maps Acosta",
+    "alt": {
+     "es": "Interior de la catedral con sus arcos y lámparas",
+     "en": "Inside the cathedral, with its arches and chandeliers"
+    },
+    "angle": {
+     "es": "La nave, por dentro",
+     "en": "The nave, inside"
+    }
+   },
+   {
+    "pexels": 13836087,
+    "author": "JVAS71",
+    "alt": {
+     "es": "La torre de la catedral con el mar al fondo",
+     "en": "The cathedral tower with the sea behind"
+    },
+    "angle": {
+     "es": "Con el mar al fondo",
+     "en": "With the sea behind"
+    }
+   },
+   {
+    "pexels": 18386022,
+    "author": "moralestorres98",
+    "alt": {
+     "es": "Detalle del remate de la torre de la catedral",
+     "en": "Detail of the top of the cathedral tower"
+    },
+    "angle": {
+     "es": "Detalle de la cúpula",
+     "en": "Close-up of the dome"
+    }
+   },
+   {
+    "pexels": 15104994,
+    "author": "Jaime A. Vega",
+    "alt": {
+     "es": "El centro histórico y la catedral vistos desde el agua",
+     "en": "The historic centre and cathedral seen from the water"
+    },
+    "angle": {
+     "es": "Desde la bahía",
+     "en": "From the bay"
+    }
+   },
+   {
+    "pexels": 13767911,
+    "author": "Ariel Foletto",
+    "alt": {
+     "es": "Calle del centro con la torre de la catedral al fondo",
+     "en": "A centre street with the cathedral tower behind"
+    },
+    "angle": {
+     "es": "Al final de la calle",
+     "en": "At the end of the street"
+    }
+   }
+  ]
+ },
+ {
+  "id": "iglesia-santo-domingo",
+  "category": "iglesia",
+  "name": {
+   "es": "Iglesia y convento de Santo Domingo",
+   "en": "Church and convent of Santo Domingo"
+  },
+  "aka": [
+   "Santo Domingo",
+   "Plaza de Santo Domingo",
+   "Iglesia"
+  ],
+  "coords": [
+   10.42424,
+   -75.55236
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1578,
+   "to": null
+  },
+  "dates": {
+   "es": "desde 1578 (según fuentes secundarias)",
+   "en": "from 1578 (according to secondary sources)"
+  },
+  "periods": [
+   "fundacion",
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "Uno de los templos más antiguos de la ciudad, de la orden de los dominicos. Su plaza es hoy uno de los espacios más animados del centro histórico.",
+   "en": "One of the city's oldest churches, belonging to the Dominican order. Its square is now one of the liveliest spots in the historic centre."
+  },
+  "history": {
+   "es": [
+    "Según fuentes secundarias, la construcción del convento de Santo Domingo comenzó en 1578.",
+    "Ficha pendiente de ampliar con fuentes académicas sobre su arquitectura y su historia."
+   ],
+   "en": [
+    "According to secondary sources, construction of the Santo Domingo convent began in 1578.",
+    "This entry is waiting to be expanded with academic sources on its architecture and history."
+   ]
+  },
+  "significance": {
+   "es": "Arquitectura religiosa temprana de la ciudad.",
+   "en": "Early religious architecture in the city."
+  },
+  "status": {
+   "es": "En culto; la plaza es espacio público.",
+   "en": "In use for worship; the square is public space."
+  },
+  "events": [],
+  "sources": [
+   "wiki-timeline"
+  ],
+  "certainty": "pendiente",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "san-pedro-claver",
+  "category": "iglesia",
+  "name": {
+   "es": "Iglesia y claustro de San Pedro Claver",
+   "en": "Church and cloister of San Pedro Claver"
+  },
+  "aka": [
+   "San Pedro Claver",
+   "Pedro Claver",
+   "Jesuitas",
+   "Iglesia"
+  ],
+  "coords": [
+   10.42183,
+   -75.55121
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1610,
+   "to": null
+  },
+  "dates": {
+   "es": "Pedro Claver en Cartagena: 1610/1611–1654",
+   "en": "Pedro Claver in Cartagena: 1610/1611–1654"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Pedro Claver"
+  ],
+  "guide": {
+   "es": "Este templo de la Compañía de Jesús está ligado a Pedro Claver, el jesuita catalán que dedicó su vida a atender a las personas africanas esclavizadas que llegaban al puerto de Cartagena.",
+   "en": "This Jesuit church is linked to Pedro Claver, the Catalan Jesuit who devoted his life to caring for the enslaved Africans brought to the port of Cartagena."
+  },
+  "history": {
+   "es": [
+    "Pedro Claver nació en Verdú (Lérida) el 24 de junio de 1580 y llegó a Cartagena a finales de 1610 o comienzos de 1611. Fue ordenado sacerdote el 19 de marzo de 1616.",
+    "Al profesar sus votos perpetuos, el 3 de abril de 1622, firmó como «esclavo de los negros para siempre». Murió en Cartagena el 8 de septiembre de 1654. Fue beatificado en 1850 y canonizado en 1888."
+   ],
+   "en": [
+    "Pedro Claver was born in Verdú (Lleida) on 24 June 1580 and reached Cartagena in late 1610 or early 1611. He was ordained a priest on 19 March 1616.",
+    "When he took his final vows on 3 April 1622, he signed as “slave of the Black people forever”. He died in Cartagena on 8 September 1654. He was beatified in 1850 and canonised in 1888."
+   ]
+  },
+  "note": {
+   "es": "Las fechas de construcción del templo actual no están verificadas en las fuentes consultadas; los datos de esta ficha se refieren a la vida de Pedro Claver.",
+   "en": "The construction dates of the present church are not verified in the sources consulted; the data in this entry concern Pedro Claver's life."
+  },
+  "significance": {
+   "es": "Memoria de la trata esclavista y de la población africana en Cartagena.",
+   "en": "A place of memory for the slave trade and the African population of Cartagena."
+  },
+  "status": {
+   "es": "En culto; conjunto visitable.",
+   "en": "In use for worship; the complex can be visited."
+  },
+  "events": [
+   "e1622-claver",
+   "e1654-claver"
+  ],
+  "sources": [
+   "banrep-claver"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 13809258,
+    "author": "Juan Carlos Gomez Aristizabal",
+    "alt": {
+     "es": "Portada de la iglesia de San Pedro Claver",
+     "en": "Façade of the Church of San Pedro Claver"
+    },
+    "angle": {
+     "es": "La portada",
+     "en": "The façade"
+    }
+   }
+  ]
+ },
+ {
+  "id": "convento-popa",
+  "category": "iglesia",
+  "name": {
+   "es": "Convento de La Popa",
+   "en": "La Popa Convent"
+  },
+  "aka": [
+   "Cerro de La Popa",
+   "La Popa",
+   "Virgen de la Candelaria",
+   "Convento"
+  ],
+  "coords": [
+   10.41918,
+   -75.52577
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1607,
+   "to": null
+  },
+  "dates": {
+   "es": "fundado en 1607 · iglesia de 1617–1622",
+   "en": "founded 1607 · church of 1617–1622"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Alonso de la Cruz Paredes",
+   "Juan Pecador"
+  ],
+  "guide": {
+   "es": "Desde la cima del cerro de La Popa se domina toda la ciudad y la bahía. Por eso el convento no solo fue un lugar de oración: en los sitios militares su posición fue estratégica, y en 1741 lo ocuparon las tropas británicas.",
+   "en": "From the top of La Popa hill you can see the whole city and the bay. That is why the convent was not only a place of prayer: in times of siege its position was strategic, and in 1741 British troops occupied it."
+  },
+  "history": {
+   "es": [
+    "Fray Alonso de la Cruz Paredes fundó el convento con los agustinos descalzos; la fundación se formalizó en 1607. Entre 1617 y 1622 fray Juan Pecador levantó una iglesia de cal y canto con cubiertas de cedro.",
+    "En 1741 fue ocupado por las tropas de Vernon y, en 1815, fue escenario de la defensa de la ciudad. Su fiesta principal es la de la Virgen de la Candelaria, el 2 de febrero."
+   ],
+   "en": [
+    "Friar Alonso de la Cruz Paredes founded the convent with the Discalced Augustinians; the foundation was formalised in 1607. Between 1617 and 1622 Friar Juan Pecador built a stone-and-mortar church with cedar roofing.",
+    "In 1741 it was occupied by Vernon's troops, and in 1815 it was a scene of the city's defence. Its main feast is that of the Virgin of Candelaria, on 2 February."
+   ]
+  },
+  "significance": {
+   "es": "Mirador natural y punto estratégico en los asedios.",
+   "en": "A natural lookout and a strategic point during sieges."
+  },
+  "status": {
+   "es": "Conservado; se visita por carretera.",
+   "en": "Preserved; reached by road."
+  },
+  "events": [
+   "e1607-popa",
+   "e1741-vernon",
+   "e1815-morillo"
+  ],
+  "sources": [
+   "epa-popa"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "teatro-adolfo-mejia",
+  "category": "cultura",
+  "name": {
+   "es": "Teatro Adolfo Mejía",
+   "en": "Teatro Adolfo Mejía"
+  },
+  "aka": [
+   "Teatro Heredia",
+   "Teatro Municipal",
+   "Plaza de la Merced"
+  ],
+  "coords": [
+   10.4271,
+   -75.5494
+  ],
+  "loc": {
+   "accuracy": "approx",
+   "method": "Posición aproximada (plaza de la Merced); pendiente de verificación en campo"
+  },
+  "built": {
+   "from": 1911,
+   "to": null
+  },
+  "dates": {
+   "es": "1911 · restaurado 1987–1998",
+   "en": "1911 · restored 1987–1998"
+  },
+  "periods": [
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Luis Felipe Jaspe",
+   "Alberto Samudio Trallero",
+   "Enrique Grau",
+   "Adolfo Mejía"
+  ],
+  "guide": {
+   "es": "Este teatro se inauguró en noviembre de 1911, sobre el solar de una antigua capilla colonial. Su sala en forma de herradura y el plafón pintado por Enrique Grau lo hacen una joya de la Cartagena republicana.",
+   "en": "This theatre opened in November 1911, on the site of an old colonial chapel. Its horseshoe-shaped auditorium and the ceiling painted by Enrique Grau make it a gem of republican-era Cartagena."
+  },
+  "history": {
+   "es": [
+    "Diseñado por Luis Felipe Jaspe e inspirado en teatros del Caribe, se construyó donde estuvo la capilla de la Merced (1625). Se llamó Teatro Municipal y en 1933, en el cuarto centenario de la fundación, pasó a llamarse Teatro Heredia.",
+    "Cerró en 1970 por deterioro. Lo restauró el arquitecto Alberto Samudio Trallero entre 1987 y 1998, cuando reabrió como Teatro Adolfo Mejía, en honor al compositor."
+   ],
+   "en": [
+    "Designed by Luis Felipe Jaspe and inspired by Caribbean theatres, it was built where the Merced chapel (1625) once stood. First called the Municipal Theatre, it was renamed Teatro Heredia in 1933, the city's 400th anniversary.",
+    "It closed in 1970 because of decay. The architect Alberto Samudio Trallero restored it between 1987 and 1998, when it reopened as the Teatro Adolfo Mejía, in honour of the composer."
+   ]
+  },
+  "significance": {
+   "es": "Patrimonio de la época republicana.",
+   "en": "Republican-era heritage."
+  },
+  "status": {
+   "es": "Activo como escenario cultural (IPCC).",
+   "en": "Active cultural venue (IPCC)."
+  },
+  "events": [
+   "e1911-teatro"
+  ],
+  "sources": [
+   "senal-teatro"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "camellon-martires",
+  "category": "monumento",
+  "name": {
+   "es": "Camellón de los Mártires",
+   "en": "Camellón de los Mártires"
+  },
+  "aka": [
+   "Mártires",
+   "Parque del Centenario",
+   "Independencia"
+  ],
+  "coords": [
+   10.4226,
+   -75.54862
+  ],
+  "loc": {
+   "accuracy": "approx",
+   "method": "Paseo entre la Puerta del Reloj y el Parque del Centenario; punto aproximado sobre OpenStreetMap"
+  },
+  "built": {
+   "from": 1870,
+   "to": null
+  },
+  "dates": {
+   "es": "homenaje a los fusilados de 1816",
+   "en": "a tribute to those executed in 1816"
+  },
+  "periods": [
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Manuel del Castillo",
+   "José María García de Toledo",
+   "Pablo Morillo"
+  ],
+  "guide": {
+   "es": "Este paseo recuerda a los Mártires de Cartagena: líderes de la independencia fusilados el 24 de febrero de 1816, después de que el ejército de Morillo reconquistara la ciudad.",
+   "en": "This promenade honours the Martyrs of Cartagena: independence leaders executed by firing squad on 24 February 1816, after Morillo's army retook the city."
+  },
+  "history": {
+   "es": [
+    "Tras el sitio de 1815, el proceso contra los líderes independentistas se abrió el 9 de enero de 1816 y la sentencia se dictó el 20 de febrero. La pena de horca se conmutó por el fusilamiento, que se cumplió el 24 de febrero.",
+    "Entre los mártires figuran Manuel del Castillo, José María García de Toledo, Martín Amador, Pantaleón Germán Ribón y Miguel Díaz Granados."
+   ],
+   "en": [
+    "After the 1815 siege, the trial of the independence leaders opened on 9 January 1816 and sentence was passed on 20 February. The sentence of hanging was commuted to execution by firing squad, carried out on 24 February.",
+    "The martyrs include Manuel del Castillo, José María García de Toledo, Martín Amador, Pantaleón Germán Ribón and Miguel Díaz Granados."
+   ]
+  },
+  "note": {
+   "es": "Las fuentes consultadas no precisan el lugar exacto del fusilamiento; este paseo es un lugar de memoria.",
+   "en": "The sources consulted do not pinpoint where the execution took place; this promenade is a place of remembrance."
+  },
+  "significance": {
+   "es": "Memoria de la represión tras la independencia.",
+   "en": "A memorial to the repression that followed independence."
+  },
+  "status": {
+   "es": "Espacio público.",
+   "en": "Public space."
+  },
+  "events": [
+   "e1816-martires"
+  ],
+  "sources": [
+   "banrep-martires",
+   "wiki-timeline"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "getsemani",
+  "category": "barrio",
+  "name": {
+   "es": "Getsemaní",
+   "en": "Getsemaní"
+  },
+  "aka": [
+   "Barrio",
+   "Independencia",
+   "Arrabal"
+  ],
+  "coords": [
+   10.42026,
+   -75.5456
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Centro del barrio: plaza e iglesia de la Trinidad (OpenStreetMap)"
+  },
+  "built": {
+   "from": 1533,
+   "to": null
+  },
+  "dates": {
+   "es": "arrabal colonial · protagonista del 11 de noviembre de 1811",
+   "en": "colonial suburb · key player on 11 November 1811"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Germán Gutiérrez de Piñeres",
+   "Gabriel Gutiérrez de Piñeres"
+  ],
+  "guide": {
+   "es": "Getsemaní fue el arrabal de la ciudad colonial, donde vivían artesanos y personas esclavizadas. En noviembre de 1811 sus habitantes presionaron a la junta de gobierno hasta lograr la proclamación de la independencia absoluta.",
+   "en": "Getsemaní was the colonial city's suburb, home to artisans and enslaved people. In November 1811 its residents pressed the governing junta until absolute independence was proclaimed."
+  },
+  "history": {
+   "es": [
+    "La UNESCO describe Getsemaní como el barrio suburbano habitado por artesanos y esclavizados, uno de los tres sectores de la ciudad histórica junto con el Centro y San Diego.",
+    "El 11 de noviembre de 1811 los hermanos Germán y Gabriel Gutiérrez de Piñeres reunieron aquí a sectores populares, cuya presión llevó a proclamar la independencia absoluta de España."
+   ],
+   "en": [
+    "UNESCO describes Getsemaní as the suburban quarter inhabited by artisans and enslaved people, one of the three sectors of the historic city together with the Centre and San Diego.",
+    "On 11 November 1811 the brothers Germán and Gabriel Gutiérrez de Piñeres gathered working-class residents here, and their pressure led to the proclamation of absolute independence from Spain."
+   ]
+  },
+  "significance": {
+   "es": "Cuna popular de la independencia de Cartagena.",
+   "en": "The popular cradle of Cartagena's independence."
+  },
+  "status": {
+   "es": "Barrio vivo, con fuerte presión turística.",
+   "en": "A living neighbourhood under strong tourist pressure."
+  },
+  "events": [
+   "e1811-independencia"
+  ],
+  "sources": [
+   "unesco",
+   "canal-1811"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 20483126,
+    "author": "Ariel Foletto",
+    "alt": {
+     "es": "Fachada decorada en Getsemaní",
+     "en": "A decorated façade in Getsemaní"
+    },
+    "angle": {
+     "es": "Sus fachadas",
+     "en": "Its façades"
+    }
+   },
+   {
+    "pexels": 29907876,
+    "author": "Fizaguirre",
+    "alt": {
+     "es": "Calle de Getsemaní adornada con banderines",
+     "en": "A Getsemaní street decked with bunting"
+    },
+    "angle": {
+     "es": "Sus calles",
+     "en": "Its streets"
+    }
+   }
+  ]
+ },
+ {
+  "id": "san-diego",
+  "category": "barrio",
+  "name": {
+   "es": "San Diego",
+   "en": "San Diego"
+  },
+  "aka": [
+   "Santo Toribio",
+   "Barrio"
+  ],
+  "coords": [
+   10.4272,
+   -75.548
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Centro aproximado del barrio"
+  },
+  "built": {
+   "from": 1600,
+   "to": null
+  },
+  "dates": {
+   "es": "barrio de la ciudad amurallada",
+   "en": "a district of the walled city"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "San Diego, también llamado Santo Toribio, era el barrio de comerciantes y artesanos de clase media dentro de las murallas. Sus calles conducen a Las Bóvedas y a los baluartes del norte.",
+   "en": "San Diego, also known as Santo Toribio, was the district of merchants and middle-class craftsmen inside the walls. Its streets lead to Las Bóvedas and the northern bastions."
+  },
+  "history": {
+   "es": [
+    "La UNESCO identifica tres sectores en la ciudad histórica: el Centro (San Pedro), con la catedral y las casas de la élite; San Diego (Santo Toribio), de comerciantes y artesanos; y Getsemaní.",
+    "El trazado de los baluartes de Santa Catalina y San Lucas se adelantó para dejar dentro del recinto tierras fértiles y reservas de agua de este sector."
+   ],
+   "en": [
+    "UNESCO identifies three sectors in the historic city: the Centre (San Pedro), with the cathedral and elite homes; San Diego (Santo Toribio), home to merchants and craftsmen; and Getsemaní.",
+    "The Santa Catalina and San Lucas bastions were pushed forward so that this sector's fertile land and water reserves would lie inside the enclosure."
+   ]
+  },
+  "significance": {
+   "es": "Uno de los tres sectores históricos del recinto.",
+   "en": "One of the three historic sectors of the enclosure."
+  },
+  "status": {
+   "es": "Barrio residencial y turístico.",
+   "en": "Residential and tourist district."
+  },
+  "events": [],
+  "sources": [
+   "unesco",
+   "etcar-sanlucas",
+   "etcar-santacatalina"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 11815919,
+    "author": "Kelly",
+    "alt": {
+     "es": "La iglesia de Santo Toribio entre los tejados del barrio",
+     "en": "The Church of Santo Toribio among the neighbourhood rooftops"
+    },
+    "angle": {
+     "es": "Desde el aire: iglesia de Santo Toribio",
+     "en": "From the air: Santo Toribio church"
+    }
+   }
+  ]
+ },
+ {
+  "id": "india-catalina",
+  "category": "monumento",
+  "name": {
+   "es": "Monumento a la India Catalina",
+   "en": "India Catalina Monument"
+  },
+  "aka": [
+   "India Catalina",
+   "Catalina"
+  ],
+  "coords": [
+   10.42647,
+   -75.54404
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1974,
+   "to": null
+  },
+  "dates": {
+   "es": "1974",
+   "en": "1974"
+  },
+  "periods": [
+   "fundacion",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Catalina",
+   "Pedro de Heredia",
+   "Eladio Gil Zambrana"
+  ],
+  "guide": {
+   "es": "Esta escultura en bronce recuerda a Catalina, una mujer indígena que sirvió de intérprete a Pedro de Heredia. Su figura es hoy un emblema de la ciudad, aunque su papel en la conquista se interpreta de formas distintas.",
+   "en": "This bronze sculpture recalls Catalina, an Indigenous woman who served as Pedro de Heredia's interpreter. She is now an emblem of the city, although her role in the conquest is interpreted in different ways."
+  },
+  "history": {
+   "es": [
+    "Según la tradición recogida por la prensa local, Catalina fue capturada de niña hacia 1509, llevada a Santo Domingo y educada allí, y acompañó a Heredia como intérprete en la expedición de 1533.",
+    "La escultura, de 2,95 m, es obra de Eladio Gil Zambrana y se instaló en 1974. Su silueta es también el premio de los Premios India Catalina de la televisión colombiana."
+   ],
+   "en": [
+    "According to the tradition reported by the local press, Catalina was captured as a child around 1509, taken to Santo Domingo and raised there, and accompanied Heredia as an interpreter on the 1533 expedition.",
+    "The 2.95 m sculpture is by Eladio Gil Zambrana and was installed in 1974. Its silhouette is also the trophy of Colombia's India Catalina television awards."
+   ]
+  },
+  "note": {
+   "es": "La biografía de Catalina procede sobre todo de la tradición; el monumento y su fecha sí están documentados.",
+   "en": "Catalina's biography comes mostly from tradition; the monument and its date are documented."
+  },
+  "significance": {
+   "es": "Símbolo del encuentro, y del conflicto, entre mundos.",
+   "en": "A symbol of the encounter, and the conflict, between worlds."
+  },
+  "status": {
+   "es": "Espacio público.",
+   "en": "Public space."
+  },
+  "events": [
+   "e1974-catalina"
+  ],
+  "sources": [
+   "universal-catalina"
+  ],
+  "certainty": "tradicion",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ }
+]

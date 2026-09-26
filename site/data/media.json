@@ -1,0 +1,144 @@
+{
+ "hero": {
+  "pexels": 11815901,
+  "author": "Kelly",
+  "alt": {
+   "es": "Vista aérea del centro histórico de Cartagena al atardecer",
+   "en": "Aerial view of Cartagena's historic centre at sunset"
+  }
+ },
+ "cat": {
+  "castillo": {
+   "pexels": 19951509,
+   "author": "moralestorres98",
+   "alt": {
+    "es": "Fortificación frente al mar en Cartagena",
+    "en": "A seafront fortification in Cartagena"
+   }
+  },
+  "muralla": {
+   "pexels": 36874558,
+   "author": "Woody Willis",
+   "alt": {
+    "es": "Murallas de Cartagena con la ciudad moderna al fondo",
+    "en": "Cartagena's walls with the modern city behind"
+   }
+  },
+  "iglesia": {
+   "pexels": 17745834,
+   "author": "Enrique",
+   "alt": {
+    "es": "Calle del centro histórico con la torre de la catedral",
+    "en": "A historic-centre street with the cathedral tower"
+   }
+  },
+  "museo": {
+   "pexels": 13804522,
+   "author": "Maria Paula Medina",
+   "alt": {
+    "es": "Arquitectura colonial en el centro de Cartagena",
+    "en": "Colonial architecture in central Cartagena"
+   }
+  },
+  "plaza": {
+   "pexels": 18074796,
+   "author": "Gilbert",
+   "alt": {
+    "es": "Calle del centro histórico con vendedores y flores",
+    "en": "A historic-centre street with vendors and flowers"
+   }
+  },
+  "monumento": {
+   "pexels": 11815937,
+   "author": "Kelly",
+   "alt": {
+    "es": "Vista aérea de Cartagena junto al mar",
+    "en": "Aerial view of Cartagena by the sea"
+   }
+  },
+  "cultura": {
+   "pexels": 13804522,
+   "author": "Maria Paula Medina",
+   "alt": {
+    "es": "Arquitectura colonial en el centro de Cartagena",
+    "en": "Colonial architecture in central Cartagena"
+   }
+  },
+  "barrio": {
+   "pexels": 6226361,
+   "author": "Claudia",
+   "alt": {
+    "es": "Calle colonial con flores en Cartagena",
+    "en": "A colonial street with flowers in Cartagena"
+   }
+  }
+ },
+ "route": {
+  "60-minutos": 11815910,
+  "murallas": 36874558,
+  "independencia": 20483126,
+  "colonial": 17745834,
+  "familias": 6226361,
+  "fortificaciones": 11815905
+ },
+ "routeAuthor": {
+  "11815910": "Kelly",
+  "36874558": "Woody Willis",
+  "20483126": "Ariel Foletto",
+  "17745834": "Enrique",
+  "6226361": "Claudia",
+  "11815905": "Kelly"
+ },
+ "walls": {
+  "note": {
+   "es": "Trazado esquemático que une los baluartes verificados; no es el dibujo exacto de la muralla.",
+   "en": "A schematic line joining the verified bastions; not the exact outline of the wall."
+  },
+  "points": [
+   [
+    10.42156,
+    -75.55264
+   ],
+   [
+    10.42343,
+    -75.55362
+   ],
+   [
+    10.42444,
+    -75.55407
+   ],
+   [
+    10.42545,
+    -75.55338
+   ],
+   [
+    10.42982,
+    -75.54657
+   ],
+   [
+    10.43079,
+    -75.54565
+   ],
+   [
+    10.42978,
+    -75.54477
+   ],
+   [
+    10.4247,
+    -75.54382
+   ],
+   [
+    10.42296,
+    -75.5492
+   ],
+   [
+    10.42125,
+    -75.55071
+   ],
+   [
+    10.42156,
+    -75.55264
+   ]
+  ]
+ }
+}
