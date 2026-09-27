@@ -7,6 +7,7 @@ import * as V from './views.js';
 import * as tts from './tts.js';
 import { openCinema } from './cinema.js';
 import { weather } from './now.js';
+import { openPostcard, isOpen as postcardOpen } from './postcard-ui.js';
 
 const $ = s => document.querySelector(s);
 const panel = $('#panel'), body = $('#panelBody'), hero = $('#hero');
@@ -497,6 +498,11 @@ function routeFromHash() {
   if (a === 'ruta' && getRoute(b)) { if (S.history) leaveHistory(false); startRoute(b, Number(c) || 1); return true; }
   if (a === 'rutas') { openTab('routes'); return true; }
   if (a === 'fuentes') { openTab('about'); return true; }
+  if (a === 'postal') {
+    openTab('trip');
+    openPostcard({ kind: b === 'estuve' || b === 'was' ? 'was' : 'invite', first: place(c) ? [c] : [], onToast: toast });
+    return true;
+  }
   if (a === 'viaje') {
     S.shared = b === 'mi' && c ? decodeURIComponent(c).split(',').filter(id => place(id)).slice(0, 40) : null;
     openTab('trip');
@@ -528,7 +534,8 @@ function wire() {
     const el = e.target.closest('button, a');
     if (!el) return;
     const d = el.dataset;
-    if (d.fav) toggleFav(d.fav, el);
+    if (d.postcard) openPostcard({ kind: d.postcard, first: d.pcfirst ? [d.pcfirst] : [], onToast: toast });
+    else if (d.fav) toggleFav(d.fav, el);
     else if (d.favRemove) { store.remove('favs', d.favRemove); toast(t('fav.removed')); render(); }
     else if ('favShare' in d) shareFavs();
     else if ('favMap' in d) { const ids = (store.get().favs || []).filter(place); if (ids.length) { M.fitPlaces(ids, { maxZoom: 16 }); setSheet('peek'); } }
@@ -605,6 +612,7 @@ function wire() {
     if (go === 'forts') goForts();
     if (go === 'cinema') { openTab('explore'); startCinema(db.stories[0].id); }
     if (go === 'trip') openTab('trip');
+    if (go === 'postcard') { openTab('trip'); openPostcard({ kind: 'invite', onToast: toast }); }
     M.invalidate();
   });
 
@@ -614,7 +622,7 @@ function wire() {
 
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    if ($('#viewer').open) return;
+    if ($('#viewer').open || postcardOpen()) return;
     if (!hero.hidden) { hero.hidden = true; return; }
     if (S.placeId) closePlace();
   });

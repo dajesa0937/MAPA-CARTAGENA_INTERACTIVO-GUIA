@@ -1163,3 +1163,41 @@ body.cinema-on { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .hero-hook { animation: none !important; } }
 .now-cell small svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 3px; color: #f6cf72; }
 @media (max-width: 400px) { .now-big { font-size: 18px; } }
+
+/* =========================================================
+   v6.1 — Postales
+   ========================================================= */
+.pc-modal { width: min(1040px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow: auto; padding: 18px; }
+.pc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; margin-top: 12px; align-items: start; }
+.pc-preview { position: sticky; top: 0; }
+.pc-preview canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1350; display: block; border-radius: 12px; box-shadow: var(--shadow); background: #f7f0e3; }
+.pc-status { min-height: 18px; margin: 8px 0 0; font-size: 12.5px; color: var(--ink-soft); }
+.pc-form { display: grid; gap: 12px; min-width: 0; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px; border-radius: 14px; background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.seg button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 0; background: none; padding: 10px; border-radius: 11px; font-weight: 600; color: var(--ink-soft); }
+.seg button svg { width: 17px; height: 17px; }
+.seg button[aria-checked="true"] { background: var(--bg-elev); color: var(--accent); box-shadow: 0 1px 4px rgba(14,42,59,.15); }
+.pc-label { margin: 2px 0 0; font-weight: 600; font-size: 14px; }
+.pc-label small { font-weight: 400; color: var(--ink-soft); }
+.pc-places { display: flex; flex-wrap: wrap; gap: 6px; max-height: 196px; overflow: auto; padding: 2px; }
+.pc-place { display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px 4px 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); font-size: 13px; color: var(--ink); max-width: 100%; }
+.pc-place > span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pc-thumb { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex: none; background: var(--line); }
+.pc-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pc-place[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); box-shadow: 0 0 0 1px var(--accent); font-weight: 600; }
+.pc-field { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.pc-field input, .pc-field textarea { font: inherit; font-weight: 400; font-size: 15px; color: var(--ink); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); resize: vertical; }
+.pc-field input:focus, .pc-field textarea:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+.pc-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.pc-promo { padding: 14px; border-radius: var(--radius); background: color-mix(in srgb, var(--gold) 14%, var(--bg-elev)); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line)); }
+.pc-promo .st { margin-top: 0; }
+.pc-promo-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 760px) {
+  .pc-modal { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; margin: 0; border-radius: 0; padding: 14px 14px max(14px, env(safe-area-inset-bottom)); }
+  .pc-wrap { grid-template-columns: 1fr; gap: 14px; }
+  .pc-preview { position: static; max-width: 340px; margin: 0 auto; width: 100%; }
+  .pc-actions .btn { flex: 1; justify-content: center; }
+}
+@media (max-width: 760px) {
+  .pc-actions { position: sticky; bottom: calc(-1 * max(14px, env(safe-area-inset-bottom))); padding: 10px 0 max(10px, env(safe-area-inset-bottom)); background: var(--bg-elev); box-shadow: 0 -8px 16px -12px rgba(14,42,59,.35); z-index: 1; }
+}

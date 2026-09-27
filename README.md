@@ -152,3 +152,12 @@ Cambios basados en una investigación sobre qué lleva a un viajero internaciona
 - Corrección: el teatro Adolfo Mejía se reubicó con OpenStreetMap (la posición anterior era aproximada).
 
 Datos prácticos a revisar periódicamente: vuelos, requisitos de entrada y aviso de viaje de EE. UU. (fecha en `trip.json → checked`).
+
+## Novedades v6.1 — Postales (27/09/2026)
+
+- **Envía una postal** (`js/postcard.js` + `js/postcard-ui.js`): el visitante elige *Te invito* o *Estuve aquí*, hasta 4 lugares (solo con fotos del propio sitio), su nombre, el de su amigo y un mensaje. La postal se dibuja en el navegador (canvas 1080×1350) con collage de fotos, sello, matasellos con la fecha, código QR hacia la guía (con la lista de lugares) y los créditos de las fotos, como exigen sus licencias.
+- Se comparte como imagen (WhatsApp, correo, redes) con el menú de compartir del teléfono o se descarga en PNG; en computador se descarga y se copia el enlace.
+- Accesos: portada («Envía una postal»), pestaña Viaje, botón «Postal» en cada ficha, «Hacer una postal con mi lista» en Mi Cartagena, y enlaces `#/postal`, `#/postal/estuve`, `#/postal/estuve/<lugar>`.
+- Fotos de Commons: se piden por la API (`origin=*`) para obtener miniaturas con CORS; Pexels ya lo permite. Si una foto no carga, se usa un fondo de color.
+- QR: `vendor/qrcode/qrcode.js` (qrcode-generator 2.0.4, Kazuhiko Arase, licencia MIT).
+- Privacidad: nada se envía a servidores; «Guardar» y el nombre del remitente viven solo en el navegador del visitante (localStorage).

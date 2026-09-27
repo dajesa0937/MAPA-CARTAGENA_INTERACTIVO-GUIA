@@ -1,9 +1,9 @@
 // Service worker: guarda la aplicación y los datos para uso sin conexión.
 // No guarda teselas de mapas (respeto a las políticas de los proveedores).
-const CACHE = 'ctg-v19';
+const CACHE = 'ctg-v20';
 const SHELL = [
   './', 'index.html', 'css/styles.css',
-  'js/app.js', 'js/data.js', 'js/i18n.js', 'js/map.js', 'js/views.js', 'js/store.js', 'js/tts.js', 'js/scenes.js', 'js/cinema.js', 'js/now.js',
+  'js/app.js', 'js/data.js', 'js/i18n.js', 'js/map.js', 'js/views.js', 'js/store.js', 'js/tts.js', 'js/scenes.js', 'js/cinema.js', 'js/now.js', 'js/postcard.js', 'js/postcard-ui.js', 'vendor/qrcode/qrcode.js',
   'vendor/leaflet/leaflet.js', 'vendor/leaflet/leaflet.css',
   'data/places.json', 'data/events.json', 'data/periods.json', 'data/routes.json', 'data/sources.json', 'data/badges.json', 'data/media.json', 'data/stories.json', 'data/trip.json',
   'i18n/es.json', 'i18n/en.json', 'img/icon.svg', 'manifest.webmanifest'

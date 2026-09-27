@@ -268,6 +268,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
       <button class="btn small" type="button" data-zoom>${ico('map')}${esc(t('place.zoom'))}</button>
       <button class="btn small fav-btn" type="button" data-fav="${esc(p.id)}" aria-pressed="${store.has('favs', p.id)}">${ico(store.has('favs', p.id) ? 'heart-on' : 'heart')}<span>${esc(t(store.has('favs', p.id) ? 'fav.saved' : 'fav.save'))}</span></button>
       <button class="btn small" type="button" data-share>${ico('share')}${esc(t('place.share'))}</button>
+      ${photoFor(p) && p.id !== 'galeon-san-jose' ? `<button class="btn small" type="button" data-postcard="invite" data-pcfirst="${esc(p.id)}">${ico('stamp')}${esc(t('pc.button'))}</button>` : ''}
       <a class="btn small" href="${esc(commons)}" target="_blank" rel="noopener">${esc(t('place.photos'))}</a>
     </div>
     ${stepper}
@@ -456,7 +457,16 @@ export function tripView({ wx = null, shared = null } = {}) {
       ${favs.length ? favList(favs) + `<div class="actions">
         <button class="btn small" type="button" data-fav-map>${ico('map')}${esc(t('fav.map'))}</button>
         <button class="btn small primary" type="button" data-fav-share>${ico('share')}${esc(t('fav.share'))}</button>
+        <button class="btn small" type="button" data-postcard="invite">${ico('stamp')}${esc(t('pc.fromList'))}</button>
       </div>` : `<p class="fav-empty">${ico('heart')}${esc(t('fav.empty'))}</p>`}
+    </section>
+    <section class="block pc-promo">
+      <h3 class="st">${ico('stamp')}${esc(t('pc.section'))}</h3>
+      <p class="hint">${esc(t('pc.sectionHint'))}</p>
+      <div class="pc-promo-btns">
+        <button class="btn primary" type="button" data-postcard="invite">${ico('plane')}${esc(t('pc.kindInvite'))}</button>
+        <button class="btn" type="button" data-postcard="was">${ico('heart')}${esc(t('pc.kindWas'))}</button>
+      </div>
     </section>
     ${quick ? `<section class="block"><h3 class="st">${esc(t('trip.short'))}</h3>
       <button class="btn primary" type="button" data-route="${esc(quick.id)}">${ico('walk')}${esc(L(quick.name))}</button></section>` : ''}
