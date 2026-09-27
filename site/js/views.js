@@ -1,5 +1,5 @@
 // Vistas del panel: devuelven HTML a partir de los datos. Sin lógica de estado.
-import { db, place, event, period, source, story as getStory, routeStats, existsIn, pexels, photoFor, photosFor, eraFocus, storyPlaces, storySources } from './data.js';
+import { db, place, event, period, source, story as getStory, routeStats, existsIn, pexels, photoUrl, photoPage, photoSite, photoFor, photosFor, eraFocus, storyPlaces, storySources } from './data.js';
 import { sceneHtml, slidesHtml } from './scenes.js';
 import { cinemaMinutes } from './cinema.js';
 import { t, L, getLang, formatDate } from './i18n.js';
@@ -15,13 +15,14 @@ const certPill = c => `<span class="pill cert-${esc(c)}" title="${esc(t(`cert.${
 /* ---------- Fotos ---------- */
 export function img(ph, w, cls = '', sizes = '') {
   if (!ph) return '';
-  const srcset = [Math.round(w / 2), w, w * 2].map(x => `${pexels(ph.pexels, x)} ${x}w`).join(', ');
-  return `<img class="${cls}" src="${pexels(ph.pexels, w)}" srcset="${srcset}" ${sizes ? `sizes="${sizes}"` : ''} alt="${esc(L(ph.alt))}" loading="lazy" decoding="async">`;
+  const srcset = [Math.round(w / 2), w, w * 2].map(x => `${photoUrl(ph, x)} ${x}w`).join(', ');
+  return `<img class="${cls}" src="${photoUrl(ph, w)}" srcset="${srcset}" ${sizes ? `sizes="${sizes}"` : ''} alt="${esc(L(ph.alt))}" loading="lazy" decoding="async">`;
 }
 export function credit(ph) {
   if (!ph) return '';
   const angle = ph.angle ? `<strong>${esc(L(ph.angle))}</strong> · ` : '';
-  return `${angle}${ph.specific === false ? esc(t('photo.illustrative')) + ' · ' : ''}${esc(t('photo.by'))}: ${esc(ph.author)} / Pexels`;
+  const lic = ph.license ? ` · ${esc(ph.license)}` : '';
+  return `${angle}${ph.specific === false ? esc(t('photo.illustrative')) + ' · ' : ''}${esc(t('photo.by'))}: ${esc(ph.author)} / <a href="${esc(photoPage(ph))}" target="_blank" rel="noopener">${esc(photoSite(ph))}</a>${lic}`;
 }
 const FEATURED = ['castillo-san-felipe', 'puerta-del-reloj', 'las-bovedas', 'getsemani', 'catedral', 'san-pedro-claver', 'baluarte-santo-domingo', 'convento-popa', 'fuerte-san-fernando'];
 
@@ -29,7 +30,7 @@ export function card(p, { size = 'md' } = {}) {
   const ph = photoFor(p);
   const visited = store.has('visited', p.id) ? `<span class="card-vis" title="${esc(t('place.visited'))}">✓</span>` : '';
   return `<button class="card card-${size}" type="button" data-place="${esc(p.id)}">
-    ${img(ph, size === 'lg' ? 480 : 360, 'card-img', size === 'lg' ? '240px' : '180px')}
+    ${ph ? img(ph, size === 'lg' ? 480 : 360, 'card-img', size === 'lg' ? '240px' : '180px') : `<span class="card-noimg" style="--cc:${catColor(p.category)}">${ico(p.category)}</span>`}
     <span class="card-shade"></span>
     <span class="card-cat" style="--cc:${catColor(p.category)}">${ico(p.category)}${esc(t(`cat.${p.category}`))}</span>
     ${visited}
@@ -204,7 +205,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
         <button class="gal-arrow next" type="button" data-gal="1" aria-label="${esc(t('gallery.next'))}">${ico('back')}</button>
         <div class="gal-dots" aria-hidden="true">${phs.map((_, i) => `<i class="${i ? '' : 'on'}"></i>`).join('')}</div>` : ''}
       ${ph ? `<button class="gal-open" type="button" data-viewer="0">${ico('layers')}${esc(phs.length > 1 ? t('gallery.views', { n: phs.length }) : t('gallery.open'))}</button>` : ''}
-      ${ph ? `<figcaption class="cover-credit" data-gal-cap>${credit(phs[0])}</figcaption>` : ''}
+      ${ph ? `<figcaption class="cover-credit" data-gal-cap>${credit(phs[0])}</figcaption>` : `<div class="cover-nophoto">${ico(p.category, 'cover-bigico')}<span>${esc(t('photo.none'))}</span></div>`}
     </figure>
     <header class="place-head">
       ${p.tourism ? `<p class="tourism-tag">${ico('hoy')}${esc(t('tourism.tag', { date: formatDate(p.visit?.checked || '2026-09-26') }))}</p>` : ''}
@@ -348,7 +349,7 @@ export function routesView() {
       const p = place(id); const ph = photoFor(p);
       return `<li><button type="button" class="rv-stop" data-route="${esc(r.id)}" data-stopn="${k + 1}" aria-label="${esc(t('routes.startHere', { name: L(p.name) }))}">
         <span class="rv-num">${k + 1}</span>
-        <span class="rv-thumb" style="background:${catColor(p.category)}">${ph ? `<img src="${pexels(ph.pexels, 120)}" alt="" loading="lazy">` : ''}</span>
+        <span class="rv-thumb" style="background:${catColor(p.category)}">${ph ? `<img src="${photoUrl(ph, 120)}" alt="" loading="lazy">` : ''}</span>
         <small>${esc(shortName(p))}</small>
       </button></li>`;
     }).join('');

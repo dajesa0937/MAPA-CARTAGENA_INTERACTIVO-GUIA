@@ -110,7 +110,7 @@
  "about.type.medio": "Medio de comunicación",
  "about.type.secundaria": "Secundaria",
  "about.accessed": "Consultadas el 26 de septiembre de 2026.",
- "about.credits": "Mapas: © OpenStreetMap (colaboradores), © CARTO, imágenes © Esri. Construido con Leaflet.",
+ "about.credits": "Mapas: © colaboradores de OpenStreetMap; imágenes © Esri. Construido con Leaflet. Fotos: Pexels (licencia Pexels) y Wikimedia Commons (licencias Creative Commons o dominio público); cada foto indica su autor y licencia. Solo mostramos fotos verificadas del lugar; si no hay ninguna, no usamos la de otro sitio.",
  "map.layers": "Capas",
  "map.layer.voyager": "Mapa",
  "map.layer.osm": "Detalle",
@@ -238,5 +238,6 @@
  "place.pressPhotos": "Fotos recientes de la obra (prensa)",
  "place.pressNote": "Las fotos de la obra pertenecen a los medios; ábrelas en su sitio.",
  "place.photoLinks": "Ver fotos del lugar",
- "place.photoLinksNote": "Enlaces externos: las fotos pertenecen a sus autores."
+ "place.photoLinksNote": "Enlaces externos: las fotos pertenecen a sus autores.",
+ "photo.none": "Aún no tenemos una foto verificada de este lugar. Preferimos no mostrar la de otro sitio."
 }

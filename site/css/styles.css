@@ -1030,3 +1030,12 @@ body.cinema-on { overflow: hidden; }
   .step:hover .s-year { visibility: visible; }
 }
 .tb-exit { margin-left: 6px; }
+
+/* ---------- Lugares sin foto verificada: portada propia, nunca la foto de otro sitio ---------- */
+.card-noimg { position: absolute; inset: 0; z-index: -2; display: grid; place-items: center; color: rgba(255,255,255,.3);
+  background: radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--cc) 70%, #fff) 0%, var(--cc) 45%, color-mix(in srgb, var(--cc) 55%, #000) 100%); }
+.card-noimg svg { width: 44%; height: 44%; }
+.cover-nophoto { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 40px 30px 60px; text-align: center; }
+.cover-bigico { width: 72px !important; height: 72px !important; color: rgba(255,255,255,.55); }
+.cover-nophoto span { font-size: 12.5px; line-height: 1.4; max-width: 30ch; opacity: .85; }
+.cover:not(.has-photo) .cover-cat { z-index: 2; }

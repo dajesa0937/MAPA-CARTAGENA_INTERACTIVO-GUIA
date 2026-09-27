@@ -110,7 +110,7 @@
  "about.type.medio": "News media",
  "about.type.secundaria": "Secondary",
  "about.accessed": "Accessed on 26 September 2026.",
- "about.credits": "Maps: © OpenStreetMap contributors, © CARTO, imagery © Esri. Built with Leaflet.",
+ "about.credits": "Maps: © OpenStreetMap contributors; imagery © Esri. Built with Leaflet. Photos: Pexels (Pexels licence) and Wikimedia Commons (Creative Commons licences or public domain); each photo shows its author and licence. We only show verified photos of each place; if there is none, we never use one of somewhere else.",
  "map.layers": "Layers",
  "map.layer.voyager": "Map",
  "map.layer.osm": "Detail",
@@ -238,5 +238,6 @@
  "place.pressPhotos": "Recent photos of the works (press)",
  "place.pressNote": "Photos of the works belong to the news outlets; open them on their sites.",
  "place.photoLinks": "See photos of the place",
- "place.photoLinksNote": "External links: photos belong to their authors."
+ "place.photoLinksNote": "External links: photos belong to their authors.",
+ "photo.none": "We don’t yet have a verified photo of this place, and we’d rather not show one of somewhere else."
 }

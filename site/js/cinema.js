@@ -1,7 +1,7 @@
 // Modo cine: las historias a pantalla completa, con fotos en movimiento lento (Ken Burns),
 // subtítulos, narración opcional y la siguiente historia en cuenta regresiva.
 // El contenido sale de los mismos datos verificados (stories.json → events.json / places.json).
-import { db, event, place, period, pexels, photosFor } from './data.js';
+import { db, event, place, period, pexels, photoUrl, photoKey, photoSite, photosFor } from './data.js';
 import { t, L, getLang } from './i18n.js';
 import { sceneHtml } from './scenes.js';
 import * as tts from './tts.js';
@@ -27,12 +27,12 @@ function buildSlides(story) {
   const periodSlides = story.slides ? (period('hoy')?.slides || []) : [];
   const pick = ids => {
     const all = specificPhotos(ids);
-    return all.find(ph => !used.has(ph.pexels) && ph.specific) || all.find(ph => !used.has(ph.pexels)) || null;
+    return all.find(ph => !used.has(photoKey(ph)) && ph.specific) || all.find(ph => !used.has(photoKey(ph))) || null;
   };
   const slides = [];
   // 1. Portada
   const first = story.scene ? null : (periodSlides[0] || cover);
-  if (first) used.add(first.pexels);
+  if (first) used.add(photoKey(first));
   slides.push({ kind: 'title', scene: story.scene || null, photo: first,
     kicker: L(story.kicker), title: L(story.title), text: L(story.teaser), speak: `${L(story.title)}. ${L(story.intro)}` });
   // 2. Capítulos
@@ -40,9 +40,9 @@ function buildSlides(story) {
     const e = c.event ? event(c.event) : null;
     const ids = e ? (e.places || []) : (c.places || []);
     let photo = pick(ids);
-    if (!photo && periodSlides.length) photo = periodSlides.find(s => !used.has(s.pexels)) || null;
+    if (!photo && periodSlides.length) photo = periodSlides.find(s => !used.has(photoKey(s))) || null;
     if (!photo && !story.scene && cover) photo = cover;
-    if (photo) used.add(photo.pexels);
+    if (photo) used.add(photoKey(photo));
     const kicker = e ? L(e.date) : L(c.label);
     const title = e ? L(e.title) : L(c.title);
     const text = e ? L(e.text) : L(c.text);
@@ -52,9 +52,9 @@ function buildSlides(story) {
   // 3. Lugares de hoy (solo «Cartagena hoy»): cada playa u obra con su foto
   if (story.tourism) {
     (story.places || []).map(place).filter(Boolean).forEach(p => {
-      const ph = photosFor(p).find(x => !used.has(x.pexels)) || photosFor(p)[0];
+      const ph = photosFor(p).find(x => !used.has(photoKey(x))) || photosFor(p)[0];
       if (!ph) return;
-      used.add(ph.pexels);
+      used.add(photoKey(ph));
       slides.push({ kind: 'place', photo: ph, kicker: t('cat.hoy'), title: L(p.name), text: L(p.guide), speak: `${L(p.name)}. ${L(p.guide)}`, placeName: '' });
     });
   }
@@ -189,14 +189,14 @@ function show(i) {
   const kb = s.kind === 'sky' ? 'kb-pan' : ['kb-a', 'kb-b', 'kb-c', 'kb-d'][(st.storyIdx + i) % 4];
   if (s.photo) {
     const w = window.innerWidth > 900 ? 1920 : 1100;
-    L0.innerHTML = `<img class="${reduce() ? '' : kb}" style="--dur:${dur + 1500}ms" src="${pexels(s.photo.pexels, w)}" alt="${esc(L(s.photo.alt))}">`;
+    L0.innerHTML = `<img class="${reduce() ? '' : kb}" style="--dur:${dur + 1500}ms" src="${photoUrl(s.photo, w)}" alt="${esc(L(s.photo.alt))}">`;
   } else if (s.scene) {
     L0.innerHTML = sceneHtml(s.scene);
   } else L0.innerHTML = '';
   L0.classList.add('on'); L1.classList.remove('on');
   // precarga de la siguiente foto
   const nx = st.slides[i + 1];
-  if (nx?.photo) new Image().src = pexels(nx.photo.pexels, window.innerWidth > 900 ? 1920 : 1100);
+  if (nx?.photo) new Image().src = photoUrl(nx.photo, window.innerWidth > 900 ? 1920 : 1100);
   // subtítulo
   const cap = el.querySelector('.cn-cap');
   cap.classList.toggle('is-title', s.kind === 'title' || (s.kind === 'sky' && !!s.text));
@@ -207,7 +207,7 @@ function show(i) {
   cap.classList.remove('in'); void cap.offsetWidth; cap.classList.add('in');
   // crédito honesto de la imagen
   const cr = el.querySelector('.cn-credit');
-  if (s.photo) cr.textContent = `${s.photo.specific === false ? t('photo.illustrative') + ' · ' : ''}${t('photo.by')}: ${s.photo.author} / Pexels`;
+  if (s.photo) cr.textContent = `${s.photo.specific === false ? t('photo.illustrative') + ' · ' : ''}${t('photo.by')}: ${s.photo.author} / ${photoSite(s.photo)}${s.photo.license ? ' · ' + s.photo.license : ''}`;
   else if (s.scene) cr.textContent = t(s.scene === 'prehispanica' ? 'scene.artistic' : 'scene.illustration');
   else cr.textContent = '';
   // barras de progreso

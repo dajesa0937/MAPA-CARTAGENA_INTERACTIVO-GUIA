@@ -222,7 +222,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Fuerte de San Sebastián del Pastelillo.JPG",
+    "author": "Ivonne Correa",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "Garitas del fuerte del Pastelillo al atardecer",
+     "en": "Sentry boxes of the Pastelillo fort at sunset"
+    },
+    "angle": {
+     "es": "Al atardecer",
+     "en": "At sunset"
+    }
+   }
+  ]
  },
  {
   "id": "san-juan-manzanillo",
@@ -527,7 +542,35 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Fuerte de San Fernando de Bocachica 2006.jpg",
+    "author": "Gabriel Porras",
+    "license": "CC BY-SA 2.0",
+    "alt": {
+     "es": "Garita y muralla del fuerte de San Fernando",
+     "en": "Sentry box and wall of the Fort of San Fernando"
+    },
+    "angle": {
+     "es": "La garita",
+     "en": "The sentry box"
+    }
+   },
+   {
+    "commons": "Fuerte de San Fernando de Bocachica 2014-08-20 2.jpg",
+    "author": "Samael Alejandro Zapata Ibarra",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "El fuerte de San Fernando visto desde el agua",
+     "en": "The Fort of San Fernando seen from the water"
+    },
+    "angle": {
+     "es": "Desde el mar",
+     "en": "From the sea"
+    }
+   }
+  ]
  },
  {
   "id": "bateria-san-jose",
@@ -599,7 +642,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "BATERIA DE SAN JOSE, CARTAGENA, COLOMBIA.jpg",
+    "author": "Jerrye y Roy Klotz",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "La batería de San José en Bocachica",
+     "en": "San José battery at Bocachica"
+    },
+    "angle": {
+     "es": "Desde el agua",
+     "en": "From the water"
+    }
+   }
+  ]
  },
  {
   "id": "castillo-san-luis",
@@ -896,7 +954,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte de Santo Domingo, Cartagena 01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "El baluarte de Santo Domingo",
+     "en": "The Bastion of Santo Domingo"
+    },
+    "angle": {
+     "es": "El baluarte",
+     "en": "The bastion"
+    }
+   }
+  ]
  },
  {
   "id": "baluarte-santa-cruz",
@@ -972,15 +1045,16 @@
   },
   "photos": [
    {
-    "pexels": 19799167,
-    "author": "Miguel Rodriguez Leon",
+    "commons": "Baluarte de Santa Cruz, Cartagena.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
     "alt": {
-     "es": "Garita del baluarte de Santa Cruz frente al mar",
-     "en": "Sentry box of the Santa Cruz bastion facing the sea"
+     "es": "El baluarte de Santa Cruz",
+     "en": "The Bastion of Santa Cruz"
     },
     "angle": {
-     "es": "La garita frente al mar",
-     "en": "The sentry box by the sea"
+     "es": "El baluarte",
+     "en": "The bastion"
     }
    }
   ]
@@ -1057,7 +1131,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte de Santiago CTG 11 2019 2493.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "El baluarte de Santiago Apóstol",
+     "en": "The Bastion of Santiago Apóstol"
+    },
+    "angle": {
+     "es": "El baluarte",
+     "en": "The bastion"
+    }
+   }
+  ]
  },
  {
   "id": "baluarte-san-francisco-javier",
@@ -1128,7 +1217,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte San Francisco Javier CTG 11 2019 2480.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Garita del baluarte de San Francisco Javier con Bocagrande al fondo",
+     "en": "Sentry box of the San Francisco Javier bastion with Bocagrande behind"
+    },
+    "angle": {
+     "es": "La garita",
+     "en": "The sentry box"
+    }
+   }
+  ]
  },
  {
   "id": "baluarte-san-ignacio",
@@ -1202,7 +1306,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte de San Ignacio, Cartagena.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "El baluarte de San Ignacio y la cúpula de San Pedro Claver",
+     "en": "The San Ignacio bastion and the dome of San Pedro Claver"
+    },
+    "angle": {
+     "es": "Con San Pedro Claver",
+     "en": "With San Pedro Claver"
+    }
+   }
+  ]
  },
  {
   "id": "baluarte-santa-catalina",
@@ -1273,7 +1392,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte de Santa Catalina, Cartagena 01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Cañones en el baluarte de Santa Catalina",
+     "en": "Cannons on the Santa Catalina bastion"
+    },
+    "angle": {
+     "es": "Los cañones",
+     "en": "The cannons"
+    }
+   }
+  ]
  },
  {
   "id": "baluarte-san-lucas",
@@ -1346,7 +1480,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Baluarte San Lucas CTG 11 2019 2255.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "El baluarte de San Lucas",
+     "en": "The San Lucas bastion"
+    },
+    "angle": {
+     "es": "El baluarte",
+     "en": "The bastion"
+    }
+   }
+  ]
  },
  {
   "id": "las-bovedas",
@@ -1593,7 +1742,35 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Casa Inquisicion CTG 11 2019 1674.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Portada barroca del Palacio de la Inquisición",
+     "en": "Baroque portal of the Palace of the Inquisition"
+    },
+    "angle": {
+     "es": "La portada",
+     "en": "The portal"
+    }
+   },
+   {
+    "commons": "Colombia, Cartagena, Palacio de la Inquisición (Patio).jpg",
+    "author": "Dr. Thomas Liptak",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Patio interior del Palacio de la Inquisición",
+     "en": "Inner courtyard of the Palace of the Inquisition"
+    },
+    "angle": {
+     "es": "El patio",
+     "en": "The courtyard"
+    }
+   }
+  ]
  },
  {
   "id": "plaza-bolivar",
@@ -1929,7 +2106,35 @@
   "note": {
    "es": "Las fechas exactas de construcción varían según la fuente; por eso damos rangos y no un año único.",
    "en": "Exact construction dates vary by source, so we give ranges rather than a single year."
-  }
+  },
+  "photos": [
+   {
+    "commons": "Convento Santo Domingo CTG 11 2019 2437.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Fachada principal de la iglesia de Santo Domingo",
+     "en": "Main façade of the Church of Santo Domingo"
+    },
+    "angle": {
+     "es": "La fachada",
+     "en": "The façade"
+    }
+   },
+   {
+    "commons": "Nave principal Iglesia Santo Domingo CTG 11 2019 1232.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Nave central de la iglesia de Santo Domingo",
+     "en": "The nave of the Church of Santo Domingo"
+    },
+    "angle": {
+     "es": "La nave, por dentro",
+     "en": "The nave, inside"
+    }
+   }
+  ]
  },
  {
   "id": "san-pedro-claver",
@@ -2017,14 +2222,15 @@
   },
   "photos": [
    {
-    "pexels": 13809258,
-    "author": "Juan Carlos Gomez Aristizabal",
+    "commons": "Iglesia San Pedro Claver CTG 11 2019 2700.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
     "alt": {
-     "es": "Portada de la iglesia de San Pedro Claver",
+     "es": "Fachada de la iglesia de San Pedro Claver",
      "en": "Façade of the Church of San Pedro Claver"
     },
     "angle": {
-     "es": "La portada",
+     "es": "La fachada",
      "en": "The façade"
     }
    }
@@ -2107,7 +2313,48 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Convento de la Popa CTG 11 2019 1871.jpg",
+    "author": "Mario Roberto Durán Ortiz (Mariordo)",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "El convento de Santa Cruz de la Popa",
+     "en": "The convent of Santa Cruz de la Popa"
+    },
+    "angle": {
+     "es": "El convento",
+     "en": "The convent"
+    }
+   },
+   {
+    "commons": "Convento de Santa Cruz de la Popa 03.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "La cruz del convento de La Popa con la ciudad al fondo",
+     "en": "The cross at La Popa convent with the city behind"
+    },
+    "angle": {
+     "es": "La cruz y la vista",
+     "en": "The cross and the view"
+    }
+   },
+   {
+    "commons": "View of Cartagena from Convento de Santa Cruz de la Popa 02.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Cartagena vista desde el cerro de La Popa",
+     "en": "Cartagena seen from La Popa hill"
+    },
+    "angle": {
+     "es": "La ciudad desde el cerro",
+     "en": "The city from the hill"
+    }
+   }
+  ]
  },
  {
   "id": "teatro-adolfo-mejia",
@@ -2180,7 +2427,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Teatro Adolfo Mejía, Cartagena 03.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Fachada del Teatro Adolfo Mejía",
+     "en": "Façade of the Adolfo Mejía Theatre"
+    },
+    "angle": {
+     "es": "La fachada",
+     "en": "The façade"
+    }
+   }
+  ]
  },
  {
   "id": "camellon-martires",
@@ -2259,7 +2521,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Camellón de Los Mártires 2.jpg",
+    "author": "Martinduquea",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "El Camellón de los Mártires frente a la Torre del Reloj",
+     "en": "The Camellón de los Mártires facing the Clock Tower"
+    },
+    "angle": {
+     "es": "Con la Torre del Reloj",
+     "en": "With the Clock Tower"
+    }
+   }
+  ]
  },
  {
   "id": "getsemani",
@@ -2437,15 +2714,16 @@
   },
   "photos": [
    {
-    "pexels": 11815919,
-    "author": "Kelly",
+    "commons": "Esquina parque de San diego.JPG",
+    "author": "Picore12",
+    "license": "CC BY-SA 3.0",
     "alt": {
-     "es": "La iglesia de Santo Toribio entre los tejados del barrio",
-     "en": "The Church of Santo Toribio among the neighbourhood rooftops"
+     "es": "Casas coloniales junto al parque de San Diego",
+     "en": "Colonial houses by San Diego park"
     },
     "angle": {
-     "es": "Desde el aire: iglesia de Santo Toribio",
-     "en": "From the air: Santo Toribio church"
+     "es": "Junto al parque",
+     "en": "By the park"
     }
    }
   ]
@@ -2524,7 +2802,22 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Cartagena de Indias, monumento a la India Catalina1.jpg",
+    "author": "Ealmagro",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Monumento a la India Catalina",
+     "en": "Monument to India Catalina"
+    },
+    "angle": {
+     "es": "La escultura",
+     "en": "The sculpture"
+    }
+   }
+  ]
  },
  {
   "id": "iglesia-trinidad",
@@ -2598,7 +2891,35 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Getsemani Street Scene, Cartagena, Colombia (24290039640).jpg",
+    "author": "Joe Ross",
+    "license": "CC BY-SA 2.0",
+    "alt": {
+     "es": "La iglesia de la Trinidad frente a su plaza en Getsemaní",
+     "en": "The Trinity church facing its square in Getsemaní"
+    },
+    "angle": {
+     "es": "Desde la plaza",
+     "en": "From the square"
+    }
+   },
+   {
+    "commons": "Getsemani Street Scene, Cartagena, Colombia (23958753623).jpg",
+    "author": "Joe Ross",
+    "license": "CC BY-SA 2.0",
+    "alt": {
+     "es": "Portada de la iglesia de la Trinidad",
+     "en": "Façade of the Trinity church"
+    },
+    "angle": {
+     "es": "La portada",
+     "en": "The façade"
+    }
+   }
+  ]
  },
  {
   "id": "iglesia-santo-toribio",
@@ -2675,7 +2996,35 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Iglesia de Santo Toribio, Cartagena 01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Iglesia de Santo Toribio en San Diego",
+     "en": "Church of Santo Toribio in San Diego"
+    },
+    "angle": {
+     "es": "La fachada",
+     "en": "The façade"
+    }
+   },
+   {
+    "commons": "Iglesia de Santo Toribio, Cartagena 02.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Portada de piedra de Santo Toribio",
+     "en": "Stone portal of Santo Toribio"
+    },
+    "angle": {
+     "es": "La portada de piedra",
+     "en": "The stone portal"
+    }
+   }
+  ]
  },
  {
   "id": "galeon-san-jose",
@@ -3124,7 +3473,35 @@
    "es": null,
    "en": null
   },
-  "tourism": true
+  "tourism": true,
+  "photos": [
+   {
+    "commons": "Playa La Boquilla, Cartagena.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "La playa de La Boquilla",
+     "en": "La Boquilla beach"
+    },
+    "angle": {
+     "es": "La playa",
+     "en": "The beach"
+    }
+   },
+   {
+    "commons": "Boats in La Boquilla.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Lanchas de pescadores en La Boquilla",
+     "en": "Fishing boats in La Boquilla"
+    },
+    "angle": {
+     "es": "Los pescadores",
+     "en": "The fishermen"
+    }
+   }
+  ]
  },
  {
   "id": "playa-blanca",
@@ -3195,30 +3572,30 @@
   "tourism": true,
   "photos": [
    {
-    "pexels": 35211242,
-    "author": "Juan Coronel",
+    "commons": "Playa Blanca, Barú.jpg",
+    "author": "Felipeortegag",
+    "license": "CC BY-SA 4.0",
     "alt": {
-     "es": "Vista aérea de una playa de aguas turquesa en Bolívar",
-     "en": "Aerial view of a turquoise beach in Bolívar"
+     "es": "Vista aérea de Playa Blanca en Barú",
+     "en": "Aerial view of Playa Blanca on Barú"
     },
     "angle": {
-     "es": "Playa del Caribe en Bolívar (imagen ilustrativa)",
-     "en": "A Caribbean beach in Bolívar (illustrative)"
-    },
-    "specific": false
+     "es": "Desde el aire",
+     "en": "From the air"
+    }
    },
    {
-    "pexels": 39332129,
-    "author": "Jose Manuel Reyes Aguilar",
+    "commons": "Atardecer en Playa Blanca - Isla Barú 2.jpg",
+    "author": "TitiNicola",
+    "license": "CC BY-SA 4.0",
     "alt": {
-     "es": "Playa con sombrillas de palma en Bolívar",
-     "en": "A beach with palm umbrellas in Bolívar"
+     "es": "Atardecer en Playa Blanca",
+     "en": "Sunset at Playa Blanca"
     },
     "angle": {
-     "es": "Sombrillas de palma (imagen ilustrativa)",
-     "en": "Palm umbrellas (illustrative)"
-    },
-    "specific": false
+     "es": "Al atardecer",
+     "en": "At sunset"
+    }
    }
   ]
  },
@@ -3294,17 +3671,30 @@
   "tourism": true,
   "photos": [
    {
-    "pexels": 35211383,
-    "author": "Juan Coronel",
+    "commons": "Cocolise Isla Resort, Islas del Rosario (23938738774).jpg",
+    "author": "Joe Ross",
+    "license": "CC BY-SA 2.0",
     "alt": {
-     "es": "Vista aérea de una playa soleada en Bolívar con vegetación",
-     "en": "Aerial view of a sunny beach in Bolívar with greenery"
+     "es": "Playa con palmeras en las Islas del Rosario",
+     "en": "A palm-lined beach in the Rosario Islands"
     },
     "angle": {
-     "es": "Aguas del Caribe en Bolívar (imagen ilustrativa)",
-     "en": "Caribbean waters in Bolívar (illustrative)"
+     "es": "Una playa de las islas",
+     "en": "An island beach"
+    }
+   },
+   {
+    "commons": "Islas del Rosario banner.jpg",
+    "author": "Rosalba Tarazona",
+    "license": "CC BY-SA 2.0",
+    "alt": {
+     "es": "Atardecer en las Islas del Rosario",
+     "en": "Sunset in the Rosario Islands"
     },
-    "specific": false
+    "angle": {
+     "es": "Al atardecer",
+     "en": "At sunset"
+    }
    }
   ]
  },
@@ -3392,7 +3782,61 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Iglesia El Cabrero.JPG",
+    "author": "Baiji",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "La ermita de El Cabrero, blanca con torres rojas",
+     "en": "The El Cabrero chapel, white with red spires"
+    },
+    "angle": {
+     "es": "La ermita hoy",
+     "en": "The chapel today"
+    }
+   },
+   {
+    "commons": "La casa del Cabrero y la ermita.jpg",
+    "author": "Clímaco Calderón",
+    "license": "Dominio público",
+    "alt": {
+     "es": "Fotografía de 1893: la casa de Rafael Núñez y la ermita",
+     "en": "1893 photograph: Rafael Núñez’s house and the chapel"
+    },
+    "angle": {
+     "es": "En 1893, con la casa de Núñez",
+     "en": "In 1893, with Núñez’s house"
+    }
+   },
+   {
+    "commons": "Tumba Rafael Nuñez.jpg",
+    "author": "Baiji",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Mausoleo de Rafael Núñez dentro de la ermita",
+     "en": "Rafael Núñez’s tomb inside the chapel"
+    },
+    "angle": {
+     "es": "La tumba de Rafael Núñez",
+     "en": "Rafael Núñez’s tomb"
+    }
+   },
+   {
+    "commons": "Postal Cartagena de Indias-Ermita del Cabrero.jpg",
+    "author": "Tichnor Bros., Inc.",
+    "license": "Dominio público",
+    "alt": {
+     "es": "Postal antigua de la ermita y la casa de Núñez",
+     "en": "Old postcard of the chapel and Núñez’s house"
+    },
+    "angle": {
+     "es": "Postal de los años 40",
+     "en": "1940s postcard"
+    }
+   }
+  ]
  },
  {
   "id": "serrezuela",
@@ -3483,6 +3927,34 @@
   "audio": {
    "es": null,
    "en": null
-  }
+  },
+  "photos": [
+   {
+    "commons": "Inbound7029199954850024975.jpg",
+    "author": "Clau8aPardo",
+    "license": "CC BY-SA 4.0",
+    "alt": {
+     "es": "Las gradas de madera de La Serrezuela reconstruida",
+     "en": "The wooden tiers of the rebuilt Serrezuela"
+    },
+    "angle": {
+     "es": "Por dentro, hoy (2023)",
+     "en": "Inside, today (2023)"
+    }
+   },
+   {
+    "commons": "Plaza de Toros de La Serrezuela.jpg",
+    "author": "Martinduquea",
+    "license": "CC BY-SA 3.0",
+    "alt": {
+     "es": "Fachada de la antigua plaza de toros antes de su reconstrucción",
+     "en": "Façade of the old bullring before its reconstruction"
+    },
+    "angle": {
+     "es": "Antes de la reconstrucción (2012)",
+     "en": "Before the reconstruction (2012)"
+    }
+   }
+  ]
  }
 ]

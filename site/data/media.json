@@ -97,7 +97,7 @@
   "familias": 6226361,
   "fortificaciones": 11815905,
   "iglesias": 13836087,
-  "hoy": 35211242
+  "hoy": 11815929
  },
  "routeAuthor": {
   "11815910": "Kelly",
@@ -107,7 +107,8 @@
   "6226361": "Claudia",
   "11815905": "Kelly",
   "35211242": "Juan Coronel",
-  "13836087": "JVAS71"
+  "13836087": "JVAS71",
+  "11815929": "Kelly"
  },
  "walls": {
   "note": {

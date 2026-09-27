@@ -27,7 +27,8 @@ for p in places:
         if p['visit'].get('source') not in S: errs.append(f'{w}: fuente de visita inexistente')
         if not p['visit'].get('checked'): errs.append(f'{w}: visita sin fecha de verificación')
     for ph in p.get('photos', []):
-        if not isinstance(ph.get('pexels'), int) or not ph.get('author'): errs.append(f'{w}: foto sin id o autor')
+        if not (isinstance(ph.get('pexels'), int) or (ph.get('commons') and ph.get('license'))) or not ph.get('author'):
+            errs.append(f'{w}: foto sin id, licencia o autor')
         bil(ph.get('alt'), f'{w}.photo.alt'); bil(ph.get('angle'), f'{w}.photo.angle')
     if len(p['history']['es']) != len(p['history']['en']): errs.append(f'{w}: párrafos ES/EN no coinciden')
     if not p.get('sources'): errs.append(f'{w}: sin fuentes')

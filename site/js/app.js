@@ -1,5 +1,5 @@
 // Orquestación: estado de la vista, enrutado por hash (enlaces compartibles) y eventos.
-import { loadData, db, pexels, photosFor, place, event as getEvent, period, route as getRoute, story as getStory, storyPlaces, periodForYear, eraFocus, eraYear } from './data.js';
+import { loadData, db, pexels, photoUrl, photosFor, place, event as getEvent, period, route as getRoute, story as getStory, storyPlaces, periodForYear, eraFocus, eraYear } from './data.js';
 import { loadLanguages, setLang, getLang, t, L, applyDom, onLangChange } from './i18n.js';
 import { store } from './store.js';
 import * as M from './map.js';
@@ -629,7 +629,7 @@ const viewer = { i: 0, list: [], timer: null, name: '' };
 function openViewer(i = 0) {
   const p = place(S.placeId); if (!p) return;
   viewer.list = photosFor(p); viewer.name = L(p.name).split(' · ')[0];
-  $('#viewerThumbs').innerHTML = viewer.list.map((x, k) => `<button type="button" data-vt="${k}" aria-label="${V.esc(L(x.angle || x.alt))}"><img src="${pexels(x.pexels, 160)}" alt=""></button>`).join('');
+  $('#viewerThumbs').innerHTML = viewer.list.map((x, k) => `<button type="button" data-vt="${k}" aria-label="${V.esc(L(x.angle || x.alt))}"><img src="${photoUrl(x, 160)}" alt=""></button>`).join('');
   $('#viewerTitle').textContent = viewer.name;
   const multi = viewer.list.length > 1;
   document.querySelectorAll('.viewer-btn, #viewerPlay').forEach(b => { b.hidden = !multi; });
@@ -642,7 +642,7 @@ function showView(i) {
   const x = viewer.list[viewer.i];
   const im = $('#viewerImg');
   im.classList.add('fade');
-  const src = pexels(x.pexels, window.innerWidth > 900 ? 2000 : 1200);
+  const src = photoUrl(x, window.innerWidth > 900 ? 2000 : 1200);
   const pre = new Image();
   pre.onload = pre.onerror = () => {
     im.src = src; im.alt = L(x.alt);
@@ -650,13 +650,13 @@ function showView(i) {
     im.classList.remove('fade');
   };
   pre.src = src;
-  $('#viewerBg').style.backgroundImage = `url("${pexels(x.pexels, 400)}")`;
+  $('#viewerBg').style.backgroundImage = `url("${photoUrl(x, 400)}")`;
   $('#viewerCap').innerHTML = V.credit(x);
   $('#viewerCount').textContent = n > 1 ? t('gallery.of', { i: viewer.i + 1, n }) : '';
   document.querySelectorAll('#viewerThumbs [data-vt]').forEach(b => b.setAttribute('aria-current', String(+b.dataset.vt === viewer.i)));
   document.querySelector(`#viewerThumbs [data-vt="${viewer.i}"]`)?.scrollIntoView({ inline: 'center', block: 'nearest' });
   // Precarga la siguiente vista
-  if (n > 1) new Image().src = pexels(viewer.list[(viewer.i + 1) % n].pexels, window.innerWidth > 900 ? 2000 : 1200);
+  if (n > 1) new Image().src = photoUrl(viewer.list[(viewer.i + 1) % n], window.innerWidth > 900 ? 2000 : 1200);
 }
 function toggleViewerPlay(force) {
   const dlg = $('#viewer');

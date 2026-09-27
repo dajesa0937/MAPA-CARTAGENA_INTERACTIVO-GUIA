@@ -130,3 +130,11 @@ Opción por consola (con Node instalado): `npx netlify-cli deploy --prod --dir s
   - Botón «Narración» (voz del navegador, desactivada por defecto).
 - **Contenido.** Sale de los mismos datos verificados (`stories.json` → `events.json` / `places.json`). Cada foto indica su autor y si es ilustrativa.
 - **Al salir,** el visitante queda en la última historia que veía, con su mapa.
+
+## Fotos: regla de correspondencia (v5.2)
+
+- Cada foto debe mostrar el lugar de su ficha. Si un lugar no tiene una foto verificada, se muestra una portada con su icono y el aviso «Aún no tenemos una foto verificada de este lugar»; nunca la foto de otro sitio.
+- Orígenes admitidos:
+  - Pexels (`"pexels": id`).
+  - Wikimedia Commons (`"commons": "Nombre del archivo.jpg"`, con `author` y `license` obligatorios). Cada foto muestra su autor, un enlace a su página de origen y su licencia.
+- Pendientes de foto verificada: fuerte de San Juan de Manzanillo, fuerte de Santa Cruz (Castillogrande), escollera de Bocagrande (está bajo el agua), castillo de San Luis (ruinas) y baluarte de El Reducto.

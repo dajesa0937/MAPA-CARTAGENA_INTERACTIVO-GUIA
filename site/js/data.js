@@ -57,17 +57,21 @@ export function routeStats(r) {
   return { km, minutes: Math.round((walkMin + r.stops.length * (r.stopMinutes || 5)) / 5) * 5 };
 }
 
-/** Fotografía (Pexels) de un lugar; si no hay foto propia, imagen ilustrativa de su categoría. */
+/** Fotografías: Pexels o Wikimedia Commons (licencias libres, con autor y licencia a la vista). */
 export const pexels = (id, w = 800) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+export const photoUrl = (ph, w = 800) => ph.commons
+  ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(ph.commons)}?width=${w}`
+  : pexels(ph.pexels, w);
+export const photoKey = ph => ph.pexels || ph.commons;
+export const photoPage = ph => ph.commons ? `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(ph.commons.replace(/ /g, '_'))}` : `https://www.pexels.com/photo/${ph.pexels}/`;
+export const photoSite = ph => ph.commons ? 'Wikimedia Commons' : 'Pexels';
+
+/** Fotos verificadas de un lugar. Si no hay ninguna, NO se sustituye por la foto de otro sitio. */
 export function photosFor(p) {
-  if (p.photos?.length) return p.photos.map(x => ({ specific: true, ...x }));
-  const c = photoFor(p);
-  return c ? [c] : [];
+  return (p.photos || []).map(x => ({ specific: true, ...x }));
 }
 export function photoFor(p) {
-  if (p.photos?.length) return { specific: true, ...p.photos[0] };
-  const c = db.media.cat?.[p.category];
-  return c ? { ...c, specific: false } : null;
+  return photosFor(p)[0] || null;
 }
 
 /** Lugares protagonistas de una época: los ligados a sus acontecimientos y los construidos en ella. */
