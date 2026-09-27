@@ -735,7 +735,14 @@ async function boot() {
   else { hero.hidden = false; hero.querySelector('.btn.primary')?.focus({ preventScroll: true }); }
 
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js').then(reg => reg.update()).catch(() => {});
+    // Cuando se publica una versión nueva, la página se recarga sola una vez para mostrarla
+    let reloaded = false;
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hadController || reloaded) return;
+      reloaded = true; location.reload();
+    });
   }
 }
 

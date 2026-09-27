@@ -1,6 +1,6 @@
 // Service worker: guarda la aplicación y los datos para uso sin conexión.
 // No guarda teselas de mapas (respeto a las políticas de los proveedores).
-const CACHE = 'ctg-v12';
+const CACHE = 'ctg-v13';
 const SHELL = [
   './', 'index.html', 'css/styles.css',
   'js/app.js', 'js/data.js', 'js/i18n.js', 'js/map.js', 'js/views.js', 'js/store.js', 'js/tts.js', 'js/scenes.js', 'js/cinema.js',
@@ -17,7 +17,8 @@ self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
   // Red primero (contenido siempre actualizado), caché como respaldo sin conexión.
   e.respondWith(
-    fetch(e.request).then(res => {
+    // 'no-cache': siempre pregunta al servidor si hay versión nueva (evita ver diseños viejos tras publicar)
+    fetch(e.request, { cache: 'no-cache' }).then(res => {
       const copy = res.clone();
       caches.open(CACHE).then(c => c.put(e.request, copy));
       return res;

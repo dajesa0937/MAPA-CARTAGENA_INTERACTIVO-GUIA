@@ -1029,3 +1029,4 @@ body.cinema-on { overflow: hidden; }
   .s-year { white-space: nowrap; }
   .step:hover .s-year { visibility: visible; }
 }
+.tb-exit { margin-left: 6px; }
