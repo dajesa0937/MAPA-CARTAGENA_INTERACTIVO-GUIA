@@ -120,12 +120,14 @@ function enterHistory(periodId) {
   if (S.preview) { S.preview = null; M.clearRoute(); }
   S.storyId = null; S.chapter = null;
   S.history = true;
+  document.body.classList.add('history-on');
   $('#timebar').hidden = false;
   $('#eraStamp').hidden = false;
   setPeriod(periodId || S.periodId, false);
 }
 function leaveHistory(rerender = true) {
   S.history = false; S.eventId = null; stopPlay();
+  document.body.classList.remove('history-on');
   if (S.speaking) { tts.stop(); S.speaking = false; }
   $('#eraStamp').hidden = true; $('#mapNote').hidden = true;
   if (rerender) { S.tab = 'explore'; render(); setHash('explorar'); }
