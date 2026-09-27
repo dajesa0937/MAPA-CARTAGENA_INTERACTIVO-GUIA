@@ -77,11 +77,11 @@ export function eraFocus(periodId) {
   const ids = new Set();
   db.events.filter(e => e.period === periodId).forEach(e => (e.places || []).forEach(id => ids.add(id)));
   db.places.forEach(p => { const f = p.built?.from; if (f != null && f >= pe.from && f <= pe.to) ids.add(p.id); });
-  if (periodId === 'contemporanea') db.places.filter(p => p.category === 'hoy').forEach(p => ids.add(p.id));
+  if (periodId === 'hoy') db.places.filter(p => p.category === 'hoy').forEach(p => ids.add(p.id));
   return [...ids].filter(id => place(id));
 }
 /** Año que representa el final de una época (para ver cómo quedó la ciudad). */
-export const eraYear = pe => pe.id === 'contemporanea' ? 2026 : Math.max(1500, pe.to);
+export const eraYear = pe => pe.id === 'hoy' ? 2026 : Math.max(1500, pe.to);
 
 /** Lugares y fuentes de una historia temática (derivados de sus capítulos: un solo origen de datos). */
 export function storyPlaces(s) {

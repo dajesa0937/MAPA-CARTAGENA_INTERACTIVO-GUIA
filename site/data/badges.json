@@ -41,12 +41,12 @@
    "en": "Cartagena Historian"
   },
   "desc": {
-   "es": "Recorre las 9 épocas de la línea de tiempo.",
-   "en": "Travel through all 9 eras of the timeline."
+   "es": "Recorre las 10 épocas de la línea de tiempo.",
+   "en": "Travel through all 10 eras of the timeline."
   },
   "rule": {
    "type": "periods",
-   "count": 9
+   "count": 10
   }
  },
  {

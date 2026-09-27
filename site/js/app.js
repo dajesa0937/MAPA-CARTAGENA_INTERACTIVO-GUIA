@@ -5,6 +5,7 @@ import { store } from './store.js';
 import * as M from './map.js';
 import * as V from './views.js';
 import * as tts from './tts.js';
+import { openCinema } from './cinema.js';
 
 const $ = s => document.querySelector(s);
 const panel = $('#panel'), body = $('#panelBody'), hero = $('#hero');
@@ -131,7 +132,7 @@ function leaveHistory(rerender = true) {
 }
 function setYear(y, rerender = true) {
   S.year = y;
-  $('#yearLabel').textContent = y >= 2026 ? t('story.today') : y <= 1532 ? '< 1533' : y;
+  $('#yearLabel').textContent = y <= 1532 ? '< 1533' : y;
   $('#periodLabel').textContent = L(period(S.periodId)?.name);
   if (rerender) renderMap();
 }
@@ -170,7 +171,7 @@ function stepPeriod(d) {
 }
 function buildSteps() {
   $('#tlSteps').innerHTML = db.periods.map(p => `<li><button type="button" class="step" data-band="${p.id}" title="${V.esc(L(p.name))} · ${V.esc(L(p.label))}">
-      <span class="s-dot"></span><span class="s-year">${p.id === 'prehispanica' ? V.esc(t('story.before')) : p.from}</span><span class="s-name">${V.esc(L(p.short))}</span>
+      <span class="s-dot"></span><span class="s-year">${p.id === 'prehispanica' ? V.esc(t('story.before')) : p.id === 'hoy' ? 2026 : p.from}</span><span class="s-name">${V.esc(L(p.short))}</span>
     </button></li>`).join('');
   updateSteps();
 }
@@ -276,6 +277,15 @@ function toggleScene(btn) {
   const paused = sc.classList.toggle('paused');
   btn.innerHTML = `<svg aria-hidden="true"><use href="#i-${paused ? 'play' : 'pause'}"/></svg>`;
   btn.setAttribute('aria-label', t(paused ? 'scene.play' : 'scene.pause'));
+}
+
+function startCinema(id) {
+  tts.stop(); S.speaking = false;
+  stopPlay?.();
+  openCinema(id, { onClose: storyId => {
+    // al salir, el visitante queda en la última historia que estaba viendo, con su mapa
+    if (storyId && storyId !== S.storyId && !S.route) openStory(storyId);
+  } });
 }
 
 /* ---- Rutas ---- */
@@ -443,7 +453,8 @@ function wire() {
     const el = e.target.closest('button, a');
     if (!el) return;
     const d = el.dataset;
-    if ('sceneToggle' in d) toggleScene(el);
+    if (d.cinema) startCinema(d.cinema);
+    else if ('sceneToggle' in d) toggleScene(el);
     else if (d.story) openStory(d.story);
     else if ('backExplore' in d) closeStory();
     else if (d.schapter != null) selectChapter(Number(d.schapter));
@@ -512,6 +523,7 @@ function wire() {
     if (go === 'history') openTab('history');
     if (go === 'routes') openTab('routes');
     if (go === 'forts') goForts();
+    if (go === 'cinema') { openTab('explore'); startCinema(db.stories[0].id); }
     M.invalidate();
   });
 

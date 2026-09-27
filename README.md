@@ -29,6 +29,7 @@ site/
   js/store.js           progreso del visitante (solo en el navegador)
   js/tts.js             narración
   js/scenes.js          escenas animadas (SVG) y presentaciones de fotos
+  js/cinema.js          modo cine (historias a pantalla completa)
   data/places.json      lugares (37)
   data/events.json      acontecimientos (38)
   data/periods.json     épocas (9)
@@ -112,3 +113,20 @@ Opción por consola (con Node instalado): `npx netlify-cli deploy --prod --dir s
   - Zonas aproximadas dibujadas como círculo discontinuo (combate del galeón, Islas del Rosario).
   - El trazado aproximado del malecón aparece como línea punteada.
   - La ubicación exacta del naufragio no se muestra: es reservada por el Estado.
+
+## Novedades v5 — Modo cine
+
+- **Entradas.** «▶ Ver como película» aparece en tres sitios:
+  - En la portada.
+  - En el banner panorámico de Explorar («Cartagena desde el cielo»).
+  - Dentro de cada historia.
+- **La película.**
+  - Abre con dos vistas aéreas (centro amurallado con el mar, y Bocagrande con sus playas).
+  - Después pasan las 6 historias a pantalla completa, con fotos en movimiento lento, subtítulos animados y barra de progreso.
+  - Al final de cada historia aparece «A continuación», con cuenta regresiva de 6 s.
+- **Controles.**
+  - Tocar a la derecha o a la izquierda (o deslizar, o usar las flechas del teclado) para avanzar o retroceder.
+  - Espacio para pausar; Esc para salir.
+  - Botón «Narración» (voz del navegador, desactivada por defecto).
+- **Contenido.** Sale de los mismos datos verificados (`stories.json` → `events.json` / `places.json`). Cada foto indica su autor y si es ilustrativa.
+- **Al salir,** el visitante queda en la última historia que veía, con su mapa.

@@ -1,6 +1,7 @@
 // Vistas del panel: devuelven HTML a partir de los datos. Sin lógica de estado.
 import { db, place, event, period, source, story as getStory, routeStats, existsIn, pexels, photoFor, photosFor, eraFocus, storyPlaces, storySources } from './data.js';
 import { sceneHtml, slidesHtml } from './scenes.js';
+import { cinemaMinutes } from './cinema.js';
 import { t, L, getLang, formatDate } from './i18n.js';
 import { store } from './store.js';
 import { catColor } from './map.js';
@@ -72,7 +73,14 @@ export function exploreView({ visibleCats }) {
     .sort((a, b) => CATS.indexOf(a.category) - CATS.indexOf(b.category) || L(a.name).localeCompare(L(b.name)));
   const featured = FEATURED.map(place).filter(p => p && visibleCats.has(p.category));
   return `<div class="anim">
-    <div class="sec-head"><h3 class="st st-top">${esc(t('explore.stories'))}</h3></div>
+    ${db.media.sky?.length ? `<button class="sky-banner" type="button" data-cinema="${esc(db.stories[0].id)}">
+      ${img({ ...db.media.sky[0], specific: true }, 900, 'sky-img', '(max-width: 820px) 100vw, 420px')}
+      <span class="sky-shade"></span>
+      <span class="sky-play">${ico('play')}</span>
+      <span class="sky-txt"><small>${esc(t('cinema.sky'))}</small><strong>${esc(t('cinema.watchAll'))}</strong><em>${esc(t('cinema.watchAllSub', { n: db.stories.length, m: cinemaMinutes() }))}</em></span>
+      <span class="sky-credit">${esc(t('photo.by'))}: ${esc(db.media.sky[0].author)} / Pexels</span>
+    </button>` : ''}
+    <div class="sec-head"><h3 class="st">${esc(t('explore.stories'))}</h3></div>
     <p class="hint">${esc(t('explore.storiesHint'))}</p>
     <div class="stories" role="list">${db.stories.map(st => `<div role="listitem">${storyCard(st)}</div>`).join('')}</div>
     ${featured.length ? `<h3 class="st">${esc(t('explore.featured'))}</h3>
@@ -92,7 +100,7 @@ export function exploreView({ visibleCats }) {
 export function storyView(st, { chapter = null, speaking = false } = {}) {
   const i = db.stories.indexOf(st), n = db.stories.length;
   const next = db.stories[(i + 1) % n];
-  const slides = st.slides ? period('contemporanea')?.slides : null;
+  const slides = st.slides ? period('hoy')?.slides : null;
   const animated = st.scene || slides;
   const cover = st.scene ? sceneHtml(st.scene) : slides ? slidesHtml(slides) : st.cover ? img(st.cover, 900, 'era-img', '(max-width: 820px) 100vw, 420px') : '';
   const head = `<span class="era-years">${esc(L(st.kicker))}</span><h2>${esc(L(st.title))}</h2>`;
@@ -122,8 +130,9 @@ export function storyView(st, { chapter = null, speaking = false } = {}) {
     ${st.tourism ? `<p class="tourism-tag">${ico('hoy')}${esc(t('tourism.tag', { date: formatDate('2026-09-26') }))}</p>` : ''}
     <p class="era-summary">${esc(L(st.intro))}</p>
     <div class="story-cta">
+      <button class="btn primary cinema-btn" type="button" data-cinema="${esc(st.id)}">${ico('play')}${esc(t('cinema.watch'))}</button>
       <button class="btn listen-btn" type="button" data-listen-story aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('story.listenStory'))}</span></button>
-      ${route ? `<button class="btn primary" type="button" data-route="${esc(route.id)}">${ico('route')}${esc(t('story.doRoute'))}</button>` : ''}
+      ${route ? `<button class="btn" type="button" data-route="${esc(route.id)}">${ico('route')}${esc(t('story.doRoute'))}</button>` : ''}
       ${st.period ? `<button class="btn" type="button" data-period="${esc(st.period)}">${ico('hourglass')}${esc(t('story.openChapter'))}</button>` : ''}
     </div>
 
@@ -217,6 +226,11 @@ export function placeView(p, { route, stopIndex, speaking }) {
       <div><span class="q-label">${esc(t('place.status'))}</span><p>${esc(L(p.status))}</p></div>
     </div>
     ${visit}
+    ${p.pressPhotos?.length ? `<div class="press">
+      <h4>${ico('layers')}${esc(t('place.pressPhotos'))}</h4>
+      <div class="press-links">${p.pressPhotos.map(source).filter(Boolean).map(s => `<a class="btn small" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.org.split(',')[0].replace(/\s*\(.*\)/, ''))} ↗</a>`).join('')}</div>
+      <small>${esc(t('place.pressNote'))}</small>
+    </div>` : ''}
 
     <div class="accs">
       <details class="acc">

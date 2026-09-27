@@ -160,5 +160,23 @@
     -75.55264
    ]
   ]
- }
+ },
+ "sky": [
+  {
+   "pexels": 11815910,
+   "author": "Kelly",
+   "alt": {
+    "es": "Vista aérea del centro amurallado, con el mar y Bocagrande al fondo",
+    "en": "Aerial view of the walled city, with the sea and Bocagrande behind"
+   }
+  },
+  {
+   "pexels": 11815929,
+   "author": "Kelly",
+   "alt": {
+    "es": "Bocagrande desde el aire: playas, espolones y rascacielos",
+    "en": "Bocagrande from the air: beaches, groynes and high-rises"
+   }
+  }
+ ]
 }
