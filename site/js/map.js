@@ -4,7 +4,9 @@ import { db, place, existsIn } from './data.js';
 import { L as Lx, t } from './i18n.js';
 import { store } from './store.js';
 
-const CENTER = [10.4236, -75.5480];
+const CENTER = [10.4250, -75.5480];
+// Vista inicial: todo el centro amurallado, San Diego, El Cabrero (ermita) y Getsemaní
+const HOME_BOUNDS = [[10.4172, -75.5556], [10.4322, -75.5428]];
 const CAT_COLOR = {
   castillo: 'var(--c-castillo)', muralla: 'var(--c-muralla)', iglesia: 'var(--c-iglesia)', museo: 'var(--c-museo)',
   plaza: 'var(--c-plaza)', monumento: 'var(--c-monumento)', cultura: 'var(--c-cultura)', barrio: 'var(--c-barrio)',
@@ -19,7 +21,7 @@ let onSelect = () => {};
 
 export function initMap(el, { onPlaceSelect }) {
   onSelect = onPlaceSelect;
-  map = window.L.map(el, { zoomControl: false, minZoom: 11, maxZoom: 19, attributionControl: true })
+  map = window.L.map(el, { zoomControl: false, minZoom: 11, maxZoom: 19, attributionControl: true, zoomSnap: 0.25, zoomDelta: 0.5 })
     .setView(CENTER, window.matchMedia('(max-width: 820px)').matches ? 15 : 16);
   window.L.control.zoom({ position: 'bottomright' }).addTo(map);
 
@@ -38,8 +40,7 @@ export function initMap(el, { onPlaceSelect }) {
   });
   setBaseLayer('sat');
   drawWalls();
-  // En el celular el panel inferior tapa parte del mapa: subir la ciudad al área visible.
-  if (window.matchMedia('(max-width: 820px)').matches) map.panBy([0, Math.round(Math.min(332, window.innerHeight * 0.5) / 2)], { animate: false });
+  home(false);
 
   for (const p of db.places) addMarker(p);
   map.on('click', () => el.dispatchEvent(new CustomEvent('mapblankclick')));
@@ -217,10 +218,16 @@ export function drawRoute(r) {
 }
 export function clearRoute() { if (routeLine) { map.removeLayer(routeLine); routeLine = null; } }
 
-export function home() {
+/** Vuelve a la vista general de la ciudad histórica, dejando libre la zona que tapa el panel. */
+export function home(animate = true) {
   const mobile = window.matchMedia('(max-width: 820px)').matches;
-  const z = mobile ? 15 : 16;
-  map.flyTo(mobile ? offsetForPanel(CENTER, z) : CENTER, z, { duration: 0.6 });
+  const opts = {
+    paddingTopLeft: mobile ? [16, 16] : [460, 30],
+    paddingBottomRight: mobile ? [16, sheetH() + 16] : [70, 40],
+    maxZoom: 17
+  };
+  if (animate) map.flyToBounds(HOME_BOUNDS, { ...opts, duration: 0.6 });
+  else map.fitBounds(HOME_BOUNDS, { ...opts, animate: false });
 }
 
 export function locate() {
