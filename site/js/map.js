@@ -178,11 +178,19 @@ export function flyToPlace(id, { zoom } = {}) {
   map.flyTo(offsetForPanel(p.coords, z), z, { duration: 0.7 });
 }
 
+/** Alto que ocupa el panel inferior en el celular, según su estado (medio, abierto o asomado). */
+function sheetH() {
+  const p = document.getElementById('panel'), h = window.innerHeight;
+  if (!p) return h * 0.5;
+  if (p.classList.contains('peek')) return Math.min(332, h * 0.5);
+  if (p.classList.contains('full')) return h * 0.6;   // abierto del todo: se centra como en «medio»
+  return h * 0.6;
+}
 /** Desplaza el centro para que el punto no quede tapado por el panel. */
 function offsetForPanel(latlng, zoom) {
   const mobile = window.matchMedia('(max-width: 820px)').matches;
   const pt = map.project(latlng, zoom);
-  if (mobile) pt.y += Math.min(332, window.innerHeight * 0.5) / 2;
+  if (mobile) pt.y += sheetH() / 2;
   else pt.x -= 210;
   return map.unproject(pt, zoom);
 }
@@ -195,7 +203,7 @@ export function fitPlaces(ids, { maxZoom = 17 } = {}) {
   const top = tb && !tb.hidden ? tb.getBoundingClientRect().bottom - 40 : 40;  // no tapar con la línea de tiempo
   map.flyToBounds(window.L.latLngBounds(pts), {
     paddingTopLeft: mobile ? [40, Math.max(30, top + 20)] : [480, Math.max(40, top + 30)],
-    paddingBottomRight: mobile ? [30, window.innerHeight * 0.48] : [70, 140],
+    paddingBottomRight: mobile ? [30, sheetH() + 24] : [70, 140],
     duration: 0.8, maxZoom
   });
 }

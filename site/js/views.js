@@ -32,7 +32,7 @@ export function card(p, { size = 'md' } = {}) {
     <span class="card-shade"></span>
     <span class="card-cat" style="--cc:${catColor(p.category)}">${ico(p.category)}${esc(t(`cat.${p.category}`))}</span>
     ${visited}
-    ${(p.photos?.length || 0) > 1 ? `<span class="card-views">${ico('layers')}${esc(t('gallery.views', { n: p.photos.length }))}</span>` : ''}
+    ${(p.photos?.length || 0) > 1 ? `<span class="card-views" title="${esc(t('gallery.views', { n: p.photos.length }))}">${ico('layers')}${p.photos.length}</span>` : ''}
     <span class="card-body"><strong>${esc(L(p.name).split(' · ')[0])}</strong><small>${esc(L(p.dates))}</small></span>
   </button>`;
 }
@@ -177,7 +177,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
     const n = route.stops.length, i = stopIndex + 1;
     stepper = `<div class="stepper">
       <button class="btn small ghost" type="button" data-step="-1" ${i === 1 ? 'disabled' : ''}>${esc(t('routes.prev'))}</button>
-      <div class="grow"><div>${esc(L(route.name))} · ${esc(t('routes.stop', { i, n }))}</div><div class="progress"><i style="width:${(i / n) * 100}%"></i></div></div>
+      <div class="grow"><div><span class="st-route">${esc(L(route.name))} · </span><strong>${esc(t('routes.stop', { i, n }))}</strong></div><div class="progress"><i style="width:${(i / n) * 100}%"></i></div></div>
       ${i < n
         ? `<button class="btn small primary" type="button" data-step="1">${esc(t('routes.next'))}</button>`
         : `<button class="btn small primary" type="button" data-finish>${esc(t('routes.finish'))}</button>`}

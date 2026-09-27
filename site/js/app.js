@@ -37,6 +37,7 @@ function render() {
   else body.innerHTML = V.exploreView({ visibleCats: S.visibleCats });
   $('#timebar').hidden = !S.history;
   wireGallery();
+  enhanceRails(body);
   renderMap();
   updateBadgeCount();
 }
@@ -529,6 +530,57 @@ function wire() {
   window.addEventListener('resize', () => M.invalidate());
 }
 
+/* ---------------- Carruseles: flechas + arrastre con el ratón ---------------- */
+function enhanceRails(root) {
+  root.querySelectorAll('.carousel, .hero-cards').forEach(track => {
+    if (track.parentElement.classList.contains('rail')) return;
+    const rail = document.createElement('div');
+    rail.className = 'rail';
+    track.replaceWith(rail); rail.appendChild(track);
+    const mk = dir => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = `rail-btn ${dir < 0 ? 'prev' : 'next'}`;
+      b.setAttribute('aria-label', t(dir < 0 ? 'gallery.prev' : 'gallery.next'));
+      b.innerHTML = '<svg aria-hidden="true"><use href="#i-back"/></svg>';
+      b.addEventListener('click', e => { e.stopPropagation(); track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: 'smooth' }); });
+      rail.appendChild(b); return b;
+    };
+    const prev = mk(-1), next = mk(1);
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 4;
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft >= max;
+      rail.classList.toggle('at-end', track.scrollLeft >= max);
+    };
+    track.addEventListener('scroll', update, { passive: true });
+    requestAnimationFrame(update);
+    // Arrastrar con el ratón (en táctil ya funciona el deslizamiento nativo)
+    let x0 = null, s0 = 0, moved = false;
+    track.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      x0 = e.clientX; s0 = track.scrollLeft; moved = false;
+    });
+    track.addEventListener('pointermove', e => {
+      if (x0 == null) return;
+      const dx = e.clientX - x0;
+      if (!moved && Math.abs(dx) > 6) { moved = true; track.classList.add('dragging'); track.setPointerCapture(e.pointerId); }
+      if (moved) track.scrollLeft = s0 - dx;
+    });
+    const end = () => {
+      if (x0 == null) return;
+      x0 = null;
+      if (!moved) return;
+      track.classList.remove('dragging');
+      // el clic que sigue a un arrastre no debe abrir la tarjeta
+      const block = ev => { ev.stopPropagation(); ev.preventDefault(); };
+      track.addEventListener('click', block, { capture: true, once: true });
+      setTimeout(() => track.removeEventListener('click', block, { capture: true }), 80);
+    };
+    track.addEventListener('pointerup', end);
+    track.addEventListener('pointercancel', end);
+  });
+}
+
 /* ---------------- Galería de vistas ---------------- */
 let galIndex = 0;
 function wireGallery() {
@@ -638,7 +690,9 @@ function setupHero() {
     im.onload = () => im.classList.add('loaded');
   }
   if (h) { im.alt = L(h.alt); $('#heroCredit').textContent = `${t('photo.by')}: ${h.author} / Pexels`; }
-  $('#heroCards').innerHTML = V.heroCards();
+  const hc = $('#heroCards');
+  hc.innerHTML = V.heroCards();
+  enhanceRails(hc.parentElement);
 }
 
 /* ---------------- Arranque ---------------- */
