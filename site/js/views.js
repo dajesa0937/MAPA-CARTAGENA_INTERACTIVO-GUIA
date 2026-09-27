@@ -125,7 +125,7 @@ export function storyView(st, { chapter = null, speaking = false } = {}) {
       ${animated ? '' : `<span class="era-shade"></span>`}
       <button class="cover-back" type="button" data-back-explore>${ico('back')}${esc(t('story.back'))}</button>
       ${animated ? '' : `<div class="era-head">${head}</div>`}
-      ${!animated && st.cover ? `<figcaption>${esc(L(st.cover.alt))} · ${esc(t('photo.by'))}: ${esc(st.cover.author)} / Pexels</figcaption>` : ''}
+      ${!animated && st.cover ? `<figcaption>${esc(t('photo.by'))}: ${esc(st.cover.author)} / ${esc(photoSite(st.cover))}${st.cover.license ? ' · ' + esc(st.cover.license) : ''}</figcaption>` : ''}
     </figure>
     ${animated ? `<header class="story-head">${head}</header>` : ''}
     ${st.tourism ? `<p class="tourism-tag">${ico('hoy')}${esc(t('tourism.tag', { date: formatDate('2026-09-26') }))}</p>` : ''}

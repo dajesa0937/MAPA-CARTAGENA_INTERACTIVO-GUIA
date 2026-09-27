@@ -274,7 +274,7 @@ function upNext() {
   const next = db.stories[st.storyIdx + 1];
   if (!next) return finale();
   const box = el.querySelector('.cn-next');
-  const cov = next.cover ? `<img src="${pexels(next.cover.pexels, 700)}" alt="">` : next.scene ? sceneHtml(next.scene, { thumb: true }) : '';
+  const cov = next.cover ? `<img src="${photoUrl(next.cover, 700)}" alt="">` : next.scene ? sceneHtml(next.scene, { thumb: true }) : '';
   box.innerHTML = `<div class="cn-card">
       <span class="cn-kicker">${esc(t('cinema.upNext'))}</span>
       <div class="cn-thumb">${cov}<span class="cn-ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/></svg><b>${COUNTDOWN}</b></span></div>

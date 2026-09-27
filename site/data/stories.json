@@ -125,6 +125,132 @@
   }
  },
  {
+  "id": "inquisicion",
+  "accent": "#5b2a3d",
+  "cover": {
+   "commons": "Casa Inquisicion CTG 11 2019 1674.jpg",
+   "author": "Mario Roberto Durán Ortiz (Mariordo)",
+   "license": "CC BY-SA 4.0",
+   "alt": {
+    "es": "Portada barroca del Palacio de la Inquisición",
+    "en": "Baroque portal of the Palace of the Inquisition"
+   }
+  },
+  "kicker": {
+   "es": "Mito y realidad",
+   "en": "Myth and fact"
+  },
+  "title": {
+   "es": "La Inquisición: ¿quemaron brujas aquí?",
+   "en": "The Inquisition: were witches burned here?"
+  },
+  "teaser": {
+   "es": "Lo que cuentan los documentos del Santo Oficio de Cartagena.",
+   "en": "What the records of Cartagena’s Holy Office really say."
+  },
+  "intro": {
+   "es": "Detrás de la portada más elegante de la plaza funcionó durante dos siglos el Tribunal del Santo Oficio, que vigilaba la fe en medio Caribe. Se dice que aquí quemaban brujas. Los documentos cuentan otra historia: hubo miedo, denuncias, cárcel y tortura, pero ninguna ejecución por brujería.",
+   "en": "Behind the most elegant doorway on the square, the Tribunal of the Holy Office policed the faith across half the Caribbean for two centuries. People say witches were burned here. The records tell another story: there was fear, denunciation, prison and torture, but no one was executed for witchcraft."
+  },
+  "chapters": [
+   {
+    "event": "e1610-inquisicion"
+   },
+   {
+    "label": {
+     "es": "1610–1821",
+     "en": "1610–1821"
+    },
+    "title": {
+     "es": "Un tribunal para medio Caribe",
+     "en": "A tribunal for half the Caribbean"
+    },
+    "text": {
+     "es": "Su jurisdicción iba de Panamá a Pasto y de la costa pacífica a Caracas, e incluía las Antillas: los territorios de las actuales Colombia, Panamá, Venezuela, Cuba y Puerto Rico, entre otros.",
+     "en": "Its jurisdiction ran from Panama to Pasto and from the Pacific coast to Caracas, including the Antilles: the lands of today’s Colombia, Panama, Venezuela, Cuba and Puerto Rico, among others."
+    },
+    "certainty": "documentado",
+    "sources": [
+     "dhial-inquisicion"
+    ],
+    "places": [
+     "palacio-inquisicion"
+    ]
+   },
+   {
+    "event": "e1630-inquisicion"
+   },
+   {
+    "label": {
+     "es": "Siglo XVII",
+     "en": "17th c."
+    },
+    "title": {
+     "es": "¿Quiénes eran las «brujas»?",
+     "en": "Who were the “witches”?"
+    },
+    "text": {
+     "es": "Cerca del 30 % de los 731 casos del siglo XVII fueron por superstición o brujería. Las acusadas de pacto con el demonio fueron sobre todo personas negras y mulatas, y mujeres blancas pobres; a los indígenas no los juzgaba la Inquisición.",
+     "en": "About 30% of the 731 cases of the 17th century concerned superstition or witchcraft. Those accused of a pact with the Devil were mostly Black and mixed-race people and poor white women; Indigenous people were outside the Inquisition’s jurisdiction."
+    },
+    "certainty": "documentado",
+    "sources": [
+     "dhial-inquisicion",
+     "ceballos-2001"
+    ]
+   },
+   {
+    "label": {
+     "es": "1634–1636",
+     "en": "1634–1636"
+    },
+    "title": {
+     "es": "La gran causa de brujería",
+     "en": "The great witchcraft case"
+    },
+    "text": {
+     "es": "El tribunal persiguió una supuesta «conjuración» de brujas. Los estudios describen cárceles, tortura y confesiones que luego fueron retractadas: el miedo fabricaba culpables.",
+     "en": "The tribunal pursued an alleged “conspiracy” of witches. Studies describe prisons, torture and confessions later retracted: fear manufactured culprits."
+    },
+    "certainty": "consenso",
+    "sources": [
+     "rg-brujeria-1634",
+     "ceballos-2001"
+    ]
+   },
+   {
+    "label": {
+     "es": "La respuesta",
+     "en": "The answer"
+    },
+    "title": {
+     "es": "No: aquí no se quemaron brujas",
+     "en": "No: witches were not burned here"
+    },
+    "text": {
+     "es": "El recuento del siglo XVII registra solo cuatro personas «relajadas», es decir, entregadas a la justicia civil para ser ejecutadas: tres por judaizantes y una por protestante. Ninguna por brujería. A las acusadas de brujería se las castigaba con cárcel, azotes, vergüenza pública, destierro o confiscación de bienes.",
+     "en": "The 17th-century tally records only four people “relaxed” — handed to the civil authorities for execution: three as Judaizers and one as a Protestant. None for witchcraft. Those accused of witchcraft were punished with prison, flogging, public shaming, exile or confiscation of property."
+    },
+    "certainty": "documentado",
+    "sources": [
+     "dhial-inquisicion",
+     "radionacional-inquisicion"
+    ]
+   },
+   {
+    "event": "e1813-inquisicion"
+   }
+  ],
+  "places": [
+   "palacio-inquisicion",
+   "plaza-bolivar"
+  ],
+  "unknown": {
+   "es": "Las cifras varían según el periodo contado: un recuento del siglo XVII registra cuatro relajados, y otra fuente habla de cinco personas quemadas entre 1610 y 1821. Ninguna fuente consultada registra una ejecución por brujería.",
+   "en": "Figures vary with the period counted: a 17th-century tally records four people relaxed, and another source speaks of five people burned between 1610 and 1821. No source we consulted records an execution for witchcraft."
+  }
+ },
+ {
   "id": "defensas",
   "accent": "#8a5a2b",
   "cover": {

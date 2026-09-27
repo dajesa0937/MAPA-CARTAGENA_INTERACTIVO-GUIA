@@ -317,6 +317,30 @@
   ]
  },
  {
+  "id": "e1630-inquisicion",
+  "year": 1630,
+  "date": {
+   "es": "1630",
+   "en": "1630"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "El tribunal levanta su propia sede",
+   "en": "The tribunal builds its own headquarters"
+  },
+  "text": {
+   "es": "La Inquisición compra y derriba las casas que alquilaba junto a la plaza mayor para construir una sede a su medida, con cárceles secretas.",
+   "en": "The Inquisition buys and pulls down the houses it rented beside the main square to build headquarters of its own, with secret cells."
+  },
+  "certainty": "documentado",
+  "places": [
+   "palacio-inquisicion"
+  ],
+  "sources": [
+   "muhca"
+  ]
+ },
+ {
   "id": "e1640-bocagrande",
   "year": 1640,
   "date": {
@@ -664,6 +688,30 @@
   "sources": [
    "canal-1811",
    "banrep-martires"
+  ]
+ },
+ {
+  "id": "e1813-inquisicion",
+  "year": 1813,
+  "date": {
+   "es": "22 de febrero de 1813",
+   "en": "22 February 1813"
+  },
+  "period": "independencia",
+  "title": {
+   "es": "Se suprime la Inquisición",
+   "en": "The Inquisition is abolished"
+  },
+  "text": {
+   "es": "Las Cortes de Cádiz suprimen el Santo Oficio. Fernando VII lo restablece en 1814, pero se elimina definitivamente en 1820; en Cartagena dejó de funcionar con la independencia, en 1821.",
+   "en": "The Cortes of Cádiz abolish the Holy Office. Ferdinand VII restores it in 1814, but it is abolished for good in 1820; in Cartagena it ceased with independence in 1821."
+  },
+  "certainty": "documentado",
+  "places": [
+   "palacio-inquisicion"
+  ],
+  "sources": [
+   "dhial-inquisicion"
   ]
  },
  {

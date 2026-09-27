@@ -495,5 +495,33 @@
   "org": "Banco de la República – Enciclopedia Banrepcultural",
   "title": "Rafael Núñez",
   "url": "https://enciclopedia.banrepcultural.org/index.php/Rafael_N%C3%BA%C3%B1ez"
+ },
+ {
+  "id": "dhial-inquisicion",
+  "type": "académica",
+  "org": "Diccionario de Historia Cultural de la Iglesia en América Latina (DHIAL)",
+  "title": "Inquisición. El Tribunal de Cartagena de Indias",
+  "url": "https://www.dhial.org/diccionario/index.php?title=INQUISICI%C3%93N._El_Tribunal_de_Cartagena_de_Indias"
+ },
+ {
+  "id": "ceballos-2001",
+  "type": "académica",
+  "org": "Universidad Nacional de Colombia – Repositorio institucional",
+  "title": "Ceballos Gómez, D. L. (2001). La Inquisición de Cartagena de Indias o de cómo se inventa una bruja en el siglo XVII",
+  "url": "https://repositorio.unal.edu.co/handle/unal/9313"
+ },
+ {
+  "id": "radionacional-inquisicion",
+  "type": "medio",
+  "org": "Radio Nacional de Colombia, 08/03/2023",
+  "title": "La Inquisición: historia del Tribunal del Santo Oficio de Cartagena",
+  "url": "https://www.radionacional.co/cultura/historia-colombiana/la-inquisicion-historia-del-tribunal-del-santo-oficio-de-cartagena"
+ },
+ {
+  "id": "rg-brujeria-1634",
+  "type": "académica",
+  "org": "Artículo académico (ResearchGate)",
+  "title": "Tras la conjuración de brujería en Cartagena de Indias (1634-1636): retractaciones, espacios carcelarios y tortura",
+  "url": "https://www.researchgate.net/publication/337036846_Tras_la_conjuracion_de_brujeria_en_Cartagena_de_Indias_1634-1636_retractaciones_espacios_carcelarios_y_tortura"
  }
 ]

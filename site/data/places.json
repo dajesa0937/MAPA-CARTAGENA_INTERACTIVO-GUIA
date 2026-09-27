@@ -1710,11 +1710,13 @@
   "history": {
    "es": [
     "En 1610 el Tribunal de la Inquisición empezó a funcionar en casas alquiladas junto a la plaza mayor, hoy plaza de Bolívar. Hacia 1630 levantó una nueva sede, que luego se amplió hasta ocupar cuatro inmuebles, con cárceles secretas.",
-    "Su portada barroca en piedra caliza es considerada un gran ejemplo de arquitectura civil del siglo XVIII en Cartagena. El tribunal cesó en 1821. El museo se fundó en 1924."
+    "Su portada barroca en piedra caliza es considerada un gran ejemplo de arquitectura civil del siglo XVIII en Cartagena. El tribunal cesó en 1821. El museo se fundó en 1924.",
+    "¿Quemaron brujas aquí? Es un mito muy repetido. Cerca de un tercio de los casos del siglo XVII fueron por superstición o brujería, y muchas personas acusadas —sobre todo negras, mulatas y mujeres pobres— sufrieron cárcel, tortura, azotes, vergüenza pública o destierro. Pero el recuento del siglo XVII registra solo cuatro personas entregadas a la justicia civil para ser ejecutadas (tres por judaizantes y una por protestante), ninguna por brujería."
    ],
    "en": [
     "In 1610 the Tribunal of the Inquisition began operating in rented houses beside the main square, now Plaza de Bolívar. Around 1630 it built a new headquarters, later enlarged to four buildings with secret cells.",
-    "Its Baroque limestone doorway is regarded as a fine example of 18th-century civil architecture in Cartagena. The tribunal ended in 1821. The museum was founded in 1924."
+    "Its Baroque limestone doorway is regarded as a fine example of 18th-century civil architecture in Cartagena. The tribunal ended in 1821. The museum was founded in 1924.",
+    "Were witches burned here? It is a much-repeated myth. About a third of 17th-century cases concerned superstition or witchcraft, and many of the accused — above all Black, mixed-race and poor women — suffered prison, torture, flogging, public shaming or exile. But the 17th-century tally records only four people handed to the civil authorities for execution (three as Judaizers and one as a Protestant), none for witchcraft."
    ]
   },
   "note": {
@@ -1731,12 +1733,15 @@
   },
   "events": [
    "e1610-inquisicion",
-   "e1811-independencia",
+   "e1630-inquisicion",
+   "e1813-inquisicion",
    "e1821-recuperacion"
   ],
   "sources": [
    "muhca",
-   "wiki-inquisicion"
+   "wiki-inquisicion",
+   "dhial-inquisicion",
+   "ceballos-2001"
   ],
   "certainty": "documentado",
   "audio": {

@@ -83,6 +83,8 @@ for st in stories:
 if set(es) != set(en): errs.append(f'i18n: claves distintas {set(es) ^ set(en)}')
 used = set()
 for f in [*places, *events, *periods]: used.update(f.get('sources', []))
+for st in stories:
+    for c in st['chapters']: used.update(c.get('sources', []))
 for p in places:
     if p.get('visit'): used.add(p['visit']['source'])
 unused = S - used
