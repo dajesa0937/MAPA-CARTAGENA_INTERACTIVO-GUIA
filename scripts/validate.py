@@ -6,6 +6,7 @@ root = pathlib.Path(__file__).resolve().parents[1] / 'site'
 J = lambda p: json.loads((root / p).read_text(encoding='utf-8'))
 places, events, periods, routes, sources, badges, stories = (J(f'data/{n}.json') for n in ['places','events','periods','routes','sources','badges','stories'])
 es, en = J('i18n/es.json'), J('i18n/en.json')
+trip = J('data/trip.json')
 errs = []
 S = {s['id'] for s in sources}; P = {p['id'] for p in places}; E = {e['id'] for e in events}; PE = {p['id'] for p in periods}
 CERT = {'documentado','consenso','debatido','tradicion','pendiente'}
@@ -80,6 +81,20 @@ for st in stories:
     for pl in st.get('places', []):
         if pl not in P: errs.append(f'{w}: lugar inexistente {pl}')
     if st.get('route') and st['route'] not in {r['id'] for r in routes}: errs.append(f'{w}: ruta inexistente')
+for sec in trip['sections']:
+    w = f"viaje {sec['id']}"
+    bil(sec.get('title'), f'{w}.title')
+    for it in sec['items']: bil(it, f'{w}.item')
+    if not sec.get('sources'): errs.append(f'{w}: sin fuentes')
+    for s_ in sec.get('sources', []):
+        if s_ not in S: errs.append(f'{w}: fuente inexistente {s_}')
+if trip.get('weatherSource') not in S: errs.append('viaje: fuente del tiempo inexistente')
+if not trip.get('checked'): errs.append('viaje: sin fecha de verificación')
+for st in stories:
+    for c in st['chapters']:
+        ph = c.get('photo')
+        if ph and not (ph.get('commons') and ph.get('license') and ph.get('author')): errs.append(f"historia {st['id']}: foto de capítulo sin licencia o autor")
+        if ph: bil(ph.get('alt'), f"historia {st['id']}.foto.alt")
 if set(es) != set(en): errs.append(f'i18n: claves distintas {set(es) ^ set(en)}')
 used = set()
 for f in [*places, *events, *periods]: used.update(f.get('sources', []))
@@ -87,6 +102,8 @@ for st in stories:
     for c in st['chapters']: used.update(c.get('sources', []))
 for p in places:
     if p.get('visit'): used.add(p['visit']['source'])
+for sec in trip['sections']: used.update(sec.get('sources', []))
+used.add(trip.get('weatherSource'))
 unused = S - used
 print(f'{len(stories)} historias · {len(places)} lugares · {len(events)} eventos · {len(periods)} épocas · {len(routes)} rutas · {len(sources)} fuentes')
 if unused: print('Aviso — fuentes sin usar:', ', '.join(sorted(unused)))

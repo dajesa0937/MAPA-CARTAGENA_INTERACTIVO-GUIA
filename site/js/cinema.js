@@ -23,7 +23,7 @@ function specificPhotos(ids) {
 }
 function buildSlides(story) {
   const used = new Set();
-  const cover = story.cover ? { ...story.cover, specific: false } : null;
+  const cover = story.cover ? { ...story.cover, specific: story.cover.specific ?? false } : null;
   const periodSlides = story.slides ? (period('hoy')?.slides || []) : [];
   const pick = ids => {
     const all = specificPhotos(ids);
@@ -39,7 +39,7 @@ function buildSlides(story) {
   story.chapters.forEach((c, i) => {
     const e = c.event ? event(c.event) : null;
     const ids = e ? (e.places || []) : (c.places || []);
-    let photo = pick(ids);
+    let photo = c.photo ? { ...c.photo, specific: true } : pick(ids);
     if (!photo && periodSlides.length) photo = periodSlides.find(s => !used.has(photoKey(s))) || null;
     if (!photo && !story.scene && cover) photo = cover;
     if (photo) used.add(photoKey(photo));
@@ -47,7 +47,7 @@ function buildSlides(story) {
     const title = e ? L(e.title) : L(c.title);
     const text = e ? L(e.text) : L(c.text);
     slides.push({ kind: 'chapter', scene: photo ? null : story.scene, photo, kicker, title, text, speak: `${title}. ${text}`,
-      placeName: photo?.place ? L(photo.place.name).split(' · ')[0] : '' });
+      placeName: photo?.place ? L(photo.place.name).split(' · ')[0] : c.photo?.angle ? L(c.photo.angle) : '' });
   });
   // 3. Lugares de hoy (solo «Cartagena hoy»): cada playa u obra con su foto
   if (story.tourism) {

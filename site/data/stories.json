@@ -1,489 +1,670 @@
 [
- {
-  "id": "galeon",
-  "accent": "#1f5f7a",
-  "scene": "galeon",
-  "cover": {
-   "pexels": 21336471,
-   "author": "Renee B",
-   "alt": {
-    "es": "Réplica moderna de un galeón (imagen ilustrativa, no es el San José)",
-    "en": "A modern galleon replica (illustrative, not the San José)"
-   }
-  },
-  "kicker": {
-   "es": "Mar y naufragios",
-   "en": "Sea & shipwrecks"
-  },
-  "title": {
-   "es": "El galeón San José",
-   "en": "The San José galleon"
-  },
-  "teaser": {
-   "es": "Un combate, una explosión y 300 años bajo el mar.",
-   "en": "A battle, an explosion and 300 years under the sea."
-  },
-  "intro": {
-   "es": "En 1708 un galeón español estalló frente a Barú y se hundió con casi todos sus tripulantes. Su supuesta carga lo convirtió en la leyenda más famosa del Caribe. En 2015 la Armada de Colombia lo encontró, y hoy la ciencia empieza a estudiarlo pieza por pieza.",
-   "en": "In 1708 a Spanish galleon blew up off Barú and sank with almost everyone on board. Its rumoured cargo made it the most famous legend of the Caribbean. In 2015 the Colombian Navy found it, and today science is beginning to study it piece by piece."
-  },
-  "chapters": [
-   {
-    "event": "e1708-galeon"
-   },
-   {
-    "event": "e2015-galeon"
-   },
-   {
-    "event": "e2025-galeon"
-   },
-   {
-    "event": "e2026-galeon"
-   }
-  ],
-  "places": [
-   "galeon-san-jose",
-   "playa-blanca"
-  ],
-  "unknown": {
-   "es": "No se conoce el valor real de la carga: las cifras de la época van de 7 a 11 millones de pesos. La posición exacta del naufragio es reservada por el Estado. Durante décadas hubo disputas legales sobre los derechos al hallazgo.",
-   "en": "The real value of the cargo is unknown: period figures range from 7 to 11 million pesos. The exact position of the wreck is classified by the state. For decades there were legal disputes over rights to the find."
-  }
- },
- {
-  "id": "iglesias",
-  "accent": "#7a3e6e",
-  "cover": {
-   "pexels": 13836087,
-   "author": "JVAS71",
-   "alt": {
-    "es": "La torre de la catedral con el mar al fondo",
-    "en": "The cathedral tower with the sea behind"
-   }
-  },
-  "kicker": {
-   "es": "Iglesias y conventos",
-   "en": "Churches & convents"
-  },
-  "title": {
-   "es": "La ciudad de los templos",
-   "en": "A city of churches"
-  },
-  "teaser": {
-   "es": "Fuego, piratas, jesuitas y una bala en plena misa.",
-   "en": "Fire, pirates, Jesuits and a cannonball during Mass."
-  },
-  "intro": {
-   "es": "Las iglesias de Cartagena cuentan la historia de la ciudad: la primera, de madera y paja, ardió en 1552; la catedral de piedra sobrevivió a Drake; los jesuitas acogieron a Pedro Claver; y cada barrio levantó su templo. Recórrelas en orden.",
-   "en": "Cartagena’s churches tell the story of the city: the first, of wood and thatch, burned in 1552; the stone cathedral survived Drake; the Jesuits were home to Pedro Claver; and each quarter built its own church. Walk through them in order."
-  },
-  "chapters": [
-   {
-    "event": "e1552-incendio"
-   },
-   {
-    "event": "e1577-catedral"
-   },
-   {
-    "event": "e1586-drake"
-   },
-   {
-    "event": "e1607-popa"
-   },
-   {
-    "event": "e1612-catedral"
-   },
-   {
-    "event": "e1622-claver"
-   },
-   {
-    "event": "e1643-trinidad"
-   },
-   {
-    "event": "e1666-toribio"
-   },
-   {
-    "event": "e1767-jesuitas"
-   },
-   {
-    "event": "e1885-ermita"
-   }
-  ],
-  "places": [
-   "catedral",
-   "iglesia-santo-domingo",
-   "san-pedro-claver",
-   "iglesia-trinidad",
-   "iglesia-santo-toribio",
-   "convento-popa",
-   "ermita-cabrero"
-  ],
-  "route": "iglesias",
-  "unknown": {
-   "es": "Varias fechas de construcción difieren entre fuentes (por ejemplo, las del templo de San Pedro Claver y el convento de Santo Domingo). Lo indicamos en cada ficha.",
-   "en": "Several construction dates differ between sources (for example for the San Pedro Claver church and the Santo Domingo convent). We flag this on each place."
-  }
- },
- {
-  "id": "inquisicion",
-  "accent": "#5b2a3d",
-  "cover": {
-   "commons": "Casa Inquisicion CTG 11 2019 1674.jpg",
-   "author": "Mario Roberto Durán Ortiz (Mariordo)",
-   "license": "CC BY-SA 4.0",
-   "alt": {
-    "es": "Portada barroca del Palacio de la Inquisición",
-    "en": "Baroque portal of the Palace of the Inquisition"
-   }
-  },
-  "kicker": {
-   "es": "Mito y realidad",
-   "en": "Myth and fact"
-  },
-  "title": {
-   "es": "La Inquisición: ¿quemaron brujas aquí?",
-   "en": "The Inquisition: were witches burned here?"
-  },
-  "teaser": {
-   "es": "Lo que cuentan los documentos del Santo Oficio de Cartagena.",
-   "en": "What the records of Cartagena’s Holy Office really say."
-  },
-  "intro": {
-   "es": "Detrás de la portada más elegante de la plaza funcionó durante dos siglos el Tribunal del Santo Oficio, que vigilaba la fe en medio Caribe. Se dice que aquí quemaban brujas. Los documentos cuentan otra historia: hubo miedo, denuncias, cárcel y tortura, pero ninguna ejecución por brujería.",
-   "en": "Behind the most elegant doorway on the square, the Tribunal of the Holy Office policed the faith across half the Caribbean for two centuries. People say witches were burned here. The records tell another story: there was fear, denunciation, prison and torture, but no one was executed for witchcraft."
-  },
-  "chapters": [
-   {
-    "event": "e1610-inquisicion"
-   },
-   {
-    "label": {
-     "es": "1610–1821",
-     "en": "1610–1821"
+  {
+    "id": "galeon",
+    "accent": "#1f5f7a",
+    "scene": "galeon",
+    "cover": {
+      "pexels": 21336471,
+      "author": "Renee B",
+      "alt": {
+        "es": "Réplica moderna de un galeón (imagen ilustrativa, no es el San José)",
+        "en": "A modern galleon replica (illustrative, not the San José)"
+      }
+    },
+    "kicker": {
+      "es": "Mar y naufragios",
+      "en": "Sea & shipwrecks"
     },
     "title": {
-     "es": "Un tribunal para medio Caribe",
-     "en": "A tribunal for half the Caribbean"
+      "es": "El galeón San José",
+      "en": "The San José galleon"
     },
-    "text": {
-     "es": "Su jurisdicción iba de Panamá a Pasto y de la costa pacífica a Caracas, e incluía las Antillas: los territorios de las actuales Colombia, Panamá, Venezuela, Cuba y Puerto Rico, entre otros.",
-     "en": "Its jurisdiction ran from Panama to Pasto and from the Pacific coast to Caracas, including the Antilles: the lands of today’s Colombia, Panama, Venezuela, Cuba and Puerto Rico, among others."
+    "teaser": {
+      "es": "Un combate, una explosión y 300 años bajo el mar.",
+      "en": "A battle, an explosion and 300 years under the sea."
     },
-    "certainty": "documentado",
-    "sources": [
-     "dhial-inquisicion"
+    "intro": {
+      "es": "En 1708 un galeón español estalló frente a Barú y se hundió con casi todos sus tripulantes. Su supuesta carga lo convirtió en la leyenda más famosa del Caribe. En 2015 la Armada de Colombia lo encontró, y hoy la ciencia empieza a estudiarlo pieza por pieza.",
+      "en": "In 1708 a Spanish galleon blew up off Barú and sank with almost everyone on board. Its rumoured cargo made it the most famous legend of the Caribbean. In 2015 the Colombian Navy found it, and today science is beginning to study it piece by piece."
+    },
+    "chapters": [
+      {
+        "event": "e1708-galeon"
+      },
+      {
+        "event": "e2015-galeon"
+      },
+      {
+        "event": "e2025-galeon"
+      },
+      {
+        "event": "e2026-galeon"
+      }
     ],
     "places": [
-     "palacio-inquisicion"
-    ]
-   },
-   {
-    "event": "e1630-inquisicion"
-   },
-   {
-    "label": {
-     "es": "Siglo XVII",
-     "en": "17th c."
+      "galeon-san-jose",
+      "playa-blanca"
+    ],
+    "unknown": {
+      "es": "No se conoce el valor real de la carga: las cifras de la época van de 7 a 11 millones de pesos. La posición exacta del naufragio es reservada por el Estado. Durante décadas hubo disputas legales sobre los derechos al hallazgo.",
+      "en": "The real value of the cargo is unknown: period figures range from 7 to 11 million pesos. The exact position of the wreck is classified by the state. For decades there were legal disputes over rights to the find."
+    }
+  },
+  {
+    "id": "washington",
+    "accent": "#7a2e2e",
+    "cover": {
+      "commons": "Penning voor Admiraal Vernon voor de inname van Carthagena in 1741 en de overgave van Don Blass op één knie 1741 barcode 800000087800.jpg",
+      "author": "Edward Pinchbeck (1741) / Rijksmuseum",
+      "license": "CC0",
+      "alt": {
+        "es": "Medalla británica de 1741 que celebraba una toma de Cartagena que nunca ocurrió",
+        "en": "A 1741 British medal celebrating a capture of Cartagena that never happened"
+      },
+      "specific": true
+    },
+    "kicker": {
+      "es": "Cartagena y Estados Unidos",
+      "en": "Cartagena & the United States"
     },
     "title": {
-     "es": "¿Quiénes eran las «brujas»?",
-     "en": "Who were the “witches”?"
+      "es": "El nombre de Mount Vernon",
+      "en": "How Mount Vernon got its name"
     },
-    "text": {
-     "es": "Cerca del 30 % de los 731 casos del siglo XVII fueron por superstición o brujería. Las acusadas de pacto con el demonio fueron sobre todo personas negras y mulatas, y mujeres blancas pobres; a los indígenas no los juzgaba la Inquisición.",
-     "en": "About 30% of the 731 cases of the 17th century concerned superstition or witchcraft. Those accused of a pact with the Devil were mostly Black and mixed-race people and poor white women; Indigenous people were outside the Inquisition’s jurisdiction."
+    "teaser": {
+      "es": "La casa de George Washington se llama así por el almirante que atacó Cartagena en 1741.",
+      "en": "George Washington's home is named after the admiral who attacked Cartagena in 1741."
     },
-    "certainty": "documentado",
-    "sources": [
-     "dhial-inquisicion",
-     "ceballos-2001"
-    ]
-   },
-   {
-    "label": {
-     "es": "1634–1636",
-     "en": "1634–1636"
+    "intro": {
+      "es": "Si has visitado Mount Vernon, la casa de George Washington en Virginia, ya conoces un pedazo de esta historia. Su nombre recuerda al almirante británico Edward Vernon, que en 1741 lanzó contra Cartagena una enorme expedición naval. Entre sus soldados había miles de colonos de Norteamérica… y un capitán llamado Lawrence Washington, el hermano mayor de George.",
+      "en": "If you have visited Mount Vernon, George Washington's home in Virginia, you already know part of this story. Its name honours the British admiral Edward Vernon, who in 1741 threw a huge naval expedition against Cartagena. Among his soldiers were thousands of North American colonists… and a captain named Lawrence Washington, George's older brother."
+    },
+    "chapters": [
+      {
+        "event": "e1740-washington",
+        "photo": {
+          "commons": "Lawrence Washington (cropped).jpg",
+          "author": "Autor desconocido (s. XVIII)",
+          "license": "Dominio público",
+          "alt": {
+            "es": "Retrato de Lawrence Washington",
+            "en": "Portrait of Lawrence Washington"
+          },
+          "angle": {
+            "es": "Lawrence Washington",
+            "en": "Lawrence Washington"
+          }
+        }
+      },
+      {
+        "event": "e1741-colonos"
+      },
+      {
+        "event": "e1741-vernon",
+        "photo": {
+          "commons": "Thomas Hudson (1701-1779) - Admiral Edward Vernon (1684–1757) - R.1934-164 - Colchester and Ipswich Museums Service.jpg",
+          "author": "Thomas Hudson (1739)",
+          "license": "Dominio público",
+          "alt": {
+            "es": "Retrato del almirante Edward Vernon",
+            "en": "Portrait of Admiral Edward Vernon"
+          },
+          "angle": {
+            "es": "El almirante Vernon",
+            "en": "Admiral Vernon"
+          }
+        }
+      },
+      {
+        "event": "e1741-medallas"
+      },
+      {
+        "event": "e1743-mountvernon",
+        "photo": {
+          "commons": "Mount Vernon Mansion East Front.jpg",
+          "author": "Otherspice",
+          "license": "CC BY-SA 4.0",
+          "alt": {
+            "es": "La casa de Mount Vernon, en Virginia",
+            "en": "The Mount Vernon mansion in Virginia"
+          },
+          "angle": {
+            "es": "Mount Vernon (Virginia) hoy",
+            "en": "Mount Vernon, Virginia, today"
+          }
+        }
+      },
+      {
+        "label": {
+          "es": "Hoy",
+          "en": "Today"
+        },
+        "title": {
+          "es": "De Washington a Cartagena, sin escalas",
+          "en": "Washington to Cartagena, nonstop"
+        },
+        "text": {
+          "es": "United Airlines anunció el 29 de junio de 2026 vuelos directos a Cartagena desde Washington-Dulles y desde Houston a partir del 17 de diciembre de 2026, cuatro por semana. Es información comercial: confírmala con la aerolínea.",
+          "en": "On 29 June 2026 United Airlines announced nonstop flights to Cartagena from Washington Dulles and Houston starting 17 December 2026, four a week. This is commercial information: confirm it with the airline."
+        },
+        "certainty": "documentado",
+        "sources": [
+          "united-ctg-2026"
+        ],
+        "tourism": true
+      }
+    ],
+    "places": [
+      "castillo-san-felipe",
+      "castillo-san-luis",
+      "convento-popa"
+    ],
+    "period": "asedios",
+    "unknown": {
+      "es": "No sabemos qué hizo exactamente Lawrence Washington durante el asedio ni en qué puntos combatió. Las cifras de soldados coloniales y de supervivientes varían según la fuente. Los vuelos son información comercial anunciada en 2026 y pueden cambiar.",
+      "en": "We do not know exactly what Lawrence Washington did during the siege or where he fought. Figures for colonial soldiers and survivors vary between sources. The flights are commercial information announced in 2026 and may change."
+    }
+  },
+  {
+    "id": "iglesias",
+    "accent": "#7a3e6e",
+    "cover": {
+      "pexels": 13836087,
+      "author": "JVAS71",
+      "alt": {
+        "es": "La torre de la catedral con el mar al fondo",
+        "en": "The cathedral tower with the sea behind"
+      }
+    },
+    "kicker": {
+      "es": "Iglesias y conventos",
+      "en": "Churches & convents"
     },
     "title": {
-     "es": "La gran causa de brujería",
-     "en": "The great witchcraft case"
+      "es": "La ciudad de los templos",
+      "en": "A city of churches"
     },
-    "text": {
-     "es": "El tribunal persiguió una supuesta «conjuración» de brujas. Los estudios describen cárceles, tortura y confesiones que luego fueron retractadas: el miedo fabricaba culpables.",
-     "en": "The tribunal pursued an alleged “conspiracy” of witches. Studies describe prisons, torture and confessions later retracted: fear manufactured culprits."
+    "teaser": {
+      "es": "Fuego, piratas, jesuitas y una bala en plena misa.",
+      "en": "Fire, pirates, Jesuits and a cannonball during Mass."
     },
-    "certainty": "consenso",
-    "sources": [
-     "rg-brujeria-1634",
-     "ceballos-2001"
-    ]
-   },
-   {
-    "label": {
-     "es": "La respuesta",
-     "en": "The answer"
+    "intro": {
+      "es": "Las iglesias de Cartagena cuentan la historia de la ciudad: la primera, de madera y paja, ardió en 1552; la catedral de piedra sobrevivió a Drake; los jesuitas acogieron a Pedro Claver; y cada barrio levantó su templo. Recórrelas en orden.",
+      "en": "Cartagena’s churches tell the story of the city: the first, of wood and thatch, burned in 1552; the stone cathedral survived Drake; the Jesuits were home to Pedro Claver; and each quarter built its own church. Walk through them in order."
+    },
+    "chapters": [
+      {
+        "event": "e1552-incendio"
+      },
+      {
+        "event": "e1577-catedral"
+      },
+      {
+        "event": "e1586-drake"
+      },
+      {
+        "event": "e1607-popa"
+      },
+      {
+        "event": "e1612-catedral"
+      },
+      {
+        "event": "e1622-claver"
+      },
+      {
+        "event": "e1643-trinidad"
+      },
+      {
+        "event": "e1666-toribio"
+      },
+      {
+        "event": "e1767-jesuitas"
+      },
+      {
+        "event": "e1885-ermita"
+      }
+    ],
+    "places": [
+      "catedral",
+      "iglesia-santo-domingo",
+      "san-pedro-claver",
+      "iglesia-trinidad",
+      "iglesia-santo-toribio",
+      "convento-popa",
+      "ermita-cabrero"
+    ],
+    "route": "iglesias",
+    "unknown": {
+      "es": "Varias fechas de construcción difieren entre fuentes (por ejemplo, las del templo de San Pedro Claver y el convento de Santo Domingo). Lo indicamos en cada ficha.",
+      "en": "Several construction dates differ between sources (for example for the San Pedro Claver church and the Santo Domingo convent). We flag this on each place."
+    }
+  },
+  {
+    "id": "inquisicion",
+    "accent": "#5b2a3d",
+    "cover": {
+      "commons": "Casa Inquisicion CTG 11 2019 1674.jpg",
+      "author": "Mario Roberto Durán Ortiz (Mariordo)",
+      "license": "CC BY-SA 4.0",
+      "alt": {
+        "es": "Portada barroca del Palacio de la Inquisición",
+        "en": "Baroque portal of the Palace of the Inquisition"
+      }
+    },
+    "kicker": {
+      "es": "Mito y realidad",
+      "en": "Myth and fact"
     },
     "title": {
-     "es": "No: aquí no se quemaron brujas",
-     "en": "No: witches were not burned here"
+      "es": "La Inquisición: ¿quemaron brujas aquí?",
+      "en": "The Inquisition: were witches burned here?"
     },
-    "text": {
-     "es": "El recuento del siglo XVII registra solo cuatro personas «relajadas», es decir, entregadas a la justicia civil para ser ejecutadas: tres por judaizantes y una por protestante. Ninguna por brujería. A las acusadas de brujería se las castigaba con cárcel, azotes, vergüenza pública, destierro o confiscación de bienes.",
-     "en": "The 17th-century tally records only four people “relaxed” — handed to the civil authorities for execution: three as Judaizers and one as a Protestant. None for witchcraft. Those accused of witchcraft were punished with prison, flogging, public shaming, exile or confiscation of property."
+    "teaser": {
+      "es": "Lo que cuentan los documentos del Santo Oficio de Cartagena.",
+      "en": "What the records of Cartagena’s Holy Office really say."
     },
-    "certainty": "documentado",
-    "sources": [
-     "dhial-inquisicion",
-     "radionacional-inquisicion"
-    ]
-   },
-   {
-    "event": "e1813-inquisicion"
-   }
-  ],
-  "places": [
-   "palacio-inquisicion",
-   "plaza-bolivar"
-  ],
-  "unknown": {
-   "es": "Las cifras varían según el periodo contado: un recuento del siglo XVII registra cuatro relajados, y otra fuente habla de cinco personas quemadas entre 1610 y 1821. Ninguna fuente consultada registra una ejecución por brujería.",
-   "en": "Figures vary with the period counted: a 17th-century tally records four people relaxed, and another source speaks of five people burned between 1610 and 1821. No source we consulted records an execution for witchcraft."
+    "intro": {
+      "es": "Detrás de la portada más elegante de la plaza funcionó durante dos siglos el Tribunal del Santo Oficio, que vigilaba la fe en medio Caribe. Se dice que aquí quemaban brujas. Los documentos cuentan otra historia: hubo miedo, denuncias, cárcel y tortura, pero ninguna ejecución por brujería.",
+      "en": "Behind the most elegant doorway on the square, the Tribunal of the Holy Office policed the faith across half the Caribbean for two centuries. People say witches were burned here. The records tell another story: there was fear, denunciation, prison and torture, but no one was executed for witchcraft."
+    },
+    "chapters": [
+      {
+        "event": "e1610-inquisicion"
+      },
+      {
+        "label": {
+          "es": "1610–1821",
+          "en": "1610–1821"
+        },
+        "title": {
+          "es": "Un tribunal para medio Caribe",
+          "en": "A tribunal for half the Caribbean"
+        },
+        "text": {
+          "es": "Su jurisdicción iba de Panamá a Pasto y de la costa pacífica a Caracas, e incluía las Antillas: los territorios de las actuales Colombia, Panamá, Venezuela, Cuba y Puerto Rico, entre otros.",
+          "en": "Its jurisdiction ran from Panama to Pasto and from the Pacific coast to Caracas, including the Antilles: the lands of today’s Colombia, Panama, Venezuela, Cuba and Puerto Rico, among others."
+        },
+        "certainty": "documentado",
+        "sources": [
+          "dhial-inquisicion"
+        ],
+        "places": [
+          "palacio-inquisicion"
+        ]
+      },
+      {
+        "event": "e1630-inquisicion"
+      },
+      {
+        "label": {
+          "es": "Siglo XVII",
+          "en": "17th c."
+        },
+        "title": {
+          "es": "¿Quiénes eran las «brujas»?",
+          "en": "Who were the “witches”?"
+        },
+        "text": {
+          "es": "Cerca del 30 % de los 731 casos del siglo XVII fueron por superstición o brujería. Las acusadas de pacto con el demonio fueron sobre todo personas negras y mulatas, y mujeres blancas pobres; a los indígenas no los juzgaba la Inquisición.",
+          "en": "About 30% of the 731 cases of the 17th century concerned superstition or witchcraft. Those accused of a pact with the Devil were mostly Black and mixed-race people and poor white women; Indigenous people were outside the Inquisition’s jurisdiction."
+        },
+        "certainty": "documentado",
+        "sources": [
+          "dhial-inquisicion",
+          "ceballos-2001"
+        ]
+      },
+      {
+        "label": {
+          "es": "1634–1636",
+          "en": "1634–1636"
+        },
+        "title": {
+          "es": "La gran causa de brujería",
+          "en": "The great witchcraft case"
+        },
+        "text": {
+          "es": "El tribunal persiguió una supuesta «conjuración» de brujas. Los estudios describen cárceles, tortura y confesiones que luego fueron retractadas: el miedo fabricaba culpables.",
+          "en": "The tribunal pursued an alleged “conspiracy” of witches. Studies describe prisons, torture and confessions later retracted: fear manufactured culprits."
+        },
+        "certainty": "consenso",
+        "sources": [
+          "rg-brujeria-1634",
+          "ceballos-2001"
+        ]
+      },
+      {
+        "label": {
+          "es": "La respuesta",
+          "en": "The answer"
+        },
+        "title": {
+          "es": "No: aquí no se quemaron brujas",
+          "en": "No: witches were not burned here"
+        },
+        "text": {
+          "es": "El recuento del siglo XVII registra solo cuatro personas «relajadas», es decir, entregadas a la justicia civil para ser ejecutadas: tres por judaizantes y una por protestante. Ninguna por brujería. A las acusadas de brujería se las castigaba con cárcel, azotes, vergüenza pública, destierro o confiscación de bienes.",
+          "en": "The 17th-century tally records only four people “relaxed” — handed to the civil authorities for execution: three as Judaizers and one as a Protestant. None for witchcraft. Those accused of witchcraft were punished with prison, flogging, public shaming, exile or confiscation of property."
+        },
+        "certainty": "documentado",
+        "sources": [
+          "dhial-inquisicion",
+          "radionacional-inquisicion"
+        ]
+      },
+      {
+        "event": "e1813-inquisicion"
+      }
+    ],
+    "places": [
+      "palacio-inquisicion",
+      "plaza-bolivar"
+    ],
+    "unknown": {
+      "es": "Las cifras varían según el periodo contado: un recuento del siglo XVII registra cuatro relajados, y otra fuente habla de cinco personas quemadas entre 1610 y 1821. Ninguna fuente consultada registra una ejecución por brujería.",
+      "en": "Figures vary with the period counted: a 17th-century tally records four people relaxed, and another source speaks of five people burned between 1610 and 1821. No source we consulted records an execution for witchcraft."
+    }
+  },
+  {
+    "id": "gabo",
+    "accent": "#a8452a",
+    "cover": {
+      "commons": "Busto de García Márquez en el Claustro La Merced Unicartagena.jpg",
+      "author": "Esteban B.H.",
+      "license": "CC BY-SA 4.0",
+      "alt": {
+        "es": "El busto de García Márquez en el claustro de La Merced",
+        "en": "García Márquez’s bust in the La Merced cloister"
+      },
+      "specific": true
+    },
+    "kicker": {
+      "es": "Cartagena literaria",
+      "en": "Literary Cartagena"
+    },
+    "title": {
+      "es": "La Cartagena de García Márquez",
+      "en": "García Márquez's Cartagena"
+    },
+    "teaser": {
+      "es": "El reportero que llegó en 1948 y el Nobel que volvió para quedarse.",
+      "en": "The young reporter of 1948 and the Nobel laureate who came back to stay."
+    },
+    "intro": {
+      "es": "Gabriel García Márquez (1927–2014), premio Nobel de Literatura en 1982, llegó a Cartagena con 21 años y aquí se hizo periodista. La ciudad amurallada asoma en algunas de sus novelas, y hoy sus cenizas reposan en el centro histórico. Esta historia separa lo documentado de lo que contó el propio autor.",
+      "en": "Gabriel García Márquez (1927–2014), winner of the 1982 Nobel Prize in Literature, arrived in Cartagena aged 21 and became a journalist here. The walled city surfaces in some of his novels, and today his ashes rest in the historic centre. This story separates what is documented from what the author himself told."
+    },
+    "chapters": [
+      {
+        "event": "e1948-gabo",
+        "photo": {
+          "commons": "Gabriel Garcia Marquez, 2009.jpg",
+          "author": "Festival Internacional de Cine en Guadalajara",
+          "license": "CC BY 2.0",
+          "alt": {
+            "es": "Gabriel García Márquez en 2009",
+            "en": "Gabriel García Márquez in 2009"
+          },
+          "angle": {
+            "es": "García Márquez en 2009",
+            "en": "García Márquez in 2009"
+          }
+        }
+      },
+      {
+        "event": "e1985-colera"
+      },
+      {
+        "event": "e1994-demonios"
+      },
+      {
+        "event": "e2016-gabo"
+      }
+    ],
+    "places": [
+      "claustro-merced",
+      "santa-clara",
+      "teatro-adolfo-mejia"
+    ],
+    "unknown": {
+      "es": "El episodio de las criptas de Santa Clara procede del prólogo de «Del amor y otros demonios»: es el relato del autor. La ciudad de «El amor en los tiempos del cólera» no tiene nombre; se la considera una mezcla de Cartagena y Barranquilla.",
+      "en": "The Santa Clara crypt episode comes from the prologue to \"Of Love and Other Demons\": it is the author’s own account. The city in \"Love in the Time of Cholera\" is never named; it is considered a blend of Cartagena and Barranquilla."
+    }
+  },
+  {
+    "id": "defensas",
+    "accent": "#8a5a2b",
+    "cover": {
+      "pexels": 36874558,
+      "author": "Woody Willis",
+      "alt": {
+        "es": "Las murallas de Cartagena",
+        "en": "The walls of Cartagena"
+      }
+    },
+    "kicker": {
+      "es": "Murallas y fortificaciones",
+      "en": "Walls & fortifications"
+    },
+    "title": {
+      "es": "Cómo se defendió Cartagena",
+      "en": "How Cartagena defended itself"
+    },
+    "teaser": {
+      "es": "De Drake a Vernon: dos siglos construyendo un escudo.",
+      "en": "From Drake to Vernon: two centuries building a shield."
+    },
+    "intro": {
+      "es": "Cartagena era la puerta del oro y la plata de América, y por eso fue atacada una y otra vez. Cada ataque dejó una lección, y cada lección se convirtió en piedra: murallas, baluartes, castillos y hasta una muralla bajo el agua.",
+      "en": "Cartagena was the gateway for America’s gold and silver, which is why it was attacked again and again. Each attack taught a lesson, and each lesson was turned into stone: walls, bastions, castles and even a wall under the water."
+    },
+    "chapters": [
+      {
+        "event": "e1586-drake"
+      },
+      {
+        "event": "e1595-antonelli"
+      },
+      {
+        "event": "e1614-santodomingo"
+      },
+      {
+        "event": "e1657-sanfelipe"
+      },
+      {
+        "event": "e1697-pointis"
+      },
+      {
+        "event": "e1741-vernon"
+      },
+      {
+        "event": "e1753-sanfernando"
+      },
+      {
+        "event": "e1771-escollera"
+      },
+      {
+        "event": "e1792-bovedas"
+      }
+    ],
+    "places": [
+      "baluarte-santo-domingo",
+      "castillo-san-felipe",
+      "fuerte-san-fernando",
+      "bateria-san-jose",
+      "escollera-bocagrande",
+      "las-bovedas"
+    ],
+    "route": "murallas"
+  },
+  {
+    "id": "independencia",
+    "accent": "#c2553a",
+    "cover": {
+      "pexels": 20483126,
+      "author": "Ariel Foletto",
+      "alt": {
+        "es": "Una fachada de Getsemaní",
+        "en": "A façade in Getsemaní"
+      }
+    },
+    "kicker": {
+      "es": "Independencia",
+      "en": "Independence"
+    },
+    "title": {
+      "es": "La ciudad heroica",
+      "en": "The heroic city"
+    },
+    "teaser": {
+      "es": "1811: Cartagena declara su independencia absoluta.",
+      "en": "1811: Cartagena declares full independence."
+    },
+    "intro": {
+      "es": "En 1811 Cartagena se declaró independiente de España, empujada por los vecinos de Getsemaní. Lo pagó muy caro: en 1815 soportó un largo sitio y en 1816 fueron fusilados sus líderes. Por eso se la llama «la Heroica».",
+      "en": "In 1811 Cartagena declared independence from Spain, pushed by the people of Getsemaní. It paid dearly: in 1815 it endured a long siege and in 1816 its leaders were executed. That is why it is called “the Heroic City”."
+    },
+    "chapters": [
+      {
+        "event": "e1811-independencia"
+      },
+      {
+        "event": "e1815-morillo"
+      },
+      {
+        "event": "e1816-martires"
+      },
+      {
+        "event": "e1821-recuperacion"
+      }
+    ],
+    "places": [
+      "getsemani",
+      "iglesia-trinidad",
+      "camellon-martires",
+      "palacio-inquisicion"
+    ],
+    "route": "independencia"
+  },
+  {
+    "id": "antes",
+    "accent": "#2f7d4f",
+    "scene": "prehispanica",
+    "kicker": {
+      "es": "Antes de la ciudad",
+      "en": "Before the city"
+    },
+    "title": {
+      "es": "Antes de Cartagena",
+      "en": "Before Cartagena"
+    },
+    "teaser": {
+      "es": "Manglares, canoas y algunas de las cerámicas más antiguas de América.",
+      "en": "Mangroves, canoes and some of the oldest pottery in the Americas."
+    },
+    "intro": {
+      "es": "Mucho antes de las murallas, esta costa de manglares, ciénagas y bahías ya estaba habitada. Aquí cerca se han hallado algunas de las cerámicas más antiguas de América. Cuando llegaron los españoles, había pueblos indígenas en la bahía; las crónicas llaman Calamarí al lugar.",
+      "en": "Long before the walls, this coast of mangroves, lagoons and bays was already inhabited. Some of the oldest pottery in the Americas has been found nearby. When the Spanish arrived, Indigenous peoples lived around the bay; the chronicles call the place Calamarí."
+    },
+    "chapters": [
+      {
+        "label": {
+          "es": "Hace milenios",
+          "en": "Millennia ago"
+        },
+        "title": {
+          "es": "Los primeros alfareros",
+          "en": "The first potters"
+        },
+        "text": {
+          "es": "La arqueología ha documentado en esta región cerámicas muy antiguas, en sitios como Puerto Hormiga y Monsú, y un sitio precerámico en Canapote, hoy un barrio de Cartagena. Las fechas exactas se discuten entre especialistas.",
+          "en": "Archaeology has documented very early pottery in this region, at sites such as Puerto Hormiga and Monsú, and a pre-ceramic site at Canapote, now a Cartagena neighbourhood. The exact dates are debated by specialists."
+        },
+        "certainty": "consenso",
+        "sources": [
+          "archila-1994"
+        ]
+      },
+      {
+        "label": {
+          "es": "Siglo XVI",
+          "en": "16th c."
+        },
+        "title": {
+          "es": "Calamarí",
+          "en": "Calamarí"
+        },
+        "text": {
+          "es": "Cuando llegaron los españoles, la bahía estaba habitada por comunidades indígenas. Las fuentes de la conquista llaman Calamarí al lugar donde se fundó la ciudad.",
+          "en": "When the Spanish arrived, the bay was home to Indigenous communities. Conquest-era sources call the place where the city was founded Calamarí."
+        },
+        "certainty": "consenso",
+        "sources": [
+          "banrep-heredia"
+        ]
+      },
+      {
+        "event": "e1533-desembarco"
+      },
+      {
+        "event": "e1533-fundacion"
+      }
+    ],
+    "places": [],
+    "period": "prehispanica",
+    "unknown": {
+      "es": "La escena animada es una interpretación artística para ayudar a imaginar el paisaje; no es una reconstrucción arqueológica de un lugar concreto.",
+      "en": "The animated scene is an artistic interpretation to help you picture the landscape; it is not an archaeological reconstruction of a specific place."
+    }
+  },
+  {
+    "id": "hoy",
+    "accent": "#e07a3a",
+    "slides": true,
+    "cover": {
+      "pexels": 11815929,
+      "author": "Kelly",
+      "alt": {
+        "es": "La costa moderna de Cartagena",
+        "en": "Cartagena’s modern coastline"
+      }
+    },
+    "kicker": {
+      "es": "Cartagena hoy · 2026",
+      "en": "Cartagena today · 2026"
+    },
+    "title": {
+      "es": "La ciudad que mira al mar",
+      "en": "The city that looks to the sea"
+    },
+    "teaser": {
+      "es": "Un malecón de 5,1 km en obra, playas e islas de coral.",
+      "en": "A 5.1 km seafront under construction, beaches and coral islands."
+    },
+    "intro": {
+      "es": "La Cartagena de 2026 no es solo historia. Frente al mar se construye el Gran Malecón del Mar, un paseo de 5,1 km, junto con obras para proteger la costa. Y a poca distancia esperan las playas de Bocagrande, La Boquilla, Barú y las Islas del Rosario.",
+      "en": "The Cartagena of 2026 is not only history. By the sea, the Gran Malecón del Mar, a 5.1 km promenade, is being built along with works to protect the coast. And close by are the beaches of Bocagrande, La Boquilla, Barú and the Rosario Islands."
+    },
+    "chapters": [
+      {
+        "event": "e1984-unesco"
+      },
+      {
+        "event": "e2026-malecon"
+      }
+    ],
+    "places": [
+      "gran-malecon",
+      "playas-bocagrande",
+      "la-boquilla",
+      "playa-blanca",
+      "islas-rosario"
+    ],
+    "route": "hoy",
+    "tourism": true,
+    "unknown": {
+      "es": "Información de actualidad verificada el 26/09/2026 en prensa local y fuentes oficiales. Obras, horarios y precios cambian: confírmalos antes de ir.",
+      "en": "Current information checked on 26/09/2026 against local press and official sources. Works, opening times and prices change: confirm before you go."
+    }
   }
- },
- {
-  "id": "defensas",
-  "accent": "#8a5a2b",
-  "cover": {
-   "pexels": 36874558,
-   "author": "Woody Willis",
-   "alt": {
-    "es": "Las murallas de Cartagena",
-    "en": "The walls of Cartagena"
-   }
-  },
-  "kicker": {
-   "es": "Murallas y fortificaciones",
-   "en": "Walls & fortifications"
-  },
-  "title": {
-   "es": "Cómo se defendió Cartagena",
-   "en": "How Cartagena defended itself"
-  },
-  "teaser": {
-   "es": "De Drake a Vernon: dos siglos construyendo un escudo.",
-   "en": "From Drake to Vernon: two centuries building a shield."
-  },
-  "intro": {
-   "es": "Cartagena era la puerta del oro y la plata de América, y por eso fue atacada una y otra vez. Cada ataque dejó una lección, y cada lección se convirtió en piedra: murallas, baluartes, castillos y hasta una muralla bajo el agua.",
-   "en": "Cartagena was the gateway for America’s gold and silver, which is why it was attacked again and again. Each attack taught a lesson, and each lesson was turned into stone: walls, bastions, castles and even a wall under the water."
-  },
-  "chapters": [
-   {
-    "event": "e1586-drake"
-   },
-   {
-    "event": "e1595-antonelli"
-   },
-   {
-    "event": "e1614-santodomingo"
-   },
-   {
-    "event": "e1657-sanfelipe"
-   },
-   {
-    "event": "e1697-pointis"
-   },
-   {
-    "event": "e1741-vernon"
-   },
-   {
-    "event": "e1753-sanfernando"
-   },
-   {
-    "event": "e1771-escollera"
-   },
-   {
-    "event": "e1792-bovedas"
-   }
-  ],
-  "places": [
-   "baluarte-santo-domingo",
-   "castillo-san-felipe",
-   "fuerte-san-fernando",
-   "bateria-san-jose",
-   "escollera-bocagrande",
-   "las-bovedas"
-  ],
-  "route": "murallas"
- },
- {
-  "id": "independencia",
-  "accent": "#c2553a",
-  "cover": {
-   "pexels": 20483126,
-   "author": "Ariel Foletto",
-   "alt": {
-    "es": "Una fachada de Getsemaní",
-    "en": "A façade in Getsemaní"
-   }
-  },
-  "kicker": {
-   "es": "Independencia",
-   "en": "Independence"
-  },
-  "title": {
-   "es": "La ciudad heroica",
-   "en": "The heroic city"
-  },
-  "teaser": {
-   "es": "1811: Cartagena declara su independencia absoluta.",
-   "en": "1811: Cartagena declares full independence."
-  },
-  "intro": {
-   "es": "En 1811 Cartagena se declaró independiente de España, empujada por los vecinos de Getsemaní. Lo pagó muy caro: en 1815 soportó un largo sitio y en 1816 fueron fusilados sus líderes. Por eso se la llama «la Heroica».",
-   "en": "In 1811 Cartagena declared independence from Spain, pushed by the people of Getsemaní. It paid dearly: in 1815 it endured a long siege and in 1816 its leaders were executed. That is why it is called “the Heroic City”."
-  },
-  "chapters": [
-   {
-    "event": "e1811-independencia"
-   },
-   {
-    "event": "e1815-morillo"
-   },
-   {
-    "event": "e1816-martires"
-   },
-   {
-    "event": "e1821-recuperacion"
-   }
-  ],
-  "places": [
-   "getsemani",
-   "iglesia-trinidad",
-   "camellon-martires",
-   "palacio-inquisicion"
-  ],
-  "route": "independencia"
- },
- {
-  "id": "antes",
-  "accent": "#2f7d4f",
-  "scene": "prehispanica",
-  "kicker": {
-   "es": "Antes de la ciudad",
-   "en": "Before the city"
-  },
-  "title": {
-   "es": "Antes de Cartagena",
-   "en": "Before Cartagena"
-  },
-  "teaser": {
-   "es": "Manglares, canoas y algunas de las cerámicas más antiguas de América.",
-   "en": "Mangroves, canoes and some of the oldest pottery in the Americas."
-  },
-  "intro": {
-   "es": "Mucho antes de las murallas, esta costa de manglares, ciénagas y bahías ya estaba habitada. Aquí cerca se han hallado algunas de las cerámicas más antiguas de América. Cuando llegaron los españoles, había pueblos indígenas en la bahía; las crónicas llaman Calamarí al lugar.",
-   "en": "Long before the walls, this coast of mangroves, lagoons and bays was already inhabited. Some of the oldest pottery in the Americas has been found nearby. When the Spanish arrived, Indigenous peoples lived around the bay; the chronicles call the place Calamarí."
-  },
-  "chapters": [
-   {
-    "label": {
-     "es": "Hace milenios",
-     "en": "Millennia ago"
-    },
-    "title": {
-     "es": "Los primeros alfareros",
-     "en": "The first potters"
-    },
-    "text": {
-     "es": "La arqueología ha documentado en esta región cerámicas muy antiguas, en sitios como Puerto Hormiga y Monsú, y un sitio precerámico en Canapote, hoy un barrio de Cartagena. Las fechas exactas se discuten entre especialistas.",
-     "en": "Archaeology has documented very early pottery in this region, at sites such as Puerto Hormiga and Monsú, and a pre-ceramic site at Canapote, now a Cartagena neighbourhood. The exact dates are debated by specialists."
-    },
-    "certainty": "consenso",
-    "sources": [
-     "archila-1994"
-    ]
-   },
-   {
-    "label": {
-     "es": "Siglo XVI",
-     "en": "16th c."
-    },
-    "title": {
-     "es": "Calamarí",
-     "en": "Calamarí"
-    },
-    "text": {
-     "es": "Cuando llegaron los españoles, la bahía estaba habitada por comunidades indígenas. Las fuentes de la conquista llaman Calamarí al lugar donde se fundó la ciudad.",
-     "en": "When the Spanish arrived, the bay was home to Indigenous communities. Conquest-era sources call the place where the city was founded Calamarí."
-    },
-    "certainty": "consenso",
-    "sources": [
-     "banrep-heredia"
-    ]
-   },
-   {
-    "event": "e1533-desembarco"
-   },
-   {
-    "event": "e1533-fundacion"
-   }
-  ],
-  "places": [],
-  "period": "prehispanica",
-  "unknown": {
-   "es": "La escena animada es una interpretación artística para ayudar a imaginar el paisaje; no es una reconstrucción arqueológica de un lugar concreto.",
-   "en": "The animated scene is an artistic interpretation to help you picture the landscape; it is not an archaeological reconstruction of a specific place."
-  }
- },
- {
-  "id": "hoy",
-  "accent": "#e07a3a",
-  "slides": true,
-  "cover": {
-   "pexels": 11815929,
-   "author": "Kelly",
-   "alt": {
-    "es": "La costa moderna de Cartagena",
-    "en": "Cartagena’s modern coastline"
-   }
-  },
-  "kicker": {
-   "es": "Cartagena hoy · 2026",
-   "en": "Cartagena today · 2026"
-  },
-  "title": {
-   "es": "La ciudad que mira al mar",
-   "en": "The city that looks to the sea"
-  },
-  "teaser": {
-   "es": "Un malecón de 5,1 km en obra, playas e islas de coral.",
-   "en": "A 5.1 km seafront under construction, beaches and coral islands."
-  },
-  "intro": {
-   "es": "La Cartagena de 2026 no es solo historia. Frente al mar se construye el Gran Malecón del Mar, un paseo de 5,1 km, junto con obras para proteger la costa. Y a poca distancia esperan las playas de Bocagrande, La Boquilla, Barú y las Islas del Rosario.",
-   "en": "The Cartagena of 2026 is not only history. By the sea, the Gran Malecón del Mar, a 5.1 km promenade, is being built along with works to protect the coast. And close by are the beaches of Bocagrande, La Boquilla, Barú and the Rosario Islands."
-  },
-  "chapters": [
-   {
-    "event": "e1984-unesco"
-   },
-   {
-    "event": "e2026-malecon"
-   }
-  ],
-  "places": [
-   "gran-malecon",
-   "playas-bocagrande",
-   "la-boquilla",
-   "playa-blanca",
-   "islas-rosario"
-  ],
-  "route": "hoy",
-  "tourism": true,
-  "unknown": {
-   "es": "Información de actualidad verificada el 26/09/2026 en prensa local y fuentes oficiales. Obras, horarios y precios cambian: confírmalos antes de ir.",
-   "en": "Current information checked on 26/09/2026 against local press and official sources. Works, opening times and prices change: confirm before you go."
-  }
- }
 ]

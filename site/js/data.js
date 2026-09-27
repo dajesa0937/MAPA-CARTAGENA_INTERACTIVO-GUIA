@@ -1,9 +1,9 @@
 // Capa de servicios de datos. Hoy lee archivos JSON estáticos; mañana puede leer una API
 // sin que la interfaz cambie (misma forma de objetos).
-const FILES = ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media', 'stories'];
+const FILES = ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media', 'stories', 'trip'];
 
 export const db = {
-  places: [], events: [], periods: [], routes: [], sources: [], badges: [], media: {}, stories: [],
+  places: [], events: [], periods: [], routes: [], sources: [], badges: [], media: {}, stories: [], trip: { sections: [] },
   byId: { places: new Map(), events: new Map(), periods: new Map(), routes: new Map(), sources: new Map(), stories: new Map() }
 };
 

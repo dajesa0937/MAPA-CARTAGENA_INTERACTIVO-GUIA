@@ -1,527 +1,667 @@
 [
- {
-  "id": "unesco",
-  "type": "oficial",
-  "org": "UNESCO World Heritage Centre",
-  "title": "Port, Fortresses and Group of Monuments, Cartagena (n.º 285)",
-  "url": "https://whc.unesco.org/en/list/285/"
- },
- {
-  "id": "etcar-sanfelipe-areas",
-  "type": "oficial",
-  "org": "Escuela Taller Cartagena de Indias (ETCAR) – Fortificaciones de Cartagena",
-  "title": "Areas of the Castle (San Felipe de Barajas)",
-  "url": "https://fortificacionescartagena.com.co/en/destination/areas-of-the-castle/"
- },
- {
-  "id": "etcar-sanfelipe-visita",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "Castillo de San Felipe de Barajas – Planee su visita",
-  "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/castillo-de-san-felipe-de-barajas/"
- },
- {
-  "id": "etcar-desaparecidas",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "Defenses no longer in existence",
-  "url": "https://fortificacionescartagena.com.co/destination/defenses-no-longer-in-existence/"
- },
- {
-  "id": "etcar-bocachica",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "Fortificaciones de Bocachica – Planee su visita",
-  "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/fortificaciones-de-bocachica/"
- },
- {
-  "id": "etcar-bahia-exterior",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The outer bay",
-  "url": "https://fortificacionescartagena.com.co/en/defense-of-the-bay/the-outer-bay/"
- },
- {
-  "id": "etcar-bahia-interior",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "Inner bay",
-  "url": "https://fortificacionescartagena.com.co/en/defense-of-the-bay/inner-bay/"
- },
- {
-  "id": "etcar-sanfernando",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "San Fernando de Bocachica",
-  "url": "https://fortificacionescartagena.com.co/en/destination/san-fernando-de-bocachica/"
- },
- {
-  "id": "etcar-sanjose",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Battery-Fortress of San José",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-battery-fortress-of-san-jose/"
- },
- {
-  "id": "etcar-pastelillo",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "San Sebastián del Pastelillo",
-  "url": "https://fortificacionescartagena.com.co/en/destination/san-sebastian-del-pastelillo-2/"
- },
- {
-  "id": "etcar-manzanillo",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "San Juan del Manzanillo",
-  "url": "https://fortificacionescartagena.com.co/en/destination/san-juan-del-manzanillo-2/"
- },
- {
-  "id": "etcar-castillogrande",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Fortress of Santa Cruz or “Castillogrande”",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-fortress-of-santa-cruz-or-castillogrande/"
- },
- {
-  "id": "etcar-escollera",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Underwater Barrier of Bocagrande",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-underwater-barrier-of-bocagrande/"
- },
- {
-  "id": "etcar-bovedas",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Barracks of Las Bóvedas",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-barracks-of-las-bovedas/"
- },
- {
-  "id": "etcar-murallas",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "Murallas de Cartagena – Planee su visita",
-  "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/murallas-de-cartagena/"
- },
- {
-  "id": "etcar-santodomingo",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of Santo Domingo",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santo-domingo/"
- },
- {
-  "id": "etcar-santiago",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of Santiago Apóstol",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santiago-apostol/"
- },
- {
-  "id": "etcar-santacruz",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of Santa Cruz",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santa-cruz/"
- },
- {
-  "id": "etcar-sfjavier",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of San Francisco Javier",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-francisco-javier/"
- },
- {
-  "id": "etcar-sanignacio",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of San Ignacio",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-ignacio/"
- },
- {
-  "id": "etcar-santacatalina",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of Santa Catalina",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santa-catalina/"
- },
- {
-  "id": "etcar-sanlucas",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of San Lucas",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-lucas/"
- },
- {
-  "id": "etcar-reducto",
-  "type": "oficial",
-  "org": "ETCAR – Fortificaciones de Cartagena",
-  "title": "The Bulwark of El Reducto",
-  "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-el-reducto/"
- },
- {
-  "id": "banrep-heredia",
-  "type": "académica",
-  "org": "Banco de la República – Enciclopedia Banrepcultural",
-  "title": "Pedro de Heredia",
-  "url": "https://enciclopedia.banrepcultural.org/index.php/Pedro_de_Heredia"
- },
- {
-  "id": "banrep-fortificaciones",
-  "type": "académica",
-  "org": "Banco de la República – Enciclopedia Banrepcultural",
-  "title": "Fortificaciones de Cartagena",
-  "url": "https://enciclopedia.banrepcultural.org/index.php/Fortificaciones_de_Cartagena"
- },
- {
-  "id": "banrep-claver",
-  "type": "académica",
-  "org": "Banco de la República – Enciclopedia Banrepcultural",
-  "title": "Pedro Claver",
-  "url": "https://enciclopedia.banrepcultural.org/index.php/Pedro_Claver"
- },
- {
-  "id": "banrep-martires",
-  "type": "académica",
-  "org": "Banco de la República – Enciclopedia Banrepcultural",
-  "title": "Los Mártires de Cartagena 1816",
-  "url": "https://enciclopedia.banrepcultural.org/index.php?title=Los_M%C3%A1rtires_de_Cartagena_1816"
- },
- {
-  "id": "archila-1994",
-  "type": "académica",
-  "org": "Boletín Museo del Oro (Banco de la República)",
-  "title": "Archila, S. (1994). Medio ambiente y arqueología de las tierras bajas del Caribe colombiano",
-  "url": "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7000"
- },
- {
-  "id": "muhca",
-  "type": "oficial",
-  "org": "Museo Histórico de Cartagena (MUHCA)",
-  "title": "Conócenos – Palacio de la Inquisición",
-  "url": "https://www.muhca.gov.co/conocenos"
- },
- {
-  "id": "epa-popa",
-  "type": "oficial",
-  "org": "EPA Cartagena – Observatorio ambiental",
-  "title": "Historia del Cerro de La Popa (anexo)",
-  "url": "https://observatorio.epacartagena.gov.co/ftp-uploads/ga-eco-lp-macrop-anexo-historia.pdf"
- },
- {
-  "id": "senal-teatro",
-  "type": "medio",
-  "org": "Señal Colombia (RTVC)",
-  "title": "La historia que encierra el emblemático Teatro Adolfo Mejía",
-  "url": "https://www.senalcolombia.tv/cultura/teatro-adolfo-mejia-historia"
- },
- {
-  "id": "universal-reloj",
-  "type": "medio",
-  "org": "El Universal (Cartagena), 31/08/2023",
-  "title": "Historia tras la Torre del Reloj",
-  "url": "https://www.eluniversal.com.co/cartagena/2023/08/31/historia-tras-la-torre-del-reloj-por-donde-antes-si-pasaban-carros/"
- },
- {
-  "id": "universal-catalina",
-  "type": "medio",
-  "org": "El Universal (Cartagena), 03/02/2025",
-  "title": "La India Catalina: la historia detrás del monumento",
-  "url": "https://www.eluniversal.com.co/turismo/2025/02/03/la-india-catalina-conoce-la-historia-detras-del-reconocido-monumento/"
- },
- {
-  "id": "canal-1811",
-  "type": "medio",
-  "org": "Canal Institucional (RTVC)",
-  "title": "Independencia de Cartagena: ¿qué pasó el 11 de noviembre de 1811?",
-  "url": "https://www.canalinstitucional.tv/independencia-de-cartagena-11-de-noviembre"
- },
- {
-  "id": "wiki-cartagena",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Cartagena, Colombia – History",
-  "url": "https://en.wikipedia.org/wiki/Cartagena,_Colombia"
- },
- {
-  "id": "wiki-timeline",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Timeline of Cartagena, Colombia",
-  "url": "https://en.wikipedia.org/wiki/Timeline_of_Cartagena,_Colombia"
- },
- {
-  "id": "wiki-1586",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Battle of Cartagena de Indias (1586)",
-  "url": "https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias_(1586)"
- },
- {
-  "id": "wiki-1697",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Raid on Cartagena (1697)",
-  "url": "https://en.wikipedia.org/wiki/Raid_on_Cartagena_(1697)"
- },
- {
-  "id": "wiki-1741",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Battle of Cartagena de Indias (1741)",
-  "url": "https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias"
- },
- {
-  "id": "wiki-1815",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Siege of Cartagena (1815)",
-  "url": "https://en.wikipedia.org/wiki/Siege_of_Cartagena_(1815)"
- },
- {
-  "id": "wiki-sanfelipe",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Castillo San Felipe de Barajas",
-  "url": "https://en.wikipedia.org/wiki/Castillo_San_Felipe_de_Barajas"
- },
- {
-  "id": "wiki-sanluis",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Castle of San Luis de Bocachica",
-  "url": "https://en.wikipedia.org/wiki/Castle_of_San_Luis_de_Bocachica"
- },
- {
-  "id": "wiki-inquisicion",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Palace of the Inquisition (Cartagena, Colombia)",
-  "url": "https://en.wikipedia.org/wiki/Palace_of_the_Inquisition_(Cartagena,_Colombia)"
- },
- {
-  "id": "wiki-bovedas",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Las Bóvedas",
-  "url": "https://en.wikipedia.org/wiki/Las_B%C3%B3vedas"
- },
- {
-  "id": "wiki-reloj",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Puerta del Reloj",
-  "url": "https://en.wikipedia.org/wiki/Puerta_del_Reloj"
- },
- {
-  "id": "wiki-sanignacio",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Bastion of San Ignacio",
-  "url": "https://en.wikipedia.org/wiki/Bastion_of_San_Ignacio"
- },
- {
-  "id": "wiki-santodomingo-baluarte",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Bastion of Santo Domingo, Cartagena",
-  "url": "https://en.wikipedia.org/wiki/Bastion_of_Santo_Domingo,_Cartagena"
- },
- {
-  "id": "wiki-catedral",
-  "type": "secundaria",
-  "org": "Wikipedia (es)",
-  "title": "Catedral de Santa Catalina de Alejandría (Cartagena de Indias)",
-  "url": "https://es.wikipedia.org/wiki/Catedral_de_Santa_Catalina_de_Alejandr%C3%ADa_(Cartagena_de_Indias)"
- },
- {
-  "id": "aecid-cf",
-  "type": "oficial",
-  "org": "AECID – Centro de Formación de la Cooperación Española en Cartagena",
-  "title": "Instalaciones: historia del claustro de Santo Domingo",
-  "url": "https://cfcartagena.aecid.es/cf/instalaciones"
- },
- {
-  "id": "aecid-museo",
-  "type": "oficial",
-  "org": "AECID, 09/06/2022",
-  "title": "El Centro de Formación en Cartagena de Indias inaugura el Museo de Sitio",
-  "url": "https://www.aecid.es/w/el-centro-de-formacion-de-la-cooperacion-espanola-en-cartagena-de-indias-inaugura-el-museo-de-sitio-y-una-nueva-sala-de-exposiciones"
- },
- {
-  "id": "reyes-2010",
-  "type": "académica",
-  "org": "Revista M (Universidad Santo Tomás), vol. 7, n.º 1",
-  "title": "Reyes Rodríguez, M. F. (2010). El convento de Santo Domingo en Cartagena de Indias",
-  "url": "https://revistas.ustabuca.edu.co/index.php/REVISTAM/article/view/1014"
- },
- {
-  "id": "santamaria-2020",
-  "type": "académica",
-  "org": "Universidade Federal da Integração Latino-Americana (UNILA)",
-  "title": "Santamaría Alvarado, A. (2020). Valoración cultural: Plaza de la Santísima Trinidad, Getsemaní",
-  "url": "https://dspace.unila.edu.br/items/07569001-51f8-40c0-a907-00ca264c5e9e"
- },
- {
-  "id": "procolombia-toribio",
-  "type": "oficial",
-  "org": "Colombia Travel (ProColombia)",
-  "title": "Church of Santo Toribio de Mogrovejo",
-  "url": "https://colombia.travel/en/cartagena-de-indias/church-santo-toribio-de-mogrovejo"
- },
- {
-  "id": "wiki-toribio",
-  "type": "secundaria",
-  "org": "Wikipedia (es)",
-  "title": "Iglesia de Santo Toribio (Cartagena de Indias)",
-  "url": "https://es.wikipedia.org/wiki/Iglesia_de_Santo_Toribio_(Cartagena_de_Indias)"
- },
- {
-  "id": "eltiempo-claver",
-  "type": "medio",
-  "org": "El Tiempo, 03/04/2021",
-  "title": "Cartagena: la historia de la iglesia San Pedro Claver",
-  "url": "https://www.eltiempo.com/colombia/otras-ciudades/cartagena-la-historia-de-la-iglesia-san-pedro-claver-578051"
- },
- {
-  "id": "wiki-claver-iglesia",
-  "type": "secundaria",
-  "org": "Wikipedia (es)",
-  "title": "Iglesia de San Pedro Claver (Cartagena)",
-  "url": "https://es.wikipedia.org/wiki/Iglesia_de_San_Pedro_Claver_(Cartagena)"
- },
- {
-  "id": "wiki-wager",
-  "type": "secundaria",
-  "org": "Wikipedia (en)",
-  "title": "Wager's Action (1708)",
-  "url": "https://en.wikipedia.org/wiki/Wager%27s_Action"
- },
- {
-  "id": "icanh-sgc-2026",
-  "type": "oficial",
-  "org": "ICANH, 10/08/2026",
-  "title": "El Servicio Geológico Colombiano presentó los resultados de sus investigaciones sobre los objetos recuperados del galeón San José",
-  "url": "https://www.icanh.gov.co/prensa/actualidad-icanh/servicio-geologico-colombiano-presento-los-resultados-de-sus-investigaciones-sobre-los-objetos-arqueologicos-recuperados-del-galeon-san-jose"
- },
- {
-  "id": "eltiempo-galeon-2025",
-  "type": "medio",
-  "org": "El Tiempo, 24/12/2025",
-  "title": "Hallazgos inéditos del galeón San José y lo que vendrá en 2026",
-  "url": "https://www.eltiempo.com/cultura/arte-y-teatro/lo-que-no-se-veia-en-las-imagenes-ahora-esta-apareciendo-hallazgos-ineditos-del-galeon-san-jose-y-lo-que-vendra-en-el-2026-para-la-investigacion-3519550"
- },
- {
-  "id": "eltiempo-malecon-2026",
-  "type": "medio",
-  "org": "El Tiempo, 10/07/2026",
-  "title": "El Gran Malecón del Mar avanza en un 57,60 %",
-  "url": "https://www.eltiempo.com/colombia/otras-ciudades/cartagena-el-gran-malecon-del-mar-la-obra-insigne-de-la-actual-administracion-avanza-en-un-57-60-por-ciento-y-su-costo-supera-los-196-000-millones-3570427"
- },
- {
-  "id": "metro-malecon-2026",
-  "type": "medio",
-  "org": "Revista Metro (Cartagena), 25/09/2026",
-  "title": "El alcalde y el contralor recorrieron las obras del Gran Malecón y de la protección costera",
-  "url": "https://revistametro.co/2026/09/el-alcalde-de-cartagena-y-el-contralor-general-recorrieron-las-obras-del-gran-malecon-y-del-proyecto-de-proteccion-costera/"
- },
- {
-  "id": "universal-defensa-2026",
-  "type": "medio",
-  "org": "El Universal (Cartagena), 21/05/2026",
-  "title": "Defensa Costera 2050: así avanzan las obras en Cartagena",
-  "url": "https://www.eluniversal.com.co/cartagena/2026/05/21/defensa-costera-2050-asi-avanzan-las-obras-en-cartagena/"
- },
- {
-  "id": "procolombia-playas",
-  "type": "oficial",
-  "org": "Colombia Travel (ProColombia)",
-  "title": "Cartagena: beaches and the Rosario Islands",
-  "url": "https://colombia.travel/en/cartagena-de-indias/beaches-and-islands-rosario"
- },
- {
-  "id": "pnn-rosario",
-  "type": "oficial",
-  "org": "Parques Nacionales Naturales de Colombia",
-  "title": "PNN Corales del Rosario y de San Bernardo",
-  "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-corales-del-rosario-y-de-san-bernardo/"
- },
- {
-  "id": "universal-malecon-2026",
-  "type": "medio",
-  "org": "El Universal (Cartagena), 09/07/2026",
-  "title": "Así va el Gran Malecón del Mar: esto es lo que se está construyendo ahora mismo",
-  "url": "https://www.eluniversal.com.co/cartagena/2026/07/09/asi-va-el-gran-malecon-del-mar-esto-es-lo-que-se-esta-construyendo-ahora-mismo/"
- },
- {
-  "id": "muhca-circoteatro",
-  "type": "oficial",
-  "org": "Museo Histórico de Cartagena (MUHCA) – Cartapedia",
-  "title": "Circo Teatro",
-  "url": "https://www.muhca.gov.co/cartapedia_circo-teatro--132"
- },
- {
-  "id": "nuevosiglo-serrezuela-2019",
-  "type": "medio",
-  "org": "El Nuevo Siglo, 27/06/2019",
-  "title": "Renace un ícono cultural de Cartagena: La Serrezuela",
-  "url": "https://www.elnuevosiglo.com.co/articulos/06-2019-renace-un-icono-cultural-de-cartagena-la-serrezuela"
- },
- {
-  "id": "serrezuela-oficial",
-  "type": "oficial",
-  "org": "Plaza La Serrezuela (sitio oficial)",
-  "title": "La Serrezuela",
-  "url": "https://www.plazalaserrezuela.com/la-serrezuela/"
- },
- {
-  "id": "wiki-elcabrero",
-  "type": "secundaria",
-  "org": "Wikipedia (es)",
-  "title": "Barrio El Cabrero",
-  "url": "https://es.wikipedia.org/wiki/Barrio_El_Cabrero"
- },
- {
-  "id": "donde-ermita",
-  "type": "secundaria",
-  "org": "Donde.co",
-  "title": "Ermita del Cabrero",
-  "url": "https://donde.co/es/cartagena/atracciones-turisticas/iglesias-catedrales/ermita-del-cabrero-28373"
- },
- {
-  "id": "banrep-nunez",
-  "type": "académica",
-  "org": "Banco de la República – Enciclopedia Banrepcultural",
-  "title": "Rafael Núñez",
-  "url": "https://enciclopedia.banrepcultural.org/index.php/Rafael_N%C3%BA%C3%B1ez"
- },
- {
-  "id": "dhial-inquisicion",
-  "type": "académica",
-  "org": "Diccionario de Historia Cultural de la Iglesia en América Latina (DHIAL)",
-  "title": "Inquisición. El Tribunal de Cartagena de Indias",
-  "url": "https://www.dhial.org/diccionario/index.php?title=INQUISICI%C3%93N._El_Tribunal_de_Cartagena_de_Indias"
- },
- {
-  "id": "ceballos-2001",
-  "type": "académica",
-  "org": "Universidad Nacional de Colombia – Repositorio institucional",
-  "title": "Ceballos Gómez, D. L. (2001). La Inquisición de Cartagena de Indias o de cómo se inventa una bruja en el siglo XVII",
-  "url": "https://repositorio.unal.edu.co/handle/unal/9313"
- },
- {
-  "id": "radionacional-inquisicion",
-  "type": "medio",
-  "org": "Radio Nacional de Colombia, 08/03/2023",
-  "title": "La Inquisición: historia del Tribunal del Santo Oficio de Cartagena",
-  "url": "https://www.radionacional.co/cultura/historia-colombiana/la-inquisicion-historia-del-tribunal-del-santo-oficio-de-cartagena"
- },
- {
-  "id": "rg-brujeria-1634",
-  "type": "académica",
-  "org": "Artículo académico (ResearchGate)",
-  "title": "Tras la conjuración de brujería en Cartagena de Indias (1634-1636): retractaciones, espacios carcelarios y tortura",
-  "url": "https://www.researchgate.net/publication/337036846_Tras_la_conjuracion_de_brujeria_en_Cartagena_de_Indias_1634-1636_retractaciones_espacios_carcelarios_y_tortura"
- }
+  {
+    "id": "unesco",
+    "type": "oficial",
+    "org": "UNESCO World Heritage Centre",
+    "title": "Port, Fortresses and Group of Monuments, Cartagena (n.º 285)",
+    "url": "https://whc.unesco.org/en/list/285/"
+  },
+  {
+    "id": "etcar-sanfelipe-areas",
+    "type": "oficial",
+    "org": "Escuela Taller Cartagena de Indias (ETCAR) – Fortificaciones de Cartagena",
+    "title": "Areas of the Castle (San Felipe de Barajas)",
+    "url": "https://fortificacionescartagena.com.co/en/destination/areas-of-the-castle/"
+  },
+  {
+    "id": "etcar-sanfelipe-visita",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "Castillo de San Felipe de Barajas – Planee su visita",
+    "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/castillo-de-san-felipe-de-barajas/"
+  },
+  {
+    "id": "etcar-desaparecidas",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "Defenses no longer in existence",
+    "url": "https://fortificacionescartagena.com.co/destination/defenses-no-longer-in-existence/"
+  },
+  {
+    "id": "etcar-bocachica",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "Fortificaciones de Bocachica – Planee su visita",
+    "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/fortificaciones-de-bocachica/"
+  },
+  {
+    "id": "etcar-bahia-exterior",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The outer bay",
+    "url": "https://fortificacionescartagena.com.co/en/defense-of-the-bay/the-outer-bay/"
+  },
+  {
+    "id": "etcar-bahia-interior",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "Inner bay",
+    "url": "https://fortificacionescartagena.com.co/en/defense-of-the-bay/inner-bay/"
+  },
+  {
+    "id": "etcar-sanfernando",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "San Fernando de Bocachica",
+    "url": "https://fortificacionescartagena.com.co/en/destination/san-fernando-de-bocachica/"
+  },
+  {
+    "id": "etcar-sanjose",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Battery-Fortress of San José",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-battery-fortress-of-san-jose/"
+  },
+  {
+    "id": "etcar-pastelillo",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "San Sebastián del Pastelillo",
+    "url": "https://fortificacionescartagena.com.co/en/destination/san-sebastian-del-pastelillo-2/"
+  },
+  {
+    "id": "etcar-manzanillo",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "San Juan del Manzanillo",
+    "url": "https://fortificacionescartagena.com.co/en/destination/san-juan-del-manzanillo-2/"
+  },
+  {
+    "id": "etcar-castillogrande",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Fortress of Santa Cruz or “Castillogrande”",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-fortress-of-santa-cruz-or-castillogrande/"
+  },
+  {
+    "id": "etcar-escollera",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Underwater Barrier of Bocagrande",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-underwater-barrier-of-bocagrande/"
+  },
+  {
+    "id": "etcar-bovedas",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Barracks of Las Bóvedas",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-barracks-of-las-bovedas/"
+  },
+  {
+    "id": "etcar-murallas",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "Murallas de Cartagena – Planee su visita",
+    "url": "https://fortificacionescartagena.com.co/es/planee-su-visita/murallas-de-cartagena/"
+  },
+  {
+    "id": "etcar-santodomingo",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of Santo Domingo",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santo-domingo/"
+  },
+  {
+    "id": "etcar-santiago",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of Santiago Apóstol",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santiago-apostol/"
+  },
+  {
+    "id": "etcar-santacruz",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of Santa Cruz",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santa-cruz/"
+  },
+  {
+    "id": "etcar-sfjavier",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of San Francisco Javier",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-francisco-javier/"
+  },
+  {
+    "id": "etcar-sanignacio",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of San Ignacio",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-ignacio/"
+  },
+  {
+    "id": "etcar-santacatalina",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of Santa Catalina",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-santa-catalina/"
+  },
+  {
+    "id": "etcar-sanlucas",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of San Lucas",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-san-lucas/"
+  },
+  {
+    "id": "etcar-reducto",
+    "type": "oficial",
+    "org": "ETCAR – Fortificaciones de Cartagena",
+    "title": "The Bulwark of El Reducto",
+    "url": "https://fortificacionescartagena.com.co/en/destination/the-bulwark-of-el-reducto/"
+  },
+  {
+    "id": "banrep-heredia",
+    "type": "académica",
+    "org": "Banco de la República – Enciclopedia Banrepcultural",
+    "title": "Pedro de Heredia",
+    "url": "https://enciclopedia.banrepcultural.org/index.php/Pedro_de_Heredia"
+  },
+  {
+    "id": "banrep-fortificaciones",
+    "type": "académica",
+    "org": "Banco de la República – Enciclopedia Banrepcultural",
+    "title": "Fortificaciones de Cartagena",
+    "url": "https://enciclopedia.banrepcultural.org/index.php/Fortificaciones_de_Cartagena"
+  },
+  {
+    "id": "banrep-claver",
+    "type": "académica",
+    "org": "Banco de la República – Enciclopedia Banrepcultural",
+    "title": "Pedro Claver",
+    "url": "https://enciclopedia.banrepcultural.org/index.php/Pedro_Claver"
+  },
+  {
+    "id": "banrep-martires",
+    "type": "académica",
+    "org": "Banco de la República – Enciclopedia Banrepcultural",
+    "title": "Los Mártires de Cartagena 1816",
+    "url": "https://enciclopedia.banrepcultural.org/index.php?title=Los_M%C3%A1rtires_de_Cartagena_1816"
+  },
+  {
+    "id": "archila-1994",
+    "type": "académica",
+    "org": "Boletín Museo del Oro (Banco de la República)",
+    "title": "Archila, S. (1994). Medio ambiente y arqueología de las tierras bajas del Caribe colombiano",
+    "url": "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7000"
+  },
+  {
+    "id": "muhca",
+    "type": "oficial",
+    "org": "Museo Histórico de Cartagena (MUHCA)",
+    "title": "Conócenos – Palacio de la Inquisición",
+    "url": "https://www.muhca.gov.co/conocenos"
+  },
+  {
+    "id": "epa-popa",
+    "type": "oficial",
+    "org": "EPA Cartagena – Observatorio ambiental",
+    "title": "Historia del Cerro de La Popa (anexo)",
+    "url": "https://observatorio.epacartagena.gov.co/ftp-uploads/ga-eco-lp-macrop-anexo-historia.pdf"
+  },
+  {
+    "id": "senal-teatro",
+    "type": "medio",
+    "org": "Señal Colombia (RTVC)",
+    "title": "La historia que encierra el emblemático Teatro Adolfo Mejía",
+    "url": "https://www.senalcolombia.tv/cultura/teatro-adolfo-mejia-historia"
+  },
+  {
+    "id": "universal-reloj",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 31/08/2023",
+    "title": "Historia tras la Torre del Reloj",
+    "url": "https://www.eluniversal.com.co/cartagena/2023/08/31/historia-tras-la-torre-del-reloj-por-donde-antes-si-pasaban-carros/"
+  },
+  {
+    "id": "universal-catalina",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 03/02/2025",
+    "title": "La India Catalina: la historia detrás del monumento",
+    "url": "https://www.eluniversal.com.co/turismo/2025/02/03/la-india-catalina-conoce-la-historia-detras-del-reconocido-monumento/"
+  },
+  {
+    "id": "canal-1811",
+    "type": "medio",
+    "org": "Canal Institucional (RTVC)",
+    "title": "Independencia de Cartagena: ¿qué pasó el 11 de noviembre de 1811?",
+    "url": "https://www.canalinstitucional.tv/independencia-de-cartagena-11-de-noviembre"
+  },
+  {
+    "id": "wiki-cartagena",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Cartagena, Colombia – History",
+    "url": "https://en.wikipedia.org/wiki/Cartagena,_Colombia"
+  },
+  {
+    "id": "wiki-timeline",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Timeline of Cartagena, Colombia",
+    "url": "https://en.wikipedia.org/wiki/Timeline_of_Cartagena,_Colombia"
+  },
+  {
+    "id": "wiki-1586",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Battle of Cartagena de Indias (1586)",
+    "url": "https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias_(1586)"
+  },
+  {
+    "id": "wiki-1697",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Raid on Cartagena (1697)",
+    "url": "https://en.wikipedia.org/wiki/Raid_on_Cartagena_(1697)"
+  },
+  {
+    "id": "wiki-1741",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Battle of Cartagena de Indias (1741)",
+    "url": "https://en.wikipedia.org/wiki/Battle_of_Cartagena_de_Indias"
+  },
+  {
+    "id": "wiki-1815",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Siege of Cartagena (1815)",
+    "url": "https://en.wikipedia.org/wiki/Siege_of_Cartagena_(1815)"
+  },
+  {
+    "id": "wiki-sanfelipe",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Castillo San Felipe de Barajas",
+    "url": "https://en.wikipedia.org/wiki/Castillo_San_Felipe_de_Barajas"
+  },
+  {
+    "id": "wiki-sanluis",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Castle of San Luis de Bocachica",
+    "url": "https://en.wikipedia.org/wiki/Castle_of_San_Luis_de_Bocachica"
+  },
+  {
+    "id": "wiki-inquisicion",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Palace of the Inquisition (Cartagena, Colombia)",
+    "url": "https://en.wikipedia.org/wiki/Palace_of_the_Inquisition_(Cartagena,_Colombia)"
+  },
+  {
+    "id": "wiki-bovedas",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Las Bóvedas",
+    "url": "https://en.wikipedia.org/wiki/Las_B%C3%B3vedas"
+  },
+  {
+    "id": "wiki-reloj",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Puerta del Reloj",
+    "url": "https://en.wikipedia.org/wiki/Puerta_del_Reloj"
+  },
+  {
+    "id": "wiki-sanignacio",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Bastion of San Ignacio",
+    "url": "https://en.wikipedia.org/wiki/Bastion_of_San_Ignacio"
+  },
+  {
+    "id": "wiki-santodomingo-baluarte",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Bastion of Santo Domingo, Cartagena",
+    "url": "https://en.wikipedia.org/wiki/Bastion_of_Santo_Domingo,_Cartagena"
+  },
+  {
+    "id": "wiki-catedral",
+    "type": "secundaria",
+    "org": "Wikipedia (es)",
+    "title": "Catedral de Santa Catalina de Alejandría (Cartagena de Indias)",
+    "url": "https://es.wikipedia.org/wiki/Catedral_de_Santa_Catalina_de_Alejandr%C3%ADa_(Cartagena_de_Indias)"
+  },
+  {
+    "id": "aecid-cf",
+    "type": "oficial",
+    "org": "AECID – Centro de Formación de la Cooperación Española en Cartagena",
+    "title": "Instalaciones: historia del claustro de Santo Domingo",
+    "url": "https://cfcartagena.aecid.es/cf/instalaciones"
+  },
+  {
+    "id": "aecid-museo",
+    "type": "oficial",
+    "org": "AECID, 09/06/2022",
+    "title": "El Centro de Formación en Cartagena de Indias inaugura el Museo de Sitio",
+    "url": "https://www.aecid.es/w/el-centro-de-formacion-de-la-cooperacion-espanola-en-cartagena-de-indias-inaugura-el-museo-de-sitio-y-una-nueva-sala-de-exposiciones"
+  },
+  {
+    "id": "reyes-2010",
+    "type": "académica",
+    "org": "Revista M (Universidad Santo Tomás), vol. 7, n.º 1",
+    "title": "Reyes Rodríguez, M. F. (2010). El convento de Santo Domingo en Cartagena de Indias",
+    "url": "https://revistas.ustabuca.edu.co/index.php/REVISTAM/article/view/1014"
+  },
+  {
+    "id": "santamaria-2020",
+    "type": "académica",
+    "org": "Universidade Federal da Integração Latino-Americana (UNILA)",
+    "title": "Santamaría Alvarado, A. (2020). Valoración cultural: Plaza de la Santísima Trinidad, Getsemaní",
+    "url": "https://dspace.unila.edu.br/items/07569001-51f8-40c0-a907-00ca264c5e9e"
+  },
+  {
+    "id": "procolombia-toribio",
+    "type": "oficial",
+    "org": "Colombia Travel (ProColombia)",
+    "title": "Church of Santo Toribio de Mogrovejo",
+    "url": "https://colombia.travel/en/cartagena-de-indias/church-santo-toribio-de-mogrovejo"
+  },
+  {
+    "id": "wiki-toribio",
+    "type": "secundaria",
+    "org": "Wikipedia (es)",
+    "title": "Iglesia de Santo Toribio (Cartagena de Indias)",
+    "url": "https://es.wikipedia.org/wiki/Iglesia_de_Santo_Toribio_(Cartagena_de_Indias)"
+  },
+  {
+    "id": "eltiempo-claver",
+    "type": "medio",
+    "org": "El Tiempo, 03/04/2021",
+    "title": "Cartagena: la historia de la iglesia San Pedro Claver",
+    "url": "https://www.eltiempo.com/colombia/otras-ciudades/cartagena-la-historia-de-la-iglesia-san-pedro-claver-578051"
+  },
+  {
+    "id": "wiki-claver-iglesia",
+    "type": "secundaria",
+    "org": "Wikipedia (es)",
+    "title": "Iglesia de San Pedro Claver (Cartagena)",
+    "url": "https://es.wikipedia.org/wiki/Iglesia_de_San_Pedro_Claver_(Cartagena)"
+  },
+  {
+    "id": "wiki-wager",
+    "type": "secundaria",
+    "org": "Wikipedia (en)",
+    "title": "Wager's Action (1708)",
+    "url": "https://en.wikipedia.org/wiki/Wager%27s_Action"
+  },
+  {
+    "id": "icanh-sgc-2026",
+    "type": "oficial",
+    "org": "ICANH, 10/08/2026",
+    "title": "El Servicio Geológico Colombiano presentó los resultados de sus investigaciones sobre los objetos recuperados del galeón San José",
+    "url": "https://www.icanh.gov.co/prensa/actualidad-icanh/servicio-geologico-colombiano-presento-los-resultados-de-sus-investigaciones-sobre-los-objetos-arqueologicos-recuperados-del-galeon-san-jose"
+  },
+  {
+    "id": "eltiempo-galeon-2025",
+    "type": "medio",
+    "org": "El Tiempo, 24/12/2025",
+    "title": "Hallazgos inéditos del galeón San José y lo que vendrá en 2026",
+    "url": "https://www.eltiempo.com/cultura/arte-y-teatro/lo-que-no-se-veia-en-las-imagenes-ahora-esta-apareciendo-hallazgos-ineditos-del-galeon-san-jose-y-lo-que-vendra-en-el-2026-para-la-investigacion-3519550"
+  },
+  {
+    "id": "eltiempo-malecon-2026",
+    "type": "medio",
+    "org": "El Tiempo, 10/07/2026",
+    "title": "El Gran Malecón del Mar avanza en un 57,60 %",
+    "url": "https://www.eltiempo.com/colombia/otras-ciudades/cartagena-el-gran-malecon-del-mar-la-obra-insigne-de-la-actual-administracion-avanza-en-un-57-60-por-ciento-y-su-costo-supera-los-196-000-millones-3570427"
+  },
+  {
+    "id": "metro-malecon-2026",
+    "type": "medio",
+    "org": "Revista Metro (Cartagena), 25/09/2026",
+    "title": "El alcalde y el contralor recorrieron las obras del Gran Malecón y de la protección costera",
+    "url": "https://revistametro.co/2026/09/el-alcalde-de-cartagena-y-el-contralor-general-recorrieron-las-obras-del-gran-malecon-y-del-proyecto-de-proteccion-costera/"
+  },
+  {
+    "id": "universal-defensa-2026",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 21/05/2026",
+    "title": "Defensa Costera 2050: así avanzan las obras en Cartagena",
+    "url": "https://www.eluniversal.com.co/cartagena/2026/05/21/defensa-costera-2050-asi-avanzan-las-obras-en-cartagena/"
+  },
+  {
+    "id": "procolombia-playas",
+    "type": "oficial",
+    "org": "Colombia Travel (ProColombia)",
+    "title": "Cartagena: beaches and the Rosario Islands",
+    "url": "https://colombia.travel/en/cartagena-de-indias/beaches-and-islands-rosario"
+  },
+  {
+    "id": "pnn-rosario",
+    "type": "oficial",
+    "org": "Parques Nacionales Naturales de Colombia",
+    "title": "PNN Corales del Rosario y de San Bernardo",
+    "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-corales-del-rosario-y-de-san-bernardo/"
+  },
+  {
+    "id": "universal-malecon-2026",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 09/07/2026",
+    "title": "Así va el Gran Malecón del Mar: esto es lo que se está construyendo ahora mismo",
+    "url": "https://www.eluniversal.com.co/cartagena/2026/07/09/asi-va-el-gran-malecon-del-mar-esto-es-lo-que-se-esta-construyendo-ahora-mismo/"
+  },
+  {
+    "id": "muhca-circoteatro",
+    "type": "oficial",
+    "org": "Museo Histórico de Cartagena (MUHCA) – Cartapedia",
+    "title": "Circo Teatro",
+    "url": "https://www.muhca.gov.co/cartapedia_circo-teatro--132"
+  },
+  {
+    "id": "nuevosiglo-serrezuela-2019",
+    "type": "medio",
+    "org": "El Nuevo Siglo, 27/06/2019",
+    "title": "Renace un ícono cultural de Cartagena: La Serrezuela",
+    "url": "https://www.elnuevosiglo.com.co/articulos/06-2019-renace-un-icono-cultural-de-cartagena-la-serrezuela"
+  },
+  {
+    "id": "serrezuela-oficial",
+    "type": "oficial",
+    "org": "Plaza La Serrezuela (sitio oficial)",
+    "title": "La Serrezuela",
+    "url": "https://www.plazalaserrezuela.com/la-serrezuela/"
+  },
+  {
+    "id": "wiki-elcabrero",
+    "type": "secundaria",
+    "org": "Wikipedia (es)",
+    "title": "Barrio El Cabrero",
+    "url": "https://es.wikipedia.org/wiki/Barrio_El_Cabrero"
+  },
+  {
+    "id": "donde-ermita",
+    "type": "secundaria",
+    "org": "Donde.co",
+    "title": "Ermita del Cabrero",
+    "url": "https://donde.co/es/cartagena/atracciones-turisticas/iglesias-catedrales/ermita-del-cabrero-28373"
+  },
+  {
+    "id": "banrep-nunez",
+    "type": "académica",
+    "org": "Banco de la República – Enciclopedia Banrepcultural",
+    "title": "Rafael Núñez",
+    "url": "https://enciclopedia.banrepcultural.org/index.php/Rafael_N%C3%BA%C3%B1ez"
+  },
+  {
+    "id": "dhial-inquisicion",
+    "type": "académica",
+    "org": "Diccionario de Historia Cultural de la Iglesia en América Latina (DHIAL)",
+    "title": "Inquisición. El Tribunal de Cartagena de Indias",
+    "url": "https://www.dhial.org/diccionario/index.php?title=INQUISICI%C3%93N._El_Tribunal_de_Cartagena_de_Indias"
+  },
+  {
+    "id": "ceballos-2001",
+    "type": "académica",
+    "org": "Universidad Nacional de Colombia – Repositorio institucional",
+    "title": "Ceballos Gómez, D. L. (2001). La Inquisición de Cartagena de Indias o de cómo se inventa una bruja en el siglo XVII",
+    "url": "https://repositorio.unal.edu.co/handle/unal/9313"
+  },
+  {
+    "id": "radionacional-inquisicion",
+    "type": "medio",
+    "org": "Radio Nacional de Colombia, 08/03/2023",
+    "title": "La Inquisición: historia del Tribunal del Santo Oficio de Cartagena",
+    "url": "https://www.radionacional.co/cultura/historia-colombiana/la-inquisicion-historia-del-tribunal-del-santo-oficio-de-cartagena"
+  },
+  {
+    "id": "rg-brujeria-1634",
+    "type": "académica",
+    "org": "Artículo académico (ResearchGate)",
+    "title": "Tras la conjuración de brujería en Cartagena de Indias (1634-1636): retractaciones, espacios carcelarios y tortura",
+    "url": "https://www.researchgate.net/publication/337036846_Tras_la_conjuracion_de_brujeria_en_Cartagena_de_Indias_1634-1636_retractaciones_espacios_carcelarios_y_tortura"
+  },
+  {
+    "id": "mv-lawrence",
+    "type": "oficial",
+    "org": "George Washington's Mount Vernon (Mount Vernon Ladies' Association)",
+    "title": "Lawrence Washington — Digital Encyclopedia (Kiera E. Nolan)",
+    "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/lawrence-washington"
+  },
+  {
+    "id": "mv-10facts",
+    "type": "oficial",
+    "org": "George Washington's Mount Vernon",
+    "title": "10 Facts About George Washington's Mount Vernon",
+    "url": "https://www.mountvernon.org/the-estate-gardens/10-facts-about-george-washingtons-mount-vernon"
+  },
+  {
+    "id": "mv-owners",
+    "type": "oficial",
+    "org": "George Washington's Mount Vernon",
+    "title": "Owners of Mount Vernon",
+    "url": "https://www.mountvernon.org/the-estate-gardens/the-mansion/owners-of-mount-vernon"
+  },
+  {
+    "id": "united-ctg-2026",
+    "type": "medio",
+    "org": "United Airlines (comunicado vía PR Newswire, 29/06/2026)",
+    "title": "United Announces New Nonstop Flights from Houston and Washington, D.C. to Cartagena",
+    "url": "https://www.prnewswire.com/news-releases/united-announces-new-nonstop-flights-from-houston-and-washington-dc-to-cartagena-302813361.html"
+  },
+  {
+    "id": "flightconnections-ctg",
+    "type": "secundaria",
+    "org": "FlightConnections (consultado el 27/09/2026)",
+    "title": "Flights to Cartagena (CTG) — rutas directas",
+    "url": "https://www.flightconnections.com/flights-to-cartagena-ctg"
+  },
+  {
+    "id": "migracion-checkmig",
+    "type": "oficial",
+    "org": "Migración Colombia",
+    "title": "Check-MIG: pre-registro migratorio gratuito",
+    "url": "https://www.migracioncolombia.gov.co/tramites-y-servicios/aplicativos/checkmig"
+  },
+  {
+    "id": "cancilleria-visa",
+    "type": "oficial",
+    "org": "Cancillería de Colombia",
+    "title": "Tipos de visa y exenciones",
+    "url": "https://www.cancilleria.gov.co/tramites_servicios/visa/requisitos"
+  },
+  {
+    "id": "infobae-visa-eeuu-2025",
+    "type": "medio",
+    "org": "Infobae (20/04/2025), citando a la Cancillería",
+    "title": "Tiempo máximo que puede quedarse un ciudadano estadounidense en Colombia",
+    "url": "https://www.infobae.com/colombia/2025/04/20/este-es-el-tiempo-maximo-que-puede-quedarse-un-ciudadano-estadounidense-en-colombia-segun-la-cancilleria/"
+  },
+  {
+    "id": "state-colombia",
+    "type": "oficial",
+    "org": "U.S. Department of State",
+    "title": "Colombia Travel Advisory",
+    "url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/colombia-travel-advisory.html"
+  },
+  {
+    "id": "clima-ctg",
+    "type": "secundaria",
+    "org": "Climates to Travel",
+    "title": "Cartagena climate: when to go, monthly averages",
+    "url": "https://www.climatestotravel.com/climate/colombia/cartagena"
+  },
+  {
+    "id": "enchufes-co",
+    "type": "secundaria",
+    "org": "Power Plugs & Sockets of the World",
+    "title": "Colombia — tipos de enchufe y voltaje",
+    "url": "https://www.power-plugs-sockets.com/us/colombia/"
+  },
+  {
+    "id": "wiki-hora-co",
+    "type": "secundaria",
+    "org": "Wikipedia",
+    "title": "Time in Colombia",
+    "url": "https://en.wikipedia.org/wiki/Time_in_Colombia"
+  },
+  {
+    "id": "open-meteo",
+    "type": "secundaria",
+    "org": "Open-Meteo.com (CC BY 4.0)",
+    "title": "Datos meteorológicos en vivo",
+    "url": "https://open-meteo.com/"
+  },
+  {
+    "id": "eluniversal-gabo-1948",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 20/03/2015",
+    "title": "Lo primero que escribió Gabo en El Universal",
+    "url": "https://www.eluniversal.com.co/cultural/2015/03/20/lo-primero-que-escribio-gabo-en-el-universal/"
+  },
+  {
+    "id": "centrogabo-bio",
+    "type": "oficial",
+    "org": "Centro Gabo (Fundación Gabo)",
+    "title": "¿Quién fue Gabriel García Márquez?",
+    "url": "https://centrogabo.org/gabo/contemos-gabo/quien-fue-gabriel-garcia-marquez"
+  },
+  {
+    "id": "eluniversal-gabo-cenizas-2016",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 22/05/2016",
+    "title": "Cenizas de Gabriel García Márquez ya reposan en Cartagena",
+    "url": "https://www.eluniversal.com.co/cultural/2016/05/22/cenizas-de-gabriel-garcia-marquez-ya-reposan-en-cartagena/"
+  },
+  {
+    "id": "eluniversal-merced-2016",
+    "type": "medio",
+    "org": "El Universal (Cartagena), 11/03/2016",
+    "title": "Así fue la transformación del Claustro de La Merced para recibir cenizas de Gabo",
+    "url": "https://www.eluniversal.com.co/cartagena/2016/03/11/asi-fue-la-transformacion-del-claustro-de-la-merced-para-recibir-cenizas-de-gabo/"
+  },
+  {
+    "id": "wiki-colera",
+    "type": "secundaria",
+    "org": "Wikipedia",
+    "title": "Love in the Time of Cholera (novela, 1985)",
+    "url": "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera"
+  },
+  {
+    "id": "wiki-amor-demonios",
+    "type": "secundaria",
+    "org": "Wikipedia",
+    "title": "Of Love and Other Demons (novela, 1994)",
+    "url": "https://en.wikipedia.org/wiki/Of_Love_and_Other_Demons"
+  },
+  {
+    "id": "lanacion-santaclara",
+    "type": "medio",
+    "org": "La Nación (Argentina)",
+    "title": "Un convento de clausura de 1600 se convirtió en el hotel emblema de Cartagena",
+    "url": "https://www.lanacion.com.ar/lifestyle/un-convento-de-clausura-de-1600-se-convirtio-en-el-hotel-emblema-de-cartagena-nid2201815/"
+  }
 ]

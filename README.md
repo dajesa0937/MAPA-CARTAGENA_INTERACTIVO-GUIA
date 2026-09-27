@@ -138,3 +138,17 @@ Opción por consola (con Node instalado): `npx netlify-cli deploy --prod --dir s
   - Pexels (`"pexels": id`).
   - Wikimedia Commons (`"commons": "Nombre del archivo.jpg"`, con `author` y `license` obligatorios). Cada foto muestra su autor, un enlace a su página de origen y su licencia.
 - Pendientes de foto verificada: fuerte de San Juan de Manzanillo, fuerte de Santa Cruz (Castillogrande), escollera de Bocagrande (está bajo el agua), castillo de San Luis (ruinas) y baluarte de El Reducto.
+
+## Novedades v6 — Para el viajero (27/09/2026)
+
+Cambios basados en una investigación sobre qué lleva a un viajero internacional (en especial de EE. UU.) a decidirse por un destino: historias con vínculo personal, lo que ha visto en pantalla o leído (*set-jetting*, Expedia Unpack '26: 81 % de Gen Z y millennials), información práctica clara y fechada, y llamadas a la acción visibles (MMGY 2025, buenas prácticas de sitios de destino).
+
+- **«¿Sabías que…?» en la portada**: tres ganchos rotativos (Washington/Mount Vernon, galeón San José, García Márquez) que abren su historia. En inglés empieza por Washington.
+- **Nueva historia «El nombre de Mount Vernon»** (Cartagena y EE. UU.): Lawrence Washington, las tropas de las Trece Colonias (cifras marcadas como *debatidas*), las medallas de una victoria que no llegó, el nombre de Mount Vernon y los nuevos vuelos directos desde Washington-Dulles (dato turístico fechado). Fuentes: George Washington's Mount Vernon, United/PR Newswire.
+- **Nueva historia «La Cartagena de García Márquez»** y dos lugares nuevos verificados en OpenStreetMap: claustro de La Merced (cenizas desde el 22/05/2016) y antiguo convento de Santa Clara. El episodio de las criptas se presenta como relato del autor.
+- **Pestaña «Viaje / Plan»** (`#/viaje`): «Cartagena ahora» en vivo (hora local, diferencia con el visitante, puesta de sol calculada en el navegador y tiempo de Open-Meteo, °F primero en inglés); cómo llegar desde EE. UU., entrada, clima, seguridad y datos prácticos, todo con fuente y fecha (`data/trip.json`).
+- **Mi Cartagena**: botón «Guardar» en cada lugar, lista en la pestaña Viaje, ver en el mapa y compartir por enlace (`#/viaje/mi/id1,id2`).
+- **SEO y redes**: título y descripción bilingües, Open Graph con imagen, datos estructurados `TouristDestination`, `?lang=en` para compartir la guía directamente en inglés.
+- Corrección: el teatro Adolfo Mejía se reubicó con OpenStreetMap (la posición anterior era aproximada).
+
+Datos prácticos a revisar periódicamente: vuelos, requisitos de entrada y aviso de viaje de EE. UU. (fecha en `trip.json → checked`).

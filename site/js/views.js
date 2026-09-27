@@ -5,6 +5,7 @@ import { cinemaMinutes } from './cinema.js';
 import { t, L, getLang, formatDate } from './i18n.js';
 import { store } from './store.js';
 import { catColor } from './map.js';
+import { clock, hourDiff, nextSunset, wxKey } from './now.js';
 
 export const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const CATS = ['castillo', 'muralla', 'iglesia', 'museo', 'plaza', 'monumento', 'cultura', 'barrio', 'mar', 'hoy'];
@@ -111,9 +112,10 @@ export function storyView(st, { chapter = null, speaking = false } = {}) {
     const title = e ? L(e.title) : L(c.title);
     const text = e ? L(e.text) : L(c.text);
     const cert = e ? e.certainty : c.certainty;
+    const thumb = c.photo ? `<span class="m-thumb"><img src="${photoUrl(c.photo, 200)}" alt="${esc(L(c.photo.alt))}" loading="lazy"><small>${esc(c.photo.author)} · ${esc(c.photo.license)}</small></span>` : '';
     return `<li><button type="button" class="moment ${chapter === k ? 'on' : ''}" data-schapter="${k}">
       <span class="m-year ${e ? '' : 'txt'}">${esc(year)}</span>
-      <span class="m-body"><strong>${esc(title)}</strong><small>${esc(text)}</small>${cert && cert !== 'documentado' ? `<span class="m-cert">${certPill(cert)}</span>` : ''}</span>
+      <span class="m-body">${thumb}<strong>${esc(title)}</strong><small>${esc(text)}</small>${cert && cert !== 'documentado' ? `<span class="m-cert">${certPill(cert)}</span>` : ''}${c.tourism ? `<span class="m-cert"><span class="pill tour-pill">${esc(t('tourism.short'))}</span></span>` : ''}</span>
     </button></li>`;
   }).join('');
   const places = storyPlaces(st).map(place);
@@ -264,6 +266,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
 
     <div class="actions">
       <button class="btn small" type="button" data-zoom>${ico('map')}${esc(t('place.zoom'))}</button>
+      <button class="btn small fav-btn" type="button" data-fav="${esc(p.id)}" aria-pressed="${store.has('favs', p.id)}">${ico(store.has('favs', p.id) ? 'heart-on' : 'heart')}<span>${esc(t(store.has('favs', p.id) ? 'fav.saved' : 'fav.save'))}</span></button>
       <button class="btn small" type="button" data-share>${ico('share')}${esc(t('place.share'))}</button>
       <a class="btn small" href="${esc(commons)}" target="_blank" rel="noopener">${esc(t('place.photos'))}</a>
     </div>
@@ -378,6 +381,89 @@ export function routesView() {
     <div class="rprog"><span>${esc(t('routes.progress', { a: doneN, b: db.routes.length }))}</span><div class="progress"><i style="width:${(doneN / db.routes.length) * 100}%"></i></div></div>
     ${cards}
     <p class="fine">${esc(t('routes.calc'))} ${esc(t('routes.lineNote'))}</p>
+  </div>`;
+}
+
+/* ---------- Cartagena ahora ---------- */
+const dur = ms => { const m = Math.max(1, Math.round(ms / 60000)); const h = Math.floor(m / 60); return h ? `${h} h ${String(m % 60).padStart(2, '0')} min` : `${m} min`; };
+const toF = c => Math.round(c * 9 / 5 + 32);
+export function nowParts(wx) {
+  const lang = getLang(), now = new Date();
+  const d = hourDiff(now);
+  const diff = d === 0 ? t('now.same') : t(d > 0 ? 'now.ahead' : 'now.behind', { h: String(Math.abs(d)).replace('.', lang === 'es' ? ',' : '.') });
+  const set = nextSunset(now);
+  const sameDay = clock(lang, set) && new Date(set).toDateString() === now.toDateString();
+  const sunTxt = `${clock(lang, set)}${sameDay ? '' : ' · ' + t('now.tomorrow')}`;
+  const k = wx ? wxKey(wx.code) : null;
+  // En inglés (visitantes de EE. UU.) primero °F; en español, °C
+  const temp = wx ? (lang === 'en' ? `${toF(wx.temp)} °F` : `${Math.round(wx.temp)} °C`) : null;
+  const temp2 = wx ? (lang === 'en' ? `${Math.round(wx.temp)} °C` : `${toF(wx.temp)} °F`) : null;
+  return { time: clock(lang, now), diff, sun: sunTxt, sunIn: t('now.sunsetIn', { d: dur(set - now) }), temp, temp2, wx: k ? t(`now.wx.${k}`) : null };
+}
+/** Línea breve para la portada. */
+export function nowCompact(wx) {
+  const n = nowParts(wx);
+  return `<span class="now-dot" aria-hidden="true"></span><strong>${esc(n.time)}</strong> ${esc(t('now.in'))}${n.temp ? ` · ${esc(n.temp)}` : ''} · ${ico('sun')}${esc(t('now.sunset'))} ${esc(n.sun)}`;
+}
+/** Tarjeta completa (pestaña Viaje). */
+export function nowCard(wx) {
+  const n = nowParts(wx);
+  return `<div class="now-head"><h3 class="st">${esc(t('now.title'))}</h3><span class="now-live"><span class="now-dot" aria-hidden="true"></span>${esc(t('now.live'))}</span></div>
+    <div class="now-grid">
+      <div class="now-cell"><span class="now-big">${esc(n.time)}</span><small>${esc(t('now.in'))} · ${esc(n.diff)}</small></div>
+      <div class="now-cell">${n.temp ? `<span class="now-big">${esc(n.temp)}</span><small>${esc(n.wx)} · ${esc(n.temp2)}</small>` : `<small>${esc(t('now.noWx'))}</small>`}</div>
+      <div class="now-cell sun"><span class="now-big">${esc(n.sun)}</span><small>${ico('sun')}${esc(t('now.sunset'))} · ${esc(n.sunIn)}</small></div>
+    </div>
+    <p class="now-tip">${esc(t('now.sunsetTip'))}${n.temp ? ` <a href="https://open-meteo.com/" target="_blank" rel="noopener">${esc(t('now.wxBy'))}</a>` : ''}</p>`;
+}
+
+/* ---------- Planea tu viaje ---------- */
+export function favList(ids, { removable = true } = {}) {
+  return `<ul class="plist fav-list">${ids.map(place).filter(Boolean).map(p => {
+    const ph = photoFor(p);
+    return `<li class="fav-item"><button class="pitem" type="button" data-place="${esc(p.id)}">
+      <span class="fav-thumb" style="background:${catColor(p.category)}">${ph ? `<img src="${photoUrl(ph, 160)}" alt="" loading="lazy">` : ico(p.category)}</span>
+      <span><strong>${esc(L(p.name).split(' · ')[0])}</strong><small>${esc(t(`cat.${p.category}`))} · ${esc(L(p.dates))}</small></span>
+    </button>${removable ? `<button class="icon-btn fav-x" type="button" data-fav-remove="${esc(p.id)}" aria-label="${esc(t('fav.remove', { name: L(p.name) }))}">${ico('close')}</button>` : ''}</li>`;
+  }).join('')}</ul>`;
+}
+export function tripView({ wx = null, shared = null } = {}) {
+  const trip = db.trip;
+  const favs = (store.get().favs || []).filter(place);
+  const srcLinks = ids => ids.map(source).filter(Boolean).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.org.split(' (')[0])} ↗</a>`).join(' · ');
+  const sections = trip.sections.map((sec, k) => `
+    <details class="acc trip-acc" ${k === 0 ? 'open' : ''}>
+      <summary>${ico(sec.icon)}${esc(L(sec.title))}</summary>
+      <div class="acc-body">
+        <ul class="trip-items">${sec.items.map(it => `<li>${esc(L(it))}</li>`).join('')}</ul>
+        <p class="trip-src">${esc(t('trip.sources'))}: ${srcLinks(sec.sources)}</p>
+      </div>
+    </details>`).join('');
+  const quick = db.routes.find(r => r.id === '60-minutos');
+  const hooks = ['washington', 'gabo', 'galeon'].map(id => db.stories.find(s => s.id === id)).filter(Boolean);
+  const sharedIds = (shared || []).filter(place);
+  return `<div class="anim trip">
+    <h2 class="pt">${esc(t('trip.title'))}</h2>
+    <p class="lead">${esc(t('trip.intro'))}</p>
+    <section class="now-card" data-now="card">${nowCard(wx)}</section>
+    ${sharedIds.length ? `<section class="block fav-box shared">
+      <h3 class="st">${ico('share')}${esc(t('fav.shared'))} · ${esc(t('fav.n', { n: sharedIds.length }))}</h3>
+      ${favList(sharedIds, { removable: false })}
+      <div class="actions"><button class="btn small primary" type="button" data-fav-saveall="${esc(sharedIds.join(','))}">${ico('heart')}${esc(t('fav.saveAll'))}</button></div>
+    </section>` : ''}
+    <section class="block fav-box">
+      <h3 class="st">${ico('heart-on', 'fav-ico')}${esc(t('fav.title'))}${favs.length ? ` · ${esc(t('fav.n', { n: favs.length }))}` : ''}</h3>
+      ${favs.length ? favList(favs) + `<div class="actions">
+        <button class="btn small" type="button" data-fav-map>${ico('map')}${esc(t('fav.map'))}</button>
+        <button class="btn small primary" type="button" data-fav-share>${ico('share')}${esc(t('fav.share'))}</button>
+      </div>` : `<p class="fav-empty">${ico('heart')}${esc(t('fav.empty'))}</p>`}
+    </section>
+    ${quick ? `<section class="block"><h3 class="st">${esc(t('trip.short'))}</h3>
+      <button class="btn primary" type="button" data-route="${esc(quick.id)}">${ico('walk')}${esc(L(quick.name))}</button></section>` : ''}
+    <section class="block">${sections}</section>
+    <p class="fine">${esc(t('trip.checked', { date: formatDate(trip.checked) }))}</p>
+    ${hooks.length ? `<section class="block"><h3 class="st">${esc(t('trip.stories'))}</h3>
+      <div class="stories" role="list">${hooks.map(st => `<div role="listitem">${storyCard(st)}</div>`).join('')}</div></section>` : ''}
   </div>`;
 }
 

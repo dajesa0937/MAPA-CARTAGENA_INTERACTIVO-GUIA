@@ -1,0 +1,135 @@
+{
+  "checked": "2026-09-27",
+  "sections": [
+    {
+      "id": "flights",
+      "icon": "plane",
+      "title": {
+        "es": "Cómo llegar desde EE. UU.",
+        "en": "Getting there from the US"
+      },
+      "items": [
+        {
+          "es": "Hay vuelos directos a Cartagena (CTG) desde Miami (American), Fort Lauderdale (JetBlue) y Atlanta (Delta). Nueva York-JFK (Avianca, JetBlue) y Orlando (Frontier) operan por temporadas.",
+          "en": "There are nonstop flights to Cartagena (CTG) from Miami (American), Fort Lauderdale (JetBlue) and Atlanta (Delta). New York JFK (Avianca, JetBlue) and Orlando (Frontier) run seasonally."
+        },
+        {
+          "es": "Nuevo: United anunció vuelos sin escalas desde Washington-Dulles y desde Houston a partir del 17 de diciembre de 2026, cuatro por semana en cada ruta.",
+          "en": "New: United has announced nonstop flights from Washington Dulles and Houston starting 17 December 2026, four a week on each route."
+        },
+        {
+          "es": "Desde otras ciudades se llega con una escala. El aeropuerto Rafael Núñez está dentro de la ciudad, cerca del centro histórico.",
+          "en": "From other cities it is one stop away. Rafael Núñez airport is inside the city, close to the historic centre."
+        }
+      ],
+      "sources": [
+        "flightconnections-ctg",
+        "united-ctg-2026"
+      ]
+    },
+    {
+      "id": "entry",
+      "icon": "passport",
+      "title": {
+        "es": "Entrada al país",
+        "en": "Entry requirements"
+      },
+      "items": [
+        {
+          "es": "Los ciudadanos de EE. UU. no necesitan visa de turista: pueden quedarse hasta 90 días, prorrogables otros 90, con un máximo de 180 días por año calendario.",
+          "en": "US citizens do not need a tourist visa: they can stay up to 90 days, extendable by another 90, up to 180 days per calendar year."
+        },
+        {
+          "es": "Migración Colombia ofrece Check-MIG, un pre-registro en línea entre 72 horas y 1 hora antes del vuelo. Es gratuito: desconfía de páginas que cobren por él.",
+          "en": "Migración Colombia offers Check-MIG, an online pre-registration from 72 hours to 1 hour before your flight. It is free: be wary of sites that charge for it."
+        },
+        {
+          "es": "¿Otra nacionalidad? Consulta los requisitos en la Cancillería de Colombia.",
+          "en": "Another nationality? Check the requirements with Colombia's Foreign Ministry."
+        }
+      ],
+      "sources": [
+        "cancilleria-visa",
+        "infobae-visa-eeuu-2025",
+        "migracion-checkmig"
+      ]
+    },
+    {
+      "id": "when",
+      "icon": "hoy",
+      "title": {
+        "es": "Cuándo ir y qué tiempo hace",
+        "en": "When to go and the weather"
+      },
+      "items": [
+        {
+          "es": "La temporada seca va de diciembre a abril: es la época más buscada.",
+          "en": "The dry season runs from December to April: the most popular time to visit."
+        },
+        {
+          "es": "De mayo a noviembre llueve más; octubre es el mes más lluvioso.",
+          "en": "From May to November it rains more; October is the wettest month."
+        },
+        {
+          "es": "Hace calor todo el año: medias de 27–29 °C (81–84 °F), y el mar está entre 27 y 29 °C.",
+          "en": "It is warm all year: averages of 27–29 °C (81–84 °F), with the sea at 27–29 °C."
+        },
+        {
+          "es": "Los huracanes son raros: Cartagena está en el borde de su zona de paso (temporada de junio a noviembre).",
+          "en": "Hurricanes are rare: Cartagena sits on the edge of their path (season June to November)."
+        }
+      ],
+      "sources": [
+        "clima-ctg"
+      ]
+    },
+    {
+      "id": "safety",
+      "icon": "shield",
+      "title": {
+        "es": "Seguridad",
+        "en": "Safety"
+      },
+      "items": [
+        {
+          "es": "El Departamento de Estado de EE. UU. mantiene a Colombia en el nivel 3 («Reconsider travel») para todo el país. Bolívar, el departamento de Cartagena, no figura entre las zonas de nivel 4 («Do not travel»).",
+          "en": "The US State Department keeps Colombia at Level 3 (\"Reconsider travel\") countrywide. Bolívar, Cartagena's department, is not among the Level 4 (\"Do not travel\") areas."
+        },
+        {
+          "es": "Lee el aviso vigente antes de viajar y toma las precauciones habituales de cualquier gran ciudad turística.",
+          "en": "Read the current advisory before you travel and take the usual precautions of any big tourist city."
+        }
+      ],
+      "sources": [
+        "state-colombia"
+      ]
+    },
+    {
+      "id": "practical",
+      "icon": "compass",
+      "title": {
+        "es": "Datos prácticos",
+        "en": "Practical info"
+      },
+      "items": [
+        {
+          "es": "Hora: Colombia usa UTC−5 todo el año, sin horario de verano. Es la misma hora que Nueva York en invierno y una hora menos en verano.",
+          "en": "Time: Colombia is on UTC−5 all year, with no daylight saving. Same time as New York in winter, one hour behind in summer."
+        },
+        {
+          "es": "Enchufes tipo A y B a 110 V / 60 Hz, como en EE. UU.: no hace falta convertidor, aunque los de tres patas pueden necesitar adaptador.",
+          "en": "Type A and B sockets at 110 V / 60 Hz, as in the US: no converter needed, though three-prong plugs may need an adapter."
+        },
+        {
+          "es": "Moneda: peso colombiano (COP). Idioma: español; esta guía está completa en inglés.",
+          "en": "Currency: Colombian peso (COP). Language: Spanish — this guide is fully available in English."
+        }
+      ],
+      "sources": [
+        "wiki-hora-co",
+        "enchufes-co"
+      ]
+    }
+  ],
+  "weatherSource": "open-meteo"
+}

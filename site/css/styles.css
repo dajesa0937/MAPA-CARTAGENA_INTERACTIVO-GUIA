@@ -146,7 +146,7 @@ a { color: var(--sea); }
   display: flex; flex-direction: column; overflow: hidden;
 }
 .sheet-handle { display: none; }
-.tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); padding: 6px; gap: 4px; }
+.tabs { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--line); padding: 6px; gap: 4px; }
 .tabs button { border: 0; background: none; padding: 8px 4px; border-radius: 10px; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 12px; font-weight: 600; color: var(--ink-soft); }
 .tabs button[aria-selected="true"] { color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .panel-body { flex: 1; overflow-y: auto; padding: 18px 20px 28px; overscroll-behavior: contain; }
@@ -1075,3 +1075,91 @@ body.cinema-on { overflow: hidden; }
 .leaflet-tooltip.mk-label.sel { background: var(--bg-deep); color: #fff; font-size: 13px; padding: 5px 10px; box-shadow: 0 4px 14px rgba(0,0,0,.35); animation: fade .5s .9s both; }
 .mk-sonar { border-color: #fff; background: color-mix(in srgb, var(--mc, var(--accent)) 45%, transparent); box-shadow: 0 0 0 2px var(--mc, var(--accent)), 0 0 16px color-mix(in srgb, var(--mc, var(--accent)) 70%, transparent); }
 @keyframes sonar { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(6.5); opacity: 0; } }
+
+/* =========================================================
+   v6 — Para el viajero: «Cartagena ahora», «¿Sabías que…?», Planea tu viaje, Mi Cartagena
+   ========================================================= */
+.tabs button { min-width: 0; }
+.tabs button span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Portada: hora, tiempo y atardecer en vivo */
+.hero-now { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 6px; margin: -12px 0 18px; padding: 7px 14px; border-radius: 999px; font-size: 13.5px;
+  background: rgba(8, 24, 34, .42); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); min-height: 34px; }
+.hero-now:empty { display: none; }
+.hero-now strong { font-variant-numeric: tabular-nums; }
+.hero-now svg { width: 16px; height: 16px; vertical-align: -3px; margin-right: 3px; color: #f6cf72; }
+.now-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,.7); animation: nowPulse 2s infinite; flex: none; }
+@keyframes nowPulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+
+/* Portada: «¿Sabías que…?» */
+.hero-hook { display: flex; align-items: stretch; gap: 6px; max-width: 620px; margin: 18px 0 0; }
+.hk-main { flex: 1; display: grid; gap: 3px; text-align: left; padding: 12px 16px; border-radius: 16px; color: #fff; cursor: pointer;
+  background: linear-gradient(120deg, rgba(194,85,58,.55), rgba(14,42,59,.55)); border: 1px solid rgba(255,255,255,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: transform .2s, background .2s; }
+.hk-main:hover { transform: translateY(-1px); background: linear-gradient(120deg, rgba(194,85,58,.72), rgba(14,42,59,.6)); }
+.hk-k { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #f6cf72; font-weight: 700; }
+.hk-t { font-family: var(--font-display); font-size: clamp(16px, 2vw, 19px); line-height: 1.35; transition: opacity .28s, transform .28s; min-height: 2.7em; }
+.hk-t.out { opacity: 0; transform: translateY(6px); }
+.hk-cta { font-size: 13px; font-weight: 600; opacity: .9; }
+.hk-next { flex: none; width: 40px; border-radius: 14px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.1); color: #fff; display: grid; place-items: center; }
+.hk-next svg { width: 18px; height: 18px; transform: rotate(180deg); }
+.hk-next:hover { background: rgba(255,255,255,.2); }
+
+/* Pestaña Viaje */
+.now-card { margin: 14px 0 6px; padding: 14px; border-radius: var(--radius); color: #fff;
+  background: radial-gradient(120% 140% at 100% 0%, #e0894f 0%, #c2553a 28%, #1d4b63 70%, #0e2a3b 100%); box-shadow: var(--shadow); }
+.now-head { display: flex; align-items: center; justify-content: space-between; }
+.now-head .st { color: #fff; margin: 0; }
+.now-live { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .9; }
+.now-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.now-cell { background: rgba(255,255,255,.12); border-radius: 12px; padding: 10px; min-width: 0; }
+.now-big { display: block; white-space: nowrap; font-family: var(--font-display); font-size: 19px; font-weight: 600; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.now-big svg { width: 18px; height: 18px; vertical-align: -2px; margin-right: 4px; color: #f6cf72; }
+.now-cell small { display: block; margin-top: 3px; font-size: 12px; opacity: .88; line-height: 1.35; }
+.now-tip { margin: 10px 0 0; font-size: 12.5px; opacity: .92; }
+.now-tip a { color: #fff; opacity: .75; margin-left: 4px; }
+@media (max-width: 400px) { .now-grid { grid-template-columns: 1fr 1fr; } .now-cell.sun { grid-column: span 2; } }
+
+.fav-box .st svg, .trip .st > svg { width: 17px; height: 17px; vertical-align: -3px; margin-right: 6px; }
+.fav-box .st .fav-ico { color: var(--accent); }
+.fav-box.shared { padding: 12px; border-radius: var(--radius); background: color-mix(in srgb, var(--sea) 8%, var(--bg-elev)); border: 1px solid color-mix(in srgb, var(--sea) 30%, var(--line)); }
+.fav-empty { display: flex; gap: 10px; align-items: flex-start; margin: 6px 0 0; padding: 12px; border-radius: 12px; border: 1px dashed var(--line); color: var(--ink-soft); font-size: 14px; }
+.fav-empty svg { width: 20px; height: 20px; flex: none; color: var(--accent); }
+.fav-item { display: flex; align-items: center; gap: 4px; }
+.fav-item .pitem { flex: 1; min-width: 0; }
+.fav-thumb { width: 46px; height: 46px; border-radius: 10px; overflow: hidden; flex: none; display: grid; place-items: center; color: #fff; }
+.fav-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.fav-thumb svg { width: 20px; height: 20px; }
+.fav-x svg { width: 16px; height: 16px; }
+.fav-btn[aria-pressed="true"] { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); background: color-mix(in srgb, var(--accent) 8%, var(--bg-elev)); }
+.fav-btn.pop svg { animation: favPop .45s ease; }
+@keyframes favPop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+
+.trip-acc summary { display: flex; align-items: center; gap: 8px; }
+.trip-acc summary > svg { width: 19px; height: 19px; color: var(--accent); flex: none; }
+.trip-items { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14.5px; line-height: 1.55; }
+.trip-src { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-soft); }
+.trip-src a { color: var(--sea); }
+
+/* Historias: foto propia del capítulo */
+.m-thumb { display: block; margin-bottom: 8px; }
+.m-thumb img { width: 100%; height: 130px; object-fit: cover; object-position: center 25%; border-radius: 10px; display: block; background: var(--line); }
+.m-thumb small { display: block !important; -webkit-line-clamp: unset !important; font-size: 11px !important; margin-top: 3px !important; opacity: .8; }
+.m-body { min-width: 0; flex: 1; }
+.tour-pill { background: color-mix(in srgb, var(--gold) 22%, transparent); color: var(--ink); }
+
+@media (max-width: 520px) {
+  .hero-now { font-size: 12.5px; margin: -14px 0 14px; }
+  .hk-main { padding: 10px 12px; }
+  .hk-t { font-size: 15.5px; }
+  .tabs button { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .now-dot { animation: none; } .hk-t { transition: none; } .fav-btn.pop svg { animation: none; } }
+@media (min-width: 1100px) {
+  .hero-hook { position: absolute; top: clamp(150px, 26vh, 240px); right: clamp(16px, 5vw, 64px); width: 360px; margin: 0; flex-direction: column; animation: hookIn .8s .4s both; }
+  .hk-next { width: auto; height: 36px; align-self: flex-end; padding: 0 14px; }
+  .hk-t { min-height: 4.1em; }
+}
+@keyframes hookIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-hook { animation: none !important; } }
+.now-cell small svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 3px; color: #f6cf72; }
+@media (max-width: 400px) { .now-big { font-size: 18px; } }

@@ -6,6 +6,7 @@ import * as M from './map.js';
 import * as V from './views.js';
 import * as tts from './tts.js';
 import { openCinema } from './cinema.js';
+import { weather } from './now.js';
 
 const $ = s => document.querySelector(s);
 const panel = $('#panel'), body = $('#panelBody'), hero = $('#hero');
@@ -23,8 +24,10 @@ const S = {
   eventId: null,
   storyId: null,     // historia temática abierta (Explorar)
   chapter: null,
-  preview: null      // ruta mostrada en el mapa sin iniciarla
+  preview: null,     // ruta mostrada en el mapa sin iniciarla
+  shared: null       // lista de favoritos recibida por enlace (#/viaje/mi/…)
 };
+const NOW = { wx: null };
 
 /* ---------------- Render ---------------- */
 function render() {
@@ -35,6 +38,7 @@ function render() {
   else if (S.tab === 'history') body.innerHTML = V.historyView({ periodId: S.periodId, eventId: S.eventId, speaking: S.speaking });
   else if (S.tab === 'routes') body.innerHTML = V.routesView();
   else if (S.tab === 'about') body.innerHTML = V.aboutView();
+  else if (S.tab === 'trip') body.innerHTML = V.tripView({ wx: NOW.wx, shared: S.shared });
   else body.innerHTML = V.exploreView({ visibleCats: S.visibleCats });
   $('#timebar').hidden = !S.history;
   wireGallery();
@@ -56,6 +60,10 @@ function renderMap() {
     const c = S.chapter != null ? st.chapters[S.chapter] : null;
     const cp = c ? (c.event ? getEvent(c.event)?.places : c.places) || [] : [];
     if (cp.length) { pulse = new Set(cp); focus = new Set([...(focus || []), ...cp]); }
+  }
+  if (S.tab === 'trip' && !S.placeId && !S.route) {
+    const ids = [...(store.get().favs || []), ...(S.shared || [])].filter(place);
+    if (ids.length) focus = new Set(ids);
   }
   const preStory = S.storyId && getStory(S.storyId)?.period === 'prehispanica';
   M.showWalls(preStory ? false : !S.history ? true : S.year >= 1640 ? true : S.year >= 1614 ? 'building' : false);
@@ -101,7 +109,7 @@ function closePlace() {
   if (S.storyId) fitStory();
 }
 
-const tabHash = tab => ({ explore: 'explorar', history: `historia/${S.periodId}`, routes: 'rutas', about: 'fuentes' }[tab]);
+const tabHash = tab => ({ explore: 'explorar', history: `historia/${S.periodId}`, routes: 'rutas', about: 'fuentes', trip: 'viaje' }[tab]);
 
 function openTab(tab) {
   tts.stop(); S.speaking = false;
@@ -355,6 +363,65 @@ function cycleSheet() {
   else setSheet('full');
 }
 
+/* ---- Mi Cartagena (favoritos, solo en este navegador) ---- */
+function toggleFav(id, btn) {
+  const on = store.toggle('favs', id);
+  toast(t(on ? 'fav.added' : 'fav.removed'));
+  if (btn && S.placeId) {
+    btn.setAttribute('aria-pressed', String(on));
+    btn.innerHTML = `<svg aria-hidden="true"><use href="#i-${on ? 'heart-on' : 'heart'}"/></svg><span>${V.esc(t(on ? 'fav.saved' : 'fav.save'))}</span>`;
+    btn.classList.remove('pop'); void btn.offsetWidth; btn.classList.add('pop');
+  } else render();
+}
+async function shareFavs() {
+  const ids = (store.get().favs || []).filter(place);
+  if (!ids.length) return;
+  const url = `${location.origin}${location.pathname}#/viaje/mi/${ids.join(',')}`;
+  const text = ids.map(id => '• ' + L(place(id).name).split(' · ')[0]).join('\n');
+  try {
+    if (navigator.share) { await navigator.share({ title: t('fav.shareTitle'), text, url }); return; }
+    await navigator.clipboard.writeText(`${t('fav.shareTitle')}\n${text}\n${url}`);
+    toast(t('fav.copied'));
+  } catch { /* cancelado */ }
+}
+
+/* ---- Cartagena ahora + «¿Sabías que…?» de la portada ---- */
+function paintNow() {
+  const h = $('#heroNow');
+  if (h) h.innerHTML = V.nowCompact(NOW.wx);
+  const c = body.querySelector('[data-now="card"]');
+  if (c) c.innerHTML = V.nowCard(NOW.wx);
+}
+const HOOKS = { en: ['washington', 'galeon', 'gabo'], es: ['galeon', 'washington', 'gabo'] };
+const hook = { i: 0, timer: null };
+function hookIds() { return (HOOKS[getLang()] || HOOKS.es).filter(id => getStory(id)); }
+function paintHook(animate = true) {
+  const ids = hookIds(); if (!ids.length) { $('#heroHook').hidden = true; return; }
+  const id = ids[hook.i % ids.length];
+  const tx = $('#hookText');
+  const set = () => { tx.textContent = t(`hook.${id}`); $('#hookBtn').dataset.story = id; tx.classList.remove('out'); };
+  if (!animate || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return set();
+  tx.classList.add('out'); setTimeout(set, 280);
+}
+function startHook() {
+  clearInterval(hook.timer);
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  hook.timer = setInterval(() => { if (!hero.hidden && !$('#heroHook').contains(document.activeElement)) { hook.i++; paintHook(); } }, 7000);
+}
+function wireHook() {
+  $('#hookBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    const id = e.currentTarget.dataset.story; if (!id) return;
+    hero.hidden = true; store.set('heroSeen', true); M.invalidate();
+    openStory(id);
+  });
+  $('#hookNext').addEventListener('click', e => { e.stopPropagation(); hook.i++; paintHook(); startHook(); });
+  const box = $('#heroHook');
+  box.addEventListener('mouseenter', () => clearInterval(hook.timer));
+  box.addEventListener('mouseleave', startHook);
+  paintHook(false); startHook();
+}
+
 async function share() {
   const url = location.href;
   const p = place(S.placeId);
@@ -430,6 +497,12 @@ function routeFromHash() {
   if (a === 'ruta' && getRoute(b)) { if (S.history) leaveHistory(false); startRoute(b, Number(c) || 1); return true; }
   if (a === 'rutas') { openTab('routes'); return true; }
   if (a === 'fuentes') { openTab('about'); return true; }
+  if (a === 'viaje') {
+    S.shared = b === 'mi' && c ? decodeURIComponent(c).split(',').filter(id => place(id)).slice(0, 40) : null;
+    openTab('trip');
+    if (S.shared?.length) M.fitPlaces(S.shared, { maxZoom: 16 });
+    return true;
+  }
   if (a === 'fortificaciones') { goForts(); return true; }
   if (a === 'explorar') { openTab('explore'); return true; }
   return false;
@@ -447,15 +520,20 @@ function wire() {
   document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
     setLang(b.dataset.lang); store.set('lang', b.dataset.lang);
   }));
-  onLangChange(() => { tts.stop(); S.speaking = false; M.refreshTooltips(); buildSteps(); if (S.history) setYear(S.year, false); render(); });
+  onLangChange(() => { tts.stop(); S.speaking = false; M.refreshTooltips(); buildSteps(); if (S.history) setYear(S.year, false); render(); hook.i = 0; paintHook(false); paintNow(); });
 
-  document.querySelectorAll('[role="tab"]').forEach(b => b.addEventListener('click', () => openTab(b.dataset.tab)));
+  document.querySelectorAll('[role="tab"]').forEach(b => b.addEventListener('click', () => { S.shared = null; openTab(b.dataset.tab); }));
 
   body.addEventListener('click', e => {
     const el = e.target.closest('button, a');
     if (!el) return;
     const d = el.dataset;
-    if (d.cinema) startCinema(d.cinema);
+    if (d.fav) toggleFav(d.fav, el);
+    else if (d.favRemove) { store.remove('favs', d.favRemove); toast(t('fav.removed')); render(); }
+    else if ('favShare' in d) shareFavs();
+    else if ('favMap' in d) { const ids = (store.get().favs || []).filter(place); if (ids.length) { M.fitPlaces(ids, { maxZoom: 16 }); setSheet('peek'); } }
+    else if (d.favSaveall) { d.favSaveall.split(',').filter(place).forEach(id => store.addTo('favs', id)); S.shared = null; toast(t('fav.added')); render(); setHash('viaje'); }
+    else if (d.cinema) startCinema(d.cinema);
     else if ('sceneToggle' in d) toggleScene(el);
     else if (d.story) openStory(d.story);
     else if ('backExplore' in d) closeStory();
@@ -526,6 +604,7 @@ function wire() {
     if (go === 'routes') openTab('routes');
     if (go === 'forts') goForts();
     if (go === 'cinema') { openTab('explore'); startCinema(db.stories[0].id); }
+    if (go === 'trip') openTab('trip');
     M.invalidate();
   });
 
@@ -718,8 +797,10 @@ async function boot() {
     body.innerHTML = `<p>${V.esc(t('ui.error'))}</p><button class="btn" type="button" onclick="location.reload()">${V.esc(t('ui.retry'))}</button>`;
     return;
   }
+  // ?lang=en permite compartir la guía directamente en inglés (p. ej. para visitantes de EE. UU.)
+  const qp = new URLSearchParams(location.search).get('lang');
   const saved = store.get().lang;
-  const initial = saved || ((navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en');
+  const initial = ['es', 'en'].includes(qp) ? qp : saved || ((navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en');
   if (initial !== 'es') setLang(initial); else applyDom();
 
   M.initMap($('#map'), { onPlaceSelect: id => openPlace(id, { fromRoute: !!(S.route && S.route.stops.includes(id)) }) });
@@ -729,7 +810,11 @@ async function boot() {
   wire();
   wireSearch();
   wireViewer();
+  wireHook();
   render();
+  paintNow();
+  setInterval(paintNow, 30000);
+  weather().then(w => { if (w) { NOW.wx = w; paintNow(); } });
   setSheet('peek');
   if (location.hash && routeFromHash()) hero.hidden = true;
   else { hero.hidden = false; hero.querySelector('.btn.primary')?.focus({ preventScroll: true }); }
