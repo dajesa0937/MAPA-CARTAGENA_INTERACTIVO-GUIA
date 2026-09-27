@@ -96,7 +96,7 @@ function addMarker(p) {
   // Zonas aproximadas (p. ej. el combate del galeón) y trazados (malecón): se ven junto con su marcador.
   const extras = [];
   if (p.loc?.radius) extras.push(window.L.circle(p.coords, { radius: p.loc.radius, color: HEX[p.category] || '#1f5f7a', weight: 2, dashArray: '6 8', fillOpacity: 0.08, interactive: false }));
-  if (p.path) extras.push(window.L.polyline(p.path, { color: HEX[p.category] || '#e07a3a', weight: 6, opacity: 0.85, dashArray: '2 10', lineCap: 'round', interactive: false }));
+  for (const line of [p.path, ...(p.paths || [])].filter(Boolean)) extras.push(window.L.polyline(line, { color: HEX[p.category] || '#e07a3a', weight: 6, opacity: 0.85, dashArray: '2 10', lineCap: 'round', interactive: false }));
   extras.forEach(x => x.addTo(map));
   markers.set(p.id, { m, p, state: {}, extras });
 }
@@ -189,7 +189,7 @@ export function refreshTooltips() {
 export function flyToPlace(id, { zoom } = {}) {
   const p = place(id);
   if (!p) return;
-  const z = zoom ?? (p.loc?.radius ? 11 : p.path ? 14 : Math.max(map.getZoom(), p.loc?.accuracy === 'zone' ? 15 : 17));
+  const z = zoom ?? (p.loc?.radius ? 11 : (p.path || p.paths) ? 14.5 : Math.max(map.getZoom(), p.loc?.accuracy === 'zone' ? 15 : 17));
   map.flyTo(offsetForPanel(p.coords, z), z, { duration: 0.7 });
 }
 

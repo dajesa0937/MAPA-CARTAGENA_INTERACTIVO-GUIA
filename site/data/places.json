@@ -3570,12 +3570,12 @@
       "Playas"
     ],
     "coords": [
-      10.40409,
-      -75.55342
+      10.40385,
+      -75.5562
     ],
     "loc": {
       "accuracy": "zone",
-      "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026). Zona de playas de la península, no un punto exacto."
+      "method": "Verificada con los polígonos de playa de OpenStreetMap: «Bocagrande» (vía 25446658), frente al mar Caribe, y «Playa Castillo Grande» (vía 25446639), del lado de la bahía (27/09/2026). El punto marca la playa de Bocagrande; las líneas punteadas recorren ambas playas."
     },
     "dates": {
       "es": "información turística actual",
@@ -3586,8 +3586,8 @@
     ],
     "people": [],
     "guide": {
-      "es": "A pocos minutos del centro histórico está la Cartagena de los rascacielos. En la península de Bocagrande hay playas urbanas; en la de Castillogrande, del lado de la bahía, el agua suele estar más calmada.",
-      "en": "A few minutes from the old town is the Cartagena of skyscrapers. The Bocagrande peninsula has city beaches; at Castillogrande, on the bay side, the water is usually calmer."
+      "es": "A pocos minutos del centro histórico está la Cartagena de los rascacielos. La playa de Bocagrande se extiende frente al mar Caribe a lo largo de la península; la de Castillogrande, en la punta y del lado de la bahía, suele tener el agua más calmada. En el mapa, las líneas punteadas marcan las dos playas.",
+      "en": "A few minutes from the old town is the Cartagena of skyscrapers. Bocagrande beach stretches along the peninsula facing the Caribbean; Castillogrande beach, at the tip on the bay side, usually has calmer water. On the map, the dotted lines trace both beaches."
     },
     "history": {
       "es": [
@@ -3649,6 +3649,92 @@
           "en": "Bocagrande from the air"
         }
       }
+    ],
+    "paths": [
+      [
+        [
+          10.39808,
+          -75.56455
+        ],
+        [
+          10.3987,
+          -75.56199
+        ],
+        [
+          10.40027,
+          -75.55962
+        ],
+        [
+          10.40214,
+          -75.55753
+        ],
+        [
+          10.40377,
+          -75.55604
+        ],
+        [
+          10.40593,
+          -75.55437
+        ],
+        [
+          10.40767,
+          -75.55297
+        ],
+        [
+          10.40945,
+          -75.55187
+        ],
+        [
+          10.41153,
+          -75.55161
+        ]
+      ],
+      [
+        [
+          10.39361,
+          -75.56116
+        ],
+        [
+          10.3933,
+          -75.55963
+        ],
+        [
+          10.39376,
+          -75.55795
+        ],
+        [
+          10.39445,
+          -75.55699
+        ],
+        [
+          10.39447,
+          -75.55573
+        ],
+        [
+          10.3938,
+          -75.55424
+        ],
+        [
+          10.39349,
+          -75.55308
+        ],
+        [
+          10.39296,
+          -75.55192
+        ],
+        [
+          10.39217,
+          -75.55041
+        ],
+        [
+          10.39126,
+          -75.54891
+        ],
+        [
+          10.39096,
+          -75.54795
+        ]
+      ]
     ]
   },
   {
@@ -3667,12 +3753,12 @@
       "Pescadores"
     ],
     "coords": [
-      10.47604,
-      -75.4947
+      10.47815,
+      -75.4951
     ],
     "loc": {
       "accuracy": "zone",
-      "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026). Zona del corregimiento, no un punto exacto."
+      "method": "Verificada con OpenStreetMap: el punto está sobre la playa (vía 169518511, natural=beach) frente al corregimiento de La Boquilla (27/09/2026). Zona, no un punto exacto."
     },
     "dates": {
       "es": "información turística actual",

@@ -162,3 +162,4 @@ Datos prácticos a revisar periódicamente: vuelos, requisitos de entrada y avis
 - QR: `vendor/qrcode/qrcode.js` (qrcode-generator 2.0.4, Kazuhiko Arase, licencia MIT).
 - Privacidad: nada se envía a servidores; «Guardar» y el nombre del remitente viven solo en el navegador del visitante (localStorage).
 - v6.2: botón **WhatsApp** en la postal. En el teléfono usa el menú de compartir del sistema (envía la imagen). En el computador copia la postal al portapapeles y abre WhatsApp (wa.me) con el mensaje y el enlace: se pega la imagen con Ctrl+V. Si el navegador no permite copiar imágenes, la descarga. Nuevos botones «Copiar imagen» y «Más opciones».
+- v6.3: playas de Bocagrande y Castillogrande reubicadas sobre los polígonos de playa de OpenStreetMap (antes el punto caía en el centro del barrio). El mapa ahora admite varios trazados por lugar (`paths`) y dibuja las dos playas. La Boquilla también se movió a la playa.

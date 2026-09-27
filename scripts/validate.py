@@ -39,7 +39,7 @@ for p in places:
     if p.get('category') not in CATS: errs.append(f'{w}: categoría inválida')
     lat, lon = p['coords']
     if not (BBOX[0] <= lat <= BBOX[1] and BBOX[2] <= lon <= BBOX[3]): errs.append(f'{w}: coordenadas fuera de Cartagena')
-    for pt in p.get('path', []):
+    for pt in [*p.get('path', []), *[q for line in p.get('paths', []) for q in line]]:
         if not (BBOX[0] <= pt[0] <= BBOX[1] and BBOX[2] <= pt[1] <= BBOX[3]): errs.append(f'{w}: trazado fuera de Cartagena')
     if p.get('category') == 'hoy' and not p.get('tourism'): errs.append(f'{w}: lo actual debe marcarse como información turística')
     if p.get('loc', {}).get('accuracy') not in {'exact','approx','zone'}: errs.append(f'{w}: precisión de ubicación no declarada')
