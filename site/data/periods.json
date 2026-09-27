@@ -28,7 +28,8 @@
   "summary": {
    "es": "Antes de la llegada de los españoles, esta costa ya estaba habitada. Cerca de aquí se han encontrado algunas de las cerámicas más antiguas de América.",
    "en": "Long before the Spaniards arrived, this coast was already inhabited. Some of the oldest pottery in the Americas has been found near here."
-  }
+  },
+  "scene": "prehispanica"
  },
  {
   "id": "fundacion",
@@ -358,21 +359,24 @@
    "en": "Cartagena, World Heritage"
   },
   "context": {
-   "es": "En 1984 la UNESCO inscribió el «Puerto, fortalezas y conjunto monumental de Cartagena» en la Lista del Patrimonio Mundial, reconociendo el sistema de fortificaciones más extenso de Sudamérica. Hoy las fortificaciones son administradas por la Escuela Taller Cartagena de Indias, que reinvierte los ingresos en su conservación. El reto contemporáneo es equilibrar turismo, vida de barrio y protección del patrimonio.",
-   "en": "In 1984 UNESCO inscribed the “Port, Fortresses and Group of Monuments, Cartagena” on the World Heritage List, recognising the most extensive fortifications in South America. Today the fortifications are managed by the Escuela Taller Cartagena de Indias, which reinvests its income in their conservation. The contemporary challenge is balancing tourism, neighbourhood life and heritage protection."
+   "es": "En 1984 la UNESCO inscribió el «Puerto, fortalezas y conjunto monumental de Cartagena» en la Lista del Patrimonio Mundial, reconociendo el sistema de fortificaciones más extenso de Sudamérica. Hoy las fortificaciones son administradas por la Escuela Taller Cartagena de Indias, que reinvierte los ingresos en su conservación. El reto contemporáneo es equilibrar turismo, vida de barrio y protección del patrimonio. En 2015 la Armada encontró el galeón San José, hundido en 1708, y en 2025 se recuperaron sus primeros objetos. En 2026 avanzan el Gran Malecón del Mar, un paseo de 5,1 km frente a la playa, y las obras de protección costera.",
+   "en": "In 1984 UNESCO inscribed the “Port, Fortresses and Group of Monuments, Cartagena” on the World Heritage List, recognising the most extensive fortifications in South America. Today the fortifications are managed by the Escuela Taller Cartagena de Indias, which reinvests its income in their conservation. The contemporary challenge is balancing tourism, neighbourhood life and heritage protection. In 2015 the Navy found the San José galleon, sunk in 1708, and in 2025 its first objects were recovered. In 2026 work continues on the Gran Malecón del Mar, a 5.1 km beachfront promenade, and on coastal protection."
   },
   "certainty": "documentado",
   "sources": [
    "unesco",
-   "etcar-sanfelipe-areas"
+   "etcar-sanfelipe-areas",
+   "wiki-wager",
+   "eltiempo-galeon-2025",
+   "metro-malecon-2026"
   ],
   "short": {
    "es": "Patrimonio",
    "en": "Heritage"
   },
   "summary": {
-   "es": "En 1984 la UNESCO declaró Patrimonio Mundial el puerto, las fortalezas y el centro histórico. Hoy puedes recorrerlos, como en esta guía.",
-   "en": "In 1984 UNESCO declared the port, fortresses and historic centre a World Heritage Site. Today you can explore them, just like in this guide."
+   "es": "En 1984 la UNESCO declaró Patrimonio Mundial el puerto, las fortalezas y el centro histórico. Hoy la ciudad mira al mar: playas, islas y un gran malecón en obra.",
+   "en": "In 1984 UNESCO made the port, fortresses and historic centre a World Heritage Site. Today the city looks to the sea: beaches, islands and a great seafront promenade under construction."
   },
   "photo": {
    "pexels": 11815901,
@@ -385,6 +389,40 @@
     "es": "Hoy: el centro histórico al atardecer",
     "en": "Today: the historic centre at sunset"
    }
-  }
+  },
+  "slides": [
+   {
+    "pexels": 11815901,
+    "author": "Kelly",
+    "alt": {
+     "es": "El centro histórico al atardecer",
+     "en": "The historic centre at sunset"
+    }
+   },
+   {
+    "pexels": 11815929,
+    "author": "Kelly",
+    "alt": {
+     "es": "Bocagrande y la costa: aquí avanza el Gran Malecón del Mar",
+     "en": "Bocagrande and the coast, where the Gran Malecón del Mar is being built"
+    }
+   },
+   {
+    "pexels": 13806427,
+    "author": "Camilo Ruiz Vasquez",
+    "alt": {
+     "es": "La playa de Bocagrande",
+     "en": "Bocagrande beach"
+    }
+   },
+   {
+    "pexels": 35211242,
+    "author": "Juan Coronel",
+    "alt": {
+     "es": "Playas de agua turquesa en Bolívar (imagen ilustrativa)",
+     "en": "Turquoise-water beaches in Bolívar (illustrative)"
+    }
+   }
+  ]
  }
 ]

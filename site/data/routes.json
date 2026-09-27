@@ -1,50 +1,173 @@
 [
-  {
-    "id": "60-minutos",
-    "mode": "walk",
-    "name": {"es": "Cartagena en 60 minutos", "en": "Cartagena in 60 minutes"},
-    "intro": {"es": "Lo esencial del centro histórico: la gran puerta, el poder colonial y el origen de la muralla.", "en": "The essentials of the historic centre: the great gate, colonial power and the origin of the walls."},
-    "stops": ["puerta-del-reloj", "plaza-bolivar", "palacio-inquisicion", "catedral", "iglesia-santo-domingo", "baluarte-santo-domingo"],
-    "stopMinutes": 7
+ {
+  "id": "60-minutos",
+  "mode": "walk",
+  "name": {
+   "es": "Cartagena en 60 minutos",
+   "en": "Cartagena in 60 minutes"
   },
-  {
-    "id": "murallas",
-    "mode": "walk",
-    "name": {"es": "Ruta de las Murallas", "en": "The Walls Route"},
-    "intro": {"es": "De la bahía al mar Caribe y hasta Las Bóvedas, siguiendo el cordón de baluartes que cerró la ciudad desde 1614.", "en": "From the bay to the Caribbean and on to Las Bóvedas, following the ring of bastions that enclosed the city from 1614."},
-    "stops": ["puerta-del-reloj", "baluarte-san-ignacio", "baluarte-san-francisco-javier", "baluarte-santiago", "baluarte-santo-domingo", "baluarte-santa-cruz", "las-bovedas", "baluarte-santa-catalina", "baluarte-san-lucas"],
-    "stopMinutes": 6
+  "intro": {
+   "es": "Lo esencial del centro histórico: la gran puerta, el poder colonial y el origen de la muralla.",
+   "en": "The essentials of the historic centre: the great gate, colonial power and the origin of the walls."
   },
-  {
-    "id": "independencia",
-    "mode": "walk",
-    "name": {"es": "Cartagena de la Independencia", "en": "Independence Cartagena"},
-    "intro": {"es": "Los escenarios de 1811, 1815 y 1816: del barrio popular que empujó la independencia al lugar que recuerda a sus mártires.", "en": "The settings of 1811, 1815 and 1816: from the working-class quarter that pushed for independence to the place that remembers its martyrs."},
-    "stops": ["getsemani", "camellon-martires", "puerta-del-reloj", "palacio-inquisicion", "plaza-bolivar"],
-    "stopMinutes": 8
+  "stops": [
+   "puerta-del-reloj",
+   "plaza-bolivar",
+   "palacio-inquisicion",
+   "catedral",
+   "iglesia-santo-domingo",
+   "baluarte-santo-domingo"
+  ],
+  "stopMinutes": 7
+ },
+ {
+  "id": "murallas",
+  "mode": "walk",
+  "name": {
+   "es": "Ruta de las Murallas",
+   "en": "The Walls Route"
   },
-  {
-    "id": "colonial",
-    "mode": "walk",
-    "name": {"es": "Cartagena Colonial", "en": "Colonial Cartagena"},
-    "intro": {"es": "Iglesias, conventos y tribunales: la ciudad del poder religioso y civil de los siglos XVI al XVIII.", "en": "Churches, convents and courts: the city of religious and civil power from the 16th to the 18th century."},
-    "stops": ["san-pedro-claver", "plaza-bolivar", "catedral", "palacio-inquisicion", "iglesia-santo-domingo", "teatro-adolfo-mejia", "san-diego", "las-bovedas"],
-    "stopMinutes": 8
+  "intro": {
+   "es": "De la bahía al mar Caribe y hasta Las Bóvedas, siguiendo el cordón de baluartes que cerró la ciudad desde 1614.",
+   "en": "From the bay to the Caribbean and on to Las Bóvedas, following the ring of bastions that enclosed the city from 1614."
   },
-  {
-    "id": "familias",
-    "mode": "walk",
-    "name": {"es": "Cartagena para familias", "en": "Cartagena for families"},
-    "intro": {"es": "Un paseo corto y llano, con historias fáciles de contar: una puerta con puente levadizo, un baluarte frente al mar y las bóvedas del cuartel.", "en": "A short, flat walk with easy-to-tell stories: a gate with a drawbridge, a bastion by the sea and the barracks vaults."},
-    "stops": ["puerta-del-reloj", "plaza-bolivar", "baluarte-santo-domingo", "las-bovedas"],
-    "stopMinutes": 10
+  "stops": [
+   "puerta-del-reloj",
+   "baluarte-san-ignacio",
+   "baluarte-san-francisco-javier",
+   "baluarte-santiago",
+   "baluarte-santo-domingo",
+   "baluarte-santa-cruz",
+   "las-bovedas",
+   "baluarte-santa-catalina",
+   "baluarte-san-lucas"
+  ],
+  "stopMinutes": 6
+ },
+ {
+  "id": "independencia",
+  "mode": "walk",
+  "name": {
+   "es": "Cartagena de la Independencia",
+   "en": "Independence Cartagena"
   },
-  {
-    "id": "fortificaciones",
-    "mode": "boat",
-    "name": {"es": "Ruta de las Fortificaciones", "en": "The Fortifications Route"},
-    "intro": {"es": "La defensa de la bahía, de tierra a mar: el gran castillo, los fuertes de la bahía interior y las bocas de acceso. Requiere auto y lancha; algunos sitios tienen acceso restringido.", "en": "The defence of the bay, from land to sea: the great castle, the inner-bay forts and the entrances. Requires car and boat; some sites have restricted access."},
-    "stops": ["castillo-san-felipe", "fuerte-pastelillo", "baluarte-reducto", "san-juan-manzanillo", "fuerte-santa-cruz", "escollera-bocagrande", "castillo-san-luis", "fuerte-san-fernando", "bateria-san-jose"],
-    "stopMinutes": 20
-  }
+  "intro": {
+   "es": "Los escenarios de 1811, 1815 y 1816: del barrio popular que empujó la independencia al lugar que recuerda a sus mártires.",
+   "en": "The settings of 1811, 1815 and 1816: from the working-class quarter that pushed for independence to the place that remembers its martyrs."
+  },
+  "stops": [
+   "getsemani",
+   "camellon-martires",
+   "puerta-del-reloj",
+   "palacio-inquisicion",
+   "plaza-bolivar"
+  ],
+  "stopMinutes": 8
+ },
+ {
+  "id": "colonial",
+  "mode": "walk",
+  "name": {
+   "es": "Cartagena Colonial",
+   "en": "Colonial Cartagena"
+  },
+  "intro": {
+   "es": "Iglesias, conventos y tribunales: la ciudad del poder religioso y civil de los siglos XVI al XVIII.",
+   "en": "Churches, convents and courts: the city of religious and civil power from the 16th to the 18th century."
+  },
+  "stops": [
+   "san-pedro-claver",
+   "plaza-bolivar",
+   "catedral",
+   "palacio-inquisicion",
+   "iglesia-santo-domingo",
+   "teatro-adolfo-mejia",
+   "san-diego",
+   "las-bovedas"
+  ],
+  "stopMinutes": 8
+ },
+ {
+  "id": "familias",
+  "mode": "walk",
+  "name": {
+   "es": "Cartagena para familias",
+   "en": "Cartagena for families"
+  },
+  "intro": {
+   "es": "Un paseo corto y llano, con historias fáciles de contar: una puerta con puente levadizo, un baluarte frente al mar y las bóvedas del cuartel.",
+   "en": "A short, flat walk with easy-to-tell stories: a gate with a drawbridge, a bastion by the sea and the barracks vaults."
+  },
+  "stops": [
+   "puerta-del-reloj",
+   "plaza-bolivar",
+   "baluarte-santo-domingo",
+   "las-bovedas"
+  ],
+  "stopMinutes": 10
+ },
+ {
+  "id": "fortificaciones",
+  "mode": "boat",
+  "name": {
+   "es": "Ruta de las Fortificaciones",
+   "en": "The Fortifications Route"
+  },
+  "intro": {
+   "es": "La defensa de la bahía, de tierra a mar: el gran castillo, los fuertes de la bahía interior y las bocas de acceso. Requiere auto y lancha; algunos sitios tienen acceso restringido.",
+   "en": "The defence of the bay, from land to sea: the great castle, the inner-bay forts and the entrances. Requires car and boat; some sites have restricted access."
+  },
+  "stops": [
+   "castillo-san-felipe",
+   "fuerte-pastelillo",
+   "baluarte-reducto",
+   "san-juan-manzanillo",
+   "fuerte-santa-cruz",
+   "escollera-bocagrande",
+   "castillo-san-luis",
+   "fuerte-san-fernando",
+   "bateria-san-jose"
+  ],
+  "stopMinutes": 20
+ },
+ {
+  "id": "iglesias",
+  "mode": "walk",
+  "name": {
+   "es": "Ruta de las iglesias",
+   "en": "Churches trail"
+  },
+  "intro": {
+   "es": "Cinco templos, cinco historias: piratas, jesuitas, un barrio popular y una bala de cañón.",
+   "en": "Five churches, five stories: pirates, Jesuits, a working-class quarter and a cannonball."
+  },
+  "stops": [
+   "iglesia-trinidad",
+   "san-pedro-claver",
+   "catedral",
+   "iglesia-santo-domingo",
+   "iglesia-santo-toribio"
+  ],
+  "stopMinutes": 10
+ },
+ {
+  "id": "hoy",
+  "mode": "boat",
+  "name": {
+   "es": "Cartagena hoy: mar y playas",
+   "en": "Cartagena today: sea and beaches"
+  },
+  "intro": {
+   "es": "De la ciudad moderna al Caribe abierto: el nuevo malecón, las playas y las islas.",
+   "en": "From the modern city to the open Caribbean: the new promenade, the beaches and the islands."
+  },
+  "stops": [
+   "la-boquilla",
+   "gran-malecon",
+   "playas-bocagrande",
+   "playa-blanca",
+   "islas-rosario"
+  ],
+  "stopMinutes": 0
+ }
 ]

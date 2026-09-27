@@ -7,7 +7,7 @@ site = root / 'site'
 dist = root / 'dist'; dist.mkdir(exist_ok=True)
 js = subprocess.run(['npx', 'esbuild', str(site / 'js/app.js'), '--bundle', '--format=iife', '--minify', '--target=es2020'],
                     capture_output=True, text=True, check=True, cwd=root).stdout
-data = {n: json.loads((site / f'data/{n}.json').read_text('utf-8')) for n in ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media']}
+data = {n: json.loads((site / f'data/{n}.json').read_text('utf-8')) for n in ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media', 'stories']}
 i18n = {l: json.loads((site / f'i18n/{l}.json').read_text('utf-8')) for l in ['es', 'en']}
 bundle = json.dumps({'data': data, 'i18n': i18n}, ensure_ascii=False).replace('</', '<\\/')
 html = (site / 'index.html').read_text('utf-8')

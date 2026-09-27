@@ -28,11 +28,13 @@ site/
   js/i18n.js            idioma
   js/store.js           progreso del visitante (solo en el navegador)
   js/tts.js             narración
-  data/places.json      lugares (29)
-  data/events.json      acontecimientos (27)
+  js/scenes.js          escenas animadas (SVG) y presentaciones de fotos
+  data/places.json      lugares (37)
+  data/events.json      acontecimientos (38)
   data/periods.json     épocas (9)
-  data/routes.json      rutas (6)
-  data/sources.json     fuentes (47)
+  data/routes.json      rutas (8)
+  data/stories.json     historias temáticas de Explorar (6)
+  data/sources.json     fuentes (64)
   data/badges.json      insignias
   i18n/es.json, en.json textos de interfaz
 scripts/validate.py     control de calidad histórica y de datos
@@ -40,7 +42,10 @@ scripts/validate.py     control de calidad histórica y de datos
 
 ## Probar en tu computador
 
-Los módulos y los JSON necesitan un servidor local (abrir el archivo con doble clic no funciona):
+La forma más fácil: abre `dist/cartagena-de-indias.html` con doble clic. Es la app completa en un solo
+archivo (se regenera con `python scripts/build_single.py`, que necesita Node). Solo el mapa base requiere Internet.
+
+Para trabajar con el código fuente de `site/`, los módulos y los JSON necesitan un servidor local (abrir el archivo con doble clic no funciona):
 
 ```
 cd site
@@ -49,18 +54,7 @@ python -m http.server 8080
 
 Luego abre http://localhost:8080. También sirve la extensión "Live Server" de VS Code.
 
-## Publicar en GitHub Pages (recomendado: gratis y sin cupo mensual de publicaciones)
-
-El proyecto incluye `.github/workflows/pages.yml`: cada vez que subes cambios a la rama `main`,
-GitHub valida los datos (`scripts/validate.py`) y publica la carpeta `site` automáticamente.
-
-1. En VS Code: Archivo → Abrir carpeta → MAPA-CARTAGENA_INTERACTIVO-GUIA.
-2. Panel "Control de código fuente" → "Publicar en GitHub" → repositorio **público** `cartagena-mapa-historia`.
-3. En GitHub: Settings → Pages → Source: **GitHub Actions**.
-4. Sitio: https://TU-USUARIO.github.io/cartagena-mapa-historia/
-5. Para actualizar: en VS Code escribe un mensaje, "Confirmar" y "Sincronizar cambios".
-
-## Publicar en Netlify (alternativa)
+## Publicar en Netlify
 
 Opción sencilla: entra a https://app.netlify.com/projects/cartagena-mapa-historia → **Deploys** →
 arrastra la carpeta `site` a la zona "Drag and drop". Queda publicado en
@@ -88,5 +82,33 @@ Opción por consola (con Node instalado): `npx netlify-cli deploy --prod --dir s
 - Verificar en campo el Teatro Adolfo Mejía y las zonas marcadas como aproximadas (el resto se verificó sobre OpenStreetMap).
 - Sustituir el trazado esquemático de la muralla por uno exacto (GeoJSON de OpenStreetMap o levantamiento propio).
 - Fotos propias de los lugares que hoy usan imagen ilustrativa.
-- Fichas marcadas "pendiente" (catedral, Santo Domingo): contrastar con fuente académica.
+- Catedral: fechas tomadas de fuentes secundarias coincidentes; contrastar con un estudio académico.
+- Iglesias de la Trinidad, Santo Toribio y Santo Domingo: conseguir fotos propias (hoy usan imagen ilustrativa).
+- Gran Malecón del Mar y playas: información de actualidad verificada el 26/09/2026; revisar cada mes mientras dure la obra (apertura de los primeros 2 km programada para el 15/10/2026).
+- Galeón San José: actualizar cuando el ICANH publique nuevos resultados.
 - Capa "Cartagena histórica vs. actual" con un plano antiguo georreferenciado.
+
+## Novedades v4 (septiembre de 2026)
+
+- **Explorar** abre con «Historias para descubrir»: seis relatos cortos con mapa, capítulos y fuentes.
+  - El galeón San José.
+  - La ciudad de los templos (las iglesias).
+  - Cómo se defendió Cartagena.
+  - La ciudad heroica (la independencia).
+  - Antes de Cartagena.
+  - Cartagena hoy · 2026.
+- **Capítulos que reutilizan los acontecimientos verificados.** Cada capítulo toma sus datos de `events.json`, así no se duplican fechas ni textos.
+- **Escenas animadas en SVG** (sin video, funcionan sin conexión). Tienen subtítulos, barra de progreso y botón de pausa, y respetan «reducir movimiento».
+  - La escena prehispánica se rotula como *interpretación artística*.
+  - La del galeón se rotula como *ilustración*.
+- **Cartagena hoy.**
+  - Presentación de fotos en la época contemporánea.
+  - Nueva categoría «Cartagena hoy» (Gran Malecón del Mar, Bocagrande, La Boquilla, Playa Blanca e Islas del Rosario), marcada siempre como información actual con fecha de verificación.
+- **Rutas rediseñadas.**
+  - Cada tarjeta muestra la foto, las cifras (paradas, km y minutos) y la tira de paradas con miniaturas; puedes empezar en cualquier parada.
+  - El botón «Mapa» muestra el trazado sin iniciar la ruta.
+  - Rutas nuevas: «Ruta de las iglesias» y «Cartagena hoy».
+- **Mapa.**
+  - Zonas aproximadas dibujadas como círculo discontinuo (combate del galeón, Islas del Rosario).
+  - El trazado aproximado del malecón aparece como línea punteada.
+  - La ubicación exacta del naufragio no se muestra: es reservada por el Estado.

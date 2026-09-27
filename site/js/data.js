@@ -1,10 +1,10 @@
 // Capa de servicios de datos. Hoy lee archivos JSON estáticos; mañana puede leer una API
 // sin que la interfaz cambie (misma forma de objetos).
-const FILES = ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media'];
+const FILES = ['places', 'events', 'periods', 'routes', 'sources', 'badges', 'media', 'stories'];
 
 export const db = {
-  places: [], events: [], periods: [], routes: [], sources: [], badges: [], media: {},
-  byId: { places: new Map(), events: new Map(), periods: new Map(), routes: new Map(), sources: new Map() }
+  places: [], events: [], periods: [], routes: [], sources: [], badges: [], media: {}, stories: [],
+  byId: { places: new Map(), events: new Map(), periods: new Map(), routes: new Map(), sources: new Map(), stories: new Map() }
 };
 
 export async function loadData() {
@@ -24,6 +24,7 @@ export const event = id => db.byId.events.get(id);
 export const period = id => db.byId.periods.get(id);
 export const route = id => db.byId.routes.get(id);
 export const source = id => db.byId.sources.get(id);
+export const story = id => db.byId.stories.get(id);
 
 export function periodForYear(y) {
   return db.periods.find(p => y >= p.from && y <= p.to) || db.periods[db.periods.length - 1];
@@ -59,12 +60,12 @@ export function routeStats(r) {
 /** Fotografía (Pexels) de un lugar; si no hay foto propia, imagen ilustrativa de su categoría. */
 export const pexels = (id, w = 800) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 export function photosFor(p) {
-  if (p.photos?.length) return p.photos.map(x => ({ ...x, specific: true }));
+  if (p.photos?.length) return p.photos.map(x => ({ specific: true, ...x }));
   const c = photoFor(p);
   return c ? [c] : [];
 }
 export function photoFor(p) {
-  if (p.photos?.length) return { ...p.photos[0], specific: true };
+  if (p.photos?.length) return { specific: true, ...p.photos[0] };
   const c = db.media.cat?.[p.category];
   return c ? { ...c, specific: false } : null;
 }
@@ -76,7 +77,21 @@ export function eraFocus(periodId) {
   const ids = new Set();
   db.events.filter(e => e.period === periodId).forEach(e => (e.places || []).forEach(id => ids.add(id)));
   db.places.forEach(p => { const f = p.built?.from; if (f != null && f >= pe.from && f <= pe.to) ids.add(p.id); });
+  if (periodId === 'contemporanea') db.places.filter(p => p.category === 'hoy').forEach(p => ids.add(p.id));
   return [...ids].filter(id => place(id));
 }
 /** Año que representa el final de una época (para ver cómo quedó la ciudad). */
 export const eraYear = pe => pe.id === 'contemporanea' ? 2026 : Math.max(1500, pe.to);
+
+/** Lugares y fuentes de una historia temática (derivados de sus capítulos: un solo origen de datos). */
+export function storyPlaces(s) {
+  const ids = new Set(s.places || []);
+  s.chapters.forEach(c => (c.event ? event(c.event)?.places || [] : c.places || []).forEach(id => ids.add(id)));
+  return [...ids].filter(id => place(id));
+}
+export function storySources(s) {
+  const ids = new Set();
+  s.chapters.forEach(c => (c.event ? event(c.event)?.sources || [] : c.sources || []).forEach(id => ids.add(id)));
+  (s.places || []).forEach(id => (place(id)?.sources || []).forEach(x => ids.add(x)));
+  return [...ids].map(source).filter(Boolean);
+}

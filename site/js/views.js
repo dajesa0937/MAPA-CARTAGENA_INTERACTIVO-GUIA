@@ -1,11 +1,12 @@
 // Vistas del panel: devuelven HTML a partir de los datos. Sin lógica de estado.
-import { db, place, event, period, source, routeStats, existsIn, pexels, photoFor, photosFor, eraFocus } from './data.js';
+import { db, place, event, period, source, story as getStory, routeStats, existsIn, pexels, photoFor, photosFor, eraFocus, storyPlaces, storySources } from './data.js';
+import { sceneHtml, slidesHtml } from './scenes.js';
 import { t, L, getLang, formatDate } from './i18n.js';
 import { store } from './store.js';
 import { catColor } from './map.js';
 
 export const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-export const CATS = ['castillo', 'muralla', 'iglesia', 'museo', 'plaza', 'monumento', 'cultura', 'barrio'];
+export const CATS = ['castillo', 'muralla', 'iglesia', 'museo', 'plaza', 'monumento', 'cultura', 'barrio', 'mar', 'hoy'];
 
 const ico = (name, cls = '') => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const certPill = c => `<span class="pill cert-${esc(c)}" title="${esc(t(`cert.${c}.d`))}">${esc(t(`cert.${c}`))}</span>`;
@@ -49,6 +50,18 @@ function placeItem(p, extra = '') {
 }
 
 /* ---------- Explorar ---------- */
+export function storyCard(st) {
+  const chapters = st.chapters.length;
+  const media = st.scene ? sceneHtml(st.scene, { thumb: true })
+    : st.cover ? img({ ...st.cover }, 520, '', '(max-width: 820px) 72vw, 250px') : '';
+  return `<button class="scard" type="button" data-story="${esc(st.id)}" style="--sc:${esc(st.accent || '#0e2a3b')}">
+    ${media}
+    <span class="sk">${esc(L(st.kicker))}</span>
+    <span class="sb"><strong>${esc(L(st.title))}</strong><small>${esc(L(st.teaser))}</small>
+      <span class="sm">${ico('book')}${esc(t('story.chapters', { n: chapters }))}</span></span>
+  </button>`;
+}
+
 export function exploreView({ visibleCats }) {
   const all = visibleCats.size === CATS.length;
   const chips = CATS.filter(c => db.places.some(p => p.category === c)).map(c => `
@@ -59,9 +72,12 @@ export function exploreView({ visibleCats }) {
     .sort((a, b) => CATS.indexOf(a.category) - CATS.indexOf(b.category) || L(a.name).localeCompare(L(b.name)));
   const featured = FEATURED.map(place).filter(p => p && visibleCats.has(p.category));
   return `<div class="anim">
-    ${featured.length ? `<h3 class="st st-top">${esc(t('explore.featured'))}</h3>
+    <div class="sec-head"><h3 class="st st-top">${esc(t('explore.stories'))}</h3></div>
+    <p class="hint">${esc(t('explore.storiesHint'))}</p>
+    <div class="stories" role="list">${db.stories.map(st => `<div role="listitem">${storyCard(st)}</div>`).join('')}</div>
+    ${featured.length ? `<h3 class="st">${esc(t('explore.featured'))}</h3>
     <div class="carousel" role="list">${featured.map(p => `<div role="listitem">${card(p)}</div>`).join('')}</div>` : ''}
-    <h2 class="pt">${esc(t('hero.explore'))}</h2>
+    <h2 class="pt">${esc(t('explore.allPlaces'))}</h2>
     <p class="lead">${esc(t('explore.intro'))}</p>
     <div class="chips">
       <button type="button" class="chip" data-cat="__all" aria-pressed="${all}">${esc(t('filters.all'))}</button>
@@ -70,6 +86,70 @@ export function exploreView({ visibleCats }) {
     <h3 class="st">${esc(t('explore.count', { n: places.length }))}</h3>
     <div class="grid">${places.map(p => card(p, { size: 'sm' })).join('')}</div>
   </div>`;
+}
+
+/* ---------- Historia temática ---------- */
+export function storyView(st, { chapter = null, speaking = false } = {}) {
+  const i = db.stories.indexOf(st), n = db.stories.length;
+  const next = db.stories[(i + 1) % n];
+  const slides = st.slides ? period('contemporanea')?.slides : null;
+  const animated = st.scene || slides;
+  const cover = st.scene ? sceneHtml(st.scene) : slides ? slidesHtml(slides) : st.cover ? img(st.cover, 900, 'era-img', '(max-width: 820px) 100vw, 420px') : '';
+  const head = `<span class="era-years">${esc(L(st.kicker))}</span><h2>${esc(L(st.title))}</h2>`;
+  const chapters = st.chapters.map((c, k) => {
+    const e = c.event ? event(c.event) : null;
+    const year = e ? String(e.year) : L(c.label);
+    const title = e ? L(e.title) : L(c.title);
+    const text = e ? L(e.text) : L(c.text);
+    const cert = e ? e.certainty : c.certainty;
+    return `<li><button type="button" class="moment ${chapter === k ? 'on' : ''}" data-schapter="${k}">
+      <span class="m-year ${e ? '' : 'txt'}">${esc(year)}</span>
+      <span class="m-body"><strong>${esc(title)}</strong><small>${esc(text)}</small>${cert && cert !== 'documentado' ? `<span class="m-cert">${certPill(cert)}</span>` : ''}</span>
+    </button></li>`;
+  }).join('');
+  const places = storyPlaces(st).map(place);
+  const srcs = storySources(st).map(s => `<li><span class="src-type">${esc(t(`about.type.${s.type}`))}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}</li>`).join('');
+  const route = st.route && db.routes.find(r => r.id === st.route);
+  return `<article class="story anim">
+    <figure class="era-cover ${animated ? 'has-scene' : ''}">
+      ${cover}
+      ${animated ? '' : `<span class="era-shade"></span>`}
+      <button class="cover-back" type="button" data-back-explore>${ico('back')}${esc(t('story.back'))}</button>
+      ${animated ? '' : `<div class="era-head">${head}</div>`}
+      ${!animated && st.cover ? `<figcaption>${esc(L(st.cover.alt))} · ${esc(t('photo.by'))}: ${esc(st.cover.author)} / Pexels</figcaption>` : ''}
+    </figure>
+    ${animated ? `<header class="story-head">${head}</header>` : ''}
+    ${st.tourism ? `<p class="tourism-tag">${ico('hoy')}${esc(t('tourism.tag', { date: formatDate('2026-09-26') }))}</p>` : ''}
+    <p class="era-summary">${esc(L(st.intro))}</p>
+    <div class="story-cta">
+      <button class="btn listen-btn" type="button" data-listen-story aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('story.listenStory'))}</span></button>
+      ${route ? `<button class="btn primary" type="button" data-route="${esc(route.id)}">${ico('route')}${esc(t('story.doRoute'))}</button>` : ''}
+      ${st.period ? `<button class="btn" type="button" data-period="${esc(st.period)}">${ico('hourglass')}${esc(t('story.openChapter'))}</button>` : ''}
+    </div>
+
+    <section class="block">
+      <h3 class="st">${esc(t('story.steps'))}</h3>
+      ${places.length ? `<p class="hint">${esc(t('story.tapEvent'))}</p>` : ''}
+      <ol class="moments">${chapters}</ol>
+    </section>
+
+    ${st.unknown ? `<div class="unknown"><strong>${ico('scroll')}${esc(t('story.unknown'))}</strong>${esc(L(st.unknown))}</div>` : ''}
+
+    ${places.length ? `<section class="block">
+      <h3 class="st">${esc(t('story.storyPlaces'))}</h3>
+      <div class="carousel">${places.map(p => `<div>${card(p)}</div>`).join('')}</div>
+    </section>` : ''}
+
+    <details class="acc">
+      <summary>${esc(t('story.sources'))}</summary>
+      <div class="acc-body"><ol class="src-list">${srcs}</ol></div>
+    </details>
+
+    <nav class="story-nav">
+      <button class="btn" type="button" data-back-explore>${ico('back')}<span>${esc(t('story.back'))}</span></button>
+      <button class="btn primary" type="button" data-story="${esc(next.id)}"><span>${esc(t('story.nextStory'))}</span>${ico('back', 'flip')}</button>
+    </nav>
+  </article>`;
 }
 
 /* ---------- Ficha de lugar ---------- */
@@ -118,6 +198,7 @@ export function placeView(p, { route, stopIndex, speaking }) {
       ${ph ? `<figcaption class="cover-credit" data-gal-cap>${credit(phs[0])}</figcaption>` : ''}
     </figure>
     <header class="place-head">
+      ${p.tourism ? `<p class="tourism-tag">${ico('hoy')}${esc(t('tourism.tag', { date: formatDate(p.visit?.checked || '2026-09-26') }))}</p>` : ''}
       <h2 class="pt">${esc(L(p.name))}</h2>
       <p class="dates">${esc(L(p.dates))}</p>
     </header>
@@ -184,6 +265,8 @@ export function historyView({ periodId, eventId, speaking }) {
   const srcs = (pe.sources || []).map(source).filter(Boolean)
     .map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}</li>`).join('');
   return `<article class="story anim">
+    ${pe.scene || pe.slides ? `<figure class="era-cover has-scene">${pe.scene ? sceneHtml(pe.scene) : slidesHtml(pe.slides)}</figure>
+    <header class="story-head"><span class="era-years">${esc(t('story.chapter', { i: i + 1, n }))} · ${esc(L(pe.label))}</span><h2>${esc(L(pe.name))}</h2></header>` : `
     <figure class="era-cover ${ph ? '' : 'no-photo'}">
       ${ph ? img(ph, 900, 'era-img', '(max-width: 820px) 100vw, 420px') : `<svg class="era-ico" aria-hidden="true"><use href="#i-compass"/></svg>`}
       <span class="era-shade"></span>
@@ -193,7 +276,7 @@ export function historyView({ periodId, eventId, speaking }) {
         <h2>${esc(L(pe.name))}</h2>
       </div>
       ${ph ? `<figcaption>${esc(L(ph.alt))} · ${esc(t('photo.by'))}: ${esc(ph.author)} / Pexels</figcaption>` : ''}
-    </figure>
+    </figure>`}
 
     <p class="era-summary">${esc(L(pe.summary))}</p>
     <button class="btn listen-btn" type="button" data-listen-era aria-pressed="${!!speaking}">${ico(speaking ? 'pause' : 'sound')}<span>${esc(speaking ? t('place.stop') : t('story.listen'))}</span></button>
@@ -225,28 +308,53 @@ export function historyView({ periodId, eventId, speaking }) {
 }
 
 /* ---------- Rutas ---------- */
+const num = x => x.toFixed(1).replace('.', getLang() === 'es' ? ',' : '.');
+/** Nombre corto para las paradas: quita el tipo genérico («Iglesia de…», «Baluarte de…»). */
+export const shortName = p => L(p.name).split(' · ')[0].split(' (')[0]
+  .replace(/^(Iglesia y claustro de|Iglesia y convento de|Iglesia de la|Iglesia de|Church and cloister of|Church and convent of|Church of the|Church of|Catedral de|Cathedral of|Fuerte de|Fort of|Castillo de|Batería-fuerte de|Convento de)\s+/i, '')
+  .replace(/^(Santa Catalina de Alejandría|St Catherine of Alexandria)$/, m => getLang() === 'es' ? 'Catedral' : 'Cathedral');
 export function routesView() {
+  const doneN = db.routes.filter(r => store.has('routes', r.id)).length;
   const cards = db.routes.map(r => {
     const s = routeStats(r);
-    const mode = r.mode === 'boat'
-      ? `<span class="pill">${esc(t('routes.boat'))}</span>`
-      : `<span class="pill">${esc(t('routes.walk'))}</span><span class="pill">${esc(t('routes.distance', { d: s.km.toFixed(1).replace('.', getLang() === 'es' ? ',' : '.') }))}</span><span class="pill">${esc(t('routes.time', { t: s.minutes }))}</span>`;
-    const done = store.has('routes', r.id) ? ' ✓' : '';
-    const firstStop = place(r.stops[0]);
+    const boat = r.mode === 'boat';
+    const done = store.has('routes', r.id);
     const rid = db.media.route?.[r.id];
     const rph = rid ? { pexels: rid, author: db.media.routeAuthor?.[rid] || '', alt: r.name, specific: false } : null;
-    return `<div class="rcard">
-      ${rph ? `<div class="rcard-img">${img(rph, 600, '', '(max-width: 820px) 100vw, 380px')}<span class="rcard-credit">${esc(t('photo.by'))}: ${esc(rph.author)} / Pexels</span></div>` : ''}
-      <h4>${esc(L(r.name))}${done}</h4>
-      <p>${esc(L(r.intro))}</p>
-      <div class="rmeta"><span class="pill">${esc(t('routes.stops', { n: r.stops.length }))}</span>${mode}</div>
-      <p class="fine">▸ ${esc(L(firstStop.name))} → … → ${esc(L(place(r.stops[r.stops.length - 1]).name))}</p>
-      <button class="btn small primary" type="button" data-route="${esc(r.id)}">${ico('route')}${esc(t('routes.start'))}</button>
-    </div>`;
+    const stats = boat
+      ? `<div><b>${r.stops.length}</b><span>${esc(t('routes.stopsLbl'))}</span></div><div style="grid-column: span 2"><b>${ico('boat')}</b><span>${esc(t('routes.byBoat'))}</span></div>`
+      : `<div><b>${r.stops.length}</b><span>${esc(t('routes.stopsLbl'))}</span></div><div><b>${esc(num(s.km))}</b><span>${esc(t('routes.kmLbl'))}</span></div><div><b>${s.minutes}</b><span>${esc(t('routes.minLbl'))}</span></div>`;
+    const stops = r.stops.map((id, k) => {
+      const p = place(id); const ph = photoFor(p);
+      return `<li><button type="button" class="rv-stop" data-route="${esc(r.id)}" data-stopn="${k + 1}" aria-label="${esc(t('routes.startHere', { name: L(p.name) }))}">
+        <span class="rv-num">${k + 1}</span>
+        <span class="rv-thumb" style="background:${catColor(p.category)}">${ph ? `<img src="${pexels(ph.pexels, 120)}" alt="" loading="lazy">` : ''}</span>
+        <small>${esc(shortName(p))}</small>
+      </button></li>`;
+    }).join('');
+    return `<article class="rv">
+      <div class="rv-top">
+        ${rph ? img(rph, 700, '', '(max-width: 820px) 100vw, 380px') : ''}
+        <span class="rv-mode">${ico(boat ? 'boat' : 'walk')}${esc(t(boat ? 'routes.boat' : 'routes.walk'))}</span>
+        ${done ? `<span class="rv-done">${esc(t('routes.doneTag'))}</span>` : ''}
+        <h4>${esc(L(r.name))}</h4>
+        ${rph ? `<span class="rcard-credit">${esc(t('photo.by'))}: ${esc(rph.author)} / Pexels</span>` : ''}
+      </div>
+      <div class="rv-body">
+        <p>${esc(L(r.intro))}</p>
+        <div class="rv-stats">${stats}</div>
+        <ol class="rv-stops">${stops}</ol>
+        <div class="rv-actions">
+          <button class="btn primary" type="button" data-route="${esc(r.id)}">${ico('route')}${esc(t('routes.startTour'))}</button>
+          <button class="btn" type="button" data-preview="${esc(r.id)}" aria-label="${esc(t('routes.preview'))}">${ico('map')}<span class="rv-maptxt">${esc(t('routes.mapShort'))}</span></button>
+        </div>
+      </div>
+    </article>`;
   }).join('');
   return `<div class="anim">
     <h2 class="pt">${esc(t('routes.title'))}</h2>
     <p class="lead">${esc(t('routes.intro'))}</p>
+    <div class="rprog"><span>${esc(t('routes.progress', { a: doneN, b: db.routes.length }))}</span><div class="progress"><i style="width:${(doneN / db.routes.length) * 100}%"></i></div></div>
     ${cards}
     <p class="fine">${esc(t('routes.calc'))} ${esc(t('routes.lineNote'))}</p>
   </div>`;
@@ -308,14 +416,17 @@ export function searchAll(q) {
   const places = db.places.filter(p => match(norm([p.name.es, p.name.en, ...(p.aka || []), t(`cat.${p.category}`), p.category, p.dates?.es, p.dates?.en, ...(p.people || [])].join(' '))));
   const events = db.events.filter(e => match(norm([e.title.es, e.title.en, e.text.es, e.text.en, e.date.es, e.date.en, String(e.year)].join(' '))));
   const periods = db.periods.filter(pe => match(norm([pe.name.es, pe.name.en, pe.label.es].join(' '))));
-  return { places: places.slice(0, 8), events: events.slice(0, 6), periods: periods.slice(0, 3) };
+  const stories = db.stories.filter(st => match(norm([st.title.es, st.title.en, st.kicker.es, st.kicker.en, st.teaser.es, st.teaser.en].join(' '))));
+  return { places: places.slice(0, 8), events: events.slice(0, 6), periods: periods.slice(0, 3), stories: stories.slice(0, 3) };
 }
 
 export function searchResultsView(res) {
   if (!res) return '';
-  const { places, events, periods } = res;
-  if (!places.length && !events.length && !periods.length) return `<div class="sr-empty">${esc(t('search.none'))}</div>`;
+  const { places, events, periods, stories = [] } = res;
+  if (!places.length && !events.length && !periods.length && !stories.length) return `<div class="sr-empty">${esc(t('search.none'))}</div>`;
   let h = '';
+  if (stories.length) h += `<div class="sr-group">${esc(t('explore.stories'))}</div>` + stories.map(st => `
+    <button class="sr-item" role="option" type="button" data-story="${esc(st.id)}"><span class="pico" style="background:${esc(st.accent)};width:30px;height:30px">${ico('book')}</span><span>${esc(L(st.title))}<small>${esc(L(st.kicker))}</small></span></button>`).join('');
   if (places.length) h += `<div class="sr-group">${esc(t('search.places'))}</div>` + places.map(p => `
     <button class="sr-item" role="option" type="button" data-place="${esc(p.id)}"><span class="pico" style="background:${catColor(p.category)};width:30px;height:30px">${ico(p.category)}</span>
     <span>${esc(L(p.name))}<small>${esc(t(`cat.${p.category}`))}</small></span></button>`).join('');

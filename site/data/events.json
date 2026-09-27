@@ -1,29 +1,940 @@
 [
-  {"id":"e1533-desembarco","year":1533,"date":{"es":"14 de enero de 1533","en":"14 January 1533"},"period":"fundacion","title":{"es":"Heredia desembarca en la bahía","en":"Heredia lands in the bay"},"text":{"es":"Pedro de Heredia llega a la bahía de Cartagena con su expedición.","en":"Pedro de Heredia reaches Cartagena Bay with his expedition."},"certainty":"documentado","places":[],"sources":["banrep-heredia"]},
-  {"id":"e1533-fundacion","year":1533,"date":{"es":"1 de junio de 1533","en":"1 June 1533"},"period":"fundacion","title":{"es":"Fundación de Cartagena","en":"Founding of Cartagena"},"text":{"es":"Heredia funda la ciudad. Según fuentes secundarias, lo hizo en el emplazamiento del poblado indígena de Calamarí.","en":"Heredia founds the city. According to secondary sources, he did so on the site of the Indigenous village of Calamarí."},"certainty":"documentado","places":["plaza-bolivar"],"sources":["banrep-heredia","wiki-cartagena"]},
-  {"id":"e1543-ataque","year":1543,"date":{"es":"24 de julio de 1543","en":"24 July 1543"},"period":"fundacion","title":{"es":"Primer gran asalto corsario","en":"First major corsair raid"},"text":{"es":"Un ataque francés sorprende a la ciudad de madrugada. Mostró lo expuesta que estaba Cartagena.","en":"A French attack takes the city by surprise at dawn, showing how exposed Cartagena was."},"certainty":"documentado","places":[],"sources":["banrep-fortificaciones"]},
-  {"id":"e1566-boqueron","year":1566,"date":{"es":"1566","en":"1566"},"period":"fundacion","title":{"es":"Fuerte de El Boquerón","en":"El Boquerón fort"},"text":{"es":"Primer fuerte de la ciudad, en el sitio donde luego se levantó el Pastelillo.","en":"The city's first fort, on the site where the Pastelillo later stood."},"certainty":"documentado","places":["fuerte-pastelillo"],"sources":["etcar-desaparecidas","etcar-pastelillo"]},
-  {"id":"e1586-drake","year":1586,"date":{"es":"9 de febrero – 12 de abril de 1586","en":"9 February – 12 April 1586"},"period":"fundacion","title":{"es":"Francis Drake toma Cartagena","en":"Francis Drake takes Cartagena"},"text":{"es":"Drake desembarca por la franja de La Caleta, toma la ciudad y la ocupa dos meses. Incendia cientos de casas y obtiene un gran rescate. El golpe impulsa la decisión de amurallar la ciudad.","en":"Drake lands on the La Caleta sandspit, takes the city and holds it for two months. He burns hundreds of houses and extracts a large ransom. The blow drives the decision to wall the city."},"certainty":"documentado","places":["baluarte-santo-domingo","baluarte-santa-cruz"],"sources":["wiki-1586","etcar-santodomingo","etcar-santacruz"]},
-  {"id":"e1595-antonelli","year":1595,"date":{"es":"1595","en":"1595"},"period":"amurallada","title":{"es":"Proyecto de Bautista Antonelli","en":"Bautista Antonelli's plan"},"text":{"es":"El ingeniero Bautista Antonelli proyecta el recinto amurallado que desarrollará Cristóbal de Roda.","en":"The engineer Bautista Antonelli designs the walled enclosure that Cristóbal de Roda will build."},"certainty":"documentado","places":["baluarte-santiago","baluarte-san-lucas"],"sources":["etcar-santiago","etcar-sanlucas"]},
-  {"id":"e1607-popa","year":1607,"date":{"es":"1607","en":"1607"},"period":"amurallada","title":{"es":"Fundación del convento de La Popa","en":"La Popa convent founded"},"text":{"es":"Fray Alonso de la Cruz Paredes funda, con los agustinos descalzos, el convento en la cima del cerro.","en":"Friar Alonso de la Cruz Paredes and the Discalced Augustinians found the convent on the hilltop."},"certainty":"documentado","places":["convento-popa"],"sources":["epa-popa"]},
-  {"id":"e1610-inquisicion","year":1610,"date":{"es":"1610","en":"1610"},"period":"amurallada","title":{"es":"Se establece el Tribunal de la Inquisición","en":"The Inquisition tribunal is established"},"text":{"es":"El Tribunal del Santo Oficio empieza a funcionar en Cartagena, en casas alquiladas junto a la plaza mayor.","en":"The Holy Office tribunal begins operating in Cartagena, in rented houses beside the main square."},"certainty":"documentado","places":["palacio-inquisicion"],"sources":["muhca","wiki-inquisicion"]},
-  {"id":"e1614-santodomingo","year":1614,"date":{"es":"8 de septiembre de 1614","en":"8 September 1614"},"period":"amurallada","title":{"es":"Primera piedra del baluarte de Santo Domingo","en":"Foundation stone of Santo Domingo bastion"},"text":{"es":"Se inicia el baluarte en el sector por donde había entrado Drake en 1586.","en":"Work begins on the bastion in the sector where Drake had broken in in 1586."},"certainty":"documentado","places":["baluarte-santo-domingo"],"sources":["etcar-santodomingo"]},
-  {"id":"e1622-claver","year":1622,"date":{"es":"3 de abril de 1622","en":"3 April 1622"},"period":"amurallada","title":{"es":"Pedro Claver, «esclavo de los negros para siempre»","en":"Pedro Claver, “slave of the Black people forever”"},"text":{"es":"Al profesar sus votos perpetuos, el jesuita firma con esa fórmula, que resume su labor con las personas africanas esclavizadas que llegaban al puerto.","en":"On taking his final vows, the Jesuit signs with this formula, which sums up his work with the enslaved Africans arriving at the port."},"certainty":"documentado","places":["san-pedro-claver"],"sources":["banrep-claver"]},
-  {"id":"e1640-bocagrande","year":1640,"date":{"es":"1640","en":"1640"},"period":"amurallada","title":{"es":"Se cierra la entrada de Bocagrande","en":"The Bocagrande entrance closes"},"text":{"es":"Barcos encallados y la arena forman un banco que bloquea Bocagrande. La defensa de la bahía se concentra en Bocachica.","en":"Grounded ships and sand form a bank that blocks Bocagrande. The bay's defence becomes focused on Bocachica."},"certainty":"documentado","places":["escollera-bocagrande","castillo-san-luis"],"sources":["etcar-escollera","etcar-castillogrande"]},
-  {"id":"e1654-claver","year":1654,"date":{"es":"8 de septiembre de 1654","en":"8 September 1654"},"period":"amurallada","title":{"es":"Muere Pedro Claver","en":"Death of Pedro Claver"},"text":{"es":"Muere en Cartagena tras cuatro años de enfermedad. Fue canonizado en 1888.","en":"He dies in Cartagena after four years of illness. He was canonised in 1888."},"certainty":"documentado","places":["san-pedro-claver"],"sources":["banrep-claver"]},
-  {"id":"e1657-sanfelipe","year":1657,"date":{"es":"1657","en":"1657"},"period":"amurallada","title":{"es":"Primer fuerte en el cerro de San Lázaro","en":"First fort on San Lázaro hill"},"text":{"es":"Se construye un pequeño fuerte triangular con 15 cañones: el origen del castillo de San Felipe.","en":"A small triangular fort with 15 cannons is built: the origin of San Felipe castle."},"certainty":"documentado","places":["castillo-san-felipe"],"sources":["etcar-sanfelipe-areas"]},
-  {"id":"e1697-pointis","year":1697,"date":{"es":"abril – mayo de 1697","en":"April – May 1697"},"period":"asedios","title":{"es":"El saqueo del barón de Pointis","en":"The Baron de Pointis's sack"},"text":{"es":"Una expedición francesa con apoyo de bucaneros toma los fuertes de la bahía y saquea la ciudad. Las fuentes dan fechas algo distintas para las fases del ataque.","en":"A French expedition backed by buccaneers takes the bay forts and sacks the city. Sources give slightly different dates for the stages of the attack."},"certainty":"documentado","places":["castillo-san-luis","castillo-san-felipe","puerta-del-reloj"],"sources":["wiki-1697","wiki-sanluis","etcar-sanfelipe-areas"]},
-  {"id":"e1741-vernon","year":1741,"date":{"es":"13 de marzo – 20 de mayo de 1741","en":"13 March – 20 May 1741"},"period":"asedios","title":{"es":"Sitio de Vernon","en":"Vernon's siege"},"text":{"es":"La flota británica de Edward Vernon toma Bocachica y destruye el castillo de San Luis, pero su asalto nocturno a San Lázaro (San Felipe) fracasa el 20 de abril. Tras semanas de enfermedades en sus tropas, se retira.","en":"Edward Vernon's British fleet takes Bocachica and destroys San Luis castle, but its night assault on San Lázaro (San Felipe) fails on 20 April. After weeks of disease among its troops, it withdraws."},"certainty":"documentado","places":["castillo-san-luis","castillo-san-felipe","convento-popa"],"sources":["wiki-1741","etcar-desaparecidas","epa-popa"]},
-  {"id":"e1753-sanfernando","year":1753,"date":{"es":"12 de marzo de 1753","en":"12 March 1753"},"period":"sistema","title":{"es":"Arévalo inicia el fuerte de San Fernando","en":"Arévalo begins Fort San Fernando"},"text":{"es":"Comienza la obra que sustituirá a San Luis en la defensa de Bocachica; la primera etapa termina en 1759.","en":"Work begins on the fort that will replace San Luis in defending Bocachica; the first stage is finished in 1759."},"certainty":"documentado","places":["fuerte-san-fernando"],"sources":["etcar-sanfernando"]},
-  {"id":"e1762-sanfelipe","year":1762,"date":{"es":"1762 – 1769","en":"1762 – 1769"},"period":"sistema","title":{"es":"Gran ampliación de San Felipe","en":"Major enlargement of San Felipe"},"text":{"es":"Antonio de Arévalo añade baterías escalonadas y convierte el fuerte en la gran fortaleza que vemos hoy.","en":"Antonio de Arévalo adds tiered batteries and turns the fort into the great fortress we see today."},"certainty":"documentado","places":["castillo-san-felipe"],"sources":["etcar-sanfelipe-areas"]},
-  {"id":"e1771-escollera","year":1771,"date":{"es":"1771 – 1778","en":"1771 – 1778"},"period":"sistema","title":{"es":"La escollera de Bocagrande","en":"The Bocagrande underwater barrier"},"text":{"es":"Arévalo cierra con una escollera submarina la boca de Bocagrande, que había vuelto a abrirse.","en":"Arévalo seals the reopened Bocagrande mouth with an underwater barrier."},"certainty":"documentado","places":["escollera-bocagrande"],"sources":["etcar-escollera"]},
-  {"id":"e1792-bovedas","year":1792,"date":{"es":"1792 – 1798","en":"1792 – 1798"},"period":"sistema","title":{"es":"Construcción de Las Bóvedas","en":"Las Bóvedas is built"},"text":{"es":"Última obra del recinto amurallado: 23 bóvedas a prueba de bombas. Otras fuentes dan fechas ligeramente distintas.","en":"The last work of the walled enclosure: 23 bomb-proof vaults. Other sources give slightly different dates."},"certainty":"documentado","places":["las-bovedas"],"sources":["etcar-bovedas","wiki-bovedas"]},
-  {"id":"e1811-independencia","year":1811,"date":{"es":"11 de noviembre de 1811","en":"11 November 1811"},"period":"independencia","title":{"es":"Independencia absoluta","en":"Absolute independence"},"text":{"es":"Con la presión de sectores populares reunidos en Getsemaní, Cartagena proclama su independencia absoluta de España.","en":"Pressed by working-class groups gathered in Getsemaní, Cartagena proclaims absolute independence from Spain."},"certainty":"documentado","places":["getsemani","palacio-inquisicion"],"sources":["canal-1811","banrep-martires"]},
-  {"id":"e1815-morillo","year":1815,"date":{"es":"agosto – 6 de diciembre de 1815","en":"August – 6 December 1815"},"period":"independencia","title":{"es":"Sitio de Morillo","en":"Morillo's siege"},"text":{"es":"El ejército expedicionario de Pablo Morillo sitia la ciudad. El hambre y las epidemias causan miles de muertes antes de la entrada de las tropas realistas.","en":"Pablo Morillo's expeditionary army besieges the city. Hunger and disease cause thousands of deaths before the royalist troops enter."},"certainty":"documentado","places":["convento-popa","castillo-san-felipe"],"sources":["wiki-1815","epa-popa"]},
-  {"id":"e1816-martires","year":1816,"date":{"es":"24 de febrero de 1816","en":"24 February 1816"},"period":"independencia","title":{"es":"Fusilamiento de los Mártires","en":"Execution of the Martyrs"},"text":{"es":"Tras un proceso abierto el 9 de enero, son fusilados líderes de la independencia cartagenera, entre ellos Manuel del Castillo y José María García de Toledo.","en":"After a trial opened on 9 January, leaders of Cartagena's independence are executed by firing squad, among them Manuel del Castillo and José María García de Toledo."},"certainty":"documentado","places":["camellon-martires"],"sources":["banrep-martires"]},
-  {"id":"e1821-recuperacion","year":1821,"date":{"es":"octubre de 1821","en":"October 1821"},"period":"independencia","title":{"es":"Los patriotas recuperan la ciudad","en":"Patriots retake the city"},"text":{"es":"Tras un largo sitio, las fuerzas realistas entregan Cartagena a las tropas patriotas. Ese mismo año cesa el Tribunal de la Inquisición.","en":"After a long siege, the royalist forces hand Cartagena over to patriot troops. The Inquisition tribunal ends that same year."},"certainty":"documentado","places":["palacio-inquisicion"],"sources":["wiki-cartagena","wiki-inquisicion"]},
-  {"id":"e1888-torre","year":1888,"date":{"es":"1888","en":"1888"},"period":"sigloXIX","title":{"es":"La torre actual de la Puerta del Reloj","en":"The present Clock Tower"},"text":{"es":"El arquitecto Luis Felipe Jaspe renueva la torre con planta octogonal y detalles neogóticos.","en":"The architect Luis Felipe Jaspe rebuilds the tower on an octagonal plan with Gothic Revival details."},"certainty":"documentado","places":["puerta-del-reloj"],"sources":["universal-reloj"]},
-  {"id":"e1911-teatro","year":1911,"date":{"es":"noviembre de 1911","en":"November 1911"},"period":"sigloXX","title":{"es":"Se inaugura el Teatro Municipal","en":"The Municipal Theatre opens"},"text":{"es":"Diseñado por Luis Felipe Jaspe sobre el solar de la antigua capilla de la Merced; hoy es el Teatro Adolfo Mejía.","en":"Designed by Luis Felipe Jaspe on the site of the old Merced chapel; today it is the Teatro Adolfo Mejía."},"certainty":"documentado","places":["teatro-adolfo-mejia"],"sources":["senal-teatro"]},
-  {"id":"e1974-catalina","year":1974,"date":{"es":"1974","en":"1974"},"period":"sigloXX","title":{"es":"Monumento a la India Catalina","en":"India Catalina monument"},"text":{"es":"Se instala la escultura en bronce de Eladio Gil Zambrana.","en":"Eladio Gil Zambrana's bronze sculpture is installed."},"certainty":"documentado","places":["india-catalina"],"sources":["universal-catalina"]},
-  {"id":"e1984-unesco","year":1984,"date":{"es":"1984","en":"1984"},"period":"contemporanea","title":{"es":"Patrimonio Mundial de la UNESCO","en":"UNESCO World Heritage"},"text":{"es":"El puerto, las fortalezas y el conjunto monumental de Cartagena entran en la Lista del Patrimonio Mundial.","en":"Cartagena's port, fortresses and monuments are inscribed on the World Heritage List."},"certainty":"documentado","places":["castillo-san-felipe","las-bovedas","puerta-del-reloj"],"sources":["unesco"]}
+ {
+  "id": "e1533-desembarco",
+  "year": 1533,
+  "date": {
+   "es": "14 de enero de 1533",
+   "en": "14 January 1533"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Heredia desembarca en la bahía",
+   "en": "Heredia lands in the bay"
+  },
+  "text": {
+   "es": "Pedro de Heredia llega a la bahía de Cartagena con su expedición.",
+   "en": "Pedro de Heredia reaches Cartagena Bay with his expedition."
+  },
+  "certainty": "documentado",
+  "places": [],
+  "sources": [
+   "banrep-heredia"
+  ]
+ },
+ {
+  "id": "e1533-fundacion",
+  "year": 1533,
+  "date": {
+   "es": "1 de junio de 1533",
+   "en": "1 June 1533"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Fundación de Cartagena",
+   "en": "Founding of Cartagena"
+  },
+  "text": {
+   "es": "Heredia funda la ciudad. Según fuentes secundarias, lo hizo en el emplazamiento del poblado indígena de Calamarí.",
+   "en": "Heredia founds the city. According to secondary sources, he did so on the site of the Indigenous village of Calamarí."
+  },
+  "certainty": "documentado",
+  "places": [
+   "plaza-bolivar"
+  ],
+  "sources": [
+   "banrep-heredia",
+   "wiki-cartagena"
+  ]
+ },
+ {
+  "id": "e1543-ataque",
+  "year": 1543,
+  "date": {
+   "es": "24 de julio de 1543",
+   "en": "24 July 1543"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Primer gran asalto corsario",
+   "en": "First major corsair raid"
+  },
+  "text": {
+   "es": "Un ataque francés sorprende a la ciudad de madrugada. Mostró lo expuesta que estaba Cartagena.",
+   "en": "A French attack takes the city by surprise at dawn, showing how exposed Cartagena was."
+  },
+  "certainty": "documentado",
+  "places": [],
+  "sources": [
+   "banrep-fortificaciones"
+  ]
+ },
+ {
+  "id": "e1552-incendio",
+  "year": 1552,
+  "date": {
+   "es": "1552",
+   "en": "1552"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "El fuego arrasa la primera iglesia",
+   "en": "Fire destroys the first church"
+  },
+  "text": {
+   "es": "La primera iglesia de la ciudad, levantada entre 1535 y 1537 con madera y techo de paja, se perdió en el incendio de 1552.",
+   "en": "The city’s first church, built between 1535 and 1537 of wood with a thatched roof, was lost in the fire of 1552."
+  },
+  "certainty": "consenso",
+  "places": [
+   "catedral"
+  ],
+  "sources": [
+   "wiki-catedral",
+   "aecid-cf"
+  ]
+ },
+ {
+  "id": "e1566-boqueron",
+  "year": 1566,
+  "date": {
+   "es": "1566",
+   "en": "1566"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Fuerte de El Boquerón",
+   "en": "El Boquerón fort"
+  },
+  "text": {
+   "es": "Primer fuerte de la ciudad, en el sitio donde luego se levantó el Pastelillo.",
+   "en": "The city's first fort, on the site where the Pastelillo later stood."
+  },
+  "certainty": "documentado",
+  "places": [
+   "fuerte-pastelillo"
+  ],
+  "sources": [
+   "etcar-desaparecidas",
+   "etcar-pastelillo"
+  ]
+ },
+ {
+  "id": "e1577-catedral",
+  "year": 1577,
+  "date": {
+   "es": "1577",
+   "en": "1577"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Empieza la catedral actual",
+   "en": "Work begins on today’s cathedral"
+  },
+  "text": {
+   "es": "Tras un concurso de diseños, el maestro Simón González dirige las obras de la catedral de piedra que hoy conocemos.",
+   "en": "After a design competition, master builder Simón González leads work on the stone cathedral we see today."
+  },
+  "certainty": "consenso",
+  "places": [
+   "catedral"
+  ],
+  "sources": [
+   "wiki-catedral"
+  ]
+ },
+ {
+  "id": "e1586-drake",
+  "year": 1586,
+  "date": {
+   "es": "9 de febrero – 12 de abril de 1586",
+   "en": "9 February – 12 April 1586"
+  },
+  "period": "fundacion",
+  "title": {
+   "es": "Francis Drake toma Cartagena",
+   "en": "Francis Drake takes Cartagena"
+  },
+  "text": {
+   "es": "Drake desembarca por la franja de La Caleta, toma la ciudad y la ocupa dos meses. Incendia cientos de casas y obtiene un gran rescate. El golpe impulsa la decisión de amurallar la ciudad.",
+   "en": "Drake lands on the La Caleta sandspit, takes the city and holds it for two months. He burns hundreds of houses and extracts a large ransom. The blow drives the decision to wall the city."
+  },
+  "certainty": "documentado",
+  "places": [
+   "baluarte-santo-domingo",
+   "baluarte-santa-cruz"
+  ],
+  "sources": [
+   "wiki-1586",
+   "etcar-santodomingo",
+   "etcar-santacruz"
+  ]
+ },
+ {
+  "id": "e1595-antonelli",
+  "year": 1595,
+  "date": {
+   "es": "1595",
+   "en": "1595"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Proyecto de Bautista Antonelli",
+   "en": "Bautista Antonelli's plan"
+  },
+  "text": {
+   "es": "El ingeniero Bautista Antonelli proyecta el recinto amurallado que desarrollará Cristóbal de Roda.",
+   "en": "The engineer Bautista Antonelli designs the walled enclosure that Cristóbal de Roda will build."
+  },
+  "certainty": "documentado",
+  "places": [
+   "baluarte-santiago",
+   "baluarte-san-lucas"
+  ],
+  "sources": [
+   "etcar-santiago",
+   "etcar-sanlucas"
+  ]
+ },
+ {
+  "id": "e1607-popa",
+  "year": 1607,
+  "date": {
+   "es": "1607",
+   "en": "1607"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Fundación del convento de La Popa",
+   "en": "La Popa convent founded"
+  },
+  "text": {
+   "es": "Fray Alonso de la Cruz Paredes funda, con los agustinos descalzos, el convento en la cima del cerro.",
+   "en": "Friar Alonso de la Cruz Paredes and the Discalced Augustinians found the convent on the hilltop."
+  },
+  "certainty": "documentado",
+  "places": [
+   "convento-popa"
+  ],
+  "sources": [
+   "epa-popa"
+  ]
+ },
+ {
+  "id": "e1610-inquisicion",
+  "year": 1610,
+  "date": {
+   "es": "1610",
+   "en": "1610"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Se establece el Tribunal de la Inquisición",
+   "en": "The Inquisition tribunal is established"
+  },
+  "text": {
+   "es": "El Tribunal del Santo Oficio empieza a funcionar en Cartagena, en casas alquiladas junto a la plaza mayor.",
+   "en": "The Holy Office tribunal begins operating in Cartagena, in rented houses beside the main square."
+  },
+  "certainty": "documentado",
+  "places": [
+   "palacio-inquisicion"
+  ],
+  "sources": [
+   "muhca",
+   "wiki-inquisicion"
+  ]
+ },
+ {
+  "id": "e1612-catedral",
+  "year": 1612,
+  "date": {
+   "es": "hacia 1612",
+   "en": "around 1612"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Se termina la catedral",
+   "en": "The cathedral is completed"
+  },
+  "text": {
+   "es": "Tras los daños del ataque de Drake (1586) y el derrumbe de parte de la cubierta en 1600, las obras concluyen hacia 1612.",
+   "en": "After the damage of Drake’s raid (1586) and the collapse of part of the roof in 1600, the work is finished around 1612."
+  },
+  "certainty": "consenso",
+  "places": [
+   "catedral"
+  ],
+  "sources": [
+   "wiki-catedral"
+  ]
+ },
+ {
+  "id": "e1614-santodomingo",
+  "year": 1614,
+  "date": {
+   "es": "8 de septiembre de 1614",
+   "en": "8 September 1614"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Primera piedra del baluarte de Santo Domingo",
+   "en": "Foundation stone of Santo Domingo bastion"
+  },
+  "text": {
+   "es": "Se inicia el baluarte en el sector por donde había entrado Drake en 1586.",
+   "en": "Work begins on the bastion in the sector where Drake had broken in in 1586."
+  },
+  "certainty": "documentado",
+  "places": [
+   "baluarte-santo-domingo"
+  ],
+  "sources": [
+   "etcar-santodomingo"
+  ]
+ },
+ {
+  "id": "e1622-claver",
+  "year": 1622,
+  "date": {
+   "es": "3 de abril de 1622",
+   "en": "3 April 1622"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Pedro Claver, «esclavo de los negros para siempre»",
+   "en": "Pedro Claver, “slave of the Black people forever”"
+  },
+  "text": {
+   "es": "Al profesar sus votos perpetuos, el jesuita firma con esa fórmula, que resume su labor con las personas africanas esclavizadas que llegaban al puerto.",
+   "en": "On taking his final vows, the Jesuit signs with this formula, which sums up his work with the enslaved Africans arriving at the port."
+  },
+  "certainty": "documentado",
+  "places": [
+   "san-pedro-claver"
+  ],
+  "sources": [
+   "banrep-claver"
+  ]
+ },
+ {
+  "id": "e1640-bocagrande",
+  "year": 1640,
+  "date": {
+   "es": "1640",
+   "en": "1640"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Se cierra la entrada de Bocagrande",
+   "en": "The Bocagrande entrance closes"
+  },
+  "text": {
+   "es": "Barcos encallados y la arena forman un banco que bloquea Bocagrande. La defensa de la bahía se concentra en Bocachica.",
+   "en": "Grounded ships and sand form a bank that blocks Bocagrande. The bay's defence becomes focused on Bocachica."
+  },
+  "certainty": "documentado",
+  "places": [
+   "escollera-bocagrande",
+   "castillo-san-luis"
+  ],
+  "sources": [
+   "etcar-escollera",
+   "etcar-castillogrande"
+  ]
+ },
+ {
+  "id": "e1643-trinidad",
+  "year": 1643,
+  "date": {
+   "es": "1643",
+   "en": "1643"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Getsemaní tiene su iglesia",
+   "en": "Getsemaní gets its church"
+  },
+  "text": {
+   "es": "Para atender al barrio de Getsemaní, que crecía rápido, se inicia la iglesia de la Santísima Trinidad; se terminó hacia 1688.",
+   "en": "To serve the fast-growing Getsemaní quarter, work begins on the Church of the Holy Trinity; it was finished around 1688."
+  },
+  "certainty": "consenso",
+  "places": [
+   "iglesia-trinidad"
+  ],
+  "sources": [
+   "santamaria-2020"
+  ]
+ },
+ {
+  "id": "e1654-claver",
+  "year": 1654,
+  "date": {
+   "es": "8 de septiembre de 1654",
+   "en": "8 September 1654"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Muere Pedro Claver",
+   "en": "Death of Pedro Claver"
+  },
+  "text": {
+   "es": "Muere en Cartagena tras cuatro años de enfermedad. Fue canonizado en 1888.",
+   "en": "He dies in Cartagena after four years of illness. He was canonised in 1888."
+  },
+  "certainty": "documentado",
+  "places": [
+   "san-pedro-claver"
+  ],
+  "sources": [
+   "banrep-claver"
+  ]
+ },
+ {
+  "id": "e1657-sanfelipe",
+  "year": 1657,
+  "date": {
+   "es": "1657",
+   "en": "1657"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Primer fuerte en el cerro de San Lázaro",
+   "en": "First fort on San Lázaro hill"
+  },
+  "text": {
+   "es": "Se construye un pequeño fuerte triangular con 15 cañones: el origen del castillo de San Felipe.",
+   "en": "A small triangular fort with 15 cannons is built: the origin of San Felipe castle."
+  },
+  "certainty": "documentado",
+  "places": [
+   "castillo-san-felipe"
+  ],
+  "sources": [
+   "etcar-sanfelipe-areas"
+  ]
+ },
+ {
+  "id": "e1666-toribio",
+  "year": 1666,
+  "date": {
+   "es": "1666",
+   "en": "1666"
+  },
+  "period": "amurallada",
+  "title": {
+   "es": "Comienza Santo Toribio",
+   "en": "Santo Toribio is begun"
+  },
+  "text": {
+   "es": "En el barrio de San Diego se inicia la iglesia de Santo Toribio de Mogrovejo, una de las últimas de la época colonial.",
+   "en": "In the San Diego quarter, work starts on the Church of Santo Toribio de Mogrovejo, one of the last of the colonial era."
+  },
+  "certainty": "consenso",
+  "places": [
+   "iglesia-santo-toribio"
+  ],
+  "sources": [
+   "wiki-toribio",
+   "procolombia-toribio"
+  ]
+ },
+ {
+  "id": "e1697-pointis",
+  "year": 1697,
+  "date": {
+   "es": "abril – mayo de 1697",
+   "en": "April – May 1697"
+  },
+  "period": "asedios",
+  "title": {
+   "es": "El saqueo del barón de Pointis",
+   "en": "The Baron de Pointis's sack"
+  },
+  "text": {
+   "es": "Una expedición francesa con apoyo de bucaneros toma los fuertes de la bahía y saquea la ciudad. Las fuentes dan fechas algo distintas para las fases del ataque.",
+   "en": "A French expedition backed by buccaneers takes the bay forts and sacks the city. Sources give slightly different dates for the stages of the attack."
+  },
+  "certainty": "documentado",
+  "places": [
+   "castillo-san-luis",
+   "castillo-san-felipe",
+   "puerta-del-reloj"
+  ],
+  "sources": [
+   "wiki-1697",
+   "wiki-sanluis",
+   "etcar-sanfelipe-areas"
+  ]
+ },
+ {
+  "id": "e1708-galeon",
+  "year": 1708,
+  "date": {
+   "es": "8 de junio de 1708",
+   "en": "8 June 1708"
+  },
+  "period": "asedios",
+  "title": {
+   "es": "Se hunde el galeón San José",
+   "en": "The San José galleon sinks"
+  },
+  "text": {
+   "es": "Frente a Barú, una escuadra británica al mando de Charles Wager ataca la flota española que navegaba hacia Cartagena. Hacia las 7 de la noche el San José, buque insignia, estalla y se hunde. De unas 600 personas a bordo, solo 11 sobreviven.",
+   "en": "Off Barú, a British squadron under Charles Wager attacks the Spanish fleet sailing to Cartagena. At around 7 p.m. the flagship San José blows up and sinks. Of some 600 people on board, only 11 survive."
+  },
+  "certainty": "documentado",
+  "places": [
+   "galeon-san-jose"
+  ],
+  "sources": [
+   "wiki-wager"
+  ]
+ },
+ {
+  "id": "e1741-vernon",
+  "year": 1741,
+  "date": {
+   "es": "13 de marzo – 20 de mayo de 1741",
+   "en": "13 March – 20 May 1741"
+  },
+  "period": "asedios",
+  "title": {
+   "es": "Sitio de Vernon",
+   "en": "Vernon's siege"
+  },
+  "text": {
+   "es": "La flota británica de Edward Vernon toma Bocachica y destruye el castillo de San Luis, pero su asalto nocturno a San Lázaro (San Felipe) fracasa el 20 de abril. Tras semanas de enfermedades en sus tropas, se retira.",
+   "en": "Edward Vernon's British fleet takes Bocachica and destroys San Luis castle, but its night assault on San Lázaro (San Felipe) fails on 20 April. After weeks of disease among its troops, it withdraws."
+  },
+  "certainty": "documentado",
+  "places": [
+   "castillo-san-luis",
+   "castillo-san-felipe",
+   "convento-popa"
+  ],
+  "sources": [
+   "wiki-1741",
+   "etcar-desaparecidas",
+   "epa-popa"
+  ]
+ },
+ {
+  "id": "e1753-sanfernando",
+  "year": 1753,
+  "date": {
+   "es": "12 de marzo de 1753",
+   "en": "12 March 1753"
+  },
+  "period": "sistema",
+  "title": {
+   "es": "Arévalo inicia el fuerte de San Fernando",
+   "en": "Arévalo begins Fort San Fernando"
+  },
+  "text": {
+   "es": "Comienza la obra que sustituirá a San Luis en la defensa de Bocachica; la primera etapa termina en 1759.",
+   "en": "Work begins on the fort that will replace San Luis in defending Bocachica; the first stage is finished in 1759."
+  },
+  "certainty": "documentado",
+  "places": [
+   "fuerte-san-fernando"
+  ],
+  "sources": [
+   "etcar-sanfernando"
+  ]
+ },
+ {
+  "id": "e1762-sanfelipe",
+  "year": 1762,
+  "date": {
+   "es": "1762 – 1769",
+   "en": "1762 – 1769"
+  },
+  "period": "sistema",
+  "title": {
+   "es": "Gran ampliación de San Felipe",
+   "en": "Major enlargement of San Felipe"
+  },
+  "text": {
+   "es": "Antonio de Arévalo añade baterías escalonadas y convierte el fuerte en la gran fortaleza que vemos hoy.",
+   "en": "Antonio de Arévalo adds tiered batteries and turns the fort into the great fortress we see today."
+  },
+  "certainty": "documentado",
+  "places": [
+   "castillo-san-felipe"
+  ],
+  "sources": [
+   "etcar-sanfelipe-areas"
+  ]
+ },
+ {
+  "id": "e1767-jesuitas",
+  "year": 1767,
+  "date": {
+   "es": "1767",
+   "en": "1767"
+  },
+  "period": "sistema",
+  "title": {
+   "es": "Expulsión de los jesuitas",
+   "en": "The Jesuits are expelled"
+  },
+  "text": {
+   "es": "El rey Carlos III expulsa a la Compañía de Jesús. Su templo y su claustro en Cartagena —hoy San Pedro Claver— pasan a otras manos; el claustro llegó a funcionar como hospital. Los jesuitas regresaron en 1896.",
+   "en": "King Charles III expels the Society of Jesus. Its church and cloister in Cartagena — today San Pedro Claver — pass to others; the cloister was even used as a hospital. The Jesuits returned in 1896."
+  },
+  "certainty": "documentado",
+  "places": [
+   "san-pedro-claver"
+  ],
+  "sources": [
+   "eltiempo-claver"
+  ]
+ },
+ {
+  "id": "e1771-escollera",
+  "year": 1771,
+  "date": {
+   "es": "1771 – 1778",
+   "en": "1771 – 1778"
+  },
+  "period": "sistema",
+  "title": {
+   "es": "La escollera de Bocagrande",
+   "en": "The Bocagrande underwater barrier"
+  },
+  "text": {
+   "es": "Arévalo cierra con una escollera submarina la boca de Bocagrande, que había vuelto a abrirse.",
+   "en": "Arévalo seals the reopened Bocagrande mouth with an underwater barrier."
+  },
+  "certainty": "documentado",
+  "places": [
+   "escollera-bocagrande"
+  ],
+  "sources": [
+   "etcar-escollera"
+  ]
+ },
+ {
+  "id": "e1792-bovedas",
+  "year": 1792,
+  "date": {
+   "es": "1792 – 1798",
+   "en": "1792 – 1798"
+  },
+  "period": "sistema",
+  "title": {
+   "es": "Construcción de Las Bóvedas",
+   "en": "Las Bóvedas is built"
+  },
+  "text": {
+   "es": "Última obra del recinto amurallado: 23 bóvedas a prueba de bombas. Otras fuentes dan fechas ligeramente distintas.",
+   "en": "The last work of the walled enclosure: 23 bomb-proof vaults. Other sources give slightly different dates."
+  },
+  "certainty": "documentado",
+  "places": [
+   "las-bovedas"
+  ],
+  "sources": [
+   "etcar-bovedas",
+   "wiki-bovedas"
+  ]
+ },
+ {
+  "id": "e1811-independencia",
+  "year": 1811,
+  "date": {
+   "es": "11 de noviembre de 1811",
+   "en": "11 November 1811"
+  },
+  "period": "independencia",
+  "title": {
+   "es": "Independencia absoluta",
+   "en": "Absolute independence"
+  },
+  "text": {
+   "es": "Con la presión de sectores populares reunidos en Getsemaní, Cartagena proclama su independencia absoluta de España.",
+   "en": "Pressed by working-class groups gathered in Getsemaní, Cartagena proclaims absolute independence from Spain."
+  },
+  "certainty": "documentado",
+  "places": [
+   "getsemani",
+   "palacio-inquisicion"
+  ],
+  "sources": [
+   "canal-1811",
+   "banrep-martires"
+  ]
+ },
+ {
+  "id": "e1815-morillo",
+  "year": 1815,
+  "date": {
+   "es": "agosto – 6 de diciembre de 1815",
+   "en": "August – 6 December 1815"
+  },
+  "period": "independencia",
+  "title": {
+   "es": "Sitio de Morillo",
+   "en": "Morillo's siege"
+  },
+  "text": {
+   "es": "El ejército expedicionario de Pablo Morillo sitia la ciudad. El hambre y las epidemias causan miles de muertes antes de la entrada de las tropas realistas.",
+   "en": "Pablo Morillo's expeditionary army besieges the city. Hunger and disease cause thousands of deaths before the royalist troops enter."
+  },
+  "certainty": "documentado",
+  "places": [
+   "convento-popa",
+   "castillo-san-felipe"
+  ],
+  "sources": [
+   "wiki-1815",
+   "epa-popa"
+  ]
+ },
+ {
+  "id": "e1816-martires",
+  "year": 1816,
+  "date": {
+   "es": "24 de febrero de 1816",
+   "en": "24 February 1816"
+  },
+  "period": "independencia",
+  "title": {
+   "es": "Fusilamiento de los Mártires",
+   "en": "Execution of the Martyrs"
+  },
+  "text": {
+   "es": "Tras un proceso abierto el 9 de enero, son fusilados líderes de la independencia cartagenera, entre ellos Manuel del Castillo y José María García de Toledo.",
+   "en": "After a trial opened on 9 January, leaders of Cartagena's independence are executed by firing squad, among them Manuel del Castillo and José María García de Toledo."
+  },
+  "certainty": "documentado",
+  "places": [
+   "camellon-martires"
+  ],
+  "sources": [
+   "banrep-martires"
+  ]
+ },
+ {
+  "id": "e1821-recuperacion",
+  "year": 1821,
+  "date": {
+   "es": "octubre de 1821",
+   "en": "October 1821"
+  },
+  "period": "independencia",
+  "title": {
+   "es": "Los patriotas recuperan la ciudad",
+   "en": "Patriots retake the city"
+  },
+  "text": {
+   "es": "Tras un largo sitio, las fuerzas realistas entregan Cartagena a las tropas patriotas. Ese mismo año cesa el Tribunal de la Inquisición.",
+   "en": "After a long siege, the royalist forces hand Cartagena over to patriot troops. The Inquisition tribunal ends that same year."
+  },
+  "certainty": "documentado",
+  "places": [
+   "palacio-inquisicion"
+  ],
+  "sources": [
+   "wiki-cartagena",
+   "wiki-inquisicion"
+  ]
+ },
+ {
+  "id": "e1888-torre",
+  "year": 1888,
+  "date": {
+   "es": "1888",
+   "en": "1888"
+  },
+  "period": "sigloXIX",
+  "title": {
+   "es": "La torre actual de la Puerta del Reloj",
+   "en": "The present Clock Tower"
+  },
+  "text": {
+   "es": "El arquitecto Luis Felipe Jaspe renueva la torre con planta octogonal y detalles neogóticos.",
+   "en": "The architect Luis Felipe Jaspe rebuilds the tower on an octagonal plan with Gothic Revival details."
+  },
+  "certainty": "documentado",
+  "places": [
+   "puerta-del-reloj"
+  ],
+  "sources": [
+   "universal-reloj"
+  ]
+ },
+ {
+  "id": "e1911-teatro",
+  "year": 1911,
+  "date": {
+   "es": "noviembre de 1911",
+   "en": "November 1911"
+  },
+  "period": "sigloXX",
+  "title": {
+   "es": "Se inaugura el Teatro Municipal",
+   "en": "The Municipal Theatre opens"
+  },
+  "text": {
+   "es": "Diseñado por Luis Felipe Jaspe sobre el solar de la antigua capilla de la Merced; hoy es el Teatro Adolfo Mejía.",
+   "en": "Designed by Luis Felipe Jaspe on the site of the old Merced chapel; today it is the Teatro Adolfo Mejía."
+  },
+  "certainty": "documentado",
+  "places": [
+   "teatro-adolfo-mejia"
+  ],
+  "sources": [
+   "senal-teatro"
+  ]
+ },
+ {
+  "id": "e1974-catalina",
+  "year": 1974,
+  "date": {
+   "es": "1974",
+   "en": "1974"
+  },
+  "period": "sigloXX",
+  "title": {
+   "es": "Monumento a la India Catalina",
+   "en": "India Catalina monument"
+  },
+  "text": {
+   "es": "Se instala la escultura en bronce de Eladio Gil Zambrana.",
+   "en": "Eladio Gil Zambrana's bronze sculpture is installed."
+  },
+  "certainty": "documentado",
+  "places": [
+   "india-catalina"
+  ],
+  "sources": [
+   "universal-catalina"
+  ]
+ },
+ {
+  "id": "e1984-unesco",
+  "year": 1984,
+  "date": {
+   "es": "1984",
+   "en": "1984"
+  },
+  "period": "contemporanea",
+  "title": {
+   "es": "Patrimonio Mundial de la UNESCO",
+   "en": "UNESCO World Heritage"
+  },
+  "text": {
+   "es": "El puerto, las fortalezas y el conjunto monumental de Cartagena entran en la Lista del Patrimonio Mundial.",
+   "en": "Cartagena's port, fortresses and monuments are inscribed on the World Heritage List."
+  },
+  "certainty": "documentado",
+  "places": [
+   "castillo-san-felipe",
+   "las-bovedas",
+   "puerta-del-reloj"
+  ],
+  "sources": [
+   "unesco"
+  ]
+ },
+ {
+  "id": "e2015-galeon",
+  "year": 2015,
+  "date": {
+   "es": "27 de noviembre de 2015",
+   "en": "27 November 2015"
+  },
+  "period": "contemporanea",
+  "title": {
+   "es": "La Armada encuentra el galeón",
+   "en": "The Navy finds the galleon"
+  },
+  "text": {
+   "es": "La Armada de Colombia localiza el pecio; se anunció el 5 de diciembre. Una de las claves para identificarlo fueron sus cañones de bronce decorados con delfines.",
+   "en": "The Colombian Navy locates the wreck; it was announced on 5 December. One of the clues to its identity was its bronze cannons decorated with dolphins."
+  },
+  "certainty": "documentado",
+  "places": [
+   "galeon-san-jose"
+  ],
+  "sources": [
+   "wiki-wager"
+  ]
+ },
+ {
+  "id": "e2025-galeon",
+  "year": 2025,
+  "date": {
+   "es": "noviembre de 2025",
+   "en": "November 2025"
+  },
+  "period": "contemporanea",
+  "title": {
+   "es": "Primeros objetos rescatados",
+   "en": "First objects recovered"
+  },
+  "text": {
+   "es": "Una expedición científica liderada por el ICANH, con la Armada, la DIMAR y el Ministerio de las Culturas, recupera un cañón, tres monedas de oro (macuquinas), una taza de porcelana china, fragmentos de porcelana y un trozo de cuerda.",
+   "en": "A scientific expedition led by ICANH, with the Navy, DIMAR and the Ministry of Culture, recovers a cannon, three gold coins (macuquinas), a Chinese porcelain cup, porcelain fragments and a piece of rope."
+  },
+  "certainty": "documentado",
+  "places": [
+   "galeon-san-jose"
+  ],
+  "sources": [
+   "eltiempo-galeon-2025",
+   "icanh-sgc-2026"
+  ]
+ },
+ {
+  "id": "e2026-galeon",
+  "year": 2026,
+  "date": {
+   "es": "10 de agosto de 2026",
+   "en": "10 August 2026"
+  },
+  "period": "contemporanea",
+  "title": {
+   "es": "La ciencia lee los hallazgos",
+   "en": "Science reads the finds"
+  },
+  "text": {
+   "es": "El Servicio Geológico Colombiano presenta sus análisis: datación por radiocarbono de la cuerda, caracterización química del cañón y estudio de los microorganismos que convivieron con los objetos durante más de 300 años.",
+   "en": "The Colombian Geological Survey presents its analyses: radiocarbon dating of the rope, chemical characterisation of the cannon and a study of the microorganisms that lived on the objects for over 300 years."
+  },
+  "certainty": "documentado",
+  "places": [
+   "galeon-san-jose"
+  ],
+  "sources": [
+   "icanh-sgc-2026"
+  ]
+ },
+ {
+  "id": "e2026-malecon",
+  "year": 2026,
+  "date": {
+   "es": "septiembre de 2026",
+   "en": "September 2026"
+  },
+  "period": "contemporanea",
+  "title": {
+   "es": "El Gran Malecón del Mar toma forma",
+   "en": "The Gran Malecón del Mar takes shape"
+  },
+  "text": {
+   "es": "Con un 70 % de avance, la Alcaldía programó abrir los primeros 2 km el 15 de octubre de 2026. La obra completa, de 5,1 km entre La Boquilla y La Tenaza, tiene plazo hasta junio de 2027.",
+   "en": "At 70% complete, the city scheduled the first 2 km to open on 15 October 2026. The full 5.1 km project, from La Boquilla to La Tenaza, is due by June 2027."
+  },
+  "certainty": "documentado",
+  "places": [
+   "gran-malecon"
+  ],
+  "sources": [
+   "metro-malecon-2026",
+   "eltiempo-malecon-2026"
+  ]
+ }
 ]

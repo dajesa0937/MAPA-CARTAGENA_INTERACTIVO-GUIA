@@ -7,8 +7,11 @@ import { store } from './store.js';
 const CENTER = [10.4236, -75.5480];
 const CAT_COLOR = {
   castillo: 'var(--c-castillo)', muralla: 'var(--c-muralla)', iglesia: 'var(--c-iglesia)', museo: 'var(--c-museo)',
-  plaza: 'var(--c-plaza)', monumento: 'var(--c-monumento)', cultura: 'var(--c-cultura)', barrio: 'var(--c-barrio)'
+  plaza: 'var(--c-plaza)', monumento: 'var(--c-monumento)', cultura: 'var(--c-cultura)', barrio: 'var(--c-barrio)',
+  mar: 'var(--c-mar)', hoy: 'var(--c-hoy)'
 };
+// Colores reales (Leaflet dibuja en SVG y no resuelve variables CSS)
+const HEX = { mar: '#1f5f7a', hoy: '#e07a3a' };
 export const catColor = c => CAT_COLOR[c] || 'var(--c-barrio)';
 
 let map, layers = {}, currentLayer, markers = new Map(), routeLine = null, youMarker = null, walls = null;
@@ -84,7 +87,12 @@ function addMarker(p) {
   m.on('click', () => onSelect(p.id));
   m.on('keypress', e => { if (e.originalEvent.key === 'Enter') onSelect(p.id); });
   m.addTo(map);
-  markers.set(p.id, { m, p, state: {} });
+  // Zonas aproximadas (p. ej. el combate del galeón) y trazados (malecón): se ven junto con su marcador.
+  const extras = [];
+  if (p.loc?.radius) extras.push(window.L.circle(p.coords, { radius: p.loc.radius, color: HEX[p.category] || '#1f5f7a', weight: 2, dashArray: '6 8', fillOpacity: 0.08, interactive: false }));
+  if (p.path) extras.push(window.L.polyline(p.path, { color: HEX[p.category] || '#e07a3a', weight: 6, opacity: 0.85, dashArray: '2 10', lineCap: 'round', interactive: false }));
+  extras.forEach(x => x.addTo(map));
+  markers.set(p.id, { m, p, state: {}, extras });
 }
 
 /** Redibuja todos los marcadores según el estado de la vista. */
@@ -99,6 +107,7 @@ export function renderMarkers({ visibleCats, year = null, route = null, activeId
     } else {
       if (visibleCats && !visibleCats.has(p.category)) show = false;
       if (year != null) {
+        if (p.category === 'hoy' && year < 1984) show = false;   // lo actual solo en la época contemporánea
         const ex = existsIn(p, year);
         if (ex === 'no') show = false;
         if (ex === 'ruin') cls = 'ruin';
@@ -119,8 +128,10 @@ export function renderMarkers({ visibleCats, year = null, route = null, activeId
         if (!map.hasLayer(m)) m.addTo(map);
         m.setZIndexOffset(id === activeId || label ? 1000 : cls.includes('dim') ? -500 : 0);
         setLabel(rec, label);
+        rec.extras.forEach(x => { if (!map.hasLayer(x)) x.addTo(map); });
       } else if (map.hasLayer(m)) {
         map.removeLayer(m);
+        rec.extras.forEach(x => map.removeLayer(x));
       }
     }
   }
@@ -163,7 +174,7 @@ export function refreshTooltips() {
 export function flyToPlace(id, { zoom } = {}) {
   const p = place(id);
   if (!p) return;
-  const z = zoom ?? Math.max(map.getZoom(), p.loc?.accuracy === 'zone' ? 15 : 17);
+  const z = zoom ?? (p.loc?.radius ? 11 : p.path ? 14 : Math.max(map.getZoom(), p.loc?.accuracy === 'zone' ? 15 : 17));
   map.flyTo(offsetForPanel(p.coords, z), z, { duration: 0.7 });
 }
 

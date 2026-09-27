@@ -1,0 +1,359 @@
+[
+ {
+  "id": "galeon",
+  "accent": "#1f5f7a",
+  "scene": "galeon",
+  "cover": {
+   "pexels": 21336471,
+   "author": "Renee B",
+   "alt": {
+    "es": "Réplica moderna de un galeón (imagen ilustrativa, no es el San José)",
+    "en": "A modern galleon replica (illustrative, not the San José)"
+   }
+  },
+  "kicker": {
+   "es": "Mar y naufragios",
+   "en": "Sea & shipwrecks"
+  },
+  "title": {
+   "es": "El galeón San José",
+   "en": "The San José galleon"
+  },
+  "teaser": {
+   "es": "Un combate, una explosión y 300 años bajo el mar.",
+   "en": "A battle, an explosion and 300 years under the sea."
+  },
+  "intro": {
+   "es": "En 1708 un galeón español estalló frente a Barú y se hundió con casi todos sus tripulantes. Su supuesta carga lo convirtió en la leyenda más famosa del Caribe. En 2015 la Armada de Colombia lo encontró, y hoy la ciencia empieza a estudiarlo pieza por pieza.",
+   "en": "In 1708 a Spanish galleon blew up off Barú and sank with almost everyone on board. Its rumoured cargo made it the most famous legend of the Caribbean. In 2015 the Colombian Navy found it, and today science is beginning to study it piece by piece."
+  },
+  "chapters": [
+   {
+    "event": "e1708-galeon"
+   },
+   {
+    "event": "e2015-galeon"
+   },
+   {
+    "event": "e2025-galeon"
+   },
+   {
+    "event": "e2026-galeon"
+   }
+  ],
+  "places": [
+   "galeon-san-jose",
+   "playa-blanca"
+  ],
+  "unknown": {
+   "es": "No se conoce el valor real de la carga: las cifras de la época van de 7 a 11 millones de pesos. La posición exacta del naufragio es reservada por el Estado. Durante décadas hubo disputas legales sobre los derechos al hallazgo.",
+   "en": "The real value of the cargo is unknown: period figures range from 7 to 11 million pesos. The exact position of the wreck is classified by the state. For decades there were legal disputes over rights to the find."
+  }
+ },
+ {
+  "id": "iglesias",
+  "accent": "#7a3e6e",
+  "cover": {
+   "pexels": 13836087,
+   "author": "JVAS71",
+   "alt": {
+    "es": "La torre de la catedral con el mar al fondo",
+    "en": "The cathedral tower with the sea behind"
+   }
+  },
+  "kicker": {
+   "es": "Iglesias y conventos",
+   "en": "Churches & convents"
+  },
+  "title": {
+   "es": "La ciudad de los templos",
+   "en": "A city of churches"
+  },
+  "teaser": {
+   "es": "Fuego, piratas, jesuitas y una bala en plena misa.",
+   "en": "Fire, pirates, Jesuits and a cannonball during Mass."
+  },
+  "intro": {
+   "es": "Las iglesias de Cartagena cuentan la historia de la ciudad: la primera, de madera y paja, ardió en 1552; la catedral de piedra sobrevivió a Drake; los jesuitas acogieron a Pedro Claver; y cada barrio levantó su templo. Recórrelas en orden.",
+   "en": "Cartagena’s churches tell the story of the city: the first, of wood and thatch, burned in 1552; the stone cathedral survived Drake; the Jesuits were home to Pedro Claver; and each quarter built its own church. Walk through them in order."
+  },
+  "chapters": [
+   {
+    "event": "e1552-incendio"
+   },
+   {
+    "event": "e1577-catedral"
+   },
+   {
+    "event": "e1586-drake"
+   },
+   {
+    "event": "e1607-popa"
+   },
+   {
+    "event": "e1612-catedral"
+   },
+   {
+    "event": "e1622-claver"
+   },
+   {
+    "event": "e1643-trinidad"
+   },
+   {
+    "event": "e1666-toribio"
+   },
+   {
+    "event": "e1767-jesuitas"
+   }
+  ],
+  "places": [
+   "catedral",
+   "iglesia-santo-domingo",
+   "san-pedro-claver",
+   "iglesia-trinidad",
+   "iglesia-santo-toribio",
+   "convento-popa"
+  ],
+  "route": "iglesias",
+  "unknown": {
+   "es": "Varias fechas de construcción difieren entre fuentes (por ejemplo, las del templo de San Pedro Claver y el convento de Santo Domingo). Lo indicamos en cada ficha.",
+   "en": "Several construction dates differ between sources (for example for the San Pedro Claver church and the Santo Domingo convent). We flag this on each place."
+  }
+ },
+ {
+  "id": "defensas",
+  "accent": "#8a5a2b",
+  "cover": {
+   "pexels": 36874558,
+   "author": "Woody Willis",
+   "alt": {
+    "es": "Las murallas de Cartagena",
+    "en": "The walls of Cartagena"
+   }
+  },
+  "kicker": {
+   "es": "Murallas y fortificaciones",
+   "en": "Walls & fortifications"
+  },
+  "title": {
+   "es": "Cómo se defendió Cartagena",
+   "en": "How Cartagena defended itself"
+  },
+  "teaser": {
+   "es": "De Drake a Vernon: dos siglos construyendo un escudo.",
+   "en": "From Drake to Vernon: two centuries building a shield."
+  },
+  "intro": {
+   "es": "Cartagena era la puerta del oro y la plata de América, y por eso fue atacada una y otra vez. Cada ataque dejó una lección, y cada lección se convirtió en piedra: murallas, baluartes, castillos y hasta una muralla bajo el agua.",
+   "en": "Cartagena was the gateway for America’s gold and silver, which is why it was attacked again and again. Each attack taught a lesson, and each lesson was turned into stone: walls, bastions, castles and even a wall under the water."
+  },
+  "chapters": [
+   {
+    "event": "e1586-drake"
+   },
+   {
+    "event": "e1595-antonelli"
+   },
+   {
+    "event": "e1614-santodomingo"
+   },
+   {
+    "event": "e1657-sanfelipe"
+   },
+   {
+    "event": "e1697-pointis"
+   },
+   {
+    "event": "e1741-vernon"
+   },
+   {
+    "event": "e1753-sanfernando"
+   },
+   {
+    "event": "e1771-escollera"
+   },
+   {
+    "event": "e1792-bovedas"
+   }
+  ],
+  "places": [
+   "baluarte-santo-domingo",
+   "castillo-san-felipe",
+   "fuerte-san-fernando",
+   "bateria-san-jose",
+   "escollera-bocagrande",
+   "las-bovedas"
+  ],
+  "route": "murallas"
+ },
+ {
+  "id": "independencia",
+  "accent": "#c2553a",
+  "cover": {
+   "pexels": 20483126,
+   "author": "Ariel Foletto",
+   "alt": {
+    "es": "Una fachada de Getsemaní",
+    "en": "A façade in Getsemaní"
+   }
+  },
+  "kicker": {
+   "es": "Independencia",
+   "en": "Independence"
+  },
+  "title": {
+   "es": "La ciudad heroica",
+   "en": "The heroic city"
+  },
+  "teaser": {
+   "es": "1811: Cartagena declara su independencia absoluta.",
+   "en": "1811: Cartagena declares full independence."
+  },
+  "intro": {
+   "es": "En 1811 Cartagena se declaró independiente de España, empujada por los vecinos de Getsemaní. Lo pagó muy caro: en 1815 soportó un largo sitio y en 1816 fueron fusilados sus líderes. Por eso se la llama «la Heroica».",
+   "en": "In 1811 Cartagena declared independence from Spain, pushed by the people of Getsemaní. It paid dearly: in 1815 it endured a long siege and in 1816 its leaders were executed. That is why it is called “the Heroic City”."
+  },
+  "chapters": [
+   {
+    "event": "e1811-independencia"
+   },
+   {
+    "event": "e1815-morillo"
+   },
+   {
+    "event": "e1816-martires"
+   },
+   {
+    "event": "e1821-recuperacion"
+   }
+  ],
+  "places": [
+   "getsemani",
+   "iglesia-trinidad",
+   "camellon-martires",
+   "palacio-inquisicion"
+  ],
+  "route": "independencia"
+ },
+ {
+  "id": "antes",
+  "accent": "#2f7d4f",
+  "scene": "prehispanica",
+  "kicker": {
+   "es": "Antes de la ciudad",
+   "en": "Before the city"
+  },
+  "title": {
+   "es": "Antes de Cartagena",
+   "en": "Before Cartagena"
+  },
+  "teaser": {
+   "es": "Manglares, canoas y algunas de las cerámicas más antiguas de América.",
+   "en": "Mangroves, canoes and some of the oldest pottery in the Americas."
+  },
+  "intro": {
+   "es": "Mucho antes de las murallas, esta costa de manglares, ciénagas y bahías ya estaba habitada. Aquí cerca se han hallado algunas de las cerámicas más antiguas de América. Cuando llegaron los españoles, había pueblos indígenas en la bahía; las crónicas llaman Calamarí al lugar.",
+   "en": "Long before the walls, this coast of mangroves, lagoons and bays was already inhabited. Some of the oldest pottery in the Americas has been found nearby. When the Spanish arrived, Indigenous peoples lived around the bay; the chronicles call the place Calamarí."
+  },
+  "chapters": [
+   {
+    "label": {
+     "es": "Hace milenios",
+     "en": "Millennia ago"
+    },
+    "title": {
+     "es": "Los primeros alfareros",
+     "en": "The first potters"
+    },
+    "text": {
+     "es": "La arqueología ha documentado en esta región cerámicas muy antiguas, en sitios como Puerto Hormiga y Monsú, y un sitio precerámico en Canapote, hoy un barrio de Cartagena. Las fechas exactas se discuten entre especialistas.",
+     "en": "Archaeology has documented very early pottery in this region, at sites such as Puerto Hormiga and Monsú, and a pre-ceramic site at Canapote, now a Cartagena neighbourhood. The exact dates are debated by specialists."
+    },
+    "certainty": "consenso",
+    "sources": [
+     "archila-1994"
+    ]
+   },
+   {
+    "label": {
+     "es": "Siglo XVI",
+     "en": "16th c."
+    },
+    "title": {
+     "es": "Calamarí",
+     "en": "Calamarí"
+    },
+    "text": {
+     "es": "Cuando llegaron los españoles, la bahía estaba habitada por comunidades indígenas. Las fuentes de la conquista llaman Calamarí al lugar donde se fundó la ciudad.",
+     "en": "When the Spanish arrived, the bay was home to Indigenous communities. Conquest-era sources call the place where the city was founded Calamarí."
+    },
+    "certainty": "consenso",
+    "sources": [
+     "banrep-heredia"
+    ]
+   },
+   {
+    "event": "e1533-desembarco"
+   },
+   {
+    "event": "e1533-fundacion"
+   }
+  ],
+  "places": [],
+  "period": "prehispanica",
+  "unknown": {
+   "es": "La escena animada es una interpretación artística para ayudar a imaginar el paisaje; no es una reconstrucción arqueológica de un lugar concreto.",
+   "en": "The animated scene is an artistic interpretation to help you picture the landscape; it is not an archaeological reconstruction of a specific place."
+  }
+ },
+ {
+  "id": "hoy",
+  "accent": "#e07a3a",
+  "slides": true,
+  "cover": {
+   "pexels": 11815929,
+   "author": "Kelly",
+   "alt": {
+    "es": "La costa moderna de Cartagena",
+    "en": "Cartagena’s modern coastline"
+   }
+  },
+  "kicker": {
+   "es": "Cartagena hoy · 2026",
+   "en": "Cartagena today · 2026"
+  },
+  "title": {
+   "es": "La ciudad que mira al mar",
+   "en": "The city that looks to the sea"
+  },
+  "teaser": {
+   "es": "Un malecón de 5,1 km en obra, playas e islas de coral.",
+   "en": "A 5.1 km seafront under construction, beaches and coral islands."
+  },
+  "intro": {
+   "es": "La Cartagena de 2026 no es solo historia. Frente al mar se construye el Gran Malecón del Mar, un paseo de 5,1 km, junto con obras para proteger la costa. Y a poca distancia esperan las playas de Bocagrande, La Boquilla, Barú y las Islas del Rosario.",
+   "en": "The Cartagena of 2026 is not only history. By the sea, the Gran Malecón del Mar, a 5.1 km promenade, is being built along with works to protect the coast. And close by are the beaches of Bocagrande, La Boquilla, Barú and the Rosario Islands."
+  },
+  "chapters": [
+   {
+    "event": "e1984-unesco"
+   },
+   {
+    "event": "e2026-malecon"
+   }
+  ],
+  "places": [
+   "gran-malecon",
+   "playas-bocagrande",
+   "la-boquilla",
+   "playa-blanca",
+   "islas-rosario"
+  ],
+  "route": "hoy",
+  "tourism": true,
+  "unknown": {
+   "es": "Información de actualidad verificada el 26/09/2026 en prensa local y fuentes oficiales. Obras, horarios y precios cambian: confírmalos antes de ir.",
+   "en": "Current information checked on 26/09/2026 against local press and official sources. Works, opening times and prices change: confirm before you go."
+  }
+ }
+]

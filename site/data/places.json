@@ -1692,8 +1692,8 @@
    "to": null
   },
   "dates": {
-   "es": "finales del siglo XVI – comienzos del XVII",
-   "en": "late 16th – early 17th century"
+   "es": "1577 – hacia 1612 · torre 1661–1681",
+   "en": "1577 – c. 1612 · tower 1661–1681"
   },
   "periods": [
    "fundacion",
@@ -1705,19 +1705,25 @@
    "sigloXX",
    "contemporanea"
   ],
-  "people": [],
+  "people": [
+   "Simón González",
+   "Francis Drake",
+   "Gastón Lelarge"
+  ],
   "guide": {
-   "es": "La catedral preside el centro de la ciudad desde la época colonial. Su historia está ligada a los ataques corsarios: según fuentes secundarias, sufrió daños durante la toma de Drake en 1586.",
-   "en": "The cathedral has presided over the city centre since colonial times. Its history is tied to the corsair raids: according to secondary sources, it was damaged during Drake's capture of the city in 1586."
+   "es": "Esta catedral nació entre piratas. Se empezó en 1577 y aún estaba en obra cuando Francis Drake tomó la ciudad en 1586: sus cañones derribaron columnas y arcos. Se terminó hacia 1612, y su torre de colores, tal como la ves, es fruto de una reforma de comienzos del siglo XX.",
+   "en": "This cathedral was born among pirates. Begun in 1577, it was still being built when Francis Drake took the city in 1586, and his cannon fire brought down columns and arches. It was finished around 1612; its colourful tower as you see it today comes from an early 20th-century remodelling."
   },
   "history": {
    "es": [
-    "La diócesis de Cartagena se creó en 1534. Las fuentes secundarias consultadas sitúan la construcción de la catedral a finales del siglo XVI y su conclusión hacia 1612.",
-    "No hemos podido contrastar estas fechas con una fuente primaria o académica; por eso la ficha se marca como pendiente de verificación."
+    "La primera iglesia de Cartagena se levantó entre 1535 y 1537 con madera y paja, y se perdió en el incendio de 1552. Tras un concurso de diseños, en 1577 empezaron las obras de la catedral de piedra, dirigidas por el maestro Simón González.",
+    "En 1586, durante la toma de la ciudad por Francis Drake, un cañonazo destruyó tres columnas y cuatro arcos del templo en construcción. En 1600 se derrumbó parte de la cubierta, y las obras concluyeron hacia 1612. La torre se levantó entre 1661 y 1681.",
+    "A comienzos del siglo XX el arquitecto francés Gastón Lelarge dirigió una gran remodelación que le dio a la torre su aspecto actual. En 1953 fue declarada basílica menor, y en 1973 se retiraron los estucos para recuperar la piedra original."
    ],
    "en": [
-    "The diocese of Cartagena was created in 1534. The secondary sources consulted place the cathedral's construction in the late 16th century and its completion around 1612.",
-    "We have not been able to check these dates against a primary or academic source, so this entry is marked as pending verification."
+    "Cartagena’s first church was built between 1535 and 1537 of wood and thatch, and was lost in the fire of 1552. After a design competition, work on the stone cathedral began in 1577 under master builder Simón González.",
+    "In 1586, during Francis Drake’s capture of the city, cannon fire destroyed three columns and four arches of the unfinished church. Part of the roof collapsed in 1600, and the work was completed around 1612. The tower was built between 1661 and 1681.",
+    "In the early 20th century the French architect Gastón Lelarge led a major remodelling that gave the tower its present look. It was named a minor basilica in 1953, and in 1973 the stucco was removed to reveal the original stone."
    ]
   },
   "significance": {
@@ -1729,13 +1735,18 @@
    "en": "In use for worship."
   },
   "events": [
-   "e1586-drake"
+   "e1552-incendio",
+   "e1577-catedral",
+   "e1586-drake",
+   "e1612-catedral"
   ],
   "sources": [
+   "wiki-catedral",
+   "aecid-cf",
    "wiki-cartagena",
    "wiki-timeline"
   ],
-  "certainty": "pendiente",
+  "certainty": "consenso",
   "audio": {
    "es": null,
    "en": null
@@ -1813,7 +1824,11 @@
      "en": "At the end of the street"
     }
    }
-  ]
+  ],
+  "note": {
+   "es": "Estas fechas proceden de fuentes secundarias coincidentes; están pendientes de contrastar con un estudio académico específico.",
+   "en": "These dates come from matching secondary sources; they have yet to be checked against a dedicated academic study."
+  }
  },
  {
   "id": "iglesia-santo-domingo",
@@ -1836,12 +1851,12 @@
    "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
   },
   "built": {
-   "from": 1578,
+   "from": 1579,
    "to": null
   },
   "dates": {
-   "es": "desde 1578 (según fuentes secundarias)",
-   "en": "from 1578 (according to secondary sources)"
+   "es": "comunidad desde la década de 1530 · obras desde finales del siglo XVI",
+   "en": "community from the 1530s · building from the late 16th century"
   },
   "periods": [
    "fundacion",
@@ -1855,35 +1870,44 @@
   ],
   "people": [],
   "guide": {
-   "es": "Uno de los templos más antiguos de la ciudad, de la orden de los dominicos. Su plaza es hoy uno de los espacios más animados del centro histórico.",
-   "en": "One of the city's oldest churches, belonging to the Dominican order. Its square is now one of the liveliest spots in the historic centre."
+   "es": "Los dominicos estuvieron entre los primeros religiosos en llegar a Cartagena. Su iglesia es de las más antiguas de la ciudad, y el claustro de al lado, restaurado a comienzos de este siglo, guarda hoy un pequeño museo con piezas halladas durante las obras.",
+   "en": "The Dominicans were among the first religious orders to reach Cartagena. Their church is one of the oldest in the city, and the cloister next door, restored early this century, now houses a small museum with objects found during the work."
   },
   "history": {
    "es": [
-    "Según fuentes secundarias, la construcción del convento de Santo Domingo comenzó en 1578.",
-    "Ficha pendiente de ampliar con fuentes académicas sobre su arquitectura y su historia."
+    "La orden de Santo Domingo llegó a Cartagena en los primeros años de la ciudad: la AECID sitúa su llegada a finales de 1534, y un estudio académico fecha el núcleo fundacional del convento en 1539. Sus primeras construcciones, de materiales ligeros, se perdieron en el incendio de 1552.",
+    "La iglesia actual se empezó a finales del siglo XVI; para el convento, las fuentes difieren entre 1579 y el siglo XVII. Entre 2000 y 2004 el claustro fue restaurado por la Escuela Taller Cartagena de Indias con apoyo de la Cooperación Española, que tiene allí su centro de formación. En 2022 se inauguró su Museo de Sitio, con hallazgos de las obras, entre ellos cerámica prehispánica."
    ],
    "en": [
-    "According to secondary sources, construction of the Santo Domingo convent began in 1578.",
-    "This entry is waiting to be expanded with academic sources on its architecture and history."
+    "The Dominican order arrived in the city’s early years: AECID dates its arrival to late 1534, and an academic study dates the convent’s founding core to 1539. Its first buildings, of light materials, were lost in the fire of 1552.",
+    "The present church was begun in the late 16th century; for the convent, sources differ between 1579 and the 17th century. Between 2000 and 2004 the cloister was restored by the Escuela Taller Cartagena de Indias with support from Spanish Cooperation, whose training centre is based there. In 2022 its Site Museum opened, showing finds from the works, including pre-Hispanic pottery."
    ]
   },
   "significance": {
-   "es": "Arquitectura religiosa temprana de la ciudad.",
-   "en": "Early religious architecture in the city."
+   "es": "Una de las primeras órdenes religiosas de la ciudad y uno de sus templos más antiguos.",
+   "en": "One of the city’s first religious orders and one of its oldest churches."
   },
   "status": {
-   "es": "En culto; la plaza es espacio público.",
-   "en": "In use for worship; the square is public space."
+   "es": "Iglesia en culto; el claustro es sede del Centro de Formación de la Cooperación Española y tiene un Museo de Sitio.",
+   "en": "The church is in use; the cloister houses the Spanish Cooperation Training Centre and a Site Museum."
   },
-  "events": [],
+  "events": [
+   "e1552-incendio"
+  ],
   "sources": [
+   "reyes-2010",
+   "aecid-cf",
+   "aecid-museo",
    "wiki-timeline"
   ],
-  "certainty": "pendiente",
+  "certainty": "consenso",
   "audio": {
    "es": null,
    "en": null
+  },
+  "note": {
+   "es": "Las fechas exactas de construcción varían según la fuente; por eso damos rangos y no un año único.",
+   "en": "Exact construction dates vary by source, so we give ranges rather than a single year."
   }
  },
  {
@@ -1933,16 +1957,18 @@
   "history": {
    "es": [
     "Pedro Claver nació en Verdú (Lérida) el 24 de junio de 1580 y llegó a Cartagena a finales de 1610 o comienzos de 1611. Fue ordenado sacerdote el 19 de marzo de 1616.",
-    "Al profesar sus votos perpetuos, el 3 de abril de 1622, firmó como «esclavo de los negros para siempre». Murió en Cartagena el 8 de septiembre de 1654. Fue beatificado en 1850 y canonizado en 1888."
+    "Al profesar sus votos perpetuos, el 3 de abril de 1622, firmó como «esclavo de los negros para siempre». Murió en Cartagena el 8 de septiembre de 1654. Fue beatificado en 1850 y canonizado en 1888.",
+    "El templo era de la Compañía de Jesús. Tras la expulsión de los jesuitas ordenada por Carlos III en 1767, el conjunto pasó a otras manos y el claustro se usó como hospital; los jesuitas regresaron en 1896. Hoy los restos de Pedro Claver se veneran en el templo."
    ],
    "en": [
     "Pedro Claver was born in Verdú (Lleida) on 24 June 1580 and reached Cartagena in late 1610 or early 1611. He was ordained a priest on 19 March 1616.",
-    "When he took his final vows on 3 April 1622, he signed as “slave of the Black people forever”. He died in Cartagena on 8 September 1654. He was beatified in 1850 and canonised in 1888."
+    "When he took his final vows on 3 April 1622, he signed as “slave of the Black people forever”. He died in Cartagena on 8 September 1654. He was beatified in 1850 and canonised in 1888.",
+    "The church belonged to the Society of Jesus. After Charles III expelled the Jesuits in 1767, the complex passed to others and the cloister was used as a hospital; the Jesuits returned in 1896. Today Pedro Claver’s remains are venerated in the church."
    ]
   },
   "note": {
-   "es": "Las fechas de construcción del templo actual no están verificadas en las fuentes consultadas; los datos de esta ficha se refieren a la vida de Pedro Claver.",
-   "en": "The construction dates of the present church are not verified in the sources consulted; the data in this entry concern Pedro Claver's life."
+   "es": "Las fuentes consultadas no coinciden en las fechas de construcción del templo actual, por eso no damos un año. Los datos biográficos proceden de la Enciclopedia del Banco de la República.",
+   "en": "The sources consulted disagree on the construction dates of the present church, so we give no year. The biographical data come from the Banco de la República encyclopaedia."
   },
   "significance": {
    "es": "Memoria de la trata esclavista y de la población africana en Cartagena.",
@@ -1954,10 +1980,13 @@
   },
   "events": [
    "e1622-claver",
-   "e1654-claver"
+   "e1654-claver",
+   "e1767-jesuitas"
   ],
   "sources": [
-   "banrep-claver"
+   "banrep-claver",
+   "eltiempo-claver",
+   "wiki-claver-iglesia"
   ],
   "certainty": "documentado",
   "audio": {
@@ -2468,5 +2497,753 @@
    "es": null,
    "en": null
   }
+ },
+ {
+  "id": "iglesia-trinidad",
+  "category": "iglesia",
+  "name": {
+   "es": "Iglesia de la Santísima Trinidad",
+   "en": "Church of the Holy Trinity"
+  },
+  "aka": [
+   "Trinidad",
+   "Plaza de la Trinidad",
+   "Getsemaní",
+   "Iglesia"
+  ],
+  "coords": [
+   10.42039,
+   -75.54544
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1643,
+   "to": null
+  },
+  "dates": {
+   "es": "1643 – hacia 1688",
+   "en": "1643 – c. 1688"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "Estás en el corazón de Getsemaní. Esta iglesia se construyó para un barrio que crecía rápido fuera del centro, y su plaza fue escenario del movimiento de independencia. Hoy, al caer la tarde, es el punto de encuentro de vecinos y viajeros.",
+   "en": "You are in the heart of Getsemaní. This church was built for a quarter that was growing fast outside the centre, and its square was a stage for the independence movement. Today, in the evening, it is where locals and travellers meet."
+  },
+  "history": {
+   "es": [
+    "A comienzos del siglo XVII el obispo pidió al rey Felipe III recursos para atender al creciente barrio de Getsemaní. La construcción de la iglesia de la Santísima Trinidad empezó en 1643 y se completó hacia 1688.",
+    "En el siglo XIX la plaza fue uno de los escenarios principales del movimiento de independencia de la ciudad. Un estudio de 2020 la describe como el «corazón del barrio» y advierte sobre la presión del turismo y la gentrificación."
+   ],
+   "en": [
+    "In the early 17th century the bishop asked King Philip III for funds to serve the growing Getsemaní quarter. Construction of the Church of the Holy Trinity began in 1643 and was completed around 1688.",
+    "In the 19th century the square was one of the main stages of the city’s independence movement. A 2020 study calls it the “heart of the neighbourhood” and warns of pressure from tourism and gentrification."
+   ]
+  },
+  "significance": {
+   "es": "Templo y plaza que definen la vida de Getsemaní.",
+   "en": "The church and square at the centre of life in Getsemaní."
+  },
+  "status": {
+   "es": "En culto; la plaza es espacio público muy concurrido por las noches.",
+   "en": "In use for worship; the square is a busy public space in the evenings."
+  },
+  "events": [
+   "e1643-trinidad"
+  ],
+  "sources": [
+   "santamaria-2020"
+  ],
+  "certainty": "consenso",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "iglesia-santo-toribio",
+  "category": "iglesia",
+  "name": {
+   "es": "Iglesia de Santo Toribio de Mogrovejo",
+   "en": "Church of Santo Toribio de Mogrovejo"
+  },
+  "aka": [
+   "Santo Toribio",
+   "San Diego",
+   "Iglesia"
+  ],
+  "coords": [
+   10.42699,
+   -75.54845
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "built": {
+   "from": 1666,
+   "to": null
+  },
+  "dates": {
+   "es": "desde 1666",
+   "en": "from 1666"
+  },
+  "periods": [
+   "amurallada",
+   "asedios",
+   "sistema",
+   "independencia",
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea"
+  ],
+  "people": [
+   "Toribio de Mogrovejo"
+  ],
+  "guide": {
+   "es": "Una iglesia pequeña con una gran anécdota: según la tradición, durante el sitio de 1741 una bala de cañón entró en plena misa. Por dentro guarda el único retablo barroco de la ciudad.",
+   "en": "A small church with a big story: according to tradition, a cannonball crashed in during Mass in the 1741 siege. Inside is the city’s only Baroque altarpiece."
+  },
+  "history": {
+   "es": [
+    "Su construcción empezó en 1666 en el barrio de San Diego, y fue una de las últimas iglesias levantadas en la ciudad durante la época colonial. Está dedicada a Toribio de Mogrovejo, arzobispo de Lima.",
+    "ProColombia recoge la historia de una bala que entró en el templo en 1741, en medio de la misa; la tomamos como tradición local. En su interior se conservan el único retablo barroco de la ciudad y pinturas murales de la época colonial."
+   ],
+   "en": [
+    "Work began in 1666 in the San Diego quarter, making it one of the last churches built in the city during the colonial era. It is dedicated to Toribio de Mogrovejo, Archbishop of Lima.",
+    "ProColombia tells of a cannonball that entered the church in 1741, in the middle of Mass; we treat this as local tradition. Inside are the city’s only Baroque altarpiece and colonial-era murals."
+   ]
+  },
+  "significance": {
+   "es": "Última gran iglesia colonial del recinto amurallado.",
+   "en": "The last major colonial church inside the walls."
+  },
+  "status": {
+   "es": "En culto.",
+   "en": "In use for worship."
+  },
+  "events": [
+   "e1666-toribio",
+   "e1741-vernon"
+  ],
+  "sources": [
+   "wiki-toribio",
+   "procolombia-toribio"
+  ],
+  "certainty": "consenso",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "galeon-san-jose",
+  "category": "mar",
+  "name": {
+   "es": "Galeón San José",
+   "en": "San José galleon"
+  },
+  "aka": [
+   "Galeón",
+   "Galleon",
+   "San José",
+   "Naufragio",
+   "Shipwreck",
+   "Tesoro",
+   "Treasure",
+   "Barú"
+  ],
+  "coords": [
+   10.171,
+   -75.661
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "radius": 14000,
+   "method": "Zona aproximada del combate de 1708 según la bibliografía (Wikipedia, «Wager’s Action»). La posición del naufragio es información reservada del Estado colombiano: este punto NO marca dónde está el galeón."
+  },
+  "built": {
+   "from": 1708,
+   "to": null
+  },
+  "dates": {
+   "es": "hundido el 8 de junio de 1708 · hallado en 2015",
+   "en": "sunk 8 June 1708 · found in 2015"
+  },
+  "periods": [
+   "asedios",
+   "contemporanea"
+  ],
+  "people": [
+   "José Fernández de Santillán",
+   "Charles Wager"
+  ],
+  "guide": {
+   "es": "La historia más famosa del mar de Cartagena. En 1708, frente a Barú, el galeón San José estalló en pleno combate y se hundió con casi todos sus tripulantes. Durante tres siglos fue una leyenda; en 2015 la Armada lo encontró, y hoy la ciencia empieza a leer sus secretos.",
+   "en": "The most famous story of Cartagena’s sea. In 1708, off Barú, the San José galleon blew up in battle and sank with almost everyone on board. For three centuries it was a legend; in 2015 the Colombian Navy found it, and today science is beginning to read its secrets."
+  },
+  "history": {
+   "es": [
+    "El 8 de junio de 1708, en plena Guerra de Sucesión española, una escuadra británica al mando de Charles Wager atacó frente a Barú a la flota española que navegaba hacia Cartagena. Hacia las 7 de la noche el San José, buque insignia al mando de José Fernández de Santillán, estalló y se hundió. De unas 600 personas a bordo sobrevivieron 11.",
+    "Las fuentes estiman su carga entre 7 y 11 millones de pesos de la época, aunque la cifra real no se conoce. Por eso el naufragio se convirtió en leyenda y, durante décadas, en objeto de disputas legales sobre quién tenía derechos sobre él.",
+    "El 27 de noviembre de 2015 la Armada de Colombia localizó el pecio; el hallazgo se anunció el 5 de diciembre. Sus cañones de bronce decorados con delfines ayudaron a identificarlo. Su posición exacta es reservada.",
+    "En noviembre de 2025 una expedición liderada por el ICANH recuperó los primeros objetos: un cañón, tres monedas de oro (macuquinas), una taza de porcelana china, fragmentos de porcelana y un trozo de cuerda. En agosto de 2026 el Servicio Geológico Colombiano presentó sus análisis científicos."
+   ],
+   "en": [
+    "On 8 June 1708, during the War of the Spanish Succession, a British squadron under Charles Wager attacked the Spanish fleet sailing to Cartagena off Barú. At around 7 p.m. the flagship San José, commanded by José Fernández de Santillán, blew up and sank. Of some 600 people on board, 11 survived.",
+    "Sources estimate its cargo at 7 to 11 million pesos of the time, though the real figure is unknown. That is why the wreck became a legend and, for decades, the subject of legal disputes over who had rights to it.",
+    "On 27 November 2015 the Colombian Navy located the wreck; the find was announced on 5 December. Its bronze cannons decorated with dolphins helped identify it. Its exact position is classified.",
+    "In November 2025 an expedition led by ICANH recovered the first objects: a cannon, three gold coins (macuquinas), a Chinese porcelain cup, porcelain fragments and a piece of rope. In August 2026 the Colombian Geological Survey presented its scientific analyses."
+   ]
+  },
+  "note": {
+   "es": "Las cifras de tripulantes, sobrevivientes y carga proceden de la bibliografía secundaria. El punto del mapa señala la zona aproximada del combate, no el lugar del naufragio.",
+   "en": "The figures for crew, survivors and cargo come from secondary sources. The map point marks the approximate area of the battle, not the wreck site."
+  },
+  "significance": {
+   "es": "El naufragio más célebre del Caribe y un patrimonio sumergido de la nación.",
+   "en": "The Caribbean’s most famous shipwreck and part of the nation’s underwater heritage."
+  },
+  "status": {
+   "es": "Patrimonio sumergido protegido, en investigación científica. No se puede visitar.",
+   "en": "Protected underwater heritage under scientific study. It cannot be visited."
+  },
+  "events": [
+   "e1708-galeon",
+   "e2015-galeon",
+   "e2025-galeon",
+   "e2026-galeon"
+  ],
+  "sources": [
+   "wiki-wager",
+   "eltiempo-galeon-2025",
+   "icanh-sgc-2026"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "photos": [
+   {
+    "pexels": 21336471,
+    "author": "Renee B",
+    "alt": {
+     "es": "Réplica moderna de un galeón amarrada en un puerto",
+     "en": "A modern galleon replica moored in a harbour"
+    },
+    "angle": {
+     "es": "Así era un galeón (réplica moderna, no es el San José)",
+     "en": "What a galleon looked like (modern replica, not the San José)"
+    },
+    "specific": false
+   },
+   {
+    "pexels": 11901399,
+    "author": "Cesar Ricciulli",
+    "alt": {
+     "es": "Un pescador en el mar de Cartagena al atardecer",
+     "en": "A fisherman on the sea off Cartagena at sunset"
+    },
+    "angle": {
+     "es": "El mar donde ocurrió el combate (imagen ilustrativa)",
+     "en": "The sea where the battle took place (illustrative)"
+    },
+    "specific": false
+   }
+  ]
+ },
+ {
+  "id": "gran-malecon",
+  "category": "hoy",
+  "name": {
+   "es": "Gran Malecón del Mar",
+   "en": "Gran Malecón del Mar (seafront promenade)"
+  },
+  "aka": [
+   "Malecón",
+   "Promenade",
+   "Marbella",
+   "El Cabrero",
+   "Crespo",
+   "La Tenaza",
+   "Rueda",
+   "Mirador del Sol",
+   "Obras 2026"
+  ],
+  "coords": [
+   10.4352,
+   -75.53913
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Trazado aproximado a lo largo de la costa entre La Tenaza, El Cabrero, Marbella, Crespo y La Boquilla, a partir de puntos verificados en OpenStreetMap (26/09/2026). No es el plano de obra."
+  },
+  "path": [
+   [
+    10.43112,
+    -75.54612
+   ],
+   [
+    10.43191,
+    -75.54308
+   ],
+   [
+    10.4352,
+    -75.53913
+   ],
+   [
+    10.43621,
+    -75.53592
+   ],
+   [
+    10.4382,
+    -75.53111
+   ],
+   [
+    10.4498,
+    -75.5188
+   ],
+   [
+    10.47604,
+    -75.4947
+   ]
+  ],
+  "dates": {
+   "es": "en construcción (2026) · plazo: junio de 2027",
+   "en": "under construction (2026) · due: June 2027"
+  },
+  "periods": [
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "La Cartagena de hoy también se construye frente al mar. El Gran Malecón del Mar será un paseo de 5,1 km junto a la playa, desde La Boquilla hasta La Tenaza, con senderos, ciclorruta, zonas verdes y un mirador con rueda panorámica. Los primeros tramos se abren este otoño de 2026.",
+   "en": "Today’s Cartagena is also being built by the sea. The Gran Malecón del Mar will be a 5.1 km seafront promenade from La Boquilla to La Tenaza, with walkways, a cycle path, green areas and a viewpoint with a Ferris wheel. The first stretches open in autumn 2026."
+  },
+  "history": {
+   "es": [
+    "El proyecto recorre 5,1 km de costa entre Playa Azul de La Boquilla y La Tenaza, pasando por el túnel de Crespo, Marbella y El Cabrero. Incluye estructuras de protección costera (espolones), ciclorrutas, senderos peatonales, zonas verdes, un centro de información turística y el Mirador del Sol, con una rueda panorámica.",
+    "En julio de 2026 la obra iba en un 57,6 %; a finales de septiembre, en un 70 %. La Alcaldía programó abrir los primeros 2 km el 15 de octubre de 2026, y el contrato va hasta junio de 2027.",
+    "En paralelo avanza la Defensa Costera 2050, con espolones en Castillogrande, Marbella, El Cabrero, la avenida Santander y La Bocana. Su primera fase, entre Playa Hollywood y la plaza de Bocagrande, tiene como meta abril de 2027."
+   ],
+   "en": [
+    "The project runs along 5.1 km of coast from Playa Azul in La Boquilla to La Tenaza, via the Crespo tunnel, Marbella and El Cabrero. It includes coastal-protection groynes, cycle paths, walkways, green areas, a tourist information centre and the Mirador del Sol viewpoint with a Ferris wheel.",
+    "In July 2026 the work was 57.6% complete; by late September, 70%. The city scheduled the first 2 km to open on 15 October 2026, and the contract runs to June 2027.",
+    "Alongside it, the Coastal Defence 2050 programme is building groynes in Castillogrande, Marbella, El Cabrero, Avenida Santander and La Bocana. Its first phase, between Playa Hollywood and Bocagrande square, is due in April 2027."
+   ]
+  },
+  "note": {
+   "es": "Información de actualidad: obra en curso. Fechas y avances según la prensa local al 25/09/2026; pueden cambiar.",
+   "en": "Current information: work in progress. Dates and progress per local press as of 25/09/2026; they may change."
+  },
+  "significance": {
+   "es": "La gran obra urbana de la Cartagena de 2026: un paseo público frente al mar y una defensa ante la erosión.",
+   "en": "Cartagena’s major urban project of 2026: a public seafront promenade and a defence against erosion."
+  },
+  "status": {
+   "es": "En construcción (70 % en septiembre de 2026).",
+   "en": "Under construction (70% in September 2026)."
+  },
+  "events": [
+   "e2026-malecon"
+  ],
+  "sources": [
+   "eltiempo-malecon-2026",
+   "metro-malecon-2026",
+   "universal-defensa-2026"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "tourism": true,
+  "photos": [
+   {
+    "pexels": 11815929,
+    "author": "Kelly",
+    "alt": {
+     "es": "La costa de Cartagena con Bocagrande y el mar",
+     "en": "Cartagena’s coast, with Bocagrande and the sea"
+    },
+    "angle": {
+     "es": "La costa de la ciudad hoy (el malecón aún está en obra)",
+     "en": "The city’s coast today (the promenade is still being built)"
+    },
+    "specific": false
+   },
+   {
+    "pexels": 10323093,
+    "author": "Roma Diachkin",
+    "alt": {
+     "es": "Un pescador lanza su red frente a los edificios de Cartagena",
+     "en": "A fisherman casts his net in front of Cartagena’s buildings"
+    },
+    "angle": {
+     "es": "La vida frente al mar",
+     "en": "Life by the sea"
+    },
+    "specific": false
+   }
+  ]
+ },
+ {
+  "id": "playas-bocagrande",
+  "category": "hoy",
+  "name": {
+   "es": "Playas de Bocagrande y Castillogrande",
+   "en": "Bocagrande and Castillogrande beaches"
+  },
+  "aka": [
+   "Bocagrande",
+   "Castillogrande",
+   "Playa",
+   "Beach",
+   "Playas"
+  ],
+  "coords": [
+   10.40409,
+   -75.55342
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026). Zona de playas de la península, no un punto exacto."
+  },
+  "dates": {
+   "es": "información turística actual",
+   "en": "current visitor information"
+  },
+  "periods": [
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "A pocos minutos del centro histórico está la Cartagena de los rascacielos. En la península de Bocagrande hay playas urbanas; en la de Castillogrande, del lado de la bahía, el agua suele estar más calmada.",
+   "en": "A few minutes from the old town is the Cartagena of skyscrapers. The Bocagrande peninsula has city beaches; at Castillogrande, on the bay side, the water is usually calmer."
+  },
+  "history": {
+   "es": [
+    "La península de Bocagrande reúne hoteles, apartamentos y playas urbanas. ProColombia destaca Castillogrande por sus aguas tranquilas y claras.",
+    "Aquí mismo se levantó en 1626 el fuerte de Santa Cruz de Castillogrande, uno de los primeros del sistema defensivo de la bahía."
+   ],
+   "en": [
+    "The Bocagrande peninsula is home to hotels, apartments and city beaches. ProColombia highlights Castillogrande for its calm, clear water.",
+    "The Fort of Santa Cruz de Castillogrande, one of the first in the bay’s defensive system, was built here in 1626."
+   ]
+  },
+  "significance": {
+   "es": "Las playas urbanas de la ciudad moderna.",
+   "en": "The modern city’s urban beaches."
+  },
+  "status": {
+   "es": "Playas públicas.",
+   "en": "Public beaches."
+  },
+  "visit": {
+   "es": "A pocos minutos en taxi desde el centro histórico. Consulta el estado del mar y las indicaciones de los salvavidas.",
+   "en": "A few minutes by taxi from the historic centre. Check sea conditions and lifeguard advice.",
+   "checked": "2026-09-26",
+   "source": "procolombia-playas"
+  },
+  "events": [],
+  "sources": [
+   "procolombia-playas",
+   "etcar-castillogrande"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "tourism": true,
+  "photos": [
+   {
+    "pexels": 13806427,
+    "author": "Camilo Ruiz Vasquez",
+    "alt": {
+     "es": "Bañistas en la playa de Bocagrande",
+     "en": "Beachgoers at Bocagrande"
+    },
+    "angle": {
+     "es": "La playa de Bocagrande",
+     "en": "Bocagrande beach"
+    }
+   },
+   {
+    "pexels": 11815906,
+    "author": "Kelly",
+    "alt": {
+     "es": "Los edificios de Bocagrande frente al mar",
+     "en": "Bocagrande’s buildings by the sea"
+    },
+    "angle": {
+     "es": "Bocagrande desde el aire",
+     "en": "Bocagrande from the air"
+    }
+   }
+  ]
+ },
+ {
+  "id": "la-boquilla",
+  "category": "hoy",
+  "name": {
+   "es": "La Boquilla",
+   "en": "La Boquilla"
+  },
+  "aka": [
+   "Boquilla",
+   "Playa",
+   "Beach",
+   "Manglar",
+   "Mangroves",
+   "Pescadores"
+  ],
+  "coords": [
+   10.47604,
+   -75.4947
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026). Zona del corregimiento, no un punto exacto."
+  },
+  "dates": {
+   "es": "información turística actual",
+   "en": "current visitor information"
+  },
+  "periods": [
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "Al norte de la ciudad, pasando el aeropuerto, está La Boquilla: una playa larga y un pueblo de pescadores cerca del centro. Aquí empezará el Gran Malecón del Mar.",
+   "en": "North of the city, past the airport, lies La Boquilla: a long beach and a fishing village close to the centre. This is where the Gran Malecón del Mar will begin."
+  },
+  "history": {
+   "es": [
+    "ProColombia la describe como una playa famosa por su cercanía al centro histórico. Es el extremo norte del Gran Malecón del Mar, que arranca en Playa Azul."
+   ],
+   "en": [
+    "ProColombia describes it as a well-known beach, close to the historic centre. It is the northern end of the Gran Malecón del Mar, which starts at Playa Azul."
+   ]
+  },
+  "significance": {
+   "es": "Playa y comunidad tradicional al norte de la ciudad.",
+   "en": "A beach and traditional community north of the city."
+  },
+  "status": {
+   "es": "Playa pública y comunidad habitada.",
+   "en": "Public beach and living community."
+  },
+  "visit": {
+   "es": "Se llega por la vía al Mar, al norte del aeropuerto. Respeta a la comunidad y contrata servicios con operadores formales.",
+   "en": "Reached via the Vía al Mar, north of the airport. Respect the community and book services with licensed operators.",
+   "checked": "2026-09-26",
+   "source": "procolombia-playas"
+  },
+  "events": [],
+  "sources": [
+   "procolombia-playas",
+   "eltiempo-malecon-2026"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "tourism": true
+ },
+ {
+  "id": "playa-blanca",
+  "category": "hoy",
+  "name": {
+   "es": "Playa Blanca (Barú)",
+   "en": "Playa Blanca (Barú)"
+  },
+  "aka": [
+   "Barú",
+   "Playa",
+   "Beach",
+   "Playas"
+  ],
+  "coords": [
+   10.22431,
+   -75.60779
+  ],
+  "loc": {
+   "accuracy": "approx",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026)"
+  },
+  "dates": {
+   "es": "información turística actual",
+   "en": "current visitor information"
+  },
+  "periods": [
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "Arena blanca y agua turquesa en la isla de Barú, a unos 40 minutos de la ciudad. Es la postal caribeña que muchos viajeros buscan.",
+   "en": "White sand and turquoise water on Barú island, about 40 minutes from the city. It’s the Caribbean postcard many travellers come for."
+  },
+  "history": {
+   "es": [
+    "ProColombia la presenta como una playa de arena blanca y aguas cristalinas, a unos 40 minutos de Cartagena. Frente a estas aguas de Barú ocurrió en 1708 el combate en que se hundió el galeón San José."
+   ],
+   "en": [
+    "ProColombia describes it as a white-sand beach with crystal-clear water, about 40 minutes from Cartagena. Off these Barú waters, in 1708, the battle took place in which the San José galleon sank."
+   ]
+  },
+  "significance": {
+   "es": "La playa más conocida cerca de Cartagena.",
+   "en": "The best-known beach near Cartagena."
+  },
+  "status": {
+   "es": "Playa pública; muy concurrida en temporada alta.",
+   "en": "Public beach; very busy in high season."
+  },
+  "visit": {
+   "es": "Unos 40 minutos desde la ciudad (por carretera o en lancha, según el operador). Verifica precios y condiciones antes de ir.",
+   "en": "About 40 minutes from the city (by road or boat, depending on the operator). Check prices and conditions before you go.",
+   "checked": "2026-09-26",
+   "source": "procolombia-playas"
+  },
+  "events": [
+   "e1708-galeon"
+  ],
+  "sources": [
+   "procolombia-playas"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "tourism": true,
+  "photos": [
+   {
+    "pexels": 35211242,
+    "author": "Juan Coronel",
+    "alt": {
+     "es": "Vista aérea de una playa de aguas turquesa en Bolívar",
+     "en": "Aerial view of a turquoise beach in Bolívar"
+    },
+    "angle": {
+     "es": "Playa del Caribe en Bolívar (imagen ilustrativa)",
+     "en": "A Caribbean beach in Bolívar (illustrative)"
+    },
+    "specific": false
+   },
+   {
+    "pexels": 39332129,
+    "author": "Jose Manuel Reyes Aguilar",
+    "alt": {
+     "es": "Playa con sombrillas de palma en Bolívar",
+     "en": "A beach with palm umbrellas in Bolívar"
+    },
+    "angle": {
+     "es": "Sombrillas de palma (imagen ilustrativa)",
+     "en": "Palm umbrellas (illustrative)"
+    },
+    "specific": false
+   }
+  ]
+ },
+ {
+  "id": "islas-rosario",
+  "category": "hoy",
+  "name": {
+   "es": "Islas del Rosario",
+   "en": "Rosario Islands"
+  },
+  "aka": [
+   "Rosario",
+   "Islas",
+   "Islands",
+   "Corales",
+   "Parque Nacional",
+   "Playa",
+   "Beach"
+  ],
+  "coords": [
+   10.18064,
+   -75.74632
+  ],
+  "loc": {
+   "accuracy": "zone",
+   "radius": 6000,
+   "method": "Verificada sobre la cartografía de OpenStreetMap (26/09/2026). Archipiélago: zona, no un punto exacto."
+  },
+  "dates": {
+   "es": "información turística actual",
+   "en": "current visitor information"
+  },
+  "periods": [
+   "contemporanea"
+  ],
+  "people": [],
+  "guide": {
+   "es": "Unas 28 islas de arena blanca y arrecifes de coral, a cerca de una hora en lancha. Forman parte de un parque nacional natural: se visitan con cuidado.",
+   "en": "Some 28 islands of white sand and coral reefs, about an hour away by boat. They are part of a national natural park, so visit with care."
+  },
+  "history": {
+   "es": [
+    "El archipiélago tiene unas 28 islas y se llega en lancha en cerca de una hora, según ProColombia. Forma parte del Parque Nacional Natural Corales del Rosario y de San Bernardo, que protege arrecifes y ecosistemas marinos."
+   ],
+   "en": [
+    "The archipelago has about 28 islands and is roughly an hour away by boat, according to ProColombia. It is part of the Corales del Rosario y de San Bernardo National Natural Park, which protects reefs and marine ecosystems."
+   ]
+  },
+  "significance": {
+   "es": "Naturaleza protegida del Caribe colombiano.",
+   "en": "Protected nature of the Colombian Caribbean."
+  },
+  "status": {
+   "es": "Área protegida con actividades turísticas reguladas.",
+   "en": "Protected area with regulated tourism."
+  },
+  "visit": {
+   "es": "Cerca de una hora en lancha. Usa operadores autorizados, no toques los corales y lleva protector solar respetuoso con el arrecife.",
+   "en": "About an hour by boat. Use licensed operators, don’t touch the coral and bring reef-safe sunscreen.",
+   "checked": "2026-09-26",
+   "source": "procolombia-playas"
+  },
+  "events": [],
+  "sources": [
+   "procolombia-playas",
+   "pnn-rosario"
+  ],
+  "certainty": "documentado",
+  "audio": {
+   "es": null,
+   "en": null
+  },
+  "tourism": true,
+  "photos": [
+   {
+    "pexels": 35211383,
+    "author": "Juan Coronel",
+    "alt": {
+     "es": "Vista aérea de una playa soleada en Bolívar con vegetación",
+     "en": "Aerial view of a sunny beach in Bolívar with greenery"
+    },
+    "angle": {
+     "es": "Aguas del Caribe en Bolívar (imagen ilustrativa)",
+     "en": "Caribbean waters in Bolívar (illustrative)"
+    },
+    "specific": false
+   }
+  ]
  }
 ]

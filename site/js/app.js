@@ -1,5 +1,5 @@
 // Orquestación: estado de la vista, enrutado por hash (enlaces compartibles) y eventos.
-import { loadData, db, pexels, photosFor, place, event as getEvent, period, route as getRoute, periodForYear, eraFocus, eraYear } from './data.js';
+import { loadData, db, pexels, photosFor, place, event as getEvent, period, route as getRoute, story as getStory, storyPlaces, periodForYear, eraFocus, eraYear } from './data.js';
 import { loadLanguages, setLang, getLang, t, L, applyDom, onLangChange } from './i18n.js';
 import { store } from './store.js';
 import * as M from './map.js';
@@ -19,7 +19,10 @@ const S = {
   route: null,       // objeto ruta activa
   stop: 0,
   speaking: false,
-  eventId: null
+  eventId: null,
+  storyId: null,     // historia temática abierta (Explorar)
+  chapter: null,
+  preview: null      // ruta mostrada en el mapa sin iniciarla
 };
 
 /* ---------------- Render ---------------- */
@@ -27,6 +30,7 @@ function render() {
   document.querySelectorAll('[role="tab"]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === S.tab)));
   const p = S.placeId && place(S.placeId);
   if (p) body.innerHTML = V.placeView(p, { route: S.route, stopIndex: S.stop, speaking: S.speaking });
+  else if (S.storyId && getStory(S.storyId)) body.innerHTML = V.storyView(getStory(S.storyId), { chapter: S.chapter, speaking: S.speaking });
   else if (S.tab === 'history') body.innerHTML = V.historyView({ periodId: S.periodId, eventId: S.eventId, speaking: S.speaking });
   else if (S.tab === 'routes') body.innerHTML = V.routesView();
   else if (S.tab === 'about') body.innerHTML = V.aboutView();
@@ -43,13 +47,21 @@ function renderMap() {
     const ev = S.eventId && getEvent(S.eventId);
     pulse = ev ? new Set(ev.places || []) : null;
     focus = new Set(ev && ev.places?.length ? ev.places : eraFocus(S.periodId));
+  } else if (S.storyId && getStory(S.storyId)) {
+    const st = getStory(S.storyId);
+    const ids = storyPlaces(st);
+    if (ids.length) focus = new Set(ids);
+    const c = S.chapter != null ? st.chapters[S.chapter] : null;
+    const cp = c ? (c.event ? getEvent(c.event)?.places : c.places) || [] : [];
+    if (cp.length) { pulse = new Set(cp); focus = new Set([...(focus || []), ...cp]); }
   }
-  M.showWalls(!S.history ? true : S.year >= 1640 ? true : S.year >= 1614 ? 'building' : false);
+  const preStory = S.storyId && getStory(S.storyId)?.period === 'prehispanica';
+  M.showWalls(preStory ? false : !S.history ? true : S.year >= 1640 ? true : S.year >= 1614 ? 'building' : false);
   M.renderMarkers({
     focus, pulse,
     visibleCats: S.history ? new Set(V.CATS) : S.visibleCats,
     year: S.history ? S.year : null,
-    route: S.route,
+    route: S.route || S.preview,
     activeId: S.placeId
   });
 }
@@ -67,6 +79,7 @@ function openPlace(id, { fly = true, fromRoute = false } = {}) {
   if (!p) return;
   tts.stop(); S.speaking = false;
   if (!fromRoute && S.route && !S.route.stops.includes(id)) exitRoute(false);
+  if (S.preview) { S.preview = null; M.clearRoute(); }
   S.placeId = id;
   const fresh = store.addTo('visited', id);
   render(); scrollTop();
@@ -82,7 +95,8 @@ function closePlace() {
   if (S.route) { exitRoute(true); return; }
   S.placeId = null;
   render(); scrollTop();
-  setHash(S.tab === 'history' ? `historia/${S.periodId}` : tabHash(S.tab));
+  setHash(S.storyId ? `relato/${S.storyId}` : S.tab === 'history' ? `historia/${S.periodId}` : tabHash(S.tab));
+  if (S.storyId) fitStory();
 }
 
 const tabHash = tab => ({ explore: 'explorar', history: `historia/${S.periodId}`, routes: 'rutas', about: 'fuentes' }[tab]);
@@ -91,7 +105,8 @@ function openTab(tab) {
   tts.stop(); S.speaking = false;
   if (S.route && tab !== 'routes') exitRoute(false);
   S.tab = tab;
-  S.placeId = null;
+  S.placeId = null; S.storyId = null; S.chapter = null;
+  if (S.preview) { S.preview = null; M.clearRoute(); }
   if (tab === 'history') enterHistory(); else if (S.history) leaveHistory(false);
   render(); scrollTop();
   setHash(tabHash(tab));
@@ -100,6 +115,8 @@ function openTab(tab) {
 
 /* ---- Historia: relato por capítulos ---- */
 function enterHistory(periodId) {
+  if (S.preview) { S.preview = null; M.clearRoute(); }
+  S.storyId = null; S.chapter = null;
   S.history = true;
   $('#timebar').hidden = false;
   $('#eraStamp').hidden = false;
@@ -201,12 +218,71 @@ function listenEra() {
   if (b) { b.setAttribute('aria-pressed', 'true'); b.innerHTML = `<svg aria-hidden="true"><use href="#i-pause"/></svg><span>${t('place.stop')}</span>`; }
 }
 
+/* ---- Historias temáticas (Explorar) ---- */
+function fitStory() {
+  const st = getStory(S.storyId); if (!st) return;
+  const ids = storyPlaces(st);
+  if (ids.length) M.fitPlaces(ids, { maxZoom: 16 }); else M.home();
+}
+function openStory(id) {
+  const st = getStory(id); if (!st) return;
+  tts.stop(); S.speaking = false;
+  if (S.route) exitRoute(false);
+  if (S.history) leaveHistory(false);
+  if (S.preview) { S.preview = null; M.clearRoute(); }
+  S.tab = 'explore'; S.placeId = null; S.storyId = id; S.chapter = null;
+  render(); scrollTop();
+  setHash(`relato/${id}`);
+  setSheet('half');
+  fitStory();
+}
+function closeStory() {
+  tts.stop(); S.speaking = false;
+  S.storyId = null; S.chapter = null;
+  render(); scrollTop(); setHash('explorar');
+}
+function selectChapter(k) {
+  const st = getStory(S.storyId); if (!st) return;
+  S.chapter = S.chapter === k ? null : k;
+  body.querySelectorAll('[data-schapter]').forEach(b => b.classList.toggle('on', Number(b.dataset.schapter) === S.chapter));
+  renderMap();
+  const c = S.chapter != null ? st.chapters[S.chapter] : null;
+  const ids = c ? (c.event ? getEvent(c.event)?.places : c.places) || [] : [];
+  if (ids.length) {
+    M.fitPlaces(ids, { maxZoom: 16 });
+    if (window.matchMedia('(max-width: 820px)').matches) { setSheet('peek'); const e = c.event && getEvent(c.event); toast(e ? `${L(e.date)} · ${L(e.title)}` : L(c.title)); }
+  } else if (S.chapter == null) fitStory();
+}
+function listenStory() {
+  const st = getStory(S.storyId); if (!st) return;
+  if (S.speaking) { tts.stop(); S.speaking = false; render(); return; }
+  const parts = st.chapters.map(c => { const e = c.event && getEvent(c.event); return e ? `${e.year}. ${L(e.title)}. ${L(e.text)}` : `${L(c.label)}. ${L(c.title)}. ${L(c.text)}`; });
+  const ok = tts.speak(`${L(st.title)}. ${L(st.intro)} ${parts.join(' ')}`, getLang(), { onend: () => { S.speaking = false; if (S.storyId && !S.placeId) render(); } });
+  if (!ok) return toast(t('tts.unsupported'));
+  S.speaking = true;
+  const b = body.querySelector('[data-listen-story]');
+  if (b) { b.setAttribute('aria-pressed', 'true'); b.innerHTML = `<svg aria-hidden="true"><use href="#i-pause"/></svg><span>${t('place.stop')}</span>`; }
+}
+function previewRoute(id) {
+  const r = getRoute(id); if (!r) return;
+  S.preview = r;
+  M.drawRoute(r); renderMap();
+  M.fitPlaces(r.stops, { maxZoom: 16 });
+  setSheet('peek');
+}
+function toggleScene(btn) {
+  const sc = btn.closest('[data-scene]'); if (!sc) return;
+  const paused = sc.classList.toggle('paused');
+  btn.innerHTML = `<svg aria-hidden="true"><use href="#i-${paused ? 'play' : 'pause'}"/></svg>`;
+  btn.setAttribute('aria-label', t(paused ? 'scene.play' : 'scene.pause'));
+}
+
 /* ---- Rutas ---- */
 function startRoute(id, stopNum = 1) {
   const r = getRoute(id);
   if (!r) return;
   if (S.history) leaveHistory(false);
-  S.tab = 'routes';
+  S.tab = 'routes'; S.storyId = null; S.chapter = null; S.preview = null;
   S.route = r;
   S.stop = Math.max(0, Math.min(r.stops.length - 1, stopNum - 1));
   M.drawRoute(r);
@@ -320,12 +396,13 @@ function wireSearch() {
     const b = e.target.closest('.sr-item');
     if (!b) return;
     close(); input.value = ''; input.blur();
-    if (b.dataset.place) { S.tab = S.tab === 'history' ? 'history' : 'explore'; openPlace(b.dataset.place); }
+    if (b.dataset.story) openStory(b.dataset.story);
+    else if (b.dataset.place) { S.tab = S.tab === 'history' ? 'history' : 'explore'; openPlace(b.dataset.place); }
     else if (b.dataset.event) {
       const ev = getEvent(b.dataset.event);
-      S.tab = 'history'; S.placeId = null; enterHistory(ev.period); render(); scrollTop(); setHash(`historia/${ev.period}`);
+      S.tab = 'history'; S.placeId = null; S.storyId = null; enterHistory(ev.period); render(); scrollTop(); setHash(`historia/${ev.period}`);
       selectEvent(ev.id);
-    } else if (b.dataset.period) { S.tab = 'history'; S.placeId = null; enterHistory(b.dataset.period); render(); scrollTop(); setHash(`historia/${b.dataset.period}`); }
+    } else if (b.dataset.period) { S.tab = 'history'; S.placeId = null; S.storyId = null; enterHistory(b.dataset.period); render(); scrollTop(); setHash(`historia/${b.dataset.period}`); }
   });
   document.addEventListener('click', e => { if (!e.target.closest('.search')) close(); });
 }
@@ -334,8 +411,9 @@ function wireSearch() {
 function routeFromHash() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   const [a, b, c] = parts;
+  if (a === 'relato' && getStory(b)) { openStory(b); return true; }
   if (a === 'lugar' && place(b)) { if (S.history) leaveHistory(false); S.tab = 'explore'; openPlace(b); return true; }
-  if (a === 'historia') { S.tab = 'history'; S.placeId = null; enterHistory(period(b) ? b : S.periodId); render(); return true; }
+  if (a === 'historia') { if (S.route) exitRoute(false); S.tab = 'history'; S.placeId = null; enterHistory(period(b) ? b : S.periodId); render(); scrollTop(); return true; }
   if (a === 'ruta' && getRoute(b)) { if (S.history) leaveHistory(false); startRoute(b, Number(c) || 1); return true; }
   if (a === 'rutas') { openTab('routes'); return true; }
   if (a === 'fuentes') { openTab('about'); return true; }
@@ -364,7 +442,13 @@ function wire() {
     const el = e.target.closest('button, a');
     if (!el) return;
     const d = el.dataset;
-    if (d.place) openPlace(d.place, { fromRoute: !!(S.route && S.route.stops.includes(d.place)) });
+    if ('sceneToggle' in d) toggleScene(el);
+    else if (d.story) openStory(d.story);
+    else if ('backExplore' in d) closeStory();
+    else if (d.schapter != null) selectChapter(Number(d.schapter));
+    else if ('listenStory' in d) listenStory();
+    else if (d.preview) previewRoute(d.preview);
+    else if (d.place) openPlace(d.place, { fromRoute: !!(S.route && S.route.stops.includes(d.place)) });
     else if (d.cat) {
       const all = S.visibleCats.size === V.CATS.length;
       if (d.cat === '__all') S.visibleCats = new Set(V.CATS);
@@ -375,8 +459,8 @@ function wire() {
       const ids = db.places.filter(p => S.visibleCats.has(p.category)).map(p => p.id);
       if (S.visibleCats.size < V.CATS.length && ids.length) M.fitPlaces(ids);
     }
-    else if (d.period) { tts.stop(); S.speaking = false; S.tab = 'history'; S.placeId = null; enterHistory(d.period); render(); scrollTop(); setHash(`historia/${d.period}`); }
-    else if (d.route) startRoute(d.route);
+    else if (d.period) { tts.stop(); S.speaking = false; S.tab = 'history'; S.placeId = null; S.storyId = null; enterHistory(d.period); render(); scrollTop(); setHash(`historia/${d.period}`); }
+    else if (d.route) startRoute(d.route, Number(d.stopn) || 1);
     else if ('back' in d) closePlace();
     else if ('listen' in d) listen();
     else if ('zoom' in d) M.flyToPlace(S.placeId, { zoom: 18 });
