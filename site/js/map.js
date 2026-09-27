@@ -72,10 +72,15 @@ export function setBaseLayer(name) {
   document.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.layer === name)));
 }
 
-function iconHtml(p, { num, cls = '' } = {}) {
+function iconHtml(p, { num, cls = '', arrive = false } = {}) {
   const inner = num != null ? `<span class="mk-num">${num}</span>` : `<svg aria-hidden="true"><use href="#i-${p.category}"/></svg>`;
   const visited = store.has('visited', p.id) ? ' visited' : '';
-  return `<div class="mk ${cls}${visited}" style="background:${catColor(p.category)}">${inner}</div>`;
+  const pin = `<div class="mk ${cls}${visited}" style="background:${catColor(p.category)}">${inner}</div>`;
+  if (!cls.includes('active')) return pin;
+  // Lugar seleccionado: cae con un rebote y emite ondas en el suelo para que se vea dónde está
+  return `<div class="mk-hi${arrive ? ' arrive' : ''}" style="--mc:${catColor(p.category)}">
+    <span class="mk-sonar"></span><span class="mk-sonar s2"></span><span class="mk-sonar s3"></span>
+    <div class="mk-b">${pin}</div></div>`;
 }
 
 function makeIcon(p, opts) {
@@ -120,15 +125,20 @@ export function renderMarkers({ visibleCats, year = null, route = null, activeId
       }
       if (pulse && pulse.has(id) && show) cls += ' pulse';
     }
-    if (id === activeId) cls += ' active';
+    let arrive = false;
+    if (id === activeId) {
+      cls += ' active';
+      label = true;                                   // su nombre siempre visible
+      arrive = !rec.wasActive; rec.wasActive = true;  // la animación de llegada solo al seleccionarlo
+    } else rec.wasActive = false;
     const key = `${show}|${cls}|${num}|${label}|${store.has('visited', id)}`;
     if (rec.key !== key) {
       rec.key = key;
       if (show) {
-        m.setIcon(makeIcon(p, { num, cls }));
+        m.setIcon(makeIcon(p, { num, cls, arrive }));
         if (!map.hasLayer(m)) m.addTo(map);
         m.setZIndexOffset(id === activeId || label ? 1000 : cls.includes('dim') ? -500 : 0);
-        setLabel(rec, label);
+        setLabel(rec, label, id === activeId);
         rec.extras.forEach(x => { if (!map.hasLayer(x)) x.addTo(map); });
       } else if (map.hasLayer(m)) {
         map.removeLayer(m);
@@ -153,14 +163,18 @@ function declutter() {
 let declutterTimer;
 const scheduleDeclutter = () => { clearTimeout(declutterTimer); declutterTimer = setTimeout(declutter, 60); };
 
-/** Etiqueta con el nombre siempre visible (para los protagonistas de una época). */
-function setLabel(rec, on) {
+/** Etiqueta con el nombre siempre visible (protagonistas de una época o lugar seleccionado). */
+function setLabel(rec, on, sel = false) {
   const { m, p } = rec;
-  if (rec.labeled === on) return;
-  rec.labeled = on;
-  const name = Lx(p.name).split(' · ')[0];
+  const mode = on ? (sel ? 'sel' : 'on') : 'off';
+  if (rec.labeled === mode) return;
+  rec.labeled = mode;
+  const name = Lx(p.name).split(' · ')[0].split(' (')[0];
   m.unbindTooltip();
-  if (on) {
+  if (sel) {
+    m.bindTooltip(name, { permanent: true, direction: 'top', offset: [0, -32], className: 'mk-label sel' });
+    if (map.hasLayer(m)) m.openTooltip();
+  } else if (on) {
     m.bindTooltip(name, { permanent: true, direction: 'right', offset: [16, -18], className: 'mk-label' });
     if (map.hasLayer(m)) m.openTooltip();
   } else {
