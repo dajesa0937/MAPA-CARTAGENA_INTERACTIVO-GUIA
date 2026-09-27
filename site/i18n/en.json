@@ -236,5 +236,7 @@
  "cinema.hint": "Tap the sides to go forward or back",
  "hero.cinema": "Watch as a film",
  "place.pressPhotos": "Recent photos of the works (press)",
- "place.pressNote": "Photos of the works belong to the news outlets; open them on their sites."
+ "place.pressNote": "Photos of the works belong to the news outlets; open them on their sites.",
+ "place.photoLinks": "See photos of the place",
+ "place.photoLinksNote": "External links: photos belong to their authors."
 }

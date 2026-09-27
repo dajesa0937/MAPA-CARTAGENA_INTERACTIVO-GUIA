@@ -104,6 +104,9 @@
    },
    {
     "event": "e1767-jesuitas"
+   },
+   {
+    "event": "e1885-ermita"
    }
   ],
   "places": [
@@ -112,7 +115,8 @@
    "san-pedro-claver",
    "iglesia-trinidad",
    "iglesia-santo-toribio",
-   "convento-popa"
+   "convento-popa",
+   "ermita-cabrero"
   ],
   "route": "iglesias",
   "unknown": {

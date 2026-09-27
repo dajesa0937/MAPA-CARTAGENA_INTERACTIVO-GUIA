@@ -236,5 +236,7 @@
  "cinema.hint": "Toca los lados para avanzar o retroceder",
  "hero.cinema": "Ver como película",
  "place.pressPhotos": "Fotos recientes de la obra (prensa)",
- "place.pressNote": "Las fotos de la obra pertenecen a los medios; ábrelas en su sitio."
+ "place.pressNote": "Las fotos de la obra pertenecen a los medios; ábrelas en su sitio.",
+ "place.photoLinks": "Ver fotos del lugar",
+ "place.photoLinksNote": "Enlaces externos: las fotos pertenecen a sus autores."
 }

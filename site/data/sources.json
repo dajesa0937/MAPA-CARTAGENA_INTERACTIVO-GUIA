@@ -453,5 +453,47 @@
   "org": "El Universal (Cartagena), 09/07/2026",
   "title": "Así va el Gran Malecón del Mar: esto es lo que se está construyendo ahora mismo",
   "url": "https://www.eluniversal.com.co/cartagena/2026/07/09/asi-va-el-gran-malecon-del-mar-esto-es-lo-que-se-esta-construyendo-ahora-mismo/"
+ },
+ {
+  "id": "muhca-circoteatro",
+  "type": "oficial",
+  "org": "Museo Histórico de Cartagena (MUHCA) – Cartapedia",
+  "title": "Circo Teatro",
+  "url": "https://www.muhca.gov.co/cartapedia_circo-teatro--132"
+ },
+ {
+  "id": "nuevosiglo-serrezuela-2019",
+  "type": "medio",
+  "org": "El Nuevo Siglo, 27/06/2019",
+  "title": "Renace un ícono cultural de Cartagena: La Serrezuela",
+  "url": "https://www.elnuevosiglo.com.co/articulos/06-2019-renace-un-icono-cultural-de-cartagena-la-serrezuela"
+ },
+ {
+  "id": "serrezuela-oficial",
+  "type": "oficial",
+  "org": "Plaza La Serrezuela (sitio oficial)",
+  "title": "La Serrezuela",
+  "url": "https://www.plazalaserrezuela.com/la-serrezuela/"
+ },
+ {
+  "id": "wiki-elcabrero",
+  "type": "secundaria",
+  "org": "Wikipedia (es)",
+  "title": "Barrio El Cabrero",
+  "url": "https://es.wikipedia.org/wiki/Barrio_El_Cabrero"
+ },
+ {
+  "id": "donde-ermita",
+  "type": "secundaria",
+  "org": "Donde.co",
+  "title": "Ermita del Cabrero",
+  "url": "https://donde.co/es/cartagena/atracciones-turisticas/iglesias-catedrales/ermita-del-cabrero-28373"
+ },
+ {
+  "id": "banrep-nunez",
+  "type": "académica",
+  "org": "Banco de la República – Enciclopedia Banrepcultural",
+  "title": "Rafael Núñez",
+  "url": "https://enciclopedia.banrepcultural.org/index.php/Rafael_N%C3%BA%C3%B1ez"
  }
 ]

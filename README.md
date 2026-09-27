@@ -30,12 +30,12 @@ site/
   js/tts.js             narración
   js/scenes.js          escenas animadas (SVG) y presentaciones de fotos
   js/cinema.js          modo cine (historias a pantalla completa)
-  data/places.json      lugares (37)
-  data/events.json      acontecimientos (38)
-  data/periods.json     épocas (9)
+  data/places.json      lugares (39)
+  data/events.json      acontecimientos (42)
+  data/periods.json     épocas (10)
   data/routes.json      rutas (8)
   data/stories.json     historias temáticas de Explorar (6)
-  data/sources.json     fuentes (64)
+  data/sources.json     fuentes (71)
   data/badges.json      insignias
   i18n/es.json, en.json textos de interfaz
 scripts/validate.py     control de calidad histórica y de datos

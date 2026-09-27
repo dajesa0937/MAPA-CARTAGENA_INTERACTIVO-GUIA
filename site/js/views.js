@@ -232,6 +232,12 @@ export function placeView(p, { route, stopIndex, speaking }) {
       <small>${esc(t('place.pressNote'))}</small>
     </div>` : ''}
 
+    ${p.photoLinks?.length ? `<div class="press">
+      <h4>${ico('layers')}${esc(t('place.photoLinks'))}</h4>
+      <div class="press-links">${p.photoLinks.map(source).filter(Boolean).map(s => `<a class="btn small" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.org.split(',')[0].replace(/\s*\(.*\)/, '').split(' – ')[0])} ↗</a>`).join('')}</div>
+      <small>${esc(t('place.photoLinksNote'))}</small>
+    </div>` : ''}
+
     <div class="accs">
       <details class="acc">
         <summary>${esc(t('place.more'))}</summary>

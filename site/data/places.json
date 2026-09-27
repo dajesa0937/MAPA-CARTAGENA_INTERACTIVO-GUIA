@@ -3307,5 +3307,182 @@
     "specific": false
    }
   ]
+ },
+ {
+  "id": "ermita-cabrero",
+  "category": "iglesia",
+  "name": {
+   "es": "Ermita de El Cabrero (Nuestra Señora de las Mercedes)",
+   "en": "El Cabrero Chapel (Our Lady of Mercy)"
+  },
+  "aka": [
+   "Ermita",
+   "El Cabrero",
+   "Cabrero",
+   "Las Mercedes",
+   "Rafael Núñez",
+   "Soledad Román",
+   "Parque Apolo",
+   "Iglesia"
+  ],
+  "coords": [
+   10.43106,
+   -75.5436
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (27/09/2026)"
+  },
+  "built": {
+   "from": 1885,
+   "to": null
+  },
+  "dates": {
+   "es": "hacia 1885 (fuentes secundarias)",
+   "en": "c. 1885 (secondary sources)"
+  },
+  "periods": [
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea",
+   "hoy"
+  ],
+  "people": [
+   "Rafael Núñez",
+   "Soledad Román"
+  ],
+  "guide": {
+   "es": "A un paso de la muralla, en el barrio de El Cabrero, está esta pequeña ermita. Aquí reposan Rafael Núñez, presidente de Colombia e impulsor de la Constitución de 1886, y su esposa Soledad Román. Al lado se conserva su casa de madera, hoy casa museo.",
+   "en": "Just beyond the walls, in the El Cabrero quarter, stands this small chapel. Here rest Rafael Núñez, president of Colombia and driving force behind the 1886 Constitution, and his wife Soledad Román. Next door, their wooden house is now a museum."
+  },
+  "history": {
+   "es": [
+    "La ermita está dedicada a Nuestra Señora de las Mercedes. Fuentes turísticas sitúan su construcción en 1885; no hemos podido contrastar esa fecha con una fuente académica.",
+    "Sobre su origen circulan dos versiones: una dice que cumplía una promesa de Soledad Román; otra, que Núñez la hizo construir para que su esposa pudiera rezar tranquila, porque su matrimonio con él, que estaba divorciado, escandalizó a parte de la sociedad de la época.",
+    "Rafael Núñez murió en Cartagena el 18 de septiembre de 1894. Sus restos y los de Soledad Román reposan en dos mausoleos, a ambos lados del altar mayor. La ermita forma conjunto con el Parque Apolo y la casa de madera de Núñez, hoy casa museo con visitas guiadas."
+   ],
+   "en": [
+    "The chapel is dedicated to Our Lady of Mercy. Tourist sources date its construction to 1885; we have not been able to check that date against an academic source.",
+    "Two versions of its origin circulate: one says it fulfilled a vow made by Soledad Román; another, that Núñez had it built so his wife could pray in peace, because her marriage to him — he was divorced — scandalised part of society at the time.",
+    "Rafael Núñez died in Cartagena on 18 September 1894. His remains and those of Soledad Román rest in two mausoleums on either side of the high altar. The chapel forms a group with Apolo Park and Núñez’s wooden house, now a museum with guided tours."
+   ]
+  },
+  "note": {
+   "es": "Las dos versiones sobre el origen de la ermita proceden de fuentes secundarias; las presentamos como tradición.",
+   "en": "Both versions of the chapel’s origin come from secondary sources; we present them as tradition."
+  },
+  "significance": {
+   "es": "Lugar de memoria de Rafael Núñez y Soledad Román, figuras centrales de la política colombiana del siglo XIX.",
+   "en": "A place of memory for Rafael Núñez and Soledad Román, central figures of 19th-century Colombian politics."
+  },
+  "status": {
+   "es": "En culto; junto a la Casa Museo Rafael Núñez y el Parque Apolo.",
+   "en": "In use for worship; next to the Rafael Núñez House Museum and Apolo Park."
+  },
+  "events": [
+   "e1885-ermita",
+   "e1894-nunez"
+  ],
+  "sources": [
+   "wiki-elcabrero",
+   "donde-ermita",
+   "banrep-nunez"
+  ],
+  "certainty": "consenso",
+  "audio": {
+   "es": null,
+   "en": null
+  }
+ },
+ {
+  "id": "serrezuela",
+  "category": "cultura",
+  "name": {
+   "es": "La Serrezuela (antigua plaza de toros y Circo Teatro)",
+   "en": "La Serrezuela (former bullring and Circus-Theatre)"
+  },
+  "aka": [
+   "Serrezuela",
+   "Plaza de toros",
+   "Bullring",
+   "Circo Teatro",
+   "Teatro",
+   "Madera",
+   "San Diego",
+   "Centro comercial"
+  ],
+  "coords": [
+   10.42829,
+   -75.54584
+  ],
+  "loc": {
+   "accuracy": "exact",
+   "method": "Verificada sobre la cartografía de OpenStreetMap (27/09/2026)"
+  },
+  "built": {
+   "from": 1893,
+   "to": null
+  },
+  "dates": {
+   "es": "1893 · 1908 · 1930 (según la fuente) · renace en 2019",
+   "en": "1893 · 1908 · 1930 (depending on source) · reborn in 2019"
+  },
+  "periods": [
+   "sigloXIX",
+   "sigloXX",
+   "contemporanea",
+   "hoy"
+  ],
+  "people": [
+   "Fernando Vélez Daníes",
+   "Marcial Calvo Castillo",
+   "Álvaro Barrera Herrera"
+  ],
+  "guide": {
+   "es": "Dentro de la ciudad amurallada, en San Diego, hubo una plaza de toros de madera que también fue circo, teatro y cine. Cerró en 1972 y quedó abandonada durante décadas. En 2019 renació, reconstruida en madera, con una gran plaza central que recuerda el antiguo ruedo.",
+   "en": "Inside the walled city, in San Diego, stood a wooden bullring that was also a circus, theatre and cinema. It closed in 1972 and lay abandoned for decades. In 2019 it was reborn, rebuilt in wood, with a great central plaza that recalls the old ring."
+  },
+  "history": {
+   "es": [
+    "La prensa sitúa una primera plaza de toros en 1893 en la loma de La Serrezuela, destruida durante la Guerra de los Mil Días y reconstruida en 1908 por los hermanos Vélez Daníes. El Museo Histórico de Cartagena registra que Fernando Vélez Daníes inauguró la plaza en 1930, con estructura de madera y mampostería levantada por el maestro de obras Marcial Calvo Castillo.",
+    "Además de corridas fue circo, teatro y cine —el «Circo Teatro»—, frecuentado por vecinos de El Cabrero y de toda la ciudad. Dejó de funcionar en 1972 y cayó en el abandono.",
+    "Entre 2015 y 2019 se reconstruyó con unos 500 m³ de madera de bosques certificados, bajo la dirección del arquitecto Álvaro Barrera Herrera. Reabrió en junio de 2019 como centro comercial, cultural y gastronómico, con una plaza central para 1.900 personas."
+   ],
+   "en": [
+    "The press dates a first bullring on La Serrezuela hill to 1893, destroyed during the Thousand Days’ War and rebuilt in 1908 by the Vélez Daníes brothers. The Cartagena History Museum records that Fernando Vélez Daníes opened the ring in 1930, with a wood-and-masonry structure built by master builder Marcial Calvo Castillo.",
+    "Besides bullfights it was a circus, theatre and cinema — the “Circo Teatro” — attended by residents of El Cabrero and the whole city. It closed in 1972 and fell into neglect.",
+    "Between 2015 and 2019 it was rebuilt using some 500 m³ of wood from certified forests, under architect Álvaro Barrera Herrera. It reopened in June 2019 as a shopping, cultural and dining centre, with a central plaza for 1,900 people."
+   ]
+  },
+  "note": {
+   "es": "Las fechas de origen difieren según la fuente (1893, 1908 y 1930); las mostramos tal como las da cada una.",
+   "en": "Origin dates differ by source (1893, 1908 and 1930); we show them as each source gives them."
+  },
+  "significance": {
+   "es": "Una de las grandes construcciones en madera del Caribe colombiano y memoria del ocio de la ciudad en el siglo XX.",
+   "en": "One of the great wooden buildings of the Colombian Caribbean and a memory of the city’s 20th-century entertainment."
+  },
+  "status": {
+   "es": "Centro comercial, cultural y gastronómico (reabierto en 2019).",
+   "en": "Shopping, cultural and dining centre (reopened in 2019)."
+  },
+  "events": [
+   "e1930-serrezuela",
+   "e2019-serrezuela"
+  ],
+  "sources": [
+   "muhca-circoteatro",
+   "nuevosiglo-serrezuela-2019",
+   "serrezuela-oficial"
+  ],
+  "photoLinks": [
+   "serrezuela-oficial",
+   "nuevosiglo-serrezuela-2019"
+  ],
+  "certainty": "debatido",
+  "audio": {
+   "es": null,
+   "en": null
+  }
  }
 ]

@@ -742,6 +742,31 @@
   ]
  },
  {
+  "id": "e1885-ermita",
+  "year": 1885,
+  "date": {
+   "es": "1885 (según fuentes secundarias)",
+   "en": "1885 (per secondary sources)"
+  },
+  "period": "sigloXIX",
+  "title": {
+   "es": "Nace la ermita de El Cabrero",
+   "en": "The El Cabrero chapel is built"
+  },
+  "text": {
+   "es": "Junto a la casa de Rafael Núñez y Soledad Román se levanta una ermita dedicada a Nuestra Señora de las Mercedes.",
+   "en": "Next to the home of Rafael Núñez and Soledad Román, a chapel dedicated to Our Lady of Mercy is built."
+  },
+  "certainty": "pendiente",
+  "places": [
+   "ermita-cabrero"
+  ],
+  "sources": [
+   "donde-ermita",
+   "wiki-elcabrero"
+  ]
+ },
+ {
   "id": "e1888-torre",
   "year": 1888,
   "date": {
@@ -766,6 +791,31 @@
   ]
  },
  {
+  "id": "e1894-nunez",
+  "year": 1894,
+  "date": {
+   "es": "18 de septiembre de 1894",
+   "en": "18 September 1894"
+  },
+  "period": "sigloXIX",
+  "title": {
+   "es": "Muere Rafael Núñez",
+   "en": "Rafael Núñez dies"
+  },
+  "text": {
+   "es": "Muere en Cartagena el presidente impulsor de la Constitución de 1886. Reposa con Soledad Román en la ermita de El Cabrero.",
+   "en": "The president behind the 1886 Constitution dies in Cartagena. He rests with Soledad Román in the El Cabrero chapel."
+  },
+  "certainty": "documentado",
+  "places": [
+   "ermita-cabrero"
+  ],
+  "sources": [
+   "banrep-nunez",
+   "wiki-elcabrero"
+  ]
+ },
+ {
   "id": "e1911-teatro",
   "year": 1911,
   "date": {
@@ -787,6 +837,30 @@
   ],
   "sources": [
    "senal-teatro"
+  ]
+ },
+ {
+  "id": "e1930-serrezuela",
+  "year": 1930,
+  "date": {
+   "es": "1930",
+   "en": "1930"
+  },
+  "period": "sigloXX",
+  "title": {
+   "es": "Abre el Circo Teatro de La Serrezuela",
+   "en": "The Serrezuela Circus-Theatre opens"
+  },
+  "text": {
+   "es": "Fernando Vélez Daníes inaugura la plaza de toros y circo-teatro de madera y mampostería, levantada por el maestro de obras Marcial Calvo Castillo. Fue ruedo, circo, teatro y cine.",
+   "en": "Fernando Vélez Daníes opens the wood-and-masonry bullring and circus-theatre, built by master builder Marcial Calvo Castillo. It served as bullring, circus, theatre and cinema."
+  },
+  "certainty": "documentado",
+  "places": [
+   "serrezuela"
+  ],
+  "sources": [
+   "muhca-circoteatro"
   ]
  },
  {
@@ -861,6 +935,30 @@
   ],
   "sources": [
    "wiki-wager"
+  ]
+ },
+ {
+  "id": "e2019-serrezuela",
+  "year": 2019,
+  "date": {
+   "es": "junio de 2019",
+   "en": "June 2019"
+  },
+  "period": "hoy",
+  "title": {
+   "es": "La Serrezuela renace",
+   "en": "La Serrezuela is reborn"
+  },
+  "text": {
+   "es": "Tras décadas de abandono, reabre reconstruida en madera como centro cultural, comercial y gastronómico, con una plaza central que evoca el antiguo ruedo.",
+   "en": "After decades of neglect, it reopens rebuilt in wood as a cultural, shopping and dining centre, with a central plaza that recalls the old ring."
+  },
+  "certainty": "documentado",
+  "places": [
+   "serrezuela"
+  ],
+  "sources": [
+   "nuevosiglo-serrezuela-2019"
   ]
  },
  {
