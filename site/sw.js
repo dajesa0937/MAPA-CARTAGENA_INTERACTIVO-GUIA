@@ -1,6 +1,6 @@
 // Service worker: guarda la aplicación y los datos para uso sin conexión.
 // No guarda teselas de mapas (respeto a las políticas de los proveedores).
-const CACHE = 'ctg-v20';
+const CACHE = 'ctg-v21';
 const SHELL = [
   './', 'index.html', 'css/styles.css',
   'js/app.js', 'js/data.js', 'js/i18n.js', 'js/map.js', 'js/views.js', 'js/store.js', 'js/tts.js', 'js/scenes.js', 'js/cinema.js', 'js/now.js', 'js/postcard.js', 'js/postcard-ui.js', 'vendor/qrcode/qrcode.js',

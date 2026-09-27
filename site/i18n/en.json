@@ -322,5 +322,13 @@
   "pc.previewAlt": "Postcard preview",
   "pc.fromList": "Make a postcard from my list",
   "pc.button": "Postcard",
-  "hero.postcard": "Send a postcard"
+  "hero.postcard": "Send a postcard",
+  "pc.shareOther": "More options",
+  "pc.copy": "Copy image",
+  "pc.copied": "Postcard copied: paste it anywhere with Ctrl+V",
+  "pc.copyFail": "Your browser can't copy images: the postcard was downloaded",
+  "pc.copiedPaste": "Postcard copied. In WhatsApp, paste it with Ctrl+V",
+  "pc.waHowto": "WhatsApp opened with your message and the link. Pick the chat, paste the postcard with Ctrl+V (Cmd+V on Mac) and send.",
+  "pc.waHowtoFile": "WhatsApp opened with your message and the link, and the postcard was downloaded: attach it with the paperclip before sending.",
+  "pc.openWa": "Open WhatsApp"
 }

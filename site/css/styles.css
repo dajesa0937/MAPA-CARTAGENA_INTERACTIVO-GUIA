@@ -1201,3 +1201,7 @@ body.cinema-on { overflow: hidden; }
 @media (max-width: 760px) {
   .pc-actions { position: sticky; bottom: calc(-1 * max(14px, env(safe-area-inset-bottom))); padding: 10px 0 max(10px, env(safe-area-inset-bottom)); background: var(--bg-elev); box-shadow: 0 -8px 16px -12px rgba(14,42,59,.35); z-index: 1; }
 }
+.pc-wa { background: #1f9d55; color: #fff; border-color: #1f9d55; }
+.pc-wa:hover { background: #188746; }
+.pc-howto { margin: 0; padding: 10px 12px; border-radius: 12px; font-size: 13.5px; line-height: 1.5; background: color-mix(in srgb, #1f9d55 10%, var(--bg-elev)); border: 1px solid color-mix(in srgb, #1f9d55 35%, var(--line)); }
+.pc-howto .btn { margin-top: 6px; }

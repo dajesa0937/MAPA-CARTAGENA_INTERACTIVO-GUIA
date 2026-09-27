@@ -161,3 +161,4 @@ Datos prácticos a revisar periódicamente: vuelos, requisitos de entrada y avis
 - Fotos de Commons: se piden por la API (`origin=*`) para obtener miniaturas con CORS; Pexels ya lo permite. Si una foto no carga, se usa un fondo de color.
 - QR: `vendor/qrcode/qrcode.js` (qrcode-generator 2.0.4, Kazuhiko Arase, licencia MIT).
 - Privacidad: nada se envía a servidores; «Guardar» y el nombre del remitente viven solo en el navegador del visitante (localStorage).
+- v6.2: botón **WhatsApp** en la postal. En el teléfono usa el menú de compartir del sistema (envía la imagen). En el computador copia la postal al portapapeles y abre WhatsApp (wa.me) con el mensaje y el enlace: se pega la imagen con Ctrl+V. Si el navegador no permite copiar imágenes, la descarga. Nuevos botones «Copiar imagen» y «Más opciones».

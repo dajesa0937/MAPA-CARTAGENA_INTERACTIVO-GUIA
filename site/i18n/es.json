@@ -322,5 +322,13 @@
   "pc.previewAlt": "Vista previa de la postal",
   "pc.fromList": "Hacer una postal con mi lista",
   "pc.button": "Postal",
-  "hero.postcard": "Envía una postal"
+  "hero.postcard": "Envía una postal",
+  "pc.shareOther": "Más opciones",
+  "pc.copy": "Copiar imagen",
+  "pc.copied": "Postal copiada: pégala con Ctrl+V donde quieras",
+  "pc.copyFail": "Tu navegador no permite copiar imágenes: la postal se descargó",
+  "pc.copiedPaste": "Postal copiada. En WhatsApp, pégala con Ctrl+V",
+  "pc.waHowto": "Se abrió WhatsApp con tu mensaje y el enlace. Elige el chat, pega la postal con Ctrl+V (Cmd+V en Mac) y envía.",
+  "pc.waHowtoFile": "Se abrió WhatsApp con tu mensaje y el enlace, y la postal se descargó: adjúntala con el clip antes de enviar.",
+  "pc.openWa": "Abrir WhatsApp"
 }
